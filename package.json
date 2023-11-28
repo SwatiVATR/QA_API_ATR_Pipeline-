@@ -1,0 +1,17 @@
+{
+  "name": "testcase",
+  "version": "1.0.0",
+  "description": "test cases",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js && sleep 5 && jest --coverage"
+  },
+  "author": "TestCase",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "dependencies": {
+    "jest-html-reporters": "^3.1.4"
+  }
+}
