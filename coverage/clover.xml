@@ -1,46 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1701758264171" clover="3.2.0">
-  <project timestamp="1701758264171" name="All files">
-    <metrics statements="274" coveredstatements="257" conditionals="2" coveredconditionals="1" methods="61" coveredmethods="51" elements="337" coveredelements="309" complexity="0" loc="274" ncloc="274" packages="3" files="26" classes="26"/>
+<coverage generated="1701784707643" clover="3.2.0">
+  <project timestamp="1701784707643" name="All files">
+    <metrics statements="237" coveredstatements="224" conditionals="2" coveredconditionals="1" methods="49" coveredmethods="41" elements="288" coveredelements="266" complexity="0" loc="237" ncloc="237" packages="3" files="23" classes="23"/>
     <package name="QA-API-Automation-Testing">
       <metrics statements="31" coveredstatements="29" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="config.js" path="/home/devtrust/Project/QA-API-Automation-Testing/config.js">
         <metrics statements="31" coveredstatements="29" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="43" type="stmt"/>
-        <line num="4" count="43" type="stmt"/>
-        <line num="5" count="43" type="stmt"/>
-        <line num="6" count="43" type="stmt"/>
+        <line num="1" count="37" type="stmt"/>
+        <line num="4" count="37" type="stmt"/>
+        <line num="5" count="37" type="stmt"/>
+        <line num="6" count="37" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
-        <line num="13" count="43" type="stmt"/>
-        <line num="14" count="43" type="stmt"/>
-        <line num="15" count="43" type="stmt"/>
-        <line num="16" count="43" type="stmt"/>
-        <line num="17" count="43" type="stmt"/>
-        <line num="18" count="43" type="stmt"/>
-        <line num="19" count="43" type="stmt"/>
-        <line num="20" count="43" type="stmt"/>
-        <line num="23" count="43" type="stmt"/>
-        <line num="25" count="43" type="stmt"/>
-        <line num="26" count="43" type="stmt"/>
-        <line num="30" count="43" type="stmt"/>
-        <line num="34" count="43" type="stmt"/>
-        <line num="38" count="43" type="stmt"/>
-        <line num="43" count="43" type="stmt"/>
-        <line num="48" count="43" type="stmt"/>
-        <line num="53" count="43" type="stmt"/>
-        <line num="58" count="43" type="stmt"/>
-        <line num="64" count="43" type="stmt"/>
-        <line num="69" count="43" type="stmt"/>
-        <line num="74" count="43" type="stmt"/>
-        <line num="79" count="43" type="stmt"/>
-        <line num="85" count="43" type="stmt"/>
-        <line num="97" count="43" type="stmt"/>
-        <line num="110" count="43" type="stmt"/>
+        <line num="13" count="37" type="stmt"/>
+        <line num="14" count="37" type="stmt"/>
+        <line num="15" count="37" type="stmt"/>
+        <line num="16" count="37" type="stmt"/>
+        <line num="17" count="37" type="stmt"/>
+        <line num="18" count="37" type="stmt"/>
+        <line num="19" count="37" type="stmt"/>
+        <line num="20" count="37" type="stmt"/>
+        <line num="23" count="37" type="stmt"/>
+        <line num="25" count="37" type="stmt"/>
+        <line num="26" count="37" type="stmt"/>
+        <line num="30" count="37" type="stmt"/>
+        <line num="34" count="37" type="stmt"/>
+        <line num="38" count="37" type="stmt"/>
+        <line num="43" count="37" type="stmt"/>
+        <line num="48" count="37" type="stmt"/>
+        <line num="53" count="37" type="stmt"/>
+        <line num="58" count="37" type="stmt"/>
+        <line num="64" count="37" type="stmt"/>
+        <line num="69" count="37" type="stmt"/>
+        <line num="74" count="37" type="stmt"/>
+        <line num="79" count="37" type="stmt"/>
+        <line num="85" count="37" type="stmt"/>
+        <line num="97" count="37" type="stmt"/>
+        <line num="110" count="37" type="stmt"/>
       </file>
     </package>
     <package name="QA-API-Automation-Testing.RequestBodies">
-      <metrics statements="71" coveredstatements="71" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <metrics statements="74" coveredstatements="74" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="BackOfficeAuthBody.js" path="/home/devtrust/Project/QA-API-Automation-Testing/RequestBodies/BackOfficeAuthBody.js">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
@@ -73,12 +73,6 @@
         <line num="55" count="1" type="stmt"/>
         <line num="69" count="1" type="stmt"/>
       </file>
-      <file name="FileDownloadBody.js" path="/home/devtrust/Project/QA-API-Automation-Testing/RequestBodies/FileDownloadBody.js">
-        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-      </file>
       <file name="FileUploadBody.js" path="/home/devtrust/Project/QA-API-Automation-Testing/RequestBodies/FileUploadBody.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
@@ -94,10 +88,13 @@
         <line num="9" count="1" type="stmt"/>
       </file>
       <file name="ListJobsBody.js" path="/home/devtrust/Project/QA-API-Automation-Testing/RequestBodies/ListJobsBody.js">
-        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
       </file>
       <file name="NormalizeQualiaBody.js" path="/home/devtrust/Project/QA-API-Automation-Testing/RequestBodies/NormalizeQualiaBody.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -127,10 +124,13 @@
         <line num="3" count="1" type="stmt"/>
       </file>
       <file name="StatusUpdateJobsBody.js" path="/home/devtrust/Project/QA-API-Automation-Testing/RequestBodies/StatusUpdateJobsBody.js">
-        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="42" count="1" type="stmt"/>
+        <line num="53" count="1" type="stmt"/>
       </file>
       <file name="WebhookOrderRequestBody.js" path="/home/devtrust/Project/QA-API-Automation-Testing/RequestBodies/WebhookOrderRequestBody.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -159,7 +159,7 @@
       </file>
     </package>
     <package name="QA-API-Automation-Testing.modules">
-      <metrics statements="172" coveredstatements="157" conditionals="2" coveredconditionals="1" methods="60" coveredmethods="50"/>
+      <metrics statements="132" coveredstatements="121" conditionals="2" coveredconditionals="1" methods="48" coveredmethods="40"/>
       <file name="COR300TemplateModule.js" path="/home/devtrust/Project/QA-API-Automation-Testing/modules/COR300TemplateModule.js">
         <metrics statements="17" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="5"/>
         <line num="2" count="1" type="stmt"/>
@@ -182,21 +182,21 @@
       </file>
       <file name="COR310TemplateModule.js" path="/home/devtrust/Project/QA-API-Automation-Testing/modules/COR310TemplateModule.js">
         <metrics statements="15" coveredstatements="14" conditionals="2" coveredconditionals="1" methods="6" coveredmethods="5"/>
-        <line num="1" count="3" type="stmt"/>
-        <line num="4" count="13" type="stmt"/>
-        <line num="5" count="13" type="stmt"/>
-        <line num="6" count="13" type="stmt"/>
-        <line num="8" count="13" type="stmt"/>
-        <line num="9" count="19" type="stmt"/>
-        <line num="12" count="13" type="stmt"/>
-        <line num="13" count="13" type="stmt"/>
-        <line num="14" count="12" type="stmt"/>
-        <line num="18" count="13" type="stmt"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
         <line num="19" count="0" type="stmt"/>
-        <line num="22" count="13" type="cond" truecount="1" falsecount="1"/>
-        <line num="23" count="13" type="stmt"/>
-        <line num="26" count="13" type="stmt"/>
-        <line num="30" count="3" type="stmt"/>
+        <line num="22" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="23" count="2" type="stmt"/>
+        <line num="26" count="2" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
       </file>
       <file name="COR354TemplateModule.js" path="/home/devtrust/Project/QA-API-Automation-Testing/modules/COR354TemplateModule.js">
         <metrics statements="17" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="5"/>
@@ -238,26 +238,6 @@
         <line num="25" count="6" type="stmt"/>
         <line num="28" count="1" type="stmt"/>
       </file>
-      <file name="COR356TemplateModule.js" path="/home/devtrust/Project/QA-API-Automation-Testing/modules/COR356TemplateModule.js">
-        <metrics statements="17" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="5"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="10" type="stmt"/>
-        <line num="5" count="10" type="stmt"/>
-        <line num="6" count="10" type="stmt"/>
-        <line num="7" count="10" type="stmt"/>
-        <line num="8" count="10" type="stmt"/>
-        <line num="10" count="10" type="stmt"/>
-        <line num="11" count="10" type="stmt"/>
-        <line num="12" count="10" type="stmt"/>
-        <line num="13" count="8" type="stmt"/>
-        <line num="15" count="2" type="stmt"/>
-        <line num="20" count="10" type="stmt"/>
-        <line num="21" count="0" type="stmt"/>
-        <line num="24" count="10" type="stmt"/>
-        <line num="25" count="10" type="stmt"/>
-        <line num="29" count="1" type="stmt"/>
-      </file>
       <file name="CreateTemplateModule.js" path="/home/devtrust/Project/QA-API-Automation-Testing/modules/CreateTemplateModule.js">
         <metrics statements="19" coveredstatements="17" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="5"/>
         <line num="1" count="1" type="stmt"/>
@@ -279,32 +259,6 @@
         <line num="30" count="10" type="stmt"/>
         <line num="31" count="10" type="stmt"/>
         <line num="35" count="1" type="stmt"/>
-      </file>
-      <file name="DeleteTemplateModule.js" path="/home/devtrust/Project/QA-API-Automation-Testing/modules/DeleteTemplateModule.js">
-        <metrics statements="23" coveredstatements="20" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="5"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="6" count="2" type="stmt"/>
-        <line num="7" count="2" type="stmt"/>
-        <line num="12" count="2" type="stmt"/>
-        <line num="13" count="2" type="stmt"/>
-        <line num="14" count="2" type="stmt"/>
-        <line num="16" count="2" type="stmt"/>
-        <line num="17" count="2" type="stmt"/>
-        <line num="18" count="2" type="stmt"/>
-        <line num="21" count="2" type="stmt"/>
-        <line num="22" count="0" type="stmt"/>
-        <line num="24" count="2" type="stmt"/>
-        <line num="25" count="2" type="stmt"/>
-        <line num="27" count="2" type="stmt"/>
-        <line num="28" count="2" type="stmt"/>
-        <line num="29" count="2" type="stmt"/>
-        <line num="30" count="2" type="stmt"/>
-        <line num="32" count="0" type="stmt"/>
-        <line num="33" count="0" type="stmt"/>
-        <line num="37" count="1" type="stmt"/>
       </file>
       <file name="HttpModule.js" path="/home/devtrust/Project/QA-API-Automation-Testing/modules/HttpModule.js">
         <metrics statements="17" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="5"/>
@@ -328,38 +282,38 @@
       </file>
       <file name="NAModule.js" path="/home/devtrust/Project/QA-API-Automation-Testing/modules/NAModule.js">
         <metrics statements="17" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="5"/>
-        <line num="1" count="29" type="stmt"/>
-        <line num="3" count="29" type="stmt"/>
-        <line num="4" count="126" type="stmt"/>
-        <line num="5" count="126" type="stmt"/>
-        <line num="6" count="126" type="stmt"/>
-        <line num="7" count="126" type="stmt"/>
-        <line num="8" count="152" type="stmt"/>
-        <line num="10" count="126" type="stmt"/>
-        <line num="11" count="126" type="stmt"/>
-        <line num="12" count="126" type="stmt"/>
-        <line num="13" count="100" type="stmt"/>
-        <line num="15" count="26" type="stmt"/>
-        <line num="20" count="126" type="stmt"/>
+        <line num="1" count="28" type="stmt"/>
+        <line num="3" count="28" type="stmt"/>
+        <line num="4" count="136" type="stmt"/>
+        <line num="5" count="136" type="stmt"/>
+        <line num="6" count="136" type="stmt"/>
+        <line num="7" count="136" type="stmt"/>
+        <line num="8" count="145" type="stmt"/>
+        <line num="10" count="136" type="stmt"/>
+        <line num="11" count="136" type="stmt"/>
+        <line num="12" count="136" type="stmt"/>
+        <line num="13" count="109" type="stmt"/>
+        <line num="15" count="27" type="stmt"/>
+        <line num="20" count="136" type="stmt"/>
         <line num="21" count="0" type="stmt"/>
-        <line num="24" count="126" type="stmt"/>
-        <line num="25" count="126" type="stmt"/>
-        <line num="29" count="29" type="stmt"/>
+        <line num="24" count="136" type="stmt"/>
+        <line num="25" count="136" type="stmt"/>
+        <line num="29" count="28" type="stmt"/>
       </file>
       <file name="OrderModule.js" path="/home/devtrust/Project/QA-API-Automation-Testing/modules/OrderModule.js">
         <metrics statements="13" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="5"/>
         <line num="1" count="1" type="stmt"/>
-        <line num="4" count="3" type="stmt"/>
-        <line num="5" count="3" type="stmt"/>
-        <line num="6" count="3" type="stmt"/>
-        <line num="8" count="3" type="stmt"/>
-        <line num="9" count="3" type="stmt"/>
-        <line num="12" count="3" type="stmt"/>
-        <line num="13" count="3" type="stmt"/>
-        <line num="14" count="3" type="stmt"/>
-        <line num="18" count="3" type="stmt"/>
+        <line num="4" count="6" type="stmt"/>
+        <line num="5" count="6" type="stmt"/>
+        <line num="6" count="6" type="stmt"/>
+        <line num="8" count="6" type="stmt"/>
+        <line num="9" count="7" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+        <line num="13" count="6" type="stmt"/>
+        <line num="14" count="6" type="stmt"/>
+        <line num="18" count="6" type="stmt"/>
         <line num="19" count="0" type="stmt"/>
-        <line num="22" count="3" type="stmt"/>
+        <line num="22" count="6" type="stmt"/>
         <line num="26" count="1" type="stmt"/>
       </file>
     </package>
