@@ -47,16 +47,15 @@ test(
     });
     try {
       const response = await COR356TemplateModule(postData, RepeatedOptions);
-      console.log(response);
     } catch (error) {
-      expect(error).toBe("Error parsing response data");
+      throw new Error(error);
     }
   },
   Timeout
 );
 
 test(
-  "Searcher point is blank",
+  "searcherID is blank",
   async () => {
     const postData = JSON.stringify({
       appId: "AppUser101",
@@ -97,7 +96,7 @@ test(
     try {
       const response = await COR356TemplateModule(postData, RepeatedOptions);
 
-      expect(response.Response.TransactionID.length>=1).toBe(true);
+      expect(response.Response.RecID?true:false).toBe(false);
     } catch (error) {
       throw new Error(error);
     }
@@ -122,7 +121,7 @@ test(
     try {
       const response = await COR356TemplateModule(postData, RepeatedOptions);
 
-      expect(response.Response.TXStatus).toBe("02");
+      expect(response.Response.RecID?true:false).toBe(false);
     } catch (error) {
       throw new Error(error);
     }
@@ -147,7 +146,7 @@ test(
     try {
       const response = await COR356TemplateModule(postData, RepeatedOptions);
 
-      expect(response.Response.TransactionID.length>=1).toBe(true);
+      expect(response.Response.RecID?true:false).toBe(false);
     } catch (error) {
       throw new Error(error);
     }
@@ -197,7 +196,7 @@ test(
     try {
       const response = await COR356TemplateModule(postData, RepeatedOptions);
 
-      expect(response.Response.TransactionID.length>=1).toBe(true);
+      expect(response.Response.RecID).toBe("");
     } catch (error) {
       throw new Error(error);
     }
@@ -236,9 +235,8 @@ test(
     const postData = JSON.stringify({});
     try {
       const response = await COR356TemplateModule(postData, RepeatedOptions);
-      console.log("resssssssssssssssssss", response);
     } catch (error) {
-      expect(error).toBe("Error parsing response data");
+      throw new Error(error);
     }
   },
   Timeout

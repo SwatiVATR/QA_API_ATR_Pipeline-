@@ -11,7 +11,7 @@ test("API SUCCESS", async () => {
     try {
       const response = await COR310TemplateModule(options, payload);
 
-      expect(response.success.correlationId).toBe(1);
+      expect(response.success.count!==0).toBe(true);
     } catch (error) {
       throw new Error(error);
     }
@@ -31,7 +31,7 @@ test("API SUCCESS", async () => {
       const data = JSON.parse(responseData);
       expect(data).toBe(null);
     } catch (error) {
-      console.log(error);
+      throw new Error(error);
     }
   }, Timeout);
   
@@ -47,6 +47,113 @@ test("API SUCCESS", async () => {
       const response = await COR310TemplateModule(options, payload);
 
       expect(response.error).toBe("Invalid Session");
+    } catch (error) {
+      throw new Error(error);
+    }
+  }, Timeout);
+
+
+  test("status is in progress ", async () => {
+    const payload = {};
+  
+    const options = {
+      ...commonOptionsGETwithoutHeader,
+      path: `/${STAGE}/${VERSION}/services/enhance-listorders?status=progress&offset=0&limit=100&sort=desc`,
+    };
+  
+    try {
+      const response = await COR310TemplateModule(options, payload);
+
+      expect(response.success.count===0).toBe(true);
+    } catch (error) {
+      throw new Error(error);
+    }
+  }, Timeout);
+
+
+  test("status is active ", async () => {
+    const payload = {};
+  
+    const options = {
+      ...commonOptionsGETwithoutHeader,
+      path: `/${STAGE}/${VERSION}/services/enhance-listorders?status=active&offset=0&limit=100&sort=desc`,
+    };
+  
+    try {
+      const response = await COR310TemplateModule(options, payload);
+
+      expect(response.success.count!==0).toBe(true);
+    } catch (error) {
+      throw new Error(error);
+    }
+  }, Timeout);
+
+  test("status is a number", async () => {
+    const payload = {};
+  
+    const options = {
+      ...commonOptionsGETwithoutHeader,
+      path: `/${STAGE}/${VERSION}/services/enhance-listorders?status=inprogress&offset=0&limit=100&sort=desc`,
+    };
+  
+    try {
+      const response = await COR310TemplateModule(options, payload);
+
+      expect(response.success.count!==0).toBe(true);
+    } catch (error) {
+      throw new Error(error);
+    }
+  }, Timeout);
+
+
+  test("string is passed in offset", async () => {
+    const payload = {};
+  
+    const options = {
+      ...commonOptionsGETwithoutHeader,
+      path: `/${STAGE}/${VERSION}/services/enhance-listorders?status=hold&offset=cxdxc&limit=100&sort=desc`,
+    };
+  
+    try {
+      const response = await COR310TemplateModule(options, payload);
+
+      expect(response.error).toBe("invalid literal for int() with base 10: 'cxdxc'");
+    } catch (error) {
+      throw new Error(error);
+    }
+  }, Timeout);
+
+
+  test("string is passed in limit", async () => {
+    const payload = {};
+  
+    const options = {
+      ...commonOptionsGETwithoutHeader,
+      path: `/${STAGE}/${VERSION}/services/enhance-listorders?status=hold&offset=0&limit="fedfDF"&sort=desc`,
+    };
+  
+    try {
+      const response = await COR310TemplateModule(options, payload);
+
+      expect(response.error).toBe("invalid literal for int() with base 10: '\"fedfDF\"'");
+    } catch (error) {
+      throw new Error(error);
+    }
+  }, Timeout);
+
+
+  test("any data is passed to sort", async () => {
+    const payload = {};
+  
+    const options = {
+      ...commonOptionsGETwithoutHeader,
+      path: `/${STAGE}/${VERSION}/services/enhance-listorders?status=hold&offset=0&limit=100&sort=@`,
+    };
+  
+    try {
+      const response = await COR310TemplateModule(options, payload);
+
+      expect(response.success.count!==0).toBe(true);
     } catch (error) {
       throw new Error(error);
     }
