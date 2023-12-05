@@ -13,7 +13,7 @@ const COR300TemplateModule = async (postData,options) => {
           const data = JSON.parse(responseData);
           resolve(data);
         } catch (error) {
-          reject("Error parsing response data");
+          reject("Response is not in valid json format");
         }
       });
     });
