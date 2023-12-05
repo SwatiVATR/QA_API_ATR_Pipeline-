@@ -74,7 +74,7 @@ test(
 );
 
 test(
-  "orderId not found",
+  "orderId not found || Passing string to orderId",
   async () => {
     const orderid = "3931555555";
     const options = {

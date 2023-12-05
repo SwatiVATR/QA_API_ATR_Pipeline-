@@ -14,7 +14,8 @@ test(
     try {
       const response = await NAModule(postData, options);
     } catch (error) {
-      expect(error).toBe("Error parsing response data");
+      throw new Error();
+
     }
   },
   Timeout

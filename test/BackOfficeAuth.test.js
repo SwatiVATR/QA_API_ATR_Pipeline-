@@ -3,6 +3,10 @@ const NAModule = require("../modules/NAModule");
 const {
   success,
   authkeyinvalid,
+  wrongAppid,
+  wrongappPass,
+  wrongappUsername,
+  wrongrecId,
 } = require("../RequestBodies/BackOfficeAuthBody");
 
 const options = {
@@ -25,13 +29,13 @@ test(
 );
 
 test(
-  "Auth key is missing",
+  "Auth key is missing || Invalid Auth key entered",
   async () => {
     const postData = JSON.stringify(authkeyinvalid);
     try {
       const response = await NAModule(postData, options);
     } catch (error) {
-      expect(error).toBe("Error parsing response data");
+      throw new Error();
     }
   },
   Timeout
@@ -44,8 +48,53 @@ test(
     try {
       const response = await NAModule(postData, options);
     } catch (error) {
-      expect(error).toBe("Error parsing response data");
+      throw new Error();
     }
   },
   Timeout
 );
+
+test(
+  "Wrong appId || appId is missing",
+  async () => {
+    const postData = JSON.stringify(wrongAppid);
+    try {
+      const response = await NAModule(postData, options);
+      expect(response.statusCode).toBe(401);
+    } catch (error) {
+      throw new Error();
+    }
+  },
+  Timeout
+);
+
+test(
+  "appPass is wrong || appPass is missing",
+  async () => {
+    const postData = JSON.stringify(wrongappPass);
+    try {
+      const response = await NAModule(postData, options);
+      expect(response.statusCode).toBe(401);
+    } catch (error) {
+      throw new Error();
+    }
+  },
+  Timeout
+);
+
+test(
+  "appUsername is wrong ||appUsername is empty",
+  async () => {
+    const postData = JSON.stringify(wrongappUsername);
+    try {
+      const response = await NAModule(postData, options);
+      expect(response.statusCode).toBe(401);
+    } catch (error) {
+      throw new Error();
+    }
+  },
+  Timeout
+);
+
+
+

@@ -29,7 +29,7 @@ test(
 );
 
 test(
-  "appId missing",
+  "appId missing|| invalid appId",
   async () => {
     const postData = JSON.stringify(appIdmissing);
     try {
@@ -45,7 +45,7 @@ test(
 
 
 test(
-  "appPass missing",
+  "appPass missing || Wrong appPass",
   async () => {
     const postData = JSON.stringify(appPassmissing);
     try {
@@ -59,7 +59,7 @@ test(
   Timeout
 );
 test(
-  "appUsername missing",
+  "appUsername missing ||appUsername is invalid",
   async () => {
     const postData = JSON.stringify(appUsernamemissing);
     try {
@@ -74,14 +74,15 @@ test(
 );
 
 test(
-  "Auth key is missing",
+  "Auth key is missing || invalid Auth key passed",
   async () => {
     const postData = JSON.stringify(authKeymissing);
     try {
       const response = await NAModule(postData, options);
     } catch (error) {
-      expect(error).toBe("Error parsing response data");
+      throw new Error(error);
     }
   },
   Timeout
 );
+

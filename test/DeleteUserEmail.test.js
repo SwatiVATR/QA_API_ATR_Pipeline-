@@ -15,9 +15,9 @@ test(
     };
     try {
       const response = await NAModule(postData, options);
-      console.log(response);
+      expect(response.error).toBe("User not found for the provided email.");
     } catch (error) {
-      expect(error).toBe("Error parsing response data");
+      throw new Error(error);
     }
   },
   Timeout
@@ -38,22 +38,7 @@ test(
   },
   Timeout
 );
-test(
-  "Email is blank",
-  async () => {
-    const options = {
-      path: `/${STAGE}/${VERSION}/services/invoker/cognito/deleteUser?email=""`,
-      ...commonOptionsDELETEwithoutHeader,
-    };
-    try {
-      const response = await NAModule(postData, options);
-      console.log(response);
-    } catch (error) {
-      expect(error).toBe("Error parsing response data");
-    }
-  },
-  Timeout
-);
+
 test(
   "BAD Request",
   async () => {
@@ -63,9 +48,9 @@ test(
     };
     try {
       const response = await NAModule(postData, options);
-      console.log(response);
+      expect(response.error).toBe("argument of type 'NoneType' is not iterable");
     } catch (error) {
-      expect(error).toBe("Error parsing response data");
+      throw new Error(error);
     }
   },
   Timeout

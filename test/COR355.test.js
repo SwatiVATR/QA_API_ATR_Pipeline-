@@ -19,7 +19,7 @@ test(
 
     try {
       const response = await COR355TemplateModule(postData, options);
-      expect(response.Response.TransactionID.length>=1).toBe(true);
+      expect(response.Response.SearcherList).toBe("1:admin:Chris Montero~125:MRussomanno:Mark Russomanno ~322:SchPortal:Searcher Portal~365:ATR-Searcher:ATR Searcher~");
     } catch (error) {
       throw new Error(error);
     }
@@ -39,16 +39,15 @@ test(
     });
     try {
       const response = await COR355TemplateModule(postData, options);
-      console.log(response);
     } catch (error) {
-      expect(error).toBe("Error parsing response data");
+      throw new Error(error);
     }
   },
   Timeout
 );
 
 test(
-  "APP user Name is blank",
+  "APP user Name is blank||APP user Name is passed wrong",
   async () => {
     const postData = JSON.stringify({
       appId: "AppUser101",
@@ -60,7 +59,7 @@ test(
     try {
       const response = await COR355TemplateModule(postData, options);
 
-      expect(response.Response.TransactionID.length>=1).toBe(true);
+      expect(response.Response.SearcherList?true:false).toBe(false);
     } catch (error) {
       throw new Error(error);
     }
@@ -69,7 +68,7 @@ test(
 );
 
 test(
-  "APP ID point is blank",
+  "APP ID is blank|| App id is passed wrong",
   async () => {
     const postData = JSON.stringify({
       appId: "",
@@ -81,7 +80,7 @@ test(
     try {
       const response = await COR355TemplateModule(postData, options);
 
-      expect(response.Response.TransactionID.length>=1).toBe(true);
+      expect(response.Response.SearcherList?true:false).toBe(false);
     } catch (error) {
       throw new Error(error);
     }
@@ -90,7 +89,7 @@ test(
 );
 
 test(
-  "APP PASS point is blank",
+  "APP PASS point is blank||APP PASS is passed wrong",
   async () => {
     const postData = JSON.stringify({
       appId: "AppUser101",
@@ -102,7 +101,7 @@ test(
     try {
       const response = await COR355TemplateModule(postData, options);
 
-      expect(response.Response.TransactionID.length>=1).toBe(true);
+      expect(response.Response.SearcherList?true:false).toBe(false);
     } catch (error) {
       throw new Error(error);
     }
@@ -118,8 +117,11 @@ test(
       const response = await COR355TemplateModule(postData, options);
       console.log(response);
     } catch (error) {
-      expect(error).toBe("Error parsing response data");
+      throw new Error(error);
     }
   },
   Timeout
 );
+
+
+
