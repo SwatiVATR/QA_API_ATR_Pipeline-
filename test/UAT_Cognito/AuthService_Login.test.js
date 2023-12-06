@@ -85,7 +85,7 @@ const {
   );
   
   test(
-    "Bad request",
+    "Plain text received as response",
     async () => {
       const postData = JSON.stringify({});
       try {

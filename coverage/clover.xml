@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1701784707643" clover="3.2.0">
-  <project timestamp="1701784707643" name="All files">
+<coverage generated="1701860246066" clover="3.2.0">
+  <project timestamp="1701860246066" name="All files">
     <metrics statements="237" coveredstatements="224" conditionals="2" coveredconditionals="1" methods="49" coveredmethods="41" elements="288" coveredelements="266" complexity="0" loc="237" ncloc="237" packages="3" files="23" classes="23"/>
     <package name="QA-API-Automation-Testing">
       <metrics statements="31" coveredstatements="29" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -292,8 +292,8 @@
         <line num="10" count="136" type="stmt"/>
         <line num="11" count="136" type="stmt"/>
         <line num="12" count="136" type="stmt"/>
-        <line num="13" count="109" type="stmt"/>
-        <line num="15" count="27" type="stmt"/>
+        <line num="13" count="112" type="stmt"/>
+        <line num="15" count="24" type="stmt"/>
         <line num="20" count="136" type="stmt"/>
         <line num="21" count="0" type="stmt"/>
         <line num="24" count="136" type="stmt"/>

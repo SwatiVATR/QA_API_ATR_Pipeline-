@@ -1,11 +1,11 @@
 const {
     STAGE,
     VERSION,
-    commonOptionsPUTwithoutHeader,
+    commonOptionsPOSTwithoutHeader,
     Timeout,
   } = require("../../config");
   const options = {
-    ...commonOptionsPUTwithoutHeader,
+    ...commonOptionsPOSTwithoutHeader,
     path: `/${STAGE}/${VERSION}/services/order-authenticate`,
   };
   const NAModule = require("../../modules/NAModule");
@@ -20,7 +20,7 @@ const {
       try {
         const response = await NAModule(postData, options);
       } catch (error) {
-        throw new Error();
+        throw new Error(error);
       }
     },
     Timeout
@@ -34,7 +34,7 @@ const {
         const response = await NAModule(postData, options);
         expect(response.statusCode).toBe(500);
       } catch (error) {
-        throw new Error();
+        throw new Error(error);
       }
     },
     Timeout
@@ -51,7 +51,7 @@ const {
         const response = await NAModule(postData, options);
         expect(response.statusCode).toBe(500);
       } catch (error) {
-        throw new Error();
+        throw new Error(error);
       }
     },
     Timeout

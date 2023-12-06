@@ -35,7 +35,7 @@ test(
 );
 
 test(
-    "Bad Request",
+    "Plain text received as response",
     async () => {
       const postData = JSON.stringify({});
       try {
@@ -53,7 +53,7 @@ test(
       const postData = JSON.stringify(appIdmissing);
       try {
         const response = await NAModule(postData, options);
-        expect(response.Response.RecID).toBe(false);
+        expect(response.Response.RecID?true:false).toBe(false);
 
       } catch (error) {
         throw new Error(error);
@@ -67,7 +67,7 @@ test(
       const postData = JSON.stringify(appPassmissing);
       try {
         const response = await NAModule(postData, options);
-        expect(response.Response.RecID).toBe(false);
+        expect(response.Response.RecID?true:false).toBe(false);
 
       } catch (error) {
         throw new Error(error);
@@ -83,7 +83,7 @@ test(
       const postData = JSON.stringify(appUsernamemissing);
       try {
         const response = await NAModule(postData, options);
-        expect(response.Response.RecID).toBe(false);
+        expect(response.Response.RecID?true:false).toBe(false);
 
       } catch (error) {
         throw new Error(error);

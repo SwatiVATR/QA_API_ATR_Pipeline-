@@ -14,7 +14,7 @@ test(
     try {
       const response = await NAModule(postData, options);
     } catch (error) {
-      throw new Error();
+      throw new Error(error);
 
     }
   },

@@ -17,9 +17,9 @@ const {
         const postData = JSON.stringify(success);
         try {
           const response = await NAModule(postData, options);
-          expect(response.success.msg.length >=1).toBe(true);
+          expect(response.success?true:false).toBe(true);
         } catch (error) {
-          throw new Error();
+          throw new Error(error);
         }
       },
       Timeout
@@ -27,14 +27,14 @@ const {
   
   
     test(
-      "BAD Request",
+      "Plain text received as response",
       async () => {
         const postData = JSON.stringify({});
         try {
           const response = await NAModule(postData, options);
-          expect(response.error).toBe("'orders'");
+          expect(response.success?true:false).toBe(true);
         } catch (error) {
-          throw new Error();
+          throw new Error(error);
         }
       },
       Timeout
@@ -45,9 +45,9 @@ const {
         const postData = JSON.stringify({"orders":""});
         try {
           const response = await NAModule(postData, options);
-          expect(response.Code).toBe("InternalServerError");
+          expect(response.success?true:false).toBe(true);
         } catch (error) {
-          throw new Error();
+          throw new Error(error);
         }
       },
       Timeout

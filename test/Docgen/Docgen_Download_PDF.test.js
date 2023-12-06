@@ -49,7 +49,7 @@ const {
   );
   
   test(
-    "BAD REQUEST",
+    "Plain text received as response",
     async () => {
       const postData = JSON.stringify({
         documents: [

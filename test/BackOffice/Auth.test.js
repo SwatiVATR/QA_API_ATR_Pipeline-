@@ -6,7 +6,6 @@ const {
   wrongAppid,
   wrongappPass,
   wrongappUsername,
-  wrongrecId,
 } = require("../../RequestBodies/BackOfficeAuthBody");
 
 const options = {
@@ -22,7 +21,7 @@ test(
       const response = await NAModule(postData, options);
       expect(response.statusCode).toBe(201);
     } catch (error) {
-      throw new Error();
+      throw new Error(error);
     }
   },
   Timeout
@@ -35,20 +34,20 @@ test(
     try {
       const response = await NAModule(postData, options);
     } catch (error) {
-      throw new Error();
+      throw new Error(error);
     }
   },
   Timeout
 );
 
 test(
-  "Bad Request",
+  "Plain text received as response",
   async () => {
     const postData = JSON.stringify({});
     try {
       const response = await NAModule(postData, options);
     } catch (error) {
-      throw new Error();
+      throw new Error(error);
     }
   },
   Timeout
@@ -62,7 +61,7 @@ test(
       const response = await NAModule(postData, options);
       expect(response.statusCode).toBe(401);
     } catch (error) {
-      throw new Error();
+      throw new Error(error);
     }
   },
   Timeout
@@ -76,7 +75,7 @@ test(
       const response = await NAModule(postData, options);
       expect(response.statusCode).toBe(401);
     } catch (error) {
-      throw new Error();
+      throw new Error(error);
     }
   },
   Timeout
@@ -90,7 +89,7 @@ test(
       const response = await NAModule(postData, options);
       expect(response.statusCode).toBe(401);
     } catch (error) {
-      throw new Error();
+      throw new Error(error);
     }
   },
   Timeout
