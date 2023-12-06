@@ -110,7 +110,7 @@ test(
 );
 
 test(
-  "BAD REQUEST",
+  "Plain text received as response",
   async () => {
     const postData = JSON.stringify({});
     try {
