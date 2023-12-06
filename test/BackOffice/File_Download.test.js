@@ -1,5 +1,5 @@
 const { STAGE, VERSION, commonOptionsPOST, Timeout } = require("../../config");
-const NAModule = require("../modules/NAModule");
+const NAModule = require("../../modules/NAModule");
 const {
   success,
   authKeyMissing,
@@ -23,7 +23,7 @@ test(
       const response = await NAModule(postData, options);
       expect(response.Response.FileURL?true:false).toBe(true);
     } catch (error) {
-      throw new Error();
+      throw new Error(error);
     }
   },
   Timeout
@@ -35,7 +35,7 @@ test(
       try {
         const response = await NAModule(postData, options);
       } catch (error) {
-        throw new Error();
+        throw new Error(error);
       }
     },
     Timeout
@@ -47,7 +47,7 @@ test(
     try {
       const response = await NAModule(postData, options);
     } catch (error) {
-      throw new Error();
+      throw new Error(error);
     }
   },
   Timeout
@@ -62,7 +62,7 @@ test(
       const response = await NAModule(postData, options);
       expect(response.Response.FileURL?true:false).toBe(false);
     } catch (error) {
-      throw new Error();
+      throw new Error(error);
     }
   },
   Timeout
@@ -76,7 +76,7 @@ test(
       const response = await NAModule(postData, options);
       expect(response.Response.FileURL?true:false).toBe(false);
     } catch (error) {
-      throw new Error();
+      throw new Error(error);
     }
   },
   Timeout
@@ -90,7 +90,7 @@ test(
       const response = await NAModule(postData, options);
       expect(response.Response.FileURL?true:false).toBe(false);
     } catch (error) {
-      throw new Error();
+      throw new Error(error);
     }
   },
   Timeout

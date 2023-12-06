@@ -4,7 +4,7 @@ const {
     commonOptionsGETwithoutHeader,
     Timeout,
   } = require("../../config");
-  const COR310TemplateModule = require("../../RequestBodies/COR310TemplateModule");
+  const COR310TemplateModule = require("../../modules/COR310TemplateModule");
   
   test(
     "Api success",
