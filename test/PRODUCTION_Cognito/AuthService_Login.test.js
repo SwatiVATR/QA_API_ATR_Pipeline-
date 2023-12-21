@@ -1,3 +1,5 @@
+const dotenv = require('dotenv');
+dotenv.config();
 const {
     PRODSTAGE,
     VERSION,
@@ -5,6 +7,7 @@ const {
     Timeout,
     PRODBASE
   } = require("../../config");
+  
   const NAModule = require("../../modules/NAModule");
   
   const options = {
@@ -18,8 +21,8 @@ const {
     "API Success",
     async () => {
       const postData = JSON.stringify({
-        username: "pdowning@actiontitleresearch.com",
-        password: "StupidPortal#!1",
+        username: process.env.SIGN_IN_USERNAME1,
+        password: process.env.SIGN_IN_PASSWORD,
       });
       try {
         const response = await NAModule(postData, options);
@@ -35,7 +38,7 @@ const {
     async () => {
       const postData = JSON.stringify({
         username: "",
-        password: "StupidPortal#!1",
+        password: process.env.SIGN_IN_PASSWORD,
       });
       try {
         const response = await NAModule(postData, options);
@@ -50,7 +53,7 @@ const {
     "password is missing ",
     async () => {
       const postData = JSON.stringify({
-        username: "pdowning@actiontitleresearch.com",
+        username:  process.env.SIGN_IN_USERNAME1,
         password: "",
       });
       try {
@@ -66,8 +69,8 @@ const {
     "wrong username",
     async () => {
       const postData = JSON.stringify({
-        username: "pdossssswning@actiontitleresearch.com",
-        password: "StupidPortal#!1",
+        username:  "wsdsd"+process.env.SIGN_IN_USERNAME1+"ejd",
+        password:  process.env.SIGN_IN_PASSWORD,
       });
       try {
         const response = await NAModule(postData, options);
@@ -82,8 +85,8 @@ const {
     "wrong password",
     async () => {
       const postData = JSON.stringify({
-        username: "pdowning@actiontitleresearch.com",
-        password: "StupidPddddortal#!1",
+        username: process.env.SIGN_IN_USERNAME1,
+        password:  process.env.SIGN_IN_PASSWORD+"sjfeusfeusgfuw",
       });
       try {
         const response = await NAModule(postData, options);
@@ -99,8 +102,8 @@ const {
     "username and password both are incorrect",
     async () => {
       const postData = JSON.stringify({
-        username: "pdowddddddddning@actiontitleresearch.com",
-        password: "StupidPddddddortal#!1",
+        username:  process.env.SIGN_IN_USERNAME1+"sfdbfdbvd",
+        password: process.env.SIGN_IN_PASSWORD+"sjfeusfeusgfuw",
       });
       try {
         const response = await NAModule(postData, options);

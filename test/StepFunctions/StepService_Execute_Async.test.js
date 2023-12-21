@@ -1,3 +1,5 @@
+const dotenv = require('dotenv');
+dotenv.config();
 const {BASE, STAGE, VERSION, OrderAuthenticateToken, Timeout } = require("../../config");
 const NAModule = require("../../modules/NAModule");
 
@@ -11,12 +13,15 @@ const options = {
   path: `/${STAGE}/${VERSION}/services/async/MyStandardStateMachine`,
 };
 
+
+const USER=process.env.USER1
+const PASSWORD=process.env.PASSWORD1
 test(
   "API Success",
   async () => {
     const postData = JSON.stringify({
-      username: "pat3@actiontitleresearch.com",
-      password: "Starbuxstarbux1!",
+      username: USER,
+      password: PASSWORD,
     });
     try {
       const response = await NAModule(postData, options);

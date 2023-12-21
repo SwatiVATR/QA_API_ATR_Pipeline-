@@ -1,3 +1,5 @@
+const dotenv = require('dotenv');
+dotenv.config();
 const {
     STAGE,
     VERSION,
@@ -9,13 +11,14 @@ const {
     path: `/${STAGE}/${VERSION}/services/order-authenticate`,
   };
   const NAModule = require("../../modules/NAModule");
-  
+  const USERNAME=process.env.ORDER_AUTH_USERNAME
+  const PASSWORD=process.env.ORDER_AUTH_PASSWORD
   test(
     "API Success",
     async () => {
       const postData = JSON.stringify({
-        username: "a855b49b-6d5e-4145-a0a1-ecf393c017ce",
-        password: "Msingh@123",
+        username: USERNAME,
+        password: PASSWORD,
       });
       try {
         const response = await NAModule(postData, options);
@@ -29,7 +32,7 @@ const {
   test(
     "Username is missing",
     async () => {
-      const postData = JSON.stringify({ username: "", password: "Msingh@123" });
+      const postData = JSON.stringify({ username: "", password: PASSWORD });
       try {
         const response = await NAModule(postData, options);
         expect(response.statusCode).toBe(500);
@@ -44,7 +47,7 @@ const {
     "Password is missing",
     async () => {
       const postData = JSON.stringify({
-        username: "a855b49b-6d5e-4145-a0a1-ecf393c017ce",
+        username: USERNAME,
         password: "",
       });
       try {

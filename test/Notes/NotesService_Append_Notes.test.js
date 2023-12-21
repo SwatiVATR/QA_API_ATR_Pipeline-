@@ -17,7 +17,7 @@ const {
       const postData = JSON.stringify(success);
       try {
         const response = await NAModule(postData, options);
-        expect(response.success.body).toBe("Note saved successfully");
+        expect(response.success.statusCode).toBe("Note saved successfully");
       } catch (error) {
         throw new Error();
       }

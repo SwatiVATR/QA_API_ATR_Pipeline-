@@ -1,3 +1,5 @@
+const dotenv = require('dotenv');
+dotenv.config();
 const {
     STAGE,
     VERSION,
@@ -11,12 +13,15 @@ const {
     ...commonOptionsPOSTwithoutHeader,
   };
   
+  const USER1=process.env.SIGN_IN_DEV_USERNAME1
+  const PASSWORD1=process.env.SIGN_IN_DEV_PASSWORD
+
   test(
     "API Success",
     async () => {
       const postData = JSON.stringify({
-        "username": "title@bluelandtitle.com",
-        "password": "460@Bergen"
+        "username": USER1,
+        "password": PASSWORD1
       });
       try {
         const response = await NAModule(postData, options);
@@ -34,8 +39,8 @@ const {
     "Wrong username",
     async () => {
       const postData = JSON.stringify({
-        "username": "tisdsdstle@bluelandtitle.com",
-        "password": "460@Bergen"
+        "username": "ti"+USER1,
+        "password": PASSWORD1
       });
       try {
         const response = await NAModule(postData, options);
@@ -52,8 +57,8 @@ const {
     "Wrong password",
     async () => {
       const postData = JSON.stringify({
-        "username": "title@bluelandtitle.com",
-        "password": "46sdsd0@Bergen"
+        "username": USER1,
+        "password": "46sdsd"+PASSWORD1
       });
       try {
         const response = await NAModule(postData, options);
@@ -70,8 +75,8 @@ const {
     "Wrong username and password",
     async () => {
       const postData = JSON.stringify({
-        "username": "title@bluelandtitle.com",
-        "password": "46sdsd0@Bergen"
+        "username": "ti"+USER1,
+        "password": "46sdsd"+PASSWORD1
       });
       try {
         const response = await NAModule(postData, options);
