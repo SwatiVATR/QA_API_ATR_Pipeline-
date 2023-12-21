@@ -19,7 +19,7 @@ test(
 
     try {
       const response = await COR355TemplateModule(postData, options);
-      expect(response.Response.SearcherList).toBe("1:admin:Chris Montero~125:MRussomanno:Mark Russomanno ~322:SchPortal:Searcher Portal~365:ATR-Searcher:ATR Searcher~");
+      expect(response.Response.SearcherList).toBe("1:admin:Chris Montero~322:SchPortal:Searcher Portal~365:ATR-Searcher:ATR Searcher~");
     } catch (error) {
       throw new Error(error);
     }

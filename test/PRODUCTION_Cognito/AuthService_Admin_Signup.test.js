@@ -1,3 +1,5 @@
+const dotenv = require('dotenv');
+dotenv.config();
 const {
     STAGE,
     VERSION,
@@ -9,12 +11,14 @@ const {
     path: `/${STAGE}/${VERSION}/services/invoker/cognito/signup-dev`,
     ...commonOptionsPOSTwithoutHeader,
   };
+
+  const PASSWORD=process.env.PASSWORD1
   test(
     "API Success",
     async () => {
       const postData = JSON.stringify({
         username: "sdddsssssddoglu@actiontitleresearch.com",
-        password: "Starbuxstarbux1!",
+        password: PASSWORD,
       });
       try {
         const response = await NAModule(postData, options);
@@ -30,7 +34,7 @@ const {
     async () => {
       const postData = JSON.stringify({
         username: "sdddssssoglu@actiontitleresearch.com",
-        password: "Starbuxstarbux1!",
+        password:PASSWORD,
       });
       try {
         const response = await NAModule(postData, options);
@@ -46,7 +50,7 @@ const {
     async () => {
       const postData = JSON.stringify({
         username: "",
-        password: "Starbuxstarbux1!",
+        password: PASSWORD,
       });
       try {
         const response = await NAModule(postData, options);

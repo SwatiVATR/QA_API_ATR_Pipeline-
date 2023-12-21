@@ -1,11 +1,13 @@
 const https = require("https");
 const fs = require("fs");
+const dotenv = require('dotenv');
+dotenv.config();
 
 const { STAGE, VERSION, commonOptionsPOSTwithoutHeader } = require("./config");
 
 const data1 = JSON.stringify({
-  username: "title@bluelandtitle.com",
-  password: "460@Bergen",
+  username: process.env.SIGN_IN_DEV_USERNAME1,
+  password:  process.env.SIGN_IN_DEV_PASSWORD,
 });
 
 const options1 = {
@@ -45,8 +47,8 @@ req1.end();
 // Function to call the second API
 function callSecondAPI() {
   const data2 = JSON.stringify({
-    username: "pdowning@actiontitleresearch.com",
-    password: "StupidPortal#!1",
+    username: process.env.SIGN_IN_USERNAME1,
+    password:  process.env.SIGN_IN_PASSWORD,
   });
 
   const options2 = {

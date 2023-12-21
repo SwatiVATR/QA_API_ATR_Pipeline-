@@ -1,3 +1,5 @@
+const dotenv = require('dotenv');
+dotenv.config();
 const {
     STAGE,
     VERSION,
@@ -11,15 +13,17 @@ const {
     ...commonOptionsPOSTwithoutHeader,
   };
   
+  const SCOUT_EMAIL=process.env.SIGNAL_SCOUT_EMAIL
+  const ACTION_EMAIL=process.env.ACTION_TITLE_EMAIL
   test(
     "API Success",
     async () => {
       const postData = JSON.stringify({
         sender: "No-reply@actioncentral.com",
-        recipient: ["swati@signalscout.io"],
+        recipient: [SCOUT_EMAIL],
         template: "SRNotification",
         template_data:
-          '{ "request_type":"Rush", "client_order_id": "OrderNY-ABC_02", "email": "sverma@actiontitleresearch.com"}',
+          `{ "request_type":"Rush", "client_order_id": "OrderNY-ABC_02", "email": ${ACTION_EMAIL}}`,
       });
       try {
         const response = await NAModule(postData, options);
@@ -37,10 +41,10 @@ const {
     async () => {
       const postData = JSON.stringify({
         sender: "",
-        recipient: ["swati@signalscout.io"],
+        recipient: [SCOUT_EMAIL],
         template: "SRNotification",
         template_data:
-          '{ "request_type":"Rush", "client_order_id": "OrderNY-ABC_02", "email": "sverma@actiontitleresearch.com"}',
+        `{ "request_type":"Rush", "client_order_id": "OrderNY-ABC_02", "email": ${ACTION_EMAIL}}`,
       });
       try {
         const response = await NAModule(postData, options);
@@ -62,7 +66,7 @@ const {
         recipient: [""],
         template: "SRNotification",
         template_data:
-          '{ "request_type":"Rush", "client_order_id": "OrderNY-ABC_02", "email": "sverma@actiontitleresearch.com"}',
+        `{ "request_type":"Rush", "client_order_id": "OrderNY-ABC_02", "email": ${ACTION_EMAIL}}`,
       });
       try {
         const response = await NAModule(postData, options);
@@ -81,10 +85,10 @@ const {
     async () => {
       const postData = JSON.stringify({
         sender: "No-reply@actioncentral.com",
-        recipient: ["swati@signalscout.io"],
+        recipient: [SCOUT_EMAIL],
         template: "",
         template_data:
-          '{ "request_type":"Rush", "client_order_id": "OrderNY-ABC_02", "email": "sverma@actiontitleresearch.com"}',
+        `{ "request_type":"Rush", "client_order_id": "OrderNY-ABC_02", "email": ${ACTION_EMAIL}}`,
       });
       try {
         const response = await NAModule(postData, options);
@@ -100,10 +104,10 @@ const {
     async () => {
       const postData = JSON.stringify({
         sender: "No-reply@actioncentral.com",
-        recipient: ["swati@signalscout.io"],
+        recipient: [SCOUT_EMAIL],
         template: "wdwdwd",
         template_data:
-          '{ "request_type":"Rush", "client_order_id": "OrderNY-ABC_02", "email": "sverma@actiontitleresearch.com"}',
+        `{ "request_type":"Rush", "client_order_id": "OrderNY-ABC_02", "email": ${ACTION_EMAIL}}`,
       });
       try {
         const response = await NAModule(postData, options);
@@ -120,7 +124,7 @@ const {
     async () => {
       const postData = JSON.stringify({
         sender: "No-reply@actioncentral.com",
-        recipient: ["swati@signalscout.io"],
+        recipient: [SCOUT_EMAIL],
         template: "SRNotification",
         template_data: "",
       });
@@ -140,7 +144,7 @@ const {
     async () => {
       const postData = JSON.stringify({
         sender: "No-reply@actioncentral.com",
-        recipient: ["swati@signalscout.io"],
+        recipient: [SCOUT_EMAIL],
         template: "SRNotification",
         template_data: "sadsdsd",
       });

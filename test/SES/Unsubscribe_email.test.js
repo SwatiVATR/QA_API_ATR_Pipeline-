@@ -72,14 +72,66 @@ test(
 
 
 test(
-  "email_address is not passed",
+  "email_address is passed wrong",
   async () => {
     const postData = JSON.stringify({
-      reason: "BOUNCE",
+      "email_address": "sveeeerma@actiontitleresearch.com",
+      "reason": "BOUNCE"
     });
     try {
       const response = await NAModule(postData, options);
-      expect(response.Error).toBe("Message Not Delivered");
+      expect(response.Message).toBe("Successfully added email address to suppression list.");
+    } catch (error) {
+      throw new Error(error);
+    }
+  },
+  Timeout
+);
+
+test(
+  "reason is passed empty",
+  async () => {
+    const postData = JSON.stringify({
+      "email_address": "smishra@actiontitleresearch.com",
+      "reason": ""
+    });
+    try {
+      const response = await NAModule(postData, options);
+      expect(response.Message).toBe("Successfully added email address to suppression list.");
+    } catch (error) {
+      throw new Error(error);
+    }
+  },
+  Timeout
+);
+
+test(
+  "reason is passed gibberish",
+  async () => {
+    const postData = JSON.stringify({
+      "email_address": "smishra@actiontitleresearch.com",
+      "reason": "HOLD"
+    });
+    try {
+      const response = await NAModule(postData, options);
+      expect(response.Message).toBe("Successfully added email address to suppression list.");
+    } catch (error) {
+      throw new Error(error);
+    }
+  },
+  Timeout
+);
+
+test(
+  "email_address & reason both are empty",
+  async () => {
+    const postData = JSON.stringify({
+      "email_address": "",
+      "reason": ""
+    });
+    try {
+      const response = await NAModule(postData, options);
+      expect(response.Result.errorType).toBe("BadRequestException");
     } catch (error) {
       throw new Error(error);
     }

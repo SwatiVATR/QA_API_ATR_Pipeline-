@@ -1,3 +1,5 @@
+const dotenv = require('dotenv');
+dotenv.config();
 const {
     BASE,
     STAGE,
@@ -16,13 +18,15 @@ const {
     },
     path: `/${STAGE}/${VERSION}/services/sync/MyExpressStateMachine`,
   };
-  
+
+  const USER=process.env.USER1
+  const PASSWORD=process.env.PASSWORD1
   test(
     "API Success",
     async () => {
       const postData = JSON.stringify({
-        username: "pat3@actiontitleresearch.com",
-        password: "Starbuxstarbux1!",
+        username: USER,
+        password: PASSWORD,
       });
       try {
         const response = await NAModule(postData, options);
@@ -37,8 +41,8 @@ const {
     "Wrong username",
     async () => {
       const postData = JSON.stringify({
-        "username": "pat3@acsdsdwdtiontitleresearch.com",
-        "password": "Starbuxstarbux1!"
+        "username": "io"+USER+"djd",
+        "password": PASSWORD
       });
       try {
         const response = await NAModule(postData, options);
