@@ -13,8 +13,8 @@ const {
     ...commonOptionsPOSTwithoutHeader,
   };
   
-  const USER1=process.env.SIGN_IN_DEV_USERNAME1
-  const PASSWORD1=process.env.SIGN_IN_DEV_PASSWORD
+  const USER1=process.env.SWATI_USER_EMAIL
+  const PASSWORD1=process.env.SWATI_PASSWORD
 
   test(
     "API Success",

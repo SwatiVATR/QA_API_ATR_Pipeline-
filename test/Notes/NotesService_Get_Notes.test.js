@@ -54,8 +54,8 @@ test(
         };
         try {
             const response = await NAModule(postData, options);
-            expect(response.success.txId).toBe("");
-        } catch (error) {
+            expect(response.success.errorMessage).toBeTruthy();
+                } catch (error) {
             throw new Error(error);
         }
     },

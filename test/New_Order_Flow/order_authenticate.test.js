@@ -11,8 +11,8 @@ const {
     path: `/${STAGE}/${VERSION}/services/order-authenticate`,
   };
   const NAModule = require("../../modules/NAModule");
-  const USERNAME=process.env.ORDER_AUTH_USERNAME
-  const PASSWORD=process.env.ORDER_AUTH_PASSWORD
+  const USERNAME=process.env.SWATI_USER_EMAIL
+  const PASSWORD=process.env.SWATI_PASSWORD
   test(
     "API Success",
     async () => {

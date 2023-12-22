@@ -14,8 +14,8 @@ const options = {
 };
 
 
-const USER=process.env.USER1
-const PASSWORD=process.env.PASSWORD1
+const USER=process.env.SWATI_USER_EMAIL
+const PASSWORD=process.env.SWATI_PASSWORD
 test(
   "API Success",
   async () => {

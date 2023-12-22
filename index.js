@@ -6,8 +6,8 @@ dotenv.config();
 const { STAGE, VERSION, commonOptionsPOSTwithoutHeader } = require("./config");
 
 const data1 = JSON.stringify({
-  username: process.env.SIGN_IN_DEV_USERNAME1,
-  password:  process.env.SIGN_IN_DEV_PASSWORD,
+  username: process.env.SWATI_USER_EMAIL,
+  password:  process.env.SWATI_PASSWORD,
 });
 
 const options1 = {
