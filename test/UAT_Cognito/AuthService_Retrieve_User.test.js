@@ -11,7 +11,7 @@ const {
     "Api success",
     async () => {
       const options = {
-        path: `/${STAGE}/${VERSION}/services/invoker/cognito/getUser?email=title@bluelandtitle.com`,
+        path: `/${STAGE}/${VERSION}/services/invoker/cognito/getUser?email=sverma@actiontitleresearch.com`,
         ...commonOptionsGETwithoutHeader,
       };
       try {

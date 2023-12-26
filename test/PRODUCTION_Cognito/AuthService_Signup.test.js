@@ -11,8 +11,8 @@ const {
     path: `/${STAGE}/${VERSION}/services/invoker/cognito/signup`,
     ...commonOptionsPOSTwithoutHeader,
   };
-const user=process.env.SIGN_IN_DEV_USERNAME1
-const password=process.env.SIGN_IN_DEV_PASSWORD
+const user=process.env.SWATI_USER_EMAIL
+const password=process.env.SWATI_PASSWORD
   test(
     "API Success",
     async () => {

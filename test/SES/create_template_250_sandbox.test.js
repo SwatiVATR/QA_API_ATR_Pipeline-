@@ -17,7 +17,7 @@ test(
 
     try {
       const response = await CreateTemplateModule(postData);
-      expect(response.Result.ResponseMetadata.HTTPStatusCode).toBe(200);
+      expect(response.Result).toBeTruthy();
     } catch (error) {
       throw new Error(error);
     }

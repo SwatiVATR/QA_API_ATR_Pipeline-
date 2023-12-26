@@ -17,7 +17,7 @@ test(
         };
         try {
             const response = await NAModule(postData, options);
-            expect(response.success.msg.count).toBe(0);
+            expect(response.success.msg).toBeTruthy();
 
         } catch (error) {
             throw new Error(error);

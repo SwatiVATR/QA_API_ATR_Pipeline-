@@ -1,3 +1,5 @@
+const dotenv = require('dotenv');
+dotenv.config();
 const { STAGE, VERSION, commonOptionsPOST, Timeout } = require("../../config");
 const NAModule = require("../../modules/NAModule");
 
@@ -5,12 +7,12 @@ const options = {
   path: `/${STAGE}/${VERSION}/services/unsubscribe-email`,
   ...commonOptionsPOST,
 };
-
+const EMAIL=process.env.SWATI_USER_EMAIL
 test(
   "API Success",
   async () => {
     const postData = JSON.stringify({
-      email_address: "smishra@actiontitleresearch.com",
+      email_address: EMAIL,
       reason: "BOUNCE",
     });
     try {
@@ -75,7 +77,7 @@ test(
   "email_address is passed wrong",
   async () => {
     const postData = JSON.stringify({
-      "email_address": "sveeeerma@actiontitleresearch.com",
+      "email_address": "sv"+EMAIL+"szds",
       "reason": "BOUNCE"
     });
     try {
@@ -92,7 +94,7 @@ test(
   "reason is passed empty",
   async () => {
     const postData = JSON.stringify({
-      "email_address": "smishra@actiontitleresearch.com",
+      "email_address": EMAIL,
       "reason": ""
     });
     try {
@@ -109,7 +111,7 @@ test(
   "reason is passed gibberish",
   async () => {
     const postData = JSON.stringify({
-      "email_address": "smishra@actiontitleresearch.com",
+      "email_address":EMAIL,
       "reason": "HOLD"
     });
     try {

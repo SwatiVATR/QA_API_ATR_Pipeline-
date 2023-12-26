@@ -12,7 +12,7 @@ const {
     ...commonOptionsPOSTwithoutHeader,
   };
 
-  const PASSWORD=process.env.PASSWORD1
+  const PASSWORD=process.env.SWATI_PASSWORD
   test(
     "API Success",
     async () => {

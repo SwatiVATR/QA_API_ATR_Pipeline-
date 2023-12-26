@@ -1,3 +1,5 @@
+const dotenv = require('dotenv');
+dotenv.config();
 const {
     STAGE,
     VERSION,
@@ -7,11 +9,12 @@ const {
 const NAModule = require("../../modules/NAModule");
 
 const postData = ""
+const EMAIL=process.env.SWATI_USER_EMAIL
 test(
     "API Success",
     async () => {
         const options = {
-            path: `/${STAGE}/${VERSION}/user?email=sverma@actiontitleresearch.com`,
+            path: `/${STAGE}/${VERSION}/user?email=${EMAIL}`,
             ...commonOptionsGET,
         };
         try {
@@ -28,7 +31,7 @@ test(
     "invalid email address passed",
     async () => {
         const options = {
-            path: `/${STAGE}/${VERSION}/user?email=sadwadwasdw@actiontitlerwqaswdesearch.com`,
+            path: `/${STAGE}/${VERSION}/user?email=ad${EMAIL}df`,
             ...commonOptionsGET,
         };
         try {
@@ -44,7 +47,7 @@ test(
     "No email is passed",
     async () => {
         const options = {
-            path: `/${STAGE}/${VERSION}/user?email=sadwadwasdw@actiontitlerwqaswdesearch.com`,
+            path: `/${STAGE}/${VERSION}/user?email=`,
             ...commonOptionsGET,
         };
         try {

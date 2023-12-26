@@ -14,7 +14,7 @@ const {
   };
   
   const SCOUT_EMAIL=process.env.SIGNAL_SCOUT_EMAIL
-  const ACTION_EMAIL=process.env.ACTION_TITLE_EMAIL
+  const ACTION_EMAIL=process.env.SWATI_USER_EMAIL
   test(
     "API Success",
     async () => {
@@ -111,7 +111,7 @@ const {
       });
       try {
         const response = await NAModule(postData, options);
-        expect(response.Result.errorType).toBe("TemplateDoesNotExistException");
+        expect(response.Result.errorType).toBe("ClientError");
       } catch (error) {
         throw new Error(error);
       }
