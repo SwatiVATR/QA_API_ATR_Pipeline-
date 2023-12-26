@@ -12,7 +12,6 @@ const {
 const NAModule = require("../../modules/NAModule");
 const { success } = require("../../RequestBodies/NotesUpdateBody");
 
-
 test(
     "API Success",
     async () => {
