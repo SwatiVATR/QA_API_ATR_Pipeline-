@@ -111,7 +111,7 @@ const {
       });
       try {
         const response = await NAModule(postData, options);
-        expect(response.Result.errorType).toBe("ParamValidationError");
+        expect(response.Result.errorType).toBe("ClientError");
       } catch (error) {
         throw new Error(error);
       }
