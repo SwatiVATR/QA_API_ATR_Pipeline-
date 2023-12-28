@@ -21,7 +21,7 @@ const {
       try {
         const response = await NAModule(postData, options);
         expect(response.success).toBe(
-          "Due date and note updated successfully."
+          "An email with the updated details has been shared with the user."
         );
       } catch (error) {
         throw new Error(error);
