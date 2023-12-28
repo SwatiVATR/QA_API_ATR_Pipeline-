@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1703575174873" clover="3.2.0">
-  <project timestamp="1703575174874" name="All files">
-    <metrics statements="226" coveredstatements="216" conditionals="0" coveredconditionals="0" methods="37" coveredmethods="31" elements="263" coveredelements="247" complexity="0" loc="226" ncloc="226" packages="3" files="24" classes="24"/>
+<coverage generated="1703773278500" clover="3.2.0">
+  <project timestamp="1703773278500" name="All files">
+    <metrics statements="227" coveredstatements="217" conditionals="0" coveredconditionals="0" methods="37" coveredmethods="31" elements="264" coveredelements="248" complexity="0" loc="227" ncloc="227" packages="3" files="24" classes="24"/>
     <package name="QA-API-Automation-Testing">
       <metrics statements="31" coveredstatements="29" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="config.js" path="/home/devtrust/Project/QA-API-Automation-Testing/config.js">
@@ -40,7 +40,7 @@
       </file>
     </package>
     <package name="QA-API-Automation-Testing.RequestBodies">
-      <metrics statements="95" coveredstatements="95" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <metrics statements="96" coveredstatements="96" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="BackOfficeAuthBody.js" path="/home/devtrust/Project/QA-API-Automation-Testing/RequestBodies/BackOfficeAuthBody.js">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
@@ -142,16 +142,17 @@
         <line num="3" count="1" type="stmt"/>
       </file>
       <file name="SpecialRequestBody.js" path="/home/devtrust/Project/QA-API-Automation-Testing/RequestBodies/SpecialRequestBody.js">
-        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
-        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
         <line num="17" count="1" type="stmt"/>
-        <line num="22" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
         <line num="28" count="1" type="stmt"/>
-        <line num="33" count="1" type="stmt"/>
-        <line num="37" count="1" type="stmt"/>
-        <line num="42" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
+        <line num="48" count="1" type="stmt"/>
       </file>
       <file name="StatusUpdateJobsBody.js" path="/home/devtrust/Project/QA-API-Automation-Testing/RequestBodies/StatusUpdateJobsBody.js">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -280,7 +281,7 @@
         <line num="5" count="215" type="stmt"/>
         <line num="6" count="215" type="stmt"/>
         <line num="7" count="215" type="stmt"/>
-        <line num="8" count="269" type="stmt"/>
+        <line num="8" count="225" type="stmt"/>
         <line num="10" count="215" type="stmt"/>
         <line num="11" count="215" type="stmt"/>
         <line num="12" count="215" type="stmt"/>
@@ -299,7 +300,7 @@
         <line num="5" count="6" type="stmt"/>
         <line num="6" count="6" type="stmt"/>
         <line num="8" count="6" type="stmt"/>
-        <line num="9" count="13" type="stmt"/>
+        <line num="9" count="12" type="stmt"/>
         <line num="12" count="6" type="stmt"/>
         <line num="13" count="6" type="stmt"/>
         <line num="14" count="6" type="stmt"/>
