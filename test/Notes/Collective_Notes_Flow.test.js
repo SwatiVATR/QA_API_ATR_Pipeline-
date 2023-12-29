@@ -66,7 +66,7 @@ it('API Success for service submit notes of not ATR Members',
             reporter.startStep("Values passed:" + JSON.stringify(postData));
             const response = await NAModule(postData, options);
             expect(response.message).toBe(
-                "Notes have been submitted successfully, and an email has been sent to both the existing user and the non-ATR members."
+                "Notes have been submitted successfully and an email has been sent to both the existing user and the non-ATR members."
             );
             reporter.endStep();
             reporter.description("Response message from API:"+response.message)
@@ -92,7 +92,7 @@ it('API Success for service submit notes of ATR Members',
             reporter.startStep("Values passed:" + JSON.stringify(postData));
             const response = await NAModule(postData, options);
             expect(response.message).toBe(
-                "Notes have been submitted successfully, and an email has been sent to ATR Support."
+                "Notes have been submitted successfully and an email has been sent to ATR Support."
             );
             reporter.endStep();
             reporter.description("Response message from API:"+response.message)
