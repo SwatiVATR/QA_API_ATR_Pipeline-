@@ -17,7 +17,7 @@ test(
     try {
       const response = await NAModule(postData, options);
       expect(response.message).toBe(
-        "Notes have been submitted successfully, and an email has been sent to both the existing user and the non-ATR members."
+        "Notes have been submitted successfully and an email has been sent to both the existing user and the non-ATR members."
       );
     } catch (error) {
       throw new Error(error);
@@ -36,7 +36,7 @@ test(
     try {
       const response = await NAModule(postData, options);
       expect(response.message).toBe(
-        "Notes have been submitted successfully, and an email has been sent to ATR Support."
+        "Notes have been submitted successfully and an email has been sent to ATR Support."
       );
     } catch (error) {
       throw new Error(error);
