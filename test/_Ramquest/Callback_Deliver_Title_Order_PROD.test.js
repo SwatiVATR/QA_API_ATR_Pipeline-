@@ -5,48 +5,42 @@ const options = {
   path: `/${STAGE}/${VERSION}/services/normalize/ramquest`,
   ...commonOptionsPOST,
 };
-
-test(
-  "transactionId is None",
-  async () => {
-    const postData = JSON.stringify(TransactionId_None);
-    try {
-      const response = await NAModule(postData, options);
+it('transactionId is None', async () => {
+  const postData = JSON.stringify(TransactionId_None);
+  try {
+    reporter.startStep("Values passed:" + JSON.stringify(postData));
+    const response = await NAModule(postData, options);
       expect(response.error).toBe("transactionId");
-    } catch (error) {
+      reporter.endStep();
+  } catch (error) {
       throw new Error(error);
-    }
-  },
-  Timeout
-);
+  }
+},Timeout)
 
+it('transactionId passed with special characters', async () => {
+  const postData = JSON.stringify(TransactionId_SpecialCharacters);
+  try {
+    reporter.startStep("Values passed:" + JSON.stringify(postData));
+    const response = await NAModule(postData, options);
+      expect(response.error).toBe("transactionId");
+      reporter.endStep();
+  } catch (error) {
+      throw new Error(error);
+  }
+},Timeout)
+it('transactionId is empty', async () => {
+  const postData = JSON.stringify(TransactionId_Empty);
+  try {
+    reporter.startStep("Values passed:" + JSON.stringify(postData));
+    const response = await NAModule(postData, options);
+      expect(response.error).toBe("transactionId");
+      reporter.endStep();
+  } catch (error) {
+      throw new Error(error);
+  }
+},Timeout)
 
-test(
-    "transactionId passed with special characters",
-    async () => {
-      const postData = JSON.stringify(TransactionId_SpecialCharacters);
-      try {
-        const response = await NAModule(postData, options);
-        expect(response.error).toBe("transactionId");
-      } catch (error) {
-        throw new Error(error);
-      }
-    },
-    Timeout
-  );
   
-  test(
-    "transactionId is empty",
-    async () => {
-      const postData = JSON.stringify(TransactionId_Empty);
-      try {
-        const response = await NAModule(postData, options);
-        expect(response.error).toBe("transactionId");
-      } catch (error) {
-        throw new Error(error);
-      }
-    },
-    Timeout
-  );
+
 
 

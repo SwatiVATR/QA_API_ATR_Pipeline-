@@ -6,47 +6,39 @@ const options = {
   path: `/${STAGE}/${VERSION}/services/normalize/qualia?json`,
   ...commonOptionsPOST,
 };
-
-test(
-  "API Success",
-  async () => {
-    const postData = JSON.stringify(NormalizeQualiaBody);
-    try {
-      const response = await NAModule(postData, options);
+it('API Success', async () => {
+  const postData = JSON.stringify(NormalizeQualiaBody);
+  try {
+    reporter.startStep("Values passed:" + JSON.stringify(postData));
+    const response = await NAModule(postData, options);
       expect(response.success.credentials.agencyPortalId.length >= 1).toBe(
         true
       );
-    } catch (error) {
+      reporter.endStep();
+  } catch (error) {
       throw new Error(error);
-    }
-  },
-  Timeout
-);
-
-test(
-    "order is missing",
-    async () => {
-      const postData = JSON.stringify(NormalizeQualiaWithoutOrderBody);
-      try {
-        const response = await NAModule(postData, options);
-        expect(response.error).toBe("Invalid data or url or filepath argument: \nExpecting value: line 1 column 1 (char 0)");
-      } catch (error) {
-        throw new Error(error);
-      }
-    },
-    Timeout
-  );
-
-  test(
-    "BAD REQUEST",
-    async () => {
-      const postData = JSON.stringify(BadBody);
-      try {
-        const response = await NAModule(postData, options);
+  }
+},Timeout)
+it('order is missing', async () => {
+  const postData = JSON.stringify(NormalizeQualiaWithoutOrderBody);
+  try {
+    reporter.startStep("Values passed:" + JSON.stringify(postData));
+    const response = await NAModule(postData, options);
+      expect(response.error).toBe("Invalid data or url or filepath argument: \nExpecting value: line 1 column 1 (char 0)");
+ 
+      reporter.endStep();
+  } catch (error) {
+      throw new Error(error);
+  }
+},Timeout)
+it('BAD REQUEST', async () => {
+  const postData = JSON.stringify(BadBody);
+  try {
+    reporter.startStep("Values passed:" + JSON.stringify(postData));
+    const response = await NAModule(postData, options);
         expect(response.error).toBe("'order'");
-      } catch (error) {
-        throw new Error(error);
-      }
-    },
-    Timeout
-  );
+      reporter.endStep();
+  } catch (error) {
+      throw new Error(error);
+  }
+},Timeout)

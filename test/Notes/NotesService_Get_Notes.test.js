@@ -8,56 +8,57 @@ const NAModule = require("../../modules/NAModule");
 
 
 const postData = JSON.stringify({});
-
-test(
-    "API Success",
+it('API Success',
     async () => {
         const options = {
             path: `/${STAGE}/${VERSION}/services/notes/159306/0`,
             ...commonOptionsGET,
         };
         try {
+            reporter.startStep("Values passed:" + JSON.stringify(postData));
             const response = await NAModule(postData, options);
-            expect( response.success.txId).toBe(
+            expect(response.success.txId).toBe(
                 "159306"
             );
+            reporter.endStep();
         } catch (error) {
             throw new Error(error);
         }
     },
     Timeout
-);
+)
 
-
-test(
-    "Special characters passed to txId",
+it('Special characters passed to txId',
     async () => {
         const options = {
             path: `/${STAGE}/${VERSION}/services/notes/@@@@@/0`,
             ...commonOptionsGET,
         };
         try {
+            reporter.startStep("Values passed:" + JSON.stringify(postData));
             const response = await NAModule(postData, options);
             expect(response.success.txId).toBe("@@@@@");
+            reporter.endStep();
         } catch (error) {
             throw new Error(error);
         }
     },
     Timeout
-);
-test(
-    "txId is not passed",
+)
+it('txId is not passed',
     async () => {
         const options = {
             path: `/${STAGE}/${VERSION}/services/notes//0`,
             ...commonOptionsGET,
         };
         try {
+            reporter.startStep("Values passed:" + JSON.stringify(postData));
             const response = await NAModule(postData, options);
             expect(response.success).toBeTruthy();
-                } catch (error) {
+            reporter.endStep();
+        } catch (error) {
             throw new Error(error);
         }
     },
     Timeout
-);
+)
