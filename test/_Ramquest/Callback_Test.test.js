@@ -12,19 +12,16 @@ const options = {
   },
 
 };
-
-test(
-  "API Success",
-  async () => {
-    const postData = JSON.stringify(CallbackOrderRamquestBody);
-    try {
-      const response = await HttpModule(postData, options);
+it('API Success', async () => {
+  const postData = JSON.stringify(CallbackOrderRamquestBody);
+  try {
+    reporter.startStep("Values passed:" + JSON.stringify(postData));
+    const response = await HttpModule(postData, options);
       expect(response.statusCode).toBe(500);
-    } catch (error) {
+      reporter.endStep();
+  } catch (error) {
       throw new Error(error);
-    }
-  },
-  Timeout
-);
+  }
+},Timeout)
 
 

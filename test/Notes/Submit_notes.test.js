@@ -5,213 +5,231 @@ const options = {
   path: `/${STAGE}/${VERSION}/services/submit-notes`,
   ...commonOptionsPOST,
 };
-
-test(
-  "API Success of non ATR members",
+it('API Success of non ATR members',
   async () => {
     const postData = JSON.stringify({
       "client_orderId": "BT-7801",
       "note": "testing3 send email from postman12 send Email is true",
       "userID": "352"
-  });
+    });
     try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
       const response = await NAModule(postData, options);
       expect(response.message).toBe(
         "Notes have been submitted successfully and an email has been sent to both the existing user and the non-ATR members."
       );
+      reporter.endStep();
     } catch (error) {
       throw new Error(error);
     }
   },
   Timeout
-);
-test(
-  "API Success of ATR members",
+)
+it('API Success of ATR members',
   async () => {
     const postData = JSON.stringify({
       "client_orderId": "BT-7801",
       "note": "testing3 send email from postman12 send Email is true",
       "userID": "363"
-  });
+    });
     try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
       const response = await NAModule(postData, options);
       expect(response.message).toBe(
         "Notes have been submitted successfully and an email has been sent to ATR Support."
       );
+      reporter.endStep();
     } catch (error) {
       throw new Error(error);
     }
   },
   Timeout
-);
-test(
-  "client_orderId is missing",
+)
+it('client_orderId is missing',
   async () => {
     const postData = JSON.stringify({
       "client_orderId": "",
       "note": "testing3 send email from postman12 send Email is true",
       "userID": "352"
-  });
+    });
     try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
       const response = await NAModule(postData, options);
       expect(response.error).toBe("Please provide a client_orderId");
+      reporter.endStep();
     } catch (error) {
       throw new Error(error);
     }
   },
   Timeout
-);
-test(
-  "userID is missing",
+)
+it('userID is missing',
   async () => {
     const postData = JSON.stringify({
       "client_orderId": "BT-7801",
       "note": "testing3 send email from postman12 send Email is true",
       "userID": ""
-  });
+    });
     try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
       const response = await NAModule(postData, options);
       expect(response.error).toBe("Invalid user id ");
+      reporter.endStep();
     } catch (error) {
       throw new Error(error);
     }
   },
   Timeout
-);
-test(
-  "BAD REQUEST",
+)
+it('BAD REQUEST',
   async () => {
     const postData = JSON.stringify({});
+
     try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
       const response = await NAModule(postData, options);
       expect(response.error).toBe("Invalid user id ");
+      reporter.endStep();
     } catch (error) {
       throw new Error(error);
     }
   },
   Timeout
-);
+)
 
-test(
-  "Wrong client_orderId is passed",
+it('Wrong client_orderId is passed',
   async () => {
     const postData = JSON.stringify({
       "client_orderId": "BT-@43dc7801",
       "note": "testing3 send email from postman12 send Email is true",
       "userID": "352"
-  });
+    });
+
     try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
       const response = await NAModule(postData, options);
       expect(response.error).toBe("local variable 'transaction_id' referenced before assignment");
+      reporter.endStep();
     } catch (error) {
       throw new Error(error);
     }
   },
   Timeout
-);
-test(
-  "Wrong userID is passed",
+)
+it('Wrong userID is passed',
   async () => {
     const postData = JSON.stringify({
       "client_orderId": "BT-7801",
       "note": "testing3 send email from postman12 send Email is true",
       "userID": "@f@@@@@"
-  });
+    });
+
     try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
       const response = await NAModule(postData, options);
       expect(response.error).toBe("Invalid user id ");
+      reporter.endStep();
     } catch (error) {
       throw new Error(error);
     }
   },
   Timeout
-);
-test(
-  "Blank Spaces in client_orderId",
+)
+it('Blank Spaces in client_orderId',
   async () => {
     const postData = JSON.stringify({
       "client_orderId": "      ",
       "note": "testing3 send email from postman12 send Email is true",
       "userID": "3esdesdw23352"
-  });
+    });
+
     try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
       const response = await NAModule(postData, options);
       expect(response.error).toBe("invalid literal for int() with base 10: '3esdesdw23352'");
+      reporter.endStep();
     } catch (error) {
       throw new Error(error);
     }
   },
   Timeout
-);
-test(
-  "note is empty", 
+)
+it('note is empty',
   async () => {
     const postData = JSON.stringify({
       "client_orderId": "BT-@43dc7801",
       "note": "",
       "userID": "352"
-  });
+    });
+
     try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
       const response = await NAModule(postData, options);
       expect(response.error).toBe("local variable 'transaction_id' referenced before assignment");
+      reporter.endStep();
     } catch (error) {
       throw new Error(error);
     }
   },
   Timeout
-);
+)
 
-test(
-  "special character in note ", 
+it('special character in note ',
   async () => {
     const postData = JSON.stringify({
       "client_orderId": "BT-@43dc7801",
       "note": "@12@@@@@@$$",
       "userID": "3esdesdw23352"
-  });
+    });
+
     try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
       const response = await NAModule(postData, options);
       expect(response.error).toBe("invalid literal for int() with base 10: '3esdesdw23352'");
+      reporter.endStep();
     } catch (error) {
       throw new Error(error);
     }
   },
   Timeout
-);
-
-
-test(
-  "blank space passed in note ", 
+)
+it('blank space passed in note ',
   async () => {
     const postData = JSON.stringify({
       "client_orderId": "BT-@43dc7801",
       "note": "     ",
       "userID": "3esdesdw23352"
-  });
+    });
+
     try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
       const response = await NAModule(postData, options);
       expect(response.error).toBe("invalid literal for int() with base 10: '3esdesdw23352'");
+      reporter.endStep();
     } catch (error) {
       throw new Error(error);
     }
   },
   Timeout
-);
+)
 
-test(
-  "API body is called empty", 
+
+it('API body is called empty',
   async () => {
     const postData = JSON.stringify({
       "client_orderId": "",
       "note": "",
       "userID": ""
-  });
+    });
+
     try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
       const response = await NAModule(postData, options);
       expect(response.error).toBe("Invalid user id ");
+      reporter.endStep();
     } catch (error) {
       throw new Error(error);
     }
   },
   Timeout
-);
+)
