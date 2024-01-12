@@ -1,0 +1,67 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1705065289198' stop='1705065294842'>
+    <name>test/BackOffice/Status_Update.test.js</name>
+    <title>test/BackOffice/Status_Update.test.js</title>
+    <test-cases>
+        <test-case start='1705065289198' status='passed' stop='1705065290410'>
+            <name>API Success</name>
+            <title>API Success</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1705065290410' status='failed' stop='1705065291180'>
+            <name>Auth Key is missing ||invalid Auth Key</name>
+            <title>Auth Key is missing ||invalid Auth Key</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Response is not in valid json format</message>
+                <stack-trace>Error: Response is not in valid json format
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/BackOffice/Status_Update.test.js:31:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1705065291181' status='failed' stop='1705065291505'>
+            <name>Plain text received as response</name>
+            <title>Plain text received as response</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Response is not in valid json format</message>
+                <stack-trace>Error: Response is not in valid json format
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/BackOffice/Status_Update.test.js:44:15)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1705065291505' status='passed' stop='1705065292640'>
+            <name>appId is missing or invalid appId</name>
+            <title>appId is missing or invalid appId</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1705065292641' status='passed' stop='1705065293755'>
+            <name>appPass is missing or invalid appPass</name>
+            <title>appPass is missing or invalid appPass</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1705065293755' status='passed' stop='1705065294831'>
+            <name>appUsername is missing or invalid appUsername</name>
+            <title>appUsername is missing or invalid appUsername</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -1,0 +1,85 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1705065276535' stop='1705065280983'>
+    <name>test/Order/OrderService_Details.test.js</name>
+    <title>test/Order/OrderService_Details.test.js</title>
+    <test-cases>
+        <test-case start='1705065276536' status='failed' stop='1705065278115'>
+            <name>API Success</name>
+            <title>API Success</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1705065276537' status='undefined'>
+                    <name>Values passed:"{}"</name>
+                    <title>Values passed:"{}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: TypeError: Cannot read properties of undefined (reading 'length')</message>
+                <stack-trace>Error: TypeError: Cannot read properties of undefined (reading 'length')
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/Order/OrderService_Details.test.js:18:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1705065278116' status='failed' stop='1705065278981'>
+            <name>Wrong id passed in endpoints</name>
+            <title>Wrong id passed in endpoints</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1705065278116' status='undefined'>
+                    <name>Values passed:"{}"</name>
+                    <title>Values passed:"{}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: TypeError: Cannot read properties of undefined (reading 'length')</message>
+                <stack-trace>Error: TypeError: Cannot read properties of undefined (reading 'length')
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/Order/OrderService_Details.test.js:37:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1705065278982' status='passed' stop='1705065279732'>
+            <name>No id passed in endpoints</name>
+            <title>No id passed in endpoints</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1705065278982' status='passed' stop='1705065279732'>
+                    <name>Values passed:"{}"</name>
+                    <title>Values passed:"{}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1705065279732' status='failed' stop='1705065280970'>
+            <name>Special character passed in end point last</name>
+            <title>Special character passed in end point last</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1705065279732' status='undefined'>
+                    <name>Values passed:"{}"</name>
+                    <title>Values passed:"{}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: TypeError: Cannot read properties of undefined (reading 'length')</message>
+                <stack-trace>Error: TypeError: Cannot read properties of undefined (reading 'length')
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/Order/OrderService_Details.test.js:72:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

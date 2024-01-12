@@ -1,0 +1,87 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1705065329883' stop='1705065338981'>
+    <name>test/SES/create_template_250_sandbox.test.js</name>
+    <title>test/SES/create_template_250_sandbox.test.js</title>
+    <test-cases>
+        <test-case start='1705065329883' status='passed' stop='1705065331740'>
+            <name>Api Success on new template creation</name>
+            <title>Api Success on new template creation</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1705065331740' status='passed' stop='1705065332831'>
+            <name>Template name already exists</name>
+            <title>Template name already exists</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1705065332831' status='passed' stop='1705065333600'>
+            <name>400 Bad Request</name>
+            <title>400 Bad Request</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1705065333600' status='passed' stop='1705065333929'>
+            <name>name is blank</name>
+            <title>name is blank</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1705065333929' status='passed' stop='1705065334705'>
+            <name>subject is blank</name>
+            <title>subject is blank</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1705065334705' status='passed' stop='1705065335735'>
+            <name>invalid subject</name>
+            <title>invalid subject</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1705065335735' status='passed' stop='1705065336062'>
+            <name>text is blank</name>
+            <title>text is blank</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1705065336062' status='passed' stop='1705065338084'>
+            <name>text is invalid</name>
+            <title>text is invalid</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1705065338084' status='passed' stop='1705065338410'>
+            <name>html is blank</name>
+            <title>html is blank</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1705065338411' status='passed' stop='1705065338980'>
+            <name>Special character in name</name>
+            <title>Special character in name</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

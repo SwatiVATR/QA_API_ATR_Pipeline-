@@ -1,0 +1,15 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1705065371902' stop='1705065373731'>
+    <name>test/UAT_Cognito/AuthService_Get_User_Details.test.js</name>
+    <title>test/UAT_Cognito/AuthService_Get_User_Details.test.js</title>
+    <test-cases>
+        <test-case start='1705065371902' status='passed' stop='1705065373730'>
+            <name>Api success</name>
+            <title>Api success</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

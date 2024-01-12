@@ -1,0 +1,53 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1705065280840' stop='1705065286077'>
+    <name>test/UAT_Cognito/AuthService_Login.test.js</name>
+    <title>test/UAT_Cognito/AuthService_Login.test.js</title>
+    <test-cases>
+        <test-case start='1705065280840' status='failed' stop='1705065281831'>
+            <name>API Success</name>
+            <title>API Success</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Response is not in valid json format</message>
+                <stack-trace>Error: Response is not in valid json format
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/UAT_Cognito/AuthService_Login.test.js:29:15)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1705065281831' status='passed' stop='1705065283251'>
+            <name>Wrong username</name>
+            <title>Wrong username</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1705065283251' status='passed' stop='1705065284138'>
+            <name>Wrong password</name>
+            <title>Wrong password</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1705065284139' status='passed' stop='1705065285309'>
+            <name>Wrong username and password</name>
+            <title>Wrong username and password</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1705065285309' status='passed' stop='1705065286072'>
+            <name>Plain text received as response</name>
+            <title>Plain text received as response</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

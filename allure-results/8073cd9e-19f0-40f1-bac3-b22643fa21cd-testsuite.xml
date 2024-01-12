@@ -1,0 +1,23 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1705065345996' stop='1705065351106'>
+    <name>test/StepFunctions/StepService_Execute_Sync.test.js</name>
+    <title>test/StepFunctions/StepService_Execute_Sync.test.js</title>
+    <test-cases>
+        <test-case start='1705065345996' status='passed' stop='1705065349156'>
+            <name>API Success</name>
+            <title>API Success</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1705065349156' status='passed' stop='1705065351105'>
+            <name>Wrong username</name>
+            <title>Wrong username</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
