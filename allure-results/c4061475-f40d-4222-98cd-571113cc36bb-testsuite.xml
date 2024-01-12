@@ -1,0 +1,71 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1705065325613' stop='1705065335103'>
+    <name>test/SES/Unsubscribe_email.test.js</name>
+    <title>test/SES/Unsubscribe_email.test.js</title>
+    <test-cases>
+        <test-case start='1705065325613' status='passed' stop='1705065328599'>
+            <name>API Success</name>
+            <title>API Success</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1705065328600' status='passed' stop='1705065328963'>
+            <name>BAD REQUEST</name>
+            <title>BAD REQUEST</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1705065328963' status='passed' stop='1705065330234'>
+            <name>email_address is missing</name>
+            <title>email_address is missing</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1705065330235' status='passed' stop='1705065330992'>
+            <name>email_address is not passed</name>
+            <title>email_address is not passed</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1705065330992' status='passed' stop='1705065331802'>
+            <name>email_address is passed wrong</name>
+            <title>email_address is passed wrong</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1705065331802' status='passed' stop='1705065333119'>
+            <name>reason is passed empty</name>
+            <title>reason is passed empty</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1705065333119' status='passed' stop='1705065334339'>
+            <name>reason is passed gibberish</name>
+            <title>reason is passed gibberish</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1705065334339' status='passed' stop='1705065335102'>
+            <name>email_address &amp; reason both are empty</name>
+            <title>email_address &amp; reason both are empty</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

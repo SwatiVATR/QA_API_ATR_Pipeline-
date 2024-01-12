@@ -1,0 +1,31 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1705065353413' stop='1705065357005'>
+    <name>test/PRODUCTION_Cognito/AuthService_Get_User_Details.test.js</name>
+    <title>test/PRODUCTION_Cognito/AuthService_Get_User_Details.test.js</title>
+    <test-cases>
+        <test-case start='1705065353413' status='passed' stop='1705065354327'>
+            <name>API Success</name>
+            <title>API Success</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1705065354327' status='passed' stop='1705065355681'>
+            <name>invalid email address passed</name>
+            <title>invalid email address passed</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1705065355681' status='passed' stop='1705065357005'>
+            <name>No email is passed</name>
+            <title>No email is passed</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

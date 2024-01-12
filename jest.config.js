@@ -3,6 +3,8 @@ module.exports = {
   moduleFileExtensions: ["js", "json", "jsx", "ts", "tsx", "node"],
   testEnvironment: "node",
   roots: ["<rootDir>"],
+  collectCoverage: true,
+  coverageReporters: ['json', 'lcov', 'text', 'clover', "html"],
   testRegex: "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
   transform: {
     "^.+\\.(js|jsx|ts|tsx)$": "babel-jest",

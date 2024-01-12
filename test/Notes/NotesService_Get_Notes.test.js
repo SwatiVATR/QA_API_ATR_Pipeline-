@@ -21,6 +21,7 @@ it('API Success',
                 "159306"
             );
             reporter.endStep();
+            reporter.description("Response message from API:"+JSON.stringify(response))
         } catch (error) {
             throw new Error(error);
         }
@@ -39,6 +40,7 @@ it('Special characters passed to txId',
             const response = await NAModule(postData, options);
             expect(response.success.txId).toBe("@@@@@");
             reporter.endStep();
+            reporter.description("Response message from API:"+JSON.stringify(response))
         } catch (error) {
             throw new Error(error);
         }
@@ -56,6 +58,7 @@ it('txId is not passed',
             const response = await NAModule(postData, options);
             expect(response.success).toBeTruthy();
             reporter.endStep();
+            reporter.description("Response message from API:"+JSON.stringify(response))
         } catch (error) {
             throw new Error(error);
         }

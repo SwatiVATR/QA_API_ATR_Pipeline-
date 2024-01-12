@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "node index.js && sleep 5 && jest --coverage",
-    "report:serve": "allure serve",
+    "report:serve": "allure serve --port 9999",
     "report:build": "allure generate --clean"
   },
   "author": "TestCase",

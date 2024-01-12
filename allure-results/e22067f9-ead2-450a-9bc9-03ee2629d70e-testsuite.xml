@@ -1,0 +1,71 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1705065284105' stop='1705065288900'>
+    <name>test/Notes/NotesService_Append_Notes.test.js</name>
+    <title>test/Notes/NotesService_Append_Notes.test.js</title>
+    <test-cases>
+        <test-case start='1705065284105' status='passed' stop='1705065287405'>
+            <name>API Success</name>
+            <title>API Success</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1705065284106' status='passed' stop='1705065287403'>
+                    <name>Values passed:"{\"order\":{\"note\":{\"transactionId\":118359,\"noteDateTime\":\"04-30-2023 19:00:00\",\"note\":\"this is a note\",\"noteCategory\":\"CLIENT_PORTAL\",\"noteType\":\"PUBLIC\",\"userEmail\":\"msingh@actiontitleresearch.com\",\"read\":false}}}"</name>
+                    <title>Values passed:"{\"order\":{\"note\":{\"transactionId\":118359,\"noteDateTime\":\"04-30-2023 19:00:00\",\"note\":\"this is a note\",\"noteCategory\":\"CLIENT_PORTAL\",\"noteType\":\"PUBLIC\",\"userEmail\":\"msingh@actiontitleresearch.com\",\"read\":false}}}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"success":{"txId":118359,"statusCode":200,"body":"{\"transactionId\": 118359, \"noteId\": 2987, \"readMessage\": false, \"clientOrderID\": \"672023\", \"userID\": 874895, \"sendEmail\": null, \"noteDateTime\": \"01-12-2024 08:14:45\", \"note\": \"this is a note\", \"noteCategory\": \"CLIENT_PORTAL\", \"noteType\": \"PUBLIC\", \"userEmail\": \"msingh@actiontitleresearch.com\", \"userName\": null, \"aesNoteDateTime\": \"01-12-2024 13:14:45\", \"searcherID\": 0}"}}</description>
+        </test-case>
+        <test-case start='1705065287406' status='passed' stop='1705065287753'>
+            <name>BAD Request</name>
+            <title>BAD Request</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1705065287406' status='passed' stop='1705065287753'>
+                    <name>Values passed:"{}"</name>
+                    <title>Values passed:"{}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"error":"'order'"}</description>
+        </test-case>
+        <test-case start='1705065287754' status='passed' stop='1705065288572'>
+            <name>orders is missing</name>
+            <title>orders is missing</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1705065287754' status='passed' stop='1705065288572'>
+                    <name>Values passed:"{\"order\":\"\"}"</name>
+                    <title>Values passed:"{\"order\":\"\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"error":"Invalid data or url or filepath argument: \nExpecting value: line 1 column 1 (char 0)"}</description>
+        </test-case>
+        <test-case start='1705065288572' status='passed' stop='1705065288899'>
+            <name>order note is missing </name>
+            <title>order note is missing </title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1705065288573' status='passed' stop='1705065288899'>
+                    <name>Values passed:"{\"order\":{\"note\":\"\"}}"</name>
+                    <title>Values passed:"{\"order\":{\"note\":\"\"}}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"error":"'str' object does not support item assignment"}</description>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -19,12 +19,13 @@ it('API Success for service notes',
             ...commonOptionsGET,
         };
         try {
-            reporter.startStep("getting response from api");
+            reporter.startStep("Values passed:" + JSON.stringify(postData));
             const response = await NAModule(postData, options);
             expect(response.success.txId).toBe(
                 "159306"
             );
             reporter.endStep();
+            reporter.description("Response message from API:"+JSON.stringify(response))
         } catch (error) {
             throw new Error(error);
         }
@@ -40,10 +41,11 @@ it('API Success for service notes update',
         };
         const postData = JSON.stringify(success);
         try {
-            reporter.startStep("getting response from api");
+            reporter.startStep("Values passed:" + JSON.stringify(postData));
             const response = await NAModule(postData, options);
             expect(response.success.statusCode).toBe(200);
             reporter.endStep();
+            reporter.description("Response message from API:"+JSON.stringify(response))
         } catch (error) {
             throw new Error(error);
         }

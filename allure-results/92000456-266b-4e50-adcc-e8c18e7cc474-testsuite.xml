@@ -1,0 +1,139 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1705065245030' stop='1705065261649'>
+    <name>test/BackOffice/Direct_PDF_Upload.test.js</name>
+    <title>test/BackOffice/Direct_PDF_Upload.test.js</title>
+    <test-cases>
+        <test-case start='1705065245030' status='passed' stop='1705065246872'>
+            <name>API Success</name>
+            <title>API Success</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1705065246872' status='passed' stop='1705065248024'>
+            <name>appId is missing</name>
+            <title>appId is missing</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1705065248024' status='passed' stop='1705065249197'>
+            <name>appPass is missing</name>
+            <title>appPass is missing</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1705065249197' status='passed' stop='1705065250347'>
+            <name>appType is missing</name>
+            <title>appType is missing</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1705065250347' status='passed' stop='1705065251568'>
+            <name>appUsername is missing</name>
+            <title>appUsername is missing</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1705065251568' status='passed' stop='1705065252828'>
+            <name>recidMissig is missing</name>
+            <title>recidMissig is missing</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1705065252829' status='failed' stop='1705065253702'>
+            <name>authKey is missing|| invalid authKey</name>
+            <title>authKey is missing|| invalid authKey</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Response is not in valid json format</message>
+                <stack-trace>Error: Response is not in valid json format
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/BackOffice/Direct_PDF_Upload.test.js:115:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1705065253702' status='passed' stop='1705065254447'>
+            <name>rating is missing</name>
+            <title>rating is missing</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1705065254448' status='passed' stop='1705065255629'>
+            <name>condodev is missing</name>
+            <title>condodev is missing</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1705065255629' status='passed' stop='1705065256778'>
+            <name>filename is missing</name>
+            <title>filename is missing</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1705065256778' status='passed' stop='1705065257450'>
+            <name>surrogatesfee is missing</name>
+            <title>surrogatesfee is missing</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1705065257450' status='passed' stop='1705065258587'>
+            <name>copyfee is missing</name>
+            <title>copyfee is missing</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1705065258587' status='passed' stop='1705065259730'>
+            <name>otherfee is missing</name>
+            <title>otherfee is missing</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1705065259730' status='passed' stop='1705065260848'>
+            <name>notes is missing</name>
+            <title>notes is missing</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1705065260848' status='failed' stop='1705065261602'>
+            <name>Plain text received</name>
+            <title>Plain text received</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Response is not in valid json format</message>
+                <stack-trace>Error: Response is not in valid json format
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/BackOffice/Direct_PDF_Upload.test.js:223:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

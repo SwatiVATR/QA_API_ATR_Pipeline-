@@ -1,0 +1,52 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1705065358986' stop='1705065363217'>
+    <name>test/_Qualia/Order_Normalizer.test.js</name>
+    <title>test/_Qualia/Order_Normalizer.test.js</title>
+    <test-cases>
+        <test-case start='1705065358986' status='passed' stop='1705065361298'>
+            <name>API Success</name>
+            <title>API Success</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1705065358987' status='passed' stop='1705065361297'>
+                    <name>Values passed:"{\"order\":{\"source\":\"SnapClose\",\"notes\":\"helloworld3\",\"additionalParcelId\":1,\"parcelId\":2,\"purchasePrice\":\"$23,000\",\"transSummary\":\"Refi\",\"searchLength\":\"40\",\"serviceCode\":\"DI16\",\"webTitleNumber\":\"12345\",\"agencyOrderId\":\"54321\",\"agencyPortalId\":\"abc123\",\"orderId\":\"123123\",\"correlationId\":\"1568hdbxfzgsew4\",\"searchType\":\"SmartSearch\",\"orgId\":184245,\"properties\":[{\"municipalityName\":\"Ridgewood\",\"ownerFullName\":\"Curtis Spendlove\",\"propertyTypeId\":\"1\",\"agencyName\":\"Bubble Title\",\"block\":\"1\",\"lot\":\"1\",\"qualifier\":\"1\",\"address\":\"1234 123A Ave.\",\"addressTwo\":\"888 Park\",\"city\":\"Richmond\",\"county\":\"Vancouver\",\"state\":\"Washington\",\"zip\":\"99999\"}],\"parties\":[{\"role\":\"owner\",\"id\":623853,\"firstName\":\"Bugs\",\"lastName\":\"B\",\"middleName\":\"Bunny\",\"orderId\":623852,\"type\":1},{\"role\":\"owner\",\"id\":623857,\"firstName\":\"Daffy\",\"lastName\":\"D\",\"middleName\":\"Duck\",\"orderId\":623852,\"type\":1}]}}"</name>
+                    <title>Values passed:"{\"order\":{\"source\":\"SnapClose\",\"notes\":\"helloworld3\",\"additionalParcelId\":1,\"parcelId\":2,\"purchasePrice\":\"$23,000\",\"transSummary\":\"Refi\",\"searchLength\":\"40\",\"serviceCode\":\"DI16\",\"webTitleNumber\":\"12345\",\"agencyOrderId\":\"54321\",\"agencyPortalId\":\"abc123\",\"orderId\":\"123123\",\"correlationId\":\"1568hdbxfzgsew4\",\"searchType\":\"SmartSearch\",\"orgId\":184245,\"properties\":[{\"municipalityName\":\"Ridgewood\",\"ownerFullName\":\"Curtis Spendlove\",\"propertyTypeId\":\"1\",\"agencyName\":\"Bubble Title\",\"block\":\"1\",\"lot\":\"1\",\"qualifier\":\"1\",\"address\":\"1234 123A Ave.\",\"addressTwo\":\"888 Park\",\"city\":\"Richmond\",\"county\":\"Vancouver\",\"state\":\"Washington\",\"zip\":\"99999\"}],\"parties\":[{\"role\":\"owner\",\"id\":623853,\"firstName\":\"Bugs\",\"lastName\":\"B\",\"middleName\":\"Bunny\",\"orderId\":623852,\"type\":1},{\"role\":\"owner\",\"id\":623857,\"firstName\":\"Daffy\",\"lastName\":\"D\",\"middleName\":\"Duck\",\"orderId\":623852,\"type\":1}]}}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1705065361299' status='passed' stop='1705065362253'>
+            <name>order is missing</name>
+            <title>order is missing</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1705065361299' status='passed' stop='1705065362253'>
+                    <name>Values passed:"{\"order\":\"\"}"</name>
+                    <title>Values passed:"{\"order\":\"\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1705065362254' status='passed' stop='1705065363216'>
+            <name>BAD REQUEST</name>
+            <title>BAD REQUEST</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1705065362255' status='passed' stop='1705065363216'>
+                    <name>Values passed:"{}"</name>
+                    <title>Values passed:"{}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

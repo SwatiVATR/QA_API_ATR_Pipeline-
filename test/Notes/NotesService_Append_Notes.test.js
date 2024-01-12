@@ -21,6 +21,7 @@ it('API Success',
       const response = await NAModule(postData, options);
       expect(response.success.statusCode).toBe(200);
       reporter.endStep();
+      reporter.description("Response message from API:"+JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -35,6 +36,7 @@ it('BAD Request',
       const response = await NAModule(postData, options);
       expect(response.error).toBe("'order'");
       reporter.endStep();
+      reporter.description("Response message from API:"+JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -49,6 +51,7 @@ it('orders is missing',
       const response = await NAModule(postData, options);
       expect(response.error).toBe("Invalid data or url or filepath argument: \nExpecting value: line 1 column 1 (char 0)");
       reporter.endStep();
+      reporter.description("Response message from API:"+JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -63,6 +66,7 @@ it('order note is missing ',
       const response = await NAModule(postData, options);
       expect(response.error).toBe("'str' object does not support item assignment");
       reporter.endStep();
+      reporter.description("Response message from API:"+JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }

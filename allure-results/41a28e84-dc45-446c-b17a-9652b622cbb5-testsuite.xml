@@ -1,0 +1,63 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1705065344728' stop='1705065350972'>
+    <name>test/SES/send_email_250_sandbox.test.js</name>
+    <title>test/SES/send_email_250_sandbox.test.js</title>
+    <test-cases>
+        <test-case start='1705065344728' status='passed' stop='1705065345734'>
+            <name>API Success</name>
+            <title>API Success</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1705065345734' status='passed' stop='1705065346780'>
+            <name>Sender is missing</name>
+            <title>Sender is missing</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1705065346780' status='passed' stop='1705065347812'>
+            <name>recipient is missing</name>
+            <title>recipient is missing</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1705065347813' status='passed' stop='1705065348815'>
+            <name>template is missing</name>
+            <title>template is missing</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1705065348816' status='passed' stop='1705065349846'>
+            <name>Wrong template name is entered</name>
+            <title>Wrong template name is entered</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1705065349846' status='passed' stop='1705065350413'>
+            <name>template_data is empty</name>
+            <title>template_data is empty</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1705065350413' status='passed' stop='1705065350971'>
+            <name>template_data is invalid</name>
+            <title>template_data is invalid</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -1,0 +1,71 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1705065316791' stop='1705065327453'>
+    <name>test/Order/OrderService_Update.test.js</name>
+    <title>test/Order/OrderService_Update.test.js</title>
+    <test-cases>
+        <test-case start='1705065316791' status='passed' stop='1705065319838'>
+            <name>API Success</name>
+            <title>API Success</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1705065319838' status='passed' stop='1705065320911'>
+            <name>order is missing</name>
+            <title>order is missing</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1705065320912' status='passed' stop='1705065322043'>
+            <name>transaction is missing</name>
+            <title>transaction is missing</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1705065322043' status='passed' stop='1705065322611'>
+            <name>BAD Request</name>
+            <title>BAD Request</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1705065322612' status='passed' stop='1705065323612'>
+            <name>Wrong order is passed</name>
+            <title>Wrong order is passed</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1705065323612' status='passed' stop='1705065325039'>
+            <name>id is wrong</name>
+            <title>id is wrong</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1705065325039' status='passed' stop='1705065326183'>
+            <name>status is Inactive</name>
+            <title>status is Inactive</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1705065326184' status='passed' stop='1705065327452'>
+            <name>status is hold</name>
+            <title>status is hold</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
