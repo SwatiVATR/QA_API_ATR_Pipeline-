@@ -7,12 +7,16 @@ const options = {
   ...commonOptionsPOST,
 };
 
-test(
+it(
   "API Success",
   async () => {
     const postData = JSON.stringify(success);
     try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
       const response = await NAModule(postData, options);
+      reporter.endStep();
+      reporter.testId("API Endpoint-/services/invoker/backoffice/FileUpload")
+      reporter.description("Response message from API:" + response)
     } catch (error) {
       throw new Error(error);
 

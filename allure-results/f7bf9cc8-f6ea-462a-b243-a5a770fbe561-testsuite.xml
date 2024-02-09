@@ -1,0 +1,172 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1707488332989' stop='1707488341776'>
+    <name>test/PRODUCTION_Cognito/AuthService_Confirm.test.js</name>
+    <title>test/PRODUCTION_Cognito/AuthService_Confirm.test.js</title>
+    <test-cases>
+        <test-case start='1707488332989' status='passed' stop='1707488334267'>
+            <name>API Success</name>
+            <title>API Success</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/cognito/confirm'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1707488332991' status='passed' stop='1707488334265'>
+                    <name>Values passed:"{\"email\":\"sverma@actiontitleresearch.com\",\"code\":486945,\"newPassword\":\"MyPasswerd!#$123\"}"</name>
+                    <title>Values passed:"{\"email\":\"sverma@actiontitleresearch.com\",\"code\":486945,\"newPassword\":\"MyPasswerd!#$123\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:[object Object]</description>
+        </test-case>
+        <test-case start='1707488334267' status='passed' stop='1707488335017'>
+            <name>Email is missing</name>
+            <title>Email is missing</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/cognito/confirm'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1707488334267' status='passed' stop='1707488335017'>
+                    <name>Values passed:"{\"email\":\"\",\"code\":486945,\"newPassword\":\"MyPasswerd!#$123\"}"</name>
+                    <title>Values passed:"{\"email\":\"\",\"code\":486945,\"newPassword\":\"MyPasswerd!#$123\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:[object Object]</description>
+        </test-case>
+        <test-case start='1707488335017' status='passed' stop='1707488335799'>
+            <name>Invalid email entered</name>
+            <title>Invalid email entered</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/cognito/confirm'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1707488335018' status='passed' stop='1707488335799'>
+                    <name>Values passed:"{\"email\":\"dsfewsdwsad\",\"code\":486945,\"newPassword\":\"MyPasswerd!#$123\"}"</name>
+                    <title>Values passed:"{\"email\":\"dsfewsdwsad\",\"code\":486945,\"newPassword\":\"MyPasswerd!#$123\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:[object Object]</description>
+        </test-case>
+        <test-case start='1707488335799' status='passed' stop='1707488337036'>
+            <name>invalid code is passed</name>
+            <title>invalid code is passed</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/cognito/confirm'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1707488335799' status='passed' stop='1707488337036'>
+                    <name>Values passed:"{\"email\":\"sverma@actiontitleresearch.com\",\"code\":\"wsdufs\",\"newPassword\":\"MyPasswerd!#$123\"}"</name>
+                    <title>Values passed:"{\"email\":\"sverma@actiontitleresearch.com\",\"code\":\"wsdufs\",\"newPassword\":\"MyPasswerd!#$123\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:[object Object]</description>
+        </test-case>
+        <test-case start='1707488337036' status='passed' stop='1707488338262'>
+            <name>code is missing</name>
+            <title>code is missing</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/cognito/confirm'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1707488337037' status='passed' stop='1707488338262'>
+                    <name>Values passed:"{\"email\":\"sverma@actiontitleresearch.com\",\"code\":\"\",\"newPassword\":\"MyPasswerd!#$123\"}"</name>
+                    <title>Values passed:"{\"email\":\"sverma@actiontitleresearch.com\",\"code\":\"\",\"newPassword\":\"MyPasswerd!#$123\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:[object Object]</description>
+        </test-case>
+        <test-case start='1707488338262' status='passed' stop='1707488339278'>
+            <name>newPassword is missing</name>
+            <title>newPassword is missing</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/cognito/confirm'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1707488338263' status='passed' stop='1707488339277'>
+                    <name>Values passed:"{\"email\":\"sverma@actiontitleresearch.com\",\"code\":486945,\"newPassword\":\"\"}"</name>
+                    <title>Values passed:"{\"email\":\"sverma@actiontitleresearch.com\",\"code\":486945,\"newPassword\":\"\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:[object Object]</description>
+        </test-case>
+        <test-case start='1707488339278' status='passed' stop='1707488340264'>
+            <name>all fields are empty</name>
+            <title>all fields are empty</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/cognito/confirm'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1707488339278' status='passed' stop='1707488340264'>
+                    <name>Values passed:"{\"email\":\"\",\"code\":\"\",\"newPassword\":\"\"}"</name>
+                    <title>Values passed:"{\"email\":\"\",\"code\":\"\",\"newPassword\":\"\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:[object Object]</description>
+        </test-case>
+        <test-case start='1707488340264' status='failed' stop='1707488340548'>
+            <name>Bad Request</name>
+            <title>Bad Request</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1707488340264' status='undefined'>
+                    <name>Values passed:"{}"</name>
+                    <title>Values passed:"{}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Response is not in valid json format</message>
+                <stack-trace>Error: Response is not in valid json format
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/PRODUCTION_Cognito/AuthService_Confirm.test.js:189:19)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1707488340548' status='passed' stop='1707488341769'>
+            <name>No Auth key is passed in authorization</name>
+            <title>No Auth key is passed in authorization</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/cognito/confirm'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1707488340549' status='passed' stop='1707488341769'>
+                    <name>Values passed:"{\"email\":\"sverma@actiontitleresearch.com\",\"code\":486945,\"newPassword\":\"MyPasswerd!#$123\"}"</name>
+                    <title>Values passed:"{\"email\":\"sverma@actiontitleresearch.com\",\"code\":486945,\"newPassword\":\"MyPasswerd!#$123\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:[object Object]</description>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

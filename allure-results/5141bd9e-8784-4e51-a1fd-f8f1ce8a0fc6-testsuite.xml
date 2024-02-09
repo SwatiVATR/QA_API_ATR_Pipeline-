@@ -1,0 +1,139 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1707488352260' stop='1707488358302'>
+    <name>test/PRODUCTION_Cognito/AuthService_Login.test.js</name>
+    <title>test/PRODUCTION_Cognito/AuthService_Login.test.js</title>
+    <test-cases>
+        <test-case start='1707488352260' status='failed' stop='1707488353353'>
+            <name>API Success</name>
+            <title>API Success</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1707488352261' status='undefined'>
+                    <name>Values passed:"{\"username\":\"msingh@actiontitleresearch.com\",\"password\":\"Msingh@123\"}"</name>
+                    <title>Values passed:"{\"username\":\"msingh@actiontitleresearch.com\",\"password\":\"Msingh@123\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Response is not in valid json format</message>
+                <stack-trace>Error: Response is not in valid json format
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/PRODUCTION_Cognito/AuthService_Login.test.js:34:15)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1707488353353' status='passed' stop='1707488354556'>
+            <name>username is missing </name>
+            <title>username is missing </title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/cognito/signin'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1707488353354' status='passed' stop='1707488354555'>
+                    <name>Values passed:"{\"username\":\"\",\"password\":\"Msingh@123\"}"</name>
+                    <title>Values passed:"{\"username\":\"\",\"password\":\"Msingh@123\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:[object Object]</description>
+        </test-case>
+        <test-case start='1707488354556' status='passed' stop='1707488355373'>
+            <name>password is missing </name>
+            <title>password is missing </title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/cognito/signin'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1707488354556' status='passed' stop='1707488355373'>
+                    <name>Values passed:"{\"username\":\"msingh@actiontitleresearch.com\",\"password\":\"\"}"</name>
+                    <title>Values passed:"{\"username\":\"msingh@actiontitleresearch.com\",\"password\":\"\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:[object Object]</description>
+        </test-case>
+        <test-case start='1707488355374' status='passed' stop='1707488356186'>
+            <name>wrong username</name>
+            <title>wrong username</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/cognito/signin'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1707488355374' status='passed' stop='1707488356186'>
+                    <name>Values passed:"{\"username\":\"wsdsdmsingh@actiontitleresearch.comejd\",\"password\":\"Msingh@123\"}"</name>
+                    <title>Values passed:"{\"username\":\"wsdsdmsingh@actiontitleresearch.comejd\",\"password\":\"Msingh@123\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:[object Object]</description>
+        </test-case>
+        <test-case start='1707488356186' status='passed' stop='1707488357127'>
+            <name>wrong password</name>
+            <title>wrong password</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/cognito/signin'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1707488356187' status='passed' stop='1707488357127'>
+                    <name>Values passed:"{\"username\":\"msingh@actiontitleresearch.com\",\"password\":\"Msingh@123sjfeusfeusgfuw\"}"</name>
+                    <title>Values passed:"{\"username\":\"msingh@actiontitleresearch.com\",\"password\":\"Msingh@123sjfeusfeusgfuw\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:[object Object]</description>
+        </test-case>
+        <test-case start='1707488357127' status='passed' stop='1707488357929'>
+            <name>username and password both are incorrect</name>
+            <title>username and password both are incorrect</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/cognito/signin'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1707488357128' status='passed' stop='1707488357929'>
+                    <name>Values passed:"{\"username\":\"msingh@actiontitleresearch.comsfdbfdbvd\",\"password\":\"Msingh@123sjfeusfeusgfuw\"}"</name>
+                    <title>Values passed:"{\"username\":\"msingh@actiontitleresearch.comsfdbfdbvd\",\"password\":\"Msingh@123sjfeusfeusgfuw\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:[object Object]</description>
+        </test-case>
+        <test-case start='1707488357930' status='failed' stop='1707488358286'>
+            <name>Plain text received as response</name>
+            <title>Plain text received as response</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1707488357930' status='undefined'>
+                    <name>Values passed:"{}"</name>
+                    <title>Values passed:"{}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Response is not in valid json format</message>
+                <stack-trace>Error: Response is not in valid json format
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/PRODUCTION_Cognito/AuthService_Login.test.js:156:15)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

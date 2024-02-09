@@ -19,6 +19,7 @@ it('API Success of non ATR members',
         "Notes have been submitted successfully and an email has been sent to both the existing user and the non-ATR members."
       );
       reporter.endStep();
+      reporter.testId("API Endpoint-/services/submit-notes")
       reporter.description("Response message from API:"+JSON.stringify(response))
 
     } catch (error) {
@@ -41,6 +42,8 @@ it('API Success of ATR members',
         "Notes have been submitted successfully and an email has been sent to ATR Support."
       );
       reporter.endStep();
+      reporter.testId("API Endpoint-/services/submit-notes")
+
       reporter.description("Response message from API:"+JSON.stringify(response))
 
     } catch (error) {
@@ -61,6 +64,8 @@ it('client_orderId is missing',
       const response = await NAModule(postData, options);
       expect(response.error).toBe("Please provide a client_orderId");
       reporter.endStep();
+      reporter.testId("API Endpoint-/services/submit-notes")
+
       reporter.description("Response message from API:"+JSON.stringify(response))
 
     } catch (error) {
@@ -81,6 +86,8 @@ it('userID is missing',
       const response = await NAModule(postData, options);
       expect(response.error).toBe("Invalid user id ");
       reporter.endStep();
+      reporter.testId("API Endpoint-/services/submit-notes")
+
       reporter.description("Response message from API:"+JSON.stringify(response))
 
     } catch (error) {
@@ -98,6 +105,8 @@ it('BAD REQUEST',
       const response = await NAModule(postData, options);
       expect(response.error).toBe("Invalid user id ");
       reporter.endStep();
+      reporter.testId("API Endpoint-/services/submit-notes")
+
       reporter.description("Response message from API:"+JSON.stringify(response))
 
     } catch (error) {
@@ -120,6 +129,8 @@ it('Wrong client_orderId is passed',
       const response = await NAModule(postData, options);
       expect(response.error).toBe("local variable 'transaction_id' referenced before assignment");
       reporter.endStep();
+      reporter.testId("API Endpoint-/services/submit-notes")
+
       reporter.description("Response message from API:"+JSON.stringify(response))
 
     } catch (error) {
@@ -141,6 +152,8 @@ it('Wrong userID is passed',
       const response = await NAModule(postData, options);
       expect(response.error).toBe("Invalid user id ");
       reporter.endStep();
+      reporter.testId("API Endpoint-/services/submit-notes")
+
       reporter.description("Response message from API:"+JSON.stringify(response))
 
     } catch (error) {
@@ -162,6 +175,7 @@ it('Blank Spaces in client_orderId',
       const response = await NAModule(postData, options);
       expect(response.error).toBe("invalid literal for int() with base 10: '3esdesdw23352'");
       reporter.endStep();
+      reporter.testId("API Endpoint-/services/submit-notes")
       reporter.description("Response message from API:"+JSON.stringify(response))
 
     } catch (error) {
@@ -183,6 +197,7 @@ it('note is empty',
       const response = await NAModule(postData, options);
       expect(response.error).toBe("local variable 'transaction_id' referenced before assignment");
       reporter.endStep();
+      reporter.testId("API Endpoint-/services/submit-notes")
       reporter.description("Response message from API:"+JSON.stringify(response))
 
     } catch (error) {
@@ -205,6 +220,7 @@ it('special character in note ',
       const response = await NAModule(postData, options);
       expect(response.error).toBe("invalid literal for int() with base 10: '3esdesdw23352'");
       reporter.endStep();
+      reporter.testId("API Endpoint-/services/submit-notes")
       reporter.description("Response message from API:"+JSON.stringify(response))
 
     } catch (error) {
@@ -226,6 +242,7 @@ it('blank space passed in note ',
       const response = await NAModule(postData, options);
       expect(response.error).toBe("invalid literal for int() with base 10: '3esdesdw23352'");
       reporter.endStep();
+      reporter.testId("API Endpoint-/services/submit-notes")
       reporter.description("Response message from API:"+JSON.stringify(response))
 
     } catch (error) {
@@ -249,6 +266,7 @@ it('API body is called empty',
       const response = await NAModule(postData, options);
       expect(response.error).toBe("Invalid user id ");
       reporter.endStep();
+      reporter.testId("API Endpoint-/services/submit-notes")
       reporter.description("Response message from API:"+JSON.stringify(response))
 
     } catch (error) {

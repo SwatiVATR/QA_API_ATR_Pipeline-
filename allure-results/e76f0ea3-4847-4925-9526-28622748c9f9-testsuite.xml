@@ -1,0 +1,61 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1707488433348' stop='1707488436304'>
+    <name>test/Searcher/Get_Searcher_Detail.test.js</name>
+    <title>test/Searcher/Get_Searcher_Detail.test.js</title>
+    <test-cases>
+        <test-case start='1707488433348' status='passed' stop='1707488435089'>
+            <name>API Success</name>
+            <title>API Success</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/searcher/330'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1707488433349' status='passed' stop='1707488435088'>
+                    <name>Values passed:"{}"</name>
+                    <title>Values passed:"{}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:[object Object]</description>
+        </test-case>
+        <test-case start='1707488435089' status='passed' stop='1707488435443'>
+            <name>Wrong searcher id is passed</name>
+            <title>Wrong searcher id is passed</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/searcher/434343330'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1707488435090' status='passed' stop='1707488435443'>
+                    <name>Values passed:"{}"</name>
+                    <title>Values passed:"{}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:[object Object]</description>
+        </test-case>
+        <test-case start='1707488435443' status='passed' stop='1707488436303'>
+            <name>special character in  searcher id</name>
+            <title>special character in  searcher id</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/searcher/4343@#$43330'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1707488435444' status='passed' stop='1707488436303'>
+                    <name>Values passed:"{}"</name>
+                    <title>Values passed:"{}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:[object Object]</description>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -16,7 +16,7 @@ const options = {
 
 const USER=process.env.SWATI_USER_EMAIL
 const PASSWORD=process.env.SWATI_PASSWORD
-test(
+it(
   "API Success",
   async () => {
     const postData = JSON.stringify({
@@ -24,11 +24,99 @@ test(
       password: PASSWORD,
     });
     try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
       const response = await NAModule(postData, options);
       expect(response.success.statusCode).toBe(200);
+      reporter.endStep();
+      reporter.testId("API Endpoint-/services/async/MyStandardStateMachine")
+      reporter.description("Response message from API:" + response)
     } catch (error) {
       throw new Error(error);
     }
   },
   Timeout
 );
+
+it(
+  "username is missing",
+  async () => {
+    const postData = JSON.stringify({
+      username: "",
+      password: PASSWORD,
+    });
+    try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
+      const response = await NAModule(postData, options);
+      expect(response.success.statusCode).toBe(200);
+      reporter.endStep();
+      reporter.testId("API Endpoint-/services/async/MyStandardStateMachine")
+      reporter.description("Response message from API:" + response)
+    } catch (error) {
+      throw new Error(error);
+    }
+  },
+  Timeout
+);
+
+it(
+  "password is missing",
+  async () => {
+    const postData = JSON.stringify({
+      username: USER,
+      password: "",
+    });
+    try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
+      const response = await NAModule(postData, options);
+      expect(response.success.statusCode).toBe(200);
+      reporter.endStep();
+      reporter.testId("API Endpoint-/services/async/MyStandardStateMachine")
+      reporter.description("Response message from API:" + response)
+    } catch (error) {
+      throw new Error(error);
+    }
+  },
+  Timeout
+);
+it(
+  "username and password is missing",
+  async () => {
+    const postData = JSON.stringify({
+      username: "",
+      password: "",
+    });
+    try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
+      const response = await NAModule(postData, options);
+      expect(response.success.statusCode).toBe(200);
+      reporter.endStep();
+      reporter.testId("API Endpoint-/services/async/MyStandardStateMachine")
+      reporter.description("Response message from API:" + response)
+    } catch (error) {
+      throw new Error(error);
+    }
+  },
+  Timeout
+);
+
+it(
+  "Bad Request",
+  async () => {
+    const postData = JSON.stringify({
+      username: "",
+      password: "",
+    });
+    try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
+      const response = await NAModule(postData, options);
+      expect(response.success.statusCode).toBe(200);
+      reporter.endStep();
+      reporter.testId("API Endpoint-/services/async/MyStandardStateMachine")
+      reporter.description("Response message from API:" + response)
+    } catch (error) {
+      throw new Error(error);
+    }
+  },
+  Timeout
+);
+

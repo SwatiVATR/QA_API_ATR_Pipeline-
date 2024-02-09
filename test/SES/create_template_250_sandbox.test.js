@@ -1,6 +1,6 @@
 const { firstNames, lastNames, Timeout } = require("../../config");
 const CreateTemplateModule = require("../../modules/CreateTemplateModule");
-test(
+it(
   "Api Success on new template creation",
   async () => {
     const randomFirstName =
@@ -16,15 +16,19 @@ test(
     });
 
     try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
       const response = await CreateTemplateModule(postData);
       expect(response.Result).toBeTruthy();
+      reporter.endStep();
+      reporter.testId("API Endpoint-/services/create-template")
+      reporter.description("Response message from API:" + response)
     } catch (error) {
       throw new Error(error);
     }
   },
   Timeout
 );
-test(
+it(
   "Template name already exists",
   async () => {
     const postData = JSON.stringify({
@@ -35,31 +39,39 @@ test(
     });
 
     try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
       const response = await CreateTemplateModule(postData);
       expect(response.Result.errorType).toBe("AlreadyExistsException");
+      reporter.endStep();
+      reporter.testId("API Endpoint-/services/create-template")
+      reporter.description("Response message from API:" + response)
     } catch (error) {
       throw new Error(error);
     }
   },
   Timeout
 );
-test(
+it(
   "400 Bad Request",
   async () => {
     const postData = JSON.stringify({});
 
     try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
       const response = await CreateTemplateModule(postData);
       expect(response.Error).toBe(
         "'name' is a mandatory field and is missing or empty."
       );
+      reporter.endStep();
+      reporter.testId("API Endpoint-/services/create-template")
+      reporter.description("Response message from API:" + response)
     } catch (error) {
       throw new Error(error);
     }
   },
   Timeout
 );
-test(
+it(
   "name is blank",
   async () => {
     const postData = JSON.stringify({
@@ -70,17 +82,21 @@ test(
     });
 
     try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
       const response = await CreateTemplateModule(postData);
       expect(response.Error).toBe(
         "'name' is a mandatory field and is missing or empty."
       );
+      reporter.endStep();
+      reporter.testId("API Endpoint-/services/create-template")
+      reporter.description("Response message from API:" + response)
     } catch (error) {
       throw new Error(error);
     }
   },
   Timeout
 );
-test(
+it(
   "subject is blank",
   async () => {
     const postData = JSON.stringify({
@@ -90,10 +106,14 @@ test(
       html: "<html><body><p>Hi {{first_name}} {{last_name}},<br><br>The following are the completed order(s) :<br>{{AgencyOrderid}}  <br><br><strong>NEW!</strong> Action is using MaestroX to provide our customers with search order tracking and ETAs. You can view your order status and send us messages here https://portal.maestrox.com. Please login to see your recent orders and other valuable file information. If you do not yet have access, follow the link above and click the “Request Access” button. You will receive an email invitation from No-reply@actioncentral.com.<br><br> Thanks! </p></body></html>",
     });
     try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
       const response = await CreateTemplateModule(postData);
       expect(response.Error).toBe(
         "'subject' is a mandatory field and is missing or empty."
       );
+      reporter.endStep();
+      reporter.testId("API Endpoint-/services/create-template")
+      reporter.description("Response message from API:" + response)
     } catch (error) {
       throw new Error(error);
     }
@@ -101,7 +121,7 @@ test(
   Timeout
 );
 
-test(
+it(
   "invalid subject",
   async () => {
     const postData = JSON.stringify({
@@ -111,15 +131,19 @@ test(
       html: "<html><body><p>Hi {{first_name}} {{last_name}},<br><br>The following are the completed order(s) :<br>{{AgencyOrderid}}  <br><br><strong>NEW!</strong> Action is using MaestroX to provide our customers with search order tracking and ETAs. You can view your order status and send us messages here https://portal.maestrox.com. Please login to see your recent orders and other valuable file information. If you do not yet have access, follow the link above and click the “Request Access” button. You will receive an email invitation from No-reply@actioncentral.com.<br><br> Thanks! </p></body></html>",
     });
     try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
       const response = await CreateTemplateModule(postData);
       expect(response.Result.errorType).toBe("AlreadyExistsException");
+      reporter.endStep();
+      reporter.testId("API Endpoint-/services/create-template")
+      reporter.description("Response message from API:" + response)
     } catch (error) {
       throw new Error(error);
     }
   },
   Timeout
 );
-test(
+it(
   "text is blank",
   async () => {
     const postData = JSON.stringify({
@@ -129,10 +153,14 @@ test(
       html: "<html><body><p>Hi {{first_name}} {{last_name}},<br><br>The following are the completed order(s) :<br>{{AgencyOrderid}}  <br><br><strong>NEW!</strong> Action is using MaestroX to provide our customers with search order tracking and ETAs. You can view your order status and send us messages here https://portal.maestrox.com. Please login to see your recent orders and other valuable file information. If you do not yet have access, follow the link above and click the “Request Access” button. You will receive an email invitation from No-reply@actioncentral.com.<br><br> Thanks! </p></body></html>",
     });
     try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
       const response = await CreateTemplateModule(postData);
       expect(response.Error).toBe(
         "'text' is a mandatory field and is missing or empty."
       );
+      reporter.endStep();
+      reporter.testId("API Endpoint-/services/create-template")
+      reporter.description("Response message from API:" + response)
     } catch (error) {
       throw new Error(error);
     }
@@ -140,7 +168,7 @@ test(
   Timeout
 );
 
-test(
+it(
   "text is invalid",
   async () => {
     const postData = JSON.stringify({
@@ -150,15 +178,19 @@ test(
       html: "<html><body><p>Hi {{first_name}} {{last_name}},<br><br>The following are the completed order(s) :<br>{{AgencyOrderid}}  <br><br><strong>NEW!</strong> Action is using MaestroX to provide our customers with search order tracking and ETAs. You can view your order status and send us messages here https://portal.maestrox.com. Please login to see your recent orders and other valuable file information. If you do not yet have access, follow the link above and click the “Request Access” button. You will receive an email invitation from No-reply@actioncentral.com.<br><br> Thanks! </p></body></html>",
     });
     try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
       const response = await CreateTemplateModule(postData);
       expect(response.Result.errorType).toBe("AlreadyExistsException");
+      reporter.endStep();
+      reporter.testId("API Endpoint-/services/create-template")
+      reporter.description("Response message from API:" + response)
     } catch (error) {
       throw new Error(error);
     }
   },
   Timeout
 );
-test(
+it(
   "html is blank",
   async () => {
     const postData = JSON.stringify({
@@ -168,10 +200,14 @@ test(
       html: "",
     });
     try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
       const response = await CreateTemplateModule(postData);
       expect(response.Error).toBe(
         "'html' is a mandatory field and is missing or empty."
       );
+      reporter.endStep();
+      reporter.testId("API Endpoint-/services/create-template")
+      reporter.description("Response message from API:" + response)
     } catch (error) {
       throw new Error(error);
     }
@@ -179,7 +215,7 @@ test(
   Timeout
 );
 
-test(
+it(
   "Special character in name",
   async () => {
     const postData = JSON.stringify({
@@ -189,8 +225,12 @@ test(
       html: "<html><body><p>Hi {{first_name}} {{last_name}},<br><br>The following are the completed order(s) :<br>{{AgencyOrderid}}  <br><br><strong>NEW!</strong> Action is using MaestroX to provide our customers with search order tracking and ETAs. You can view your order status and send us messages here https://portal.maestrox.com. Please login to see your recent orders and other valuable file information. If you do not yet have access, follow the link above and click the “Request Access” button. You will receive an email invitation from No-reply@actioncentral.com.<br><br> Thanks! </p></body></html>",
     });
     try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
       const response = await CreateTemplateModule(postData);
       expect(response.Result.errorType).toBe("ClientError");
+      reporter.endStep();
+      reporter.testId("API Endpoint-/services/create-template")
+      reporter.description("Response message from API:" + response)
     } catch (error) {
       throw new Error(error);
     }

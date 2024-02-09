@@ -21,7 +21,7 @@ const {
 
   const USER=process.env.SWATI_USER_EMAIL
   const PASSWORD=process.env.SWATI_PASSWORD
-  test(
+  it(
     "API Success",
     async () => {
       const postData = JSON.stringify({
@@ -29,15 +29,19 @@ const {
         password: PASSWORD,
       });
       try {
+        reporter.startStep("Values passed:" + JSON.stringify(postData));
         const response = await NAModule(postData, options);
         expect(response.success.statusCode).toBe(200);
+        reporter.endStep();
+        reporter.testId("API Endpoint-/services/sync/MyExpressStateMachine")
+        reporter.description("Response message from API:" + response)
       } catch (error) {
         throw new Error(error);
       }
     },
     Timeout
   );
-  test(
+  it(
     "Wrong username",
     async () => {
       const postData = JSON.stringify({
@@ -45,8 +49,12 @@ const {
         "password": PASSWORD
       });
       try {
+        reporter.startStep("Values passed:" + JSON.stringify(postData));
         const response = await NAModule(postData, options);
         expect(response.success.statusCode).toBe(200);
+        reporter.endStep();
+        reporter.testId("API Endpoint-/services/sync/MyExpressStateMachine")
+        reporter.description("Response message from API:" + response)
       } catch (error) {
         throw new Error(error);
       }

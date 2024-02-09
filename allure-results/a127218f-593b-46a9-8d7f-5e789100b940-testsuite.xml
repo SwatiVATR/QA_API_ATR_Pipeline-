@@ -1,0 +1,64 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1707488394427' stop='1707488397109'>
+    <name>test/Searcher/Get_Searcher_Companies.test.js</name>
+    <title>test/Searcher/Get_Searcher_Companies.test.js</title>
+    <test-cases>
+        <test-case start='1707488394427' status='passed' stop='1707488396015'>
+            <name>API Success</name>
+            <title>API Success</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/searcherCompanies/all'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1707488394429' status='passed' stop='1707488396013'>
+                    <name>Values passed:"{}"</name>
+                    <title>Values passed:"{}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:[object Object]</description>
+        </test-case>
+        <test-case start='1707488396015' status='passed' stop='1707488396397'>
+            <name>instead of all any random numbers is passed</name>
+            <title>instead of all any random numbers is passed</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/searcherCompanies/2151834341'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1707488396016' status='passed' stop='1707488396397'>
+                    <name>Values passed:"{}"</name>
+                    <title>Values passed:"{}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:[object Object]</description>
+        </test-case>
+        <test-case start='1707488396398' status='failed' stop='1707488397106'>
+            <name>instead of all any special character is passed</name>
+            <title>instead of all any special character is passed</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1707488396398' status='undefined'>
+                    <name>Values passed:"{}"</name>
+                    <title>Values passed:"{}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Response is not in valid json format</message>
+                <stack-trace>Error: Response is not in valid json format
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/Searcher/Get_Searcher_Companies.test.js:71:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

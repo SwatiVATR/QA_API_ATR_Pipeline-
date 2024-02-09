@@ -6,13 +6,17 @@ const options = {
   ...commonOptionsPOSTBasicAUTH,
 };
 
-test(
+it(
   "API Success",
   async () => {
     const postData = JSON.stringify(WebhookOrderRequestBody);
     try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
       const response = await NAModule(postData, options);
       expect(response.success).toBe(true);
+      reporter.endStep();
+      reporter.testId("API Endpoint-/webhook/order/ramquest")
+      reporter.description("Response message from API:" + response.error)
     } catch (error) {
       throw new Error(error);
     }
@@ -20,26 +24,34 @@ test(
   Timeout
 );
 
-test(
+it(
   "productsordered is missing",
   async () => {
     const postData = JSON.stringify(WebhookOrderRequestBodyWithoutproductsordered);
     try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
       const response = await NAModule(postData, options);
       expect(response.error.success).toBe(false);
+      reporter.endStep();
+      reporter.testId("API Endpoint-/webhook/order/ramquest")
+      reporter.description("Response message from API:" + response.error)
     } catch (error) {
       throw new Error(error);
     }
   },
   Timeout
 );
-test(
+it(
   "BAD REQUEST",
   async () => {
     const postData = JSON.stringify(WebhookOrderRequestBodyWithoutBody);
     try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
       const response = await NAModule(postData, options);
       expect(response.error.success).toBe(false);
+      reporter.endStep();
+      reporter.testId("API Endpoint-/webhook/order/ramquest")
+      reporter.description("Response message from API:" + response.error)
     } catch (error) {
       throw new Error(error);
     }

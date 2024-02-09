@@ -12,6 +12,8 @@ it('API Success',
       const data = JSON.parse(responseData);
       expect(data.success.msg.results.length >= 1).toBe(true);
       reporter.endStep();
+      reporter.testId("API Endpoint-/services/orders?status=&offset=0&limit=100&sort=DESC")
+      reporter.description("Response message from API:" + data)
     } catch (error) {
       throw new Error(error);
     }
@@ -31,6 +33,8 @@ it('parameter missing',
       const data = JSON.parse(responseData);
       expect(data.error).toEqual("invalid literal for int() with base 10: ''");
       reporter.endStep();
+      reporter.testId("API Endpoint-/services/orders?status=&offset=&limit=&sort=DESC")
+      reporter.description("Response message from API:" + data)
     } catch (error) {
       throw new Error(error);
     }
@@ -50,6 +54,8 @@ it('status is required',
       const data = JSON.parse(responseData);
       expect(data.error).toEqual("'status'");
       reporter.endStep();
+      reporter.testId("API Endpoint-/services/orders?limit=10&sort=ASC")
+      reporter.description("Response message from API:" + data)
     } catch (error) {
       throw new Error(error);
     }
@@ -70,6 +76,8 @@ it('invalid status is passed',
       const data = JSON.parse(responseData);
       expect(data.success.msg.results.length >= 1).toEqual(false);
       reporter.endStep();
+      reporter.testId("API Endpoint-/services/orders?status=sdsds&offset=0&limit=100&sort=DESC")
+      reporter.description("Response message from API:" + data)
     } catch (error) {
       throw new Error(error);
     }
@@ -91,6 +99,8 @@ it('invalid offset is passed',
       const data = JSON.parse(responseData);
       expect(data.error).toEqual("invalid literal for int() with base 10: 'dvbfv'");
       reporter.endStep();
+      reporter.testId("API Endpoint-/services/orders?status=active&offset=dvbfv&limit=100&sort=DESC")
+      reporter.description("Response message from API:" + data)
     } catch (error) {
       throw new Error(error);
     }
@@ -111,6 +121,8 @@ it('invalid limit is passed',
       const data = JSON.parse(responseData);
       expect(data.error).toEqual("invalid literal for int() with base 10: ''");
       reporter.endStep();
+      reporter.testId("API Endpoint-/services/normalize/ramquest")
+      reporter.description("Response message from API:" + data)
     } catch (error) {
       throw new Error(error);
     }

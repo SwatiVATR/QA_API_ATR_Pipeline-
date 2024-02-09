@@ -18,14 +18,13 @@ const {
       });
         try {
             reporter.startStep("Values passed:" + JSON.stringify(postData));
-
             const response = await NAModule(postData, options);
             expect(response.success).toBe(
               "An email with the updated details has been shared with the user."
             );
             reporter.endStep();
+            reporter.testId("API Endpoint-/services/current_duedate_update")
             reporter.description("Response message from API:"+JSON.stringify(response))
-
         } catch (error) {
             throw new Error(error);
         }
@@ -45,8 +44,8 @@ async () => {
           "Transaction not found."
         );
         reporter.endStep();
+        reporter.testId("API Endpoint-/services/current_duedate_update")
         reporter.description("Response message from API:"+JSON.stringify(response))
-
     } catch (error) {
         throw new Error(error);
     }
@@ -67,8 +66,8 @@ async () => {
           "transaction_id and due date are required."
         );
         reporter.endStep();
+        reporter.testId("API Endpoint-/services/current_duedate_update")
         reporter.description("Response message from API:"+JSON.stringify(response))
-
     } catch (error) {
         throw new Error(error);
     }
@@ -87,6 +86,7 @@ async () => {
           "transaction_id and due date are required."
         );
         reporter.endStep();
+        reporter.testId("API Endpoint-/services/current_duedate_update")
         reporter.description("Response message from API:"+JSON.stringify(response))
 
     } catch (error) {
@@ -108,6 +108,7 @@ async () => {
           "invalid literal for int() with base 10: ''"
         );
         reporter.endStep();
+        reporter.testId("API Endpoint-/services/current_duedate_update")
         reporter.description("Response message from API:"+JSON.stringify(response))
 
     } catch (error) {
@@ -130,6 +131,7 @@ async () => {
           "invalid literal for int() with base 10: 'wasds@233232'"
         );
         reporter.endStep();
+        reporter.testId("API Endpoint-/services/current_duedate_update")
         reporter.description("Response message from API:"+JSON.stringify(response))
 
     } catch (error) {
@@ -152,6 +154,7 @@ async () => {
           "invalid literal for int() with base 10: 'wasds@233232'"
         );
         reporter.endStep();
+        reporter.testId("API Endpoint-/services/current_duedate_update")
         reporter.description("Response message from API:"+JSON.stringify(response))
 
     } catch (error) {

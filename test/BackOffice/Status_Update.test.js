@@ -7,13 +7,17 @@ const options = {
   ...commonOptionsPOST,
 };
 
-test(
+it(
   "API Success",
   async () => {
     const postData = JSON.stringify(success);
     try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
       const response = await NAModule(postData, options);
       expect(response.Response.RecID.length >= 1).toBe(true);
+      reporter.endStep();
+      reporter.testId("API Endpoint-/services/invoker/backoffice/StatusUpdateJobs")
+      reporter.description("Response message from API:" + response)
     } catch (error) {
       throw new Error(error);
     }
@@ -21,12 +25,16 @@ test(
   Timeout
 );
 
-test(
+it(
   "Auth Key is missing ||invalid Auth Key",
   async () => {
     const postData = JSON.stringify(apikeymissing);
     try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
       const response = await NAModule(postData, options);
+      reporter.endStep();
+      reporter.testId("API Endpoint-/services/invoker/backoffice/StatusUpdateJobs")
+      reporter.description("Response message from API:" + response)
     } catch (error) {
       throw new Error(error);
     }
@@ -34,12 +42,16 @@ test(
   Timeout
 );
 
-test(
+it(
     "Plain text received as response",
     async () => {
       const postData = JSON.stringify({});
       try {
+        reporter.startStep("Values passed:" + JSON.stringify(postData));
         const response = await NAModule(postData, options);
+        reporter.endStep();
+        reporter.testId("API Endpoint-/services/invoker/backoffice/StatusUpdateJobs")
+        reporter.description("Response message from API:" + response)
       } catch (error) {
         throw new Error(error);
       }
@@ -47,28 +59,34 @@ test(
     Timeout
   );
   
-  test(
+  it(
     "appId is missing or invalid appId",
     async () => {
       const postData = JSON.stringify(appIdmissing);
       try {
+        reporter.startStep("Values passed:" + JSON.stringify(postData));
         const response = await NAModule(postData, options);
         expect(response.Response.RecID?true:false).toBe(false);
-
+        reporter.endStep();
+        reporter.testId("API Endpoint-/services/invoker/backoffice/StatusUpdateJobs")
+        reporter.description("Response message from API:" + response)
       } catch (error) {
         throw new Error(error);
       }
     },
     Timeout
   );
-  test(
+  it(
     "appPass is missing or invalid appPass",
     async () => {
       const postData = JSON.stringify(appPassmissing);
       try {
+        reporter.startStep("Values passed:" + JSON.stringify(postData));
         const response = await NAModule(postData, options);
         expect(response.Response.RecID?true:false).toBe(false);
-
+        reporter.endStep();
+        reporter.testId("API Endpoint-/services/invoker/backoffice/StatusUpdateJobs")
+        reporter.description("Response message from API:" + response)
       } catch (error) {
         throw new Error(error);
       }
@@ -77,14 +95,17 @@ test(
   );
 
 
-  test(
+  it(
     "appUsername is missing or invalid appUsername",
     async () => {
       const postData = JSON.stringify(appUsernamemissing);
       try {
+        reporter.startStep("Values passed:" + JSON.stringify(postData));
         const response = await NAModule(postData, options);
         expect(response.Response.RecID?true:false).toBe(false);
-
+        reporter.endStep();
+        reporter.testId("API Endpoint-/services/invoker/backoffice/StatusUpdateJobs")
+        reporter.description("Response message from API:" + response)
       } catch (error) {
         throw new Error(error);
       }

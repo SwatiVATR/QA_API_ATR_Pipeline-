@@ -19,6 +19,8 @@ it('API Success', async () => {
     const response = await HttpModule(postData, options);
       expect(response.statusCode).toBe(500);
       reporter.endStep();
+      reporter.testId("API Endpoint-/callback/order/ramquest-test")
+      reporter.description("Response message from API:" + response)
   } catch (error) {
       throw new Error(error);
   }

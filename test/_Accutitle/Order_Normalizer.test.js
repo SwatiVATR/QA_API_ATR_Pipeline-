@@ -17,6 +17,8 @@ it('API Success', async () => {
       true
     );
     reporter.endStep();
+    reporter.testId("API Endpoint-/services/normalize/accutitle")
+    reporter.description("Response message from API:" + response)
   } catch (error) {
     throw new Error(error);
   }
@@ -37,6 +39,8 @@ it('Order is blank', async () => {
       "Invalid data or url or filepath argument: \nno element found: line 1, column 0"
     );
     reporter.endStep();
+    reporter.testId("API Endpoint-/services/normalize/accutitle")
+    reporter.description("Response message from API:" + response)
   } catch (error) {
     throw new Error(error);
   }
@@ -52,6 +56,8 @@ it('BAD Request', async () => {
     const response = await NAModule(postData, options);
       expect(response.error).toBe("'order'");
     reporter.endStep();
+    reporter.testId("API Endpoint-/services/normalize/accutitle")
+    reporter.description("Response message from API:" + response)
   } catch (error) {
     throw new Error(error);
   }
@@ -69,6 +75,8 @@ it('Invalid session', async () => {
     const response = await NAModule(postData, options);
     expect(response.error).toBe("Invalid Session");
     reporter.endStep();
+    reporter.testId("API Endpoint-/services/normalize/accutitle")
+    reporter.description("Response message from API:" + response.error)
   } catch (error) {
     throw new Error(error);
   }
@@ -88,6 +96,8 @@ it('Invalid order', async () => {
     const response = await NAModule(postData, options);
     expect(response.error).toBe("Invalid data or url or filepath argument: dfdss\nsyntax error: line 1, column 0");
     reporter.endStep();
+    reporter.testId("API Endpoint-/services/normalize/accutitle")
+    reporter.description("Response message from API:" + response.error)
   } catch (error) {
     throw new Error(error);
   }

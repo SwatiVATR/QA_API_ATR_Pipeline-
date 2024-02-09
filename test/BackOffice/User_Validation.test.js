@@ -6,7 +6,7 @@ const options = {
   ...commonOptionsPOSTwithoutHeader,
   path: `/${STAGE}/${VERSION}/services/invoker/backoffice/ValUser`,
 };
-test(
+it(
   "Succesfull Reponse",
   async () => {
     const postData = JSON.stringify({
@@ -18,9 +18,12 @@ test(
     });
 
     try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
       const response = await COR354TemplateModule(postData, options);
-
       expect(response.statusCode).toBe(201);
+      reporter.endStep();
+      reporter.testId("API Endpoint-/services/invoker/backoffice/ValUser")
+      reporter.description("Response message from API:" + response)
     } catch (error) {
       throw new Error(error);
     }
@@ -28,7 +31,7 @@ test(
   Timeout
 );
 
-test(
+it(
   "No Such User Exists|| no appUsername is passed",
   async () => {
     const postData = JSON.stringify({
@@ -39,9 +42,12 @@ test(
       authKey: "c3932d68c908a63f428a31458461e5a3181f9d79",
     });
     try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
       const response = await COR354TemplateModule(postData, options);
-
       expect(response.statusCode).toBe(401);
+      reporter.endStep();
+      reporter.testId("API Endpoint-/services/invoker/backoffice/ValUser")
+      reporter.description("Response message from API:" + response)
     } catch (error) {
       throw new Error(error);
     }
@@ -49,7 +55,7 @@ test(
   Timeout
 );
 
-test(
+it(
   "Invalid API Key",
   async () => {
     const postData = JSON.stringify({
@@ -60,7 +66,11 @@ test(
       "authKey": ""
     });
     try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
       const response = await COR354TemplateModule(postData, options);
+      reporter.endStep();
+      reporter.testId("API Endpoint-/services/invoker/backoffice/ValUser")
+      reporter.description("Response message from API:" + response)
     } catch (error) {
       throw new Error(error);
     }
@@ -68,12 +78,16 @@ test(
   Timeout
 );
 
-test(
+it(
   "Plain text received as response",
   async () => {
     const postData = JSON.stringify({});
     try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
       const response = await COR354TemplateModule(postData, options);
+      reporter.endStep();
+      reporter.testId("API Endpoint-/services/invoker/backoffice/ValUser")
+      reporter.description("Response message from API:" + response)
     } catch (error) {
       throw new Error(error);
     }
@@ -82,7 +96,7 @@ test(
 );
 
 
-test(
+it(
   "appId is passed wrong || Special character passed in appId",
   async () => {
     const postData = JSON.stringify({
@@ -93,9 +107,12 @@ test(
       "authKey": "c3932d68c908a63f428a31458461e5a3181f9d79"
     });
     try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
       const response = await COR354TemplateModule(postData, options);
-
       expect(response.statusCode).toBe(401);
+      reporter.endStep();
+      reporter.testId("API Endpoint-/services/invoker/backoffice/ValUser")
+      reporter.description("Response message from API:" + response)
     } catch (error) {
       throw new Error(error);
     }
@@ -103,7 +120,7 @@ test(
   Timeout
 );
 
-test(
+it(
   "appPass is passed wrong|| appPass is missing",
   async () => {
     const postData = JSON.stringify({
@@ -114,9 +131,12 @@ test(
       "authKey": "c3932d68c908a63f428a31458461e5a3181f9d79"
     });
     try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
       const response = await COR354TemplateModule(postData, options);
-
       expect(response.statusCode).toBe(401);
+      reporter.endStep();
+      reporter.testId("API Endpoint-/services/invoker/backoffice/ValUser")
+      reporter.description("Response message from API:" + response)
     } catch (error) {
       throw new Error(error);
     }
@@ -125,7 +145,7 @@ test(
 );
 
 
-test(
+it(
   "appType is passed wrong|| appType is missing",
   async () => {
     const postData = JSON.stringify({
@@ -136,9 +156,12 @@ test(
       "authKey": "c3932d68c908a63f428a31458461e5a3181f9d79"
     });
     try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
       const response = await COR354TemplateModule(postData, options);
-
       expect(response.statusCode).toBe(401);
+      reporter.endStep();
+      reporter.testId("API Endpoint-/services/invoker/backoffice/ValUser")
+      reporter.description("Response message from API:" + response)
     } catch (error) {
       throw new Error(error);
     }

@@ -1,0 +1,155 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1707488362214' stop='1707488367592'>
+    <name>test/SES/Unsubscribe_email.test.js</name>
+    <title>test/SES/Unsubscribe_email.test.js</title>
+    <test-cases>
+        <test-case start='1707488362214' status='failed' stop='1707488362766'>
+            <name>API Success</name>
+            <title>API Success</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "Successfully added email address to suppression list."
+                Received: undefined</message>
+                <stack-trace>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "Successfully added email address to suppression list."
+                Received: undefined
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/SES/Unsubscribe_email.test.js:24:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1707488362766' status='failed' stop='1707488363685'>
+            <name>BAD REQUEST</name>
+            <title>BAD REQUEST</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "Message Not Delivered"
+                Received: undefined</message>
+                <stack-trace>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "Message Not Delivered"
+                Received: undefined
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/SES/Unsubscribe_email.test.js:37:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1707488363685' status='failed' stop='1707488364209'>
+            <name>email_address is missing</name>
+            <title>email_address is missing</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: TypeError: Cannot read properties of undefined (reading 'errorType')</message>
+                <stack-trace>Error: TypeError: Cannot read properties of undefined (reading 'errorType')
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/SES/Unsubscribe_email.test.js:53:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1707488364209' status='failed' stop='1707488365164'>
+            <name>email_address is not passed</name>
+            <title>email_address is not passed</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "Message Not Delivered"
+                Received: undefined</message>
+                <stack-trace>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "Message Not Delivered"
+                Received: undefined
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/SES/Unsubscribe_email.test.js:69:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1707488365164' status='failed' stop='1707488365661'>
+            <name>email_address is passed wrong</name>
+            <title>email_address is passed wrong</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "Successfully added email address to suppression list."
+                Received: undefined</message>
+                <stack-trace>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "Successfully added email address to suppression list."
+                Received: undefined
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/SES/Unsubscribe_email.test.js:87:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1707488365661' status='failed' stop='1707488366154'>
+            <name>reason is passed empty</name>
+            <title>reason is passed empty</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "Successfully added email address to suppression list."
+                Received: undefined</message>
+                <stack-trace>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "Successfully added email address to suppression list."
+                Received: undefined
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/SES/Unsubscribe_email.test.js:104:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1707488366154' status='failed' stop='1707488366659'>
+            <name>reason is passed gibberish</name>
+            <title>reason is passed gibberish</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "Successfully added email address to suppression list."
+                Received: undefined</message>
+                <stack-trace>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "Successfully added email address to suppression list."
+                Received: undefined
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/SES/Unsubscribe_email.test.js:121:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1707488366660' status='failed' stop='1707488367567'>
+            <name>email_address &amp; reason both are empty</name>
+            <title>email_address &amp; reason both are empty</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: TypeError: Cannot read properties of undefined (reading 'errorType')</message>
+                <stack-trace>Error: TypeError: Cannot read properties of undefined (reading 'errorType')
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/SES/Unsubscribe_email.test.js:138:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

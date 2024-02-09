@@ -1,5 +1,5 @@
-const { STAGE, VERSION,commonOptionsPOST,Timeout } = require("../../config");
-const {NormalizeQualiaBody,NormalizeQualiaWithoutOrderBody,BadBody} =require('../../RequestBodies/NormalizeQualiaBody')
+const { STAGE, VERSION, commonOptionsPOST, Timeout } = require("../../config");
+const { NormalizeQualiaBody, NormalizeQualiaWithoutOrderBody, BadBody } = require('../../RequestBodies/NormalizeQualiaBody')
 const NAModule = require("../../modules/NAModule");
 
 const options = {
@@ -11,34 +11,39 @@ it('API Success', async () => {
   try {
     reporter.startStep("Values passed:" + JSON.stringify(postData));
     const response = await NAModule(postData, options);
-      expect(response.success.credentials.agencyPortalId.length >= 1).toBe(
-        true
-      );
-      reporter.endStep();
+    expect(response.success.credentials.agencyPortalId.length >= 1).toBe(
+      true
+    );
+    reporter.endStep();
+    reporter.testId("API Endpoint-/services/normalize/qualia?json")
+    reporter.description("Response message from API:" + response)
   } catch (error) {
-      throw new Error(error);
+    throw new Error(error);
   }
-},Timeout)
+}, Timeout)
 it('order is missing', async () => {
   const postData = JSON.stringify(NormalizeQualiaWithoutOrderBody);
   try {
     reporter.startStep("Values passed:" + JSON.stringify(postData));
     const response = await NAModule(postData, options);
-      expect(response.error).toBe("Invalid data or url or filepath argument: \nExpecting value: line 1 column 1 (char 0)");
- 
-      reporter.endStep();
+    expect(response.error).toBe("Invalid data or url or filepath argument: \nExpecting value: line 1 column 1 (char 0)");
+    reporter.endStep();
+    reporter.testId("API Endpoint-/services/normalize/qualia?json")
+    reporter.description("Response message from API:" + response.error)
   } catch (error) {
-      throw new Error(error);
+    throw new Error(error);
   }
-},Timeout)
+}, Timeout)
 it('BAD REQUEST', async () => {
   const postData = JSON.stringify(BadBody);
   try {
     reporter.startStep("Values passed:" + JSON.stringify(postData));
     const response = await NAModule(postData, options);
-        expect(response.error).toBe("'order'");
-      reporter.endStep();
+    expect(response.error).toBe("'order'");
+    reporter.endStep();
+    reporter.testId("API Endpoint-/services/normalize/qualia?json")
+    reporter.description("Response message from API:" + response.error)
   } catch (error) {
-      throw new Error(error);
+    throw new Error(error);
   }
-},Timeout)
+}, Timeout)

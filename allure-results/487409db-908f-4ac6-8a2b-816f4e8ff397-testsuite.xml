@@ -1,0 +1,151 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1707488402204' stop='1707488413648'>
+    <name>test/PRODUCTION_Cognito/AuthService_Signup.test.js</name>
+    <title>test/PRODUCTION_Cognito/AuthService_Signup.test.js</title>
+    <test-cases>
+        <test-case start='1707488402204' status='passed' stop='1707488405948'>
+            <name>API Success</name>
+            <title>API Success</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/cognito/signup'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1707488402206' status='passed' stop='1707488405946'>
+                    <name>Values passed:"{\"username\":\"user_pw9mza@example.com\",\"password\":\"2h(8lYw^$2uO\"}"</name>
+                    <title>Values passed:"{\"username\":\"user_pw9mza@example.com\",\"password\":\"2h(8lYw^$2uO\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:[object Object]</description>
+        </test-case>
+        <test-case start='1707488405949' status='passed' stop='1707488407142'>
+            <name>email already exists</name>
+            <title>email already exists</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/cognito/signup'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1707488405949' status='passed' stop='1707488407142'>
+                    <name>Values passed:"{\"username\":\"sverma@actiontitleresearch.com\",\"password\":\"Sverma@123\"}"</name>
+                    <title>Values passed:"{\"username\":\"sverma@actiontitleresearch.com\",\"password\":\"Sverma@123\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:[object Object]</description>
+        </test-case>
+        <test-case start='1707488407143' status='passed' stop='1707488408182'>
+            <name>username is missing</name>
+            <title>username is missing</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/cognito/signup'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1707488407143' status='passed' stop='1707488408182'>
+                    <name>Values passed:"{\"username\":\"\",\"password\":\"Sverma@123\"}"</name>
+                    <title>Values passed:"{\"username\":\"\",\"password\":\"Sverma@123\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:[object Object]</description>
+        </test-case>
+        <test-case start='1707488408182' status='passed' stop='1707488409407'>
+            <name>password is missing</name>
+            <title>password is missing</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/cognito/signup'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1707488408183' status='passed' stop='1707488409407'>
+                    <name>Values passed:"{\"username\":\"sverma@actiontitleresearch.com\",\"password\":\"\"}"</name>
+                    <title>Values passed:"{\"username\":\"sverma@actiontitleresearch.com\",\"password\":\"\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:[object Object]</description>
+        </test-case>
+        <test-case start='1707488409407' status='passed' stop='1707488410425'>
+            <name>username and password both are empty</name>
+            <title>username and password both are empty</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/cognito/signup'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1707488409408' status='passed' stop='1707488410425'>
+                    <name>Values passed:"{\"username\":\"\",\"password\":\"\"}"</name>
+                    <title>Values passed:"{\"username\":\"\",\"password\":\"\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:[object Object]</description>
+        </test-case>
+        <test-case start='1707488410425' status='passed' stop='1707488411188'>
+            <name>wrong user name is passed</name>
+            <title>wrong user name is passed</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/cognito/signup'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1707488410426' status='passed' stop='1707488411188'>
+                    <name>Values passed:"{\"username\":\"@@@sverma@actiontitleresearch.com\",\"password\":\"22!Sverma@123\"}"</name>
+                    <title>Values passed:"{\"username\":\"@@@sverma@actiontitleresearch.com\",\"password\":\"22!Sverma@123\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:[object Object]</description>
+        </test-case>
+        <test-case start='1707488411188' status='passed' stop='1707488412464'>
+            <name>wrong password is passed</name>
+            <title>wrong password is passed</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/cognito/signup'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1707488411189' status='passed' stop='1707488412464'>
+                    <name>Values passed:"{\"username\":\"sverma@actiontitleresearch.com\",\"password\":\"@@@@@@\"}"</name>
+                    <title>Values passed:"{\"username\":\"sverma@actiontitleresearch.com\",\"password\":\"@@@@@@\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:[object Object]</description>
+        </test-case>
+        <test-case start='1707488412464' status='passed' stop='1707488413648'>
+            <name>wrong username and password are passed</name>
+            <title>wrong username and password are passed</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/cognito/signup'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1707488412465' status='passed' stop='1707488413648'>
+                    <name>Values passed:"{\"username\":\"@@@@@@@@\",\"password\":\"@@@@@@\"}"</name>
+                    <title>Values passed:"{\"username\":\"@@@@@@@@\",\"password\":\"@@@@@@\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:[object Object]</description>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

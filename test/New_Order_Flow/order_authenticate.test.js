@@ -13,7 +13,7 @@ const {
   const NAModule = require("../../modules/NAModule");
   const USERNAME=process.env.SWATI_USER_EMAIL
   const PASSWORD=process.env.SWATI_PASSWORD
-  test(
+  it(
     "API Success",
     async () => {
       const postData = JSON.stringify({
@@ -21,7 +21,12 @@ const {
         password: PASSWORD,
       });
       try {
+        reporter.startStep("Values passed:" + JSON.stringify(postData));
         const response = await NAModule(postData, options);
+        expect(response.statusCode).toBe(500);
+        reporter.endStep();
+        reporter.testId("API Endpoint-/services/order-authenticate")
+        reporter.description("Response message from API:" + response)
       } catch (error) {
         throw new Error(error);
       }
@@ -29,13 +34,17 @@ const {
     Timeout
   );
   
-  test(
+  it(
     "Username is missing",
     async () => {
       const postData = JSON.stringify({ username: "", password: PASSWORD });
       try {
+        reporter.startStep("Values passed:" + JSON.stringify(postData));
         const response = await NAModule(postData, options);
         expect(response.statusCode).toBe(500);
+        reporter.endStep();
+        reporter.testId("API Endpoint-/services/order-authenticate")
+        reporter.description("Response message from API:" + response)
       } catch (error) {
         throw new Error(error);
       }
@@ -43,7 +52,7 @@ const {
     Timeout
   );
   
-  test(
+  it(
     "Password is missing",
     async () => {
       const postData = JSON.stringify({
@@ -51,8 +60,35 @@ const {
         password: "",
       });
       try {
+        reporter.startStep("Values passed:" + JSON.stringify(postData));
+
         const response = await NAModule(postData, options);
         expect(response.statusCode).toBe(500);
+        reporter.endStep();
+        reporter.testId("API Endpoint-/services/order-authenticate")
+        reporter.description("Response message from API:" + response)
+      } catch (error) {
+        throw new Error(error);
+      }
+    },
+    Timeout
+  );
+
+  it(
+    "Both username and password are empty",
+    async () => {
+      const postData = JSON.stringify({
+        username: "",
+        password: "",
+      });
+      try {
+        reporter.startStep("Values passed:" + JSON.stringify(postData));
+
+        const response = await NAModule(postData, options);
+        expect(response.statusCode).toBe(500);
+        reporter.endStep();
+        reporter.testId("API Endpoint-/services/order-authenticate")
+        reporter.description("Response message from API:" + response)
       } catch (error) {
         throw new Error(error);
       }

@@ -1,0 +1,70 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1707488391066' stop='1707488393972'>
+    <name>test/PRODUCTION_Cognito/AuthService_Get_User_Details.test.js</name>
+    <title>test/PRODUCTION_Cognito/AuthService_Get_User_Details.test.js</title>
+    <test-cases>
+        <test-case start='1707488391066' status='failed' stop='1707488392034'>
+            <name>API Success</name>
+            <title>API Success</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1707488391067' status='undefined'>
+                    <name>Values passed:""</name>
+                    <title>Values passed:""</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: TypeError: Cannot read properties of undefined (reading 'correlationId')</message>
+                <stack-trace>Error: TypeError: Cannot read properties of undefined (reading 'correlationId')
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/PRODUCTION_Cognito/AuthService_Get_User_Details.test.js:28:19)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1707488392034' status='failed' stop='1707488393009'>
+            <name>invalid email address passed</name>
+            <title>invalid email address passed</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1707488392034' status='undefined'>
+                    <name>Values passed:""</name>
+                    <title>Values passed:""</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: TypeError: Cannot read properties of undefined (reading 'correlationId')</message>
+                <stack-trace>Error: TypeError: Cannot read properties of undefined (reading 'correlationId')
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/PRODUCTION_Cognito/AuthService_Get_User_Details.test.js:49:19)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1707488393009' status='failed' stop='1707488393963'>
+            <name>No email is passed</name>
+            <title>No email is passed</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1707488393010' status='undefined'>
+                    <name>Values passed:""</name>
+                    <title>Values passed:""</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: TypeError: Cannot read properties of undefined (reading 'correlationId')</message>
+                <stack-trace>Error: TypeError: Cannot read properties of undefined (reading 'correlationId')
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/PRODUCTION_Cognito/AuthService_Get_User_Details.test.js:69:19)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
