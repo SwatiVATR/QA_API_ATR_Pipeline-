@@ -21,7 +21,7 @@ it(
       expect(response.success.msg.length >= 1 ? true : false).toBe(true);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/searcherCompanies/all")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -44,7 +44,7 @@ it(
       expect(response.success.msg.length >= 1 ? true : false).toBe(false);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/searcherCompanies/2151834341")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -66,7 +66,7 @@ it(
       expect(response.success.msg.length >= 1 ? true : false).toBe(false);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/searcherCompanies/@33#$%")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }

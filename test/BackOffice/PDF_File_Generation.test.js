@@ -17,7 +17,7 @@ it(
       expect(response.statusCode).toBe(200);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/backoffice/PDFGen")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:"+ JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -36,7 +36,7 @@ it(
         expect(response.statusCode).toBe(404);
         reporter.endStep();
         reporter.testId("API Endpoint-/services/invoker/backoffice/PDFGen")
-        reporter.description("Response message from API:" + response)
+        reporter.description("Response message from API:" + JSON.stringify(response))
       } catch (error) {
         throw new Error(error);
       }
@@ -54,7 +54,7 @@ it(
         expect(response.statusCode).toBe(404);
         reporter.endStep();
         reporter.testId("API Endpoint-/services/invoker/backoffice/PDFGen")
-        reporter.description("Response message from API:" + response)
+        reporter.description("Response message from API:" + JSON.stringify(response))
       } catch (error) {
         throw new Error(error);
       }
@@ -72,7 +72,7 @@ it(
         expect(response.statusCode).toBe(404);
         reporter.endStep();
         reporter.testId("API Endpoint-/services/invoker/backoffice/PDFGen")
-        reporter.description("Response message from API:" + response)
+        reporter.description("Response message from API:" + JSON.stringify(response))
       } catch (error) {
         throw new Error(error);
       }
@@ -89,7 +89,7 @@ it(
         expect(response.statusCode).toBe(404);
         reporter.endStep();
         reporter.testId("API Endpoint-/services/invoker/backoffice/PDFGen")
-        reporter.description("Response message from API:" + response)
+        reporter.description("Response message from API:" + JSON.stringify(response))
       } catch (error) {
         throw new Error(error);
       }
@@ -106,7 +106,7 @@ it(
         const response = await NAModule(postData, options);
         reporter.endStep();
         reporter.testId("API Endpoint-/services/invoker/backoffice/PDFGen")
-        reporter.description("Response message from API:" + response)
+        reporter.description("Response message from API:" + JSON.stringify(response))
       } catch (error) {
         throw new Error(error);
       }

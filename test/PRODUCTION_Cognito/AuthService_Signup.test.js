@@ -29,7 +29,7 @@ it(
       expect(response.statusCode).toBe(200);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/cognito/signup")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -51,7 +51,7 @@ it(
       expect(response.body).toBe("An error occurred (UsernameExistsException) when calling the SignUp operation: An account with the given email already exists.");
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/cognito/signup")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -74,7 +74,7 @@ it(
       expect(response.statusCode).toBe(500);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/cognito/signup")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -96,7 +96,7 @@ it(
       expect(response.statusCode).toBe(500);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/cognito/signup")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -118,7 +118,7 @@ it(
       expect(response.statusCode).toBe(500);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/cognito/signup")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -140,7 +140,7 @@ it(
       expect(response.statusCode).toBe(500);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/cognito/signup")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -163,7 +163,7 @@ it(
       expect(response.statusCode).toBe(500);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/cognito/signup")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -185,7 +185,7 @@ it(
       expect(response.statusCode).toBe(500);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/cognito/signup")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }

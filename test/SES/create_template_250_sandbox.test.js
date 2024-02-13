@@ -21,7 +21,7 @@ it(
       expect(response.Result).toBeTruthy();
       reporter.endStep();
       reporter.testId("API Endpoint-/services/create-template")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -44,7 +44,7 @@ it(
       expect(response.Result.errorType).toBe("AlreadyExistsException");
       reporter.endStep();
       reporter.testId("API Endpoint-/services/create-template")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -64,7 +64,7 @@ it(
       );
       reporter.endStep();
       reporter.testId("API Endpoint-/services/create-template")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -89,7 +89,7 @@ it(
       );
       reporter.endStep();
       reporter.testId("API Endpoint-/services/create-template")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -113,7 +113,7 @@ it(
       );
       reporter.endStep();
       reporter.testId("API Endpoint-/services/create-template")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -136,7 +136,7 @@ it(
       expect(response.Result.errorType).toBe("AlreadyExistsException");
       reporter.endStep();
       reporter.testId("API Endpoint-/services/create-template")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -160,7 +160,7 @@ it(
       );
       reporter.endStep();
       reporter.testId("API Endpoint-/services/create-template")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -183,7 +183,7 @@ it(
       expect(response.Result.errorType).toBe("AlreadyExistsException");
       reporter.endStep();
       reporter.testId("API Endpoint-/services/create-template")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -207,7 +207,7 @@ it(
       );
       reporter.endStep();
       reporter.testId("API Endpoint-/services/create-template")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -230,7 +230,7 @@ it(
       expect(response.Result.errorType).toBe("ClientError");
       reporter.endStep();
       reporter.testId("API Endpoint-/services/create-template")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }

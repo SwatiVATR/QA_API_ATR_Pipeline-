@@ -22,7 +22,7 @@ const {
         expect(response.success.msg).toBe("Updated successfully");
         reporter.endStep();
         reporter.testId("API Endpoint-/services/searcherCompany/134522")
-        reporter.description("Response message from API:" + response)
+        reporter.description("Response message from API:" + JSON.stringify(response))
       } catch (error) {
         throw new Error();
       }
@@ -40,7 +40,7 @@ const {
         expect(response.error).toBe("'searchCompany'");
         reporter.endStep();
         reporter.testId("API Endpoint-/services/searcherCompany/134522")
-        reporter.description("Response message from API:" + response)
+        reporter.description("Response message from API:" + JSON.stringify(response))
       } catch (error) {
         throw new Error();
       }
@@ -59,7 +59,7 @@ const {
         );
         reporter.endStep();
         reporter.testId("API Endpoint-/services/searcherCompany/134522")
-        reporter.description("Response message from API:" + response)
+        reporter.description("Response message from API:" + JSON.stringify(response))
       } catch (error) {
         throw new Error();
       }

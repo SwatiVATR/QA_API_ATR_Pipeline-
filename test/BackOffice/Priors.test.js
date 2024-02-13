@@ -20,7 +20,7 @@ it(
       expect(response.Response.TransactionID.length > 0).toBe(true);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/backoffice/Priors")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -37,7 +37,7 @@ it(
       const response = await NAModule(postData, options);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/backoffice/Priors")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -53,7 +53,7 @@ it(
       const response = await NAModule(postData, options);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/backoffice/Priors")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:"+ JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }

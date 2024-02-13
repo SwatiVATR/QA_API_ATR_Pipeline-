@@ -19,7 +19,7 @@ it(
       );
       reporter.endStep();
       reporter.testId("API Endpoint-/services/notes/update-special-request-recipients/DEVTRUST1")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -42,7 +42,7 @@ it(
         );
         reporter.endStep();
         reporter.testId("API Endpoint-/services/notes/update-special-request-recipients/")
-        reporter.description("Response message from API:" + response)
+        reporter.description("Response message from API:" + JSON.stringify(response))
       } catch (error) {
         throw new Error(error);
       }

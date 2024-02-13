@@ -1,0 +1,79 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1707832993264' stop='1707832996511'>
+    <name>test/SES/delete_email_template_250_sandbox.test.js</name>
+    <title>test/SES/delete_email_template_250_sandbox.test.js</title>
+    <test-cases>
+        <test-case start='1707832993264' status='failed' stop='1707832994234'>
+            <name>API Success</name>
+            <title>API Success</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1707832993265' status='undefined'>
+                    <name>Values passed:"{}"</name>
+                    <title>Values passed:"{}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "Template 'testabc' deleted successfully"
+                Received: undefined</message>
+                <stack-trace>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "Template 'testabc' deleted successfully"
+                Received: undefined
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/SES/delete_email_template_250_sandbox.test.js:30:19)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1707832994234' status='failed' stop='1707832995281'>
+            <name>special characters in endpoints</name>
+            <title>special characters in endpoints</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1707832994235' status='undefined'>
+                    <name>Values passed:"{}"</name>
+                    <title>Values passed:"{}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "Template '@@@' deleted successfully"
+                Received: undefined</message>
+                <stack-trace>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "Template '@@@' deleted successfully"
+                Received: undefined
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/SES/delete_email_template_250_sandbox.test.js:56:19)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1707832995281' status='passed' stop='1707832996503'>
+            <name>Invalid session</name>
+            <title>Invalid session</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/delete-template/@@@#$$DD'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1707832995281' status='passed' stop='1707832996502'>
+                    <name>Values passed:"{}"</name>
+                    <title>Values passed:"{}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"error":"Invalid Session"}</description>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

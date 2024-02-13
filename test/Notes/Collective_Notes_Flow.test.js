@@ -74,7 +74,7 @@ it('API Success for service submit notes of not ATR Members',
             );
             reporter.endStep();
             reporter.testId("API Endpoint-/services/submit-notes")
-            reporter.description("Response message from API:"+response.message)
+            reporter.description("Response message from API:"+ JSON.stringify(response))
 
         } catch (error) {
             throw new Error(error);
@@ -101,7 +101,7 @@ it('API Success for service submit notes of ATR Members',
             );
             reporter.endStep();
             reporter.testId("API Endpoint-/services/submit-notes")
-            reporter.description("Response message from API:"+response.message)
+            reporter.description("Response message from API:"+ JSON.stringify(response))
 
         } catch (error) {
             throw new Error(error);
@@ -127,7 +127,7 @@ it('API Success for special-request without appended_note key',
             expect(response.success.message).toBe("Rush note has been added successfully");
             reporter.endStep();
             reporter.testId("API Endpoint-/services/notes/special-request")
-            reporter.description("Response message from API:" + response.success.message)
+            reporter.description("Response message from API:" + JSON.stringify(response))
 
         } catch (error) {
             throw new Error(error);
@@ -155,7 +155,7 @@ it('API Success for special-request with appended_note key',
             reporter.endStep();
             reporter.testId("API Endpoint-/services/notes/special-request")
 
-            reporter.description("Response message from API:" + response.success.message)
+            reporter.description("Response message from API:" + JSON.stringify(response))
 
         } catch (error) {
             throw new Error(error);
@@ -180,7 +180,7 @@ it('API Success for service current duedate update',
             expect(response.success).toBe("An email with the updated details has been shared with the user.");
             reporter.endStep();
             reporter.testId("API Endpoint-/services/current_duedate_update")
-            reporter.description("Response message from API:" + response.success)
+            reporter.description("Response message from API:" + JSON.stringify(response))
 
         } catch (error) {
             throw new Error(error);

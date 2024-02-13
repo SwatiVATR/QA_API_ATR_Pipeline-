@@ -1,0 +1,88 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1707832981526' stop='1707832985255'>
+    <name>test/PRODUCTION_Cognito/AuthService_Get_User_Details.test.js</name>
+    <title>test/PRODUCTION_Cognito/AuthService_Get_User_Details.test.js</title>
+    <test-cases>
+        <test-case start='1707832981526' status='failed' stop='1707832982621'>
+            <name>API Success</name>
+            <title>API Success</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1707832981527' status='undefined'>
+                    <name>Values passed:""</name>
+                    <title>Values passed:""</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: TypeError: Cannot read properties of undefined (reading 'correlationId')</message>
+                <stack-trace>Error: TypeError: Cannot read properties of undefined (reading 'correlationId')
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/PRODUCTION_Cognito/AuthService_Get_User_Details.test.js:29:19)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1707832982621' status='failed' stop='1707832983646'>
+            <name>invalid email address passed</name>
+            <title>invalid email address passed</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1707832982621' status='undefined'>
+                    <name>Values passed:""</name>
+                    <title>Values passed:""</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: TypeError: Cannot read properties of undefined (reading 'correlationId')</message>
+                <stack-trace>Error: TypeError: Cannot read properties of undefined (reading 'correlationId')
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/PRODUCTION_Cognito/AuthService_Get_User_Details.test.js:50:19)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1707832983646' status='failed' stop='1707832984641'>
+            <name>No email is passed</name>
+            <title>No email is passed</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1707832983646' status='undefined'>
+                    <name>Values passed:""</name>
+                    <title>Values passed:""</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: TypeError: Cannot read properties of undefined (reading 'correlationId')</message>
+                <stack-trace>Error: TypeError: Cannot read properties of undefined (reading 'correlationId')
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/PRODUCTION_Cognito/AuthService_Get_User_Details.test.js:70:19)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1707832984641' status='passed' stop='1707832985248'>
+            <name>Invalid session</name>
+            <title>Invalid session</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/user?email=sverma@actiontitleresearch.com'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1707832984642' status='passed' stop='1707832985247'>
+                    <name>Values passed:""</name>
+                    <title>Values passed:""</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"error":"Invalid Session"}</description>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

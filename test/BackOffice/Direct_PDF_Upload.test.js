@@ -30,9 +30,10 @@ it(
       reporter.startStep("Values passed:" + JSON.stringify(postData));
       const response = await NAModule(postData, options);
       expect(response.Response.TransactionID.length > 0).toBe(true);
+      console.log(response);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/backoffice/s3DirectPDF")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -50,7 +51,7 @@ it(
       expect(!response.Response.FilesUploaded).toBe(true);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/backoffice/s3DirectPDF")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:"+ JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -67,7 +68,7 @@ it(
       expect(!response.Response.FilesUploaded).toBe(true);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/backoffice/s3DirectPDF")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -85,7 +86,7 @@ it(
       expect(!response.Response.FilesUploaded).toBe(true);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/backoffice/s3DirectPDF")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -103,7 +104,7 @@ it(
       expect(!response.Response.FilesUploaded).toBe(true);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/backoffice/s3DirectPDF")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -121,7 +122,7 @@ it(
       expect(!response.Response.FilesUploaded).toBe(true);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/backoffice/s3DirectPDF")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -138,7 +139,7 @@ it(
       const response = await NAModule(postData, options);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/backoffice/s3DirectPDF")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:"+ JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -156,7 +157,7 @@ it(
       expect(!response.Response.FilesUploaded).toBe(true);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/backoffice/s3DirectPDF")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -174,7 +175,7 @@ it(
       expect(!response.Response.FilesUploaded).toBe(true);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/backoffice/s3DirectPDF")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -192,7 +193,7 @@ it(
       expect(!response.Response.FilesUploaded).toBe(true);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/backoffice/s3DirectPDF")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -210,7 +211,7 @@ it(
       expect(!response.Response.FilesUploaded).toBe(true);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/backoffice/s3DirectPDF")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -228,7 +229,7 @@ it(
       expect(!response.Response.FilesUploaded).toBe(true);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/backoffice/s3DirectPDF")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -245,7 +246,7 @@ it(
       expect(!response.Response.FilesUploaded).toBe(true);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/backoffice/s3DirectPDF")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:"+ JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -262,7 +263,7 @@ it(
       expect(!response.Response.FilesUploaded).toBe(true);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/backoffice/s3DirectPDF")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -278,7 +279,7 @@ it(
       const response = await NAModule(postData, options);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/backoffice/s3DirectPDF")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }

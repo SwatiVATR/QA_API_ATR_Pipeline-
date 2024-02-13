@@ -26,7 +26,7 @@ const {
         expect(response.statusCode).toBe(500);
         reporter.endStep();
         reporter.testId("API Endpoint-/services/invoker/cognito/signup-dev")
-        reporter.description("Response message from API:" + response)
+        reporter.description("Response message from API:" + JSON.stringify(response))
       } catch (error) {
         throw new Error(error);
       }
@@ -46,7 +46,7 @@ const {
         expect(response.statusCode).toBe(500);
         reporter.endStep();
         reporter.testId("API Endpoint-/services/invoker/cognito/signup-dev")
-        reporter.description("Response message from API:" + response)
+        reporter.description("Response message from API:" + JSON.stringify(response))
       } catch (error) {
         throw new Error(error);
       }
@@ -66,7 +66,7 @@ const {
         expect(response.statusCode).toBe(500);
         reporter.endStep();
         reporter.testId("API Endpoint-/services/invoker/cognito/signup-dev")
-        reporter.description("Response message from API:" + response)
+        reporter.description("Response message from API:" + JSON.stringify(response))
       } catch (error) {
         throw new Error(error);
       }
@@ -86,7 +86,7 @@ const {
         expect(response.statusCode).toBe(500);
         reporter.endStep();
         reporter.testId("API Endpoint-/services/invoker/cognito/signup-dev")
-        reporter.description("Response message from API:" + response)
+        reporter.description("Response message from API:" + JSON.stringify(response))
       } catch (error) {
         throw new Error(error);
       }
@@ -103,7 +103,7 @@ const {
         expect(response.statusCode).toBe(500);
         reporter.endStep();
         reporter.testId("API Endpoint-/services/invoker/cognito/signup-dev")
-        reporter.description("Response message from API:" + response)
+        reporter.description("Response message from API:" + JSON.stringify(response))
       } catch (error) {
         throw new Error(error);
       }
@@ -119,7 +119,7 @@ const {
         const response = await NAModule(postData, options);
         reporter.endStep();
         reporter.testId("API Endpoint-/services/invoker/cognito/signup-dev")
-        reporter.description("Response message from API:" + response)
+        reporter.description("Response message from API:" + JSON.stringify(response))
       } catch (error) {
         throw new Error(error);
       }

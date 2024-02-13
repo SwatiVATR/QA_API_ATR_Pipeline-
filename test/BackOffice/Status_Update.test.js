@@ -17,7 +17,7 @@ it(
       expect(response.Response.RecID.length >= 1).toBe(true);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/backoffice/StatusUpdateJobs")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -34,7 +34,7 @@ it(
       const response = await NAModule(postData, options);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/backoffice/StatusUpdateJobs")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -51,7 +51,7 @@ it(
         const response = await NAModule(postData, options);
         reporter.endStep();
         reporter.testId("API Endpoint-/services/invoker/backoffice/StatusUpdateJobs")
-        reporter.description("Response message from API:" + response)
+        reporter.description("Response message from API:" + JSON.stringify(response))
       } catch (error) {
         throw new Error(error);
       }
@@ -69,7 +69,7 @@ it(
         expect(response.Response.RecID?true:false).toBe(false);
         reporter.endStep();
         reporter.testId("API Endpoint-/services/invoker/backoffice/StatusUpdateJobs")
-        reporter.description("Response message from API:" + response)
+        reporter.description("Response message from API:" + JSON.stringify(response))
       } catch (error) {
         throw new Error(error);
       }
@@ -86,7 +86,7 @@ it(
         expect(response.Response.RecID?true:false).toBe(false);
         reporter.endStep();
         reporter.testId("API Endpoint-/services/invoker/backoffice/StatusUpdateJobs")
-        reporter.description("Response message from API:" + response)
+        reporter.description("Response message from API:" + JSON.stringify(response))
       } catch (error) {
         throw new Error(error);
       }
@@ -105,7 +105,7 @@ it(
         expect(response.Response.RecID?true:false).toBe(false);
         reporter.endStep();
         reporter.testId("API Endpoint-/services/invoker/backoffice/StatusUpdateJobs")
-        reporter.description("Response message from API:" + response)
+        reporter.description("Response message from API:" + JSON.stringify(response))
       } catch (error) {
         throw new Error(error);
       }

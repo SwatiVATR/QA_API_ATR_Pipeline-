@@ -3,12 +3,13 @@ const {
     VERSION,
     commonOptionsDELETE,
     Timeout,
+    commonOptionsDELETEwithoutHeader
 } = require("../../config");
 const NAModule = require("../../modules/NAModule");
 
 
 const postData = JSON.stringify({});
-test(
+it(
     "API Success",
     async () => {
         const options = {
@@ -16,10 +17,15 @@ test(
             ...commonOptionsDELETE,
         };
         try {
+            reporter.startStep("Values passed:" + JSON.stringify(postData));
+
             const response = await NAModule(postData, options);
             expect(response.message).toBe(
                 "Template 'testabc' deleted successfully"
             );
+            reporter.endStep();
+            reporter.testId("API Endpoint-/services/delete-template/testabc")
+            reporter.description("Response message from API:" + JSON.stringify(response))
         } catch (error) {
             throw new Error(error);
         }
@@ -29,7 +35,7 @@ test(
 
 
 
-test(
+it(
     "special characters in endpoints",
     async () => {
         const options = {
@@ -37,10 +43,37 @@ test(
             ...commonOptionsDELETE,
         };
         try {
+            reporter.startStep("Values passed:" + JSON.stringify(postData));
+
             const response = await NAModule(postData, options);
             expect(response.message).toBe(
                 "Template '@@@' deleted successfully"
             );
+            reporter.endStep();
+            reporter.testId("API Endpoint-/services/delete-template/@@@#$$DD")
+            reporter.description("Response message from API:" + JSON.stringify(response))
+        } catch (error) {
+            throw new Error(error);
+        }
+    },
+    Timeout
+);
+
+it(
+    "Invalid session",
+    async () => {
+        const options = {
+            path: `/${STAGE}/${VERSION}/services/delete-template/@@@#$$DD`,
+            ...commonOptionsDELETEwithoutHeader,
+        };
+        try {
+            reporter.startStep("Values passed:" + JSON.stringify(postData));
+
+            const response = await NAModule(postData, options);
+            expect(response.error).toBe("Invalid Session");
+            reporter.endStep();
+            reporter.testId("API Endpoint-/services/delete-template/@@@#$$DD")
+            reporter.description("Response message from API:" + JSON.stringify(response))
         } catch (error) {
             throw new Error(error);
         }

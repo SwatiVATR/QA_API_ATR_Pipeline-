@@ -5,6 +5,7 @@ const {
     VERSION,
     commonOptionsGET,
     Timeout,
+    commonOptionsGETwithoutHeader
 } = require("../../config");
 const NAModule = require("../../modules/NAModule");
 
@@ -23,7 +24,7 @@ it(
             expect(response.success.correlationId).toBe(1);
             reporter.endStep();
             reporter.testId(`API Endpoint-/user?email=${EMAIL}`)
-            reporter.description("Response message from API:" + response)
+            reporter.description("Response message from API:" + JSON.stringify(response))
         } catch (error) {
             throw new Error(error);
         }
@@ -44,7 +45,7 @@ it(
             expect(response.success.correlationId).toBe(1);
             reporter.endStep();
             reporter.testId(`API Endpoint-/user?email=${EMAIL}df`)
-            reporter.description("Response message from API:" + response)
+            reporter.description("Response message from API:" + JSON.stringify(response))
         } catch (error) {
             throw new Error(error);
         }
@@ -64,7 +65,28 @@ it(
             expect(response.success.correlationId).toBe(1);
             reporter.endStep();
             reporter.testId(`API Endpoint-/user?email=`)
-            reporter.description("Response message from API:" + response)
+            reporter.description("Response message from API:" + JSON.stringify(response))
+        } catch (error) {
+            throw new Error(error);
+        }
+    },
+    Timeout
+);
+
+it(
+    "Invalid session",
+    async () => {
+        const options = {
+            path: `/${STAGE}/${VERSION}/user?email=${EMAIL}`,
+            ...commonOptionsGETwithoutHeader,
+        };
+        try {
+            reporter.startStep("Values passed:" + JSON.stringify(postData));
+            const response = await NAModule(postData, options);
+            expect(response.error).toBe("Invalid Session");
+            reporter.endStep();
+            reporter.testId(`API Endpoint-/user?email=${EMAIL}`)
+            reporter.description("Response message from API:" + JSON.stringify(response))
         } catch (error) {
             throw new Error(error);
         }

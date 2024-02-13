@@ -23,7 +23,7 @@ it(
       expect(response.statusCode).toBe(201);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/backoffice/ValUser")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -47,7 +47,7 @@ it(
       expect(response.statusCode).toBe(401);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/backoffice/ValUser")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -70,7 +70,7 @@ it(
       const response = await COR354TemplateModule(postData, options);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/backoffice/ValUser")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -87,7 +87,7 @@ it(
       const response = await COR354TemplateModule(postData, options);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/backoffice/ValUser")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -112,7 +112,7 @@ it(
       expect(response.statusCode).toBe(401);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/backoffice/ValUser")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -136,7 +136,7 @@ it(
       expect(response.statusCode).toBe(401);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/backoffice/ValUser")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -161,7 +161,7 @@ it(
       expect(response.statusCode).toBe(401);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/backoffice/ValUser")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }

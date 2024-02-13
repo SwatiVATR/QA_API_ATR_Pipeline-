@@ -1,0 +1,211 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1707832932423' stop='1707832939529'>
+    <name>test/SES/Unsubscribe_email.test.js</name>
+    <title>test/SES/Unsubscribe_email.test.js</title>
+    <test-cases>
+        <test-case start='1707832932423' status='failed' stop='1707832933102'>
+            <name>API Success</name>
+            <title>API Success</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1707832932424' status='undefined'>
+                    <name>Values passed:"{\"email_address\":\"sverma@actiontitleresearch.com\",\"reason\":\"BOUNCE\"}"</name>
+                    <title>Values passed:"{\"email_address\":\"sverma@actiontitleresearch.com\",\"reason\":\"BOUNCE\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "Successfully added email address to suppression list."
+                Received: undefined</message>
+                <stack-trace>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "Successfully added email address to suppression list."
+                Received: undefined
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/SES/Unsubscribe_email.test.js:30:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1707832933102' status='failed' stop='1707832934003'>
+            <name>BAD REQUEST</name>
+            <title>BAD REQUEST</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1707832933102' status='undefined'>
+                    <name>Values passed:"{}"</name>
+                    <title>Values passed:"{}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "Message Not Delivered"
+                Received: undefined</message>
+                <stack-trace>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "Message Not Delivered"
+                Received: undefined
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/SES/Unsubscribe_email.test.js:48:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1707832934003' status='failed' stop='1707832935079'>
+            <name>email_address is missing</name>
+            <title>email_address is missing</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1707832934004' status='undefined'>
+                    <name>Values passed:"{\"email_address\":\"\",\"reason\":\"BOUNCE\"}"</name>
+                    <title>Values passed:"{\"email_address\":\"\",\"reason\":\"BOUNCE\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: TypeError: Cannot read properties of undefined (reading 'errorType')</message>
+                <stack-trace>Error: TypeError: Cannot read properties of undefined (reading 'errorType')
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/SES/Unsubscribe_email.test.js:68:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1707832935079' status='failed' stop='1707832935724'>
+            <name>email_address is not passed</name>
+            <title>email_address is not passed</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1707832935080' status='undefined'>
+                    <name>Values passed:"{\"reason\":\"BOUNCE\"}"</name>
+                    <title>Values passed:"{\"reason\":\"BOUNCE\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "Message Not Delivered"
+                Received: undefined</message>
+                <stack-trace>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "Message Not Delivered"
+                Received: undefined
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/SES/Unsubscribe_email.test.js:89:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1707832935724' status='failed' stop='1707832936760'>
+            <name>email_address is passed wrong</name>
+            <title>email_address is passed wrong</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1707832935725' status='undefined'>
+                    <name>Values passed:"{\"email_address\":\"svsverma@actiontitleresearch.comszds\",\"reason\":\"BOUNCE\"}"</name>
+                    <title>Values passed:"{\"email_address\":\"svsverma@actiontitleresearch.comszds\",\"reason\":\"BOUNCE\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "Successfully added email address to suppression list."
+                Received: undefined</message>
+                <stack-trace>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "Successfully added email address to suppression list."
+                Received: undefined
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/SES/Unsubscribe_email.test.js:112:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1707832936760' status='failed' stop='1707832937387'>
+            <name>reason is passed empty</name>
+            <title>reason is passed empty</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1707832936761' status='undefined'>
+                    <name>Values passed:"{\"email_address\":\"sverma@actiontitleresearch.com\",\"reason\":\"\"}"</name>
+                    <title>Values passed:"{\"email_address\":\"sverma@actiontitleresearch.com\",\"reason\":\"\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "Successfully added email address to suppression list."
+                Received: undefined</message>
+                <stack-trace>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "Successfully added email address to suppression list."
+                Received: undefined
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/SES/Unsubscribe_email.test.js:134:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1707832937387' status='failed' stop='1707832938460'>
+            <name>reason is passed gibberish</name>
+            <title>reason is passed gibberish</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1707832937387' status='undefined'>
+                    <name>Values passed:"{\"email_address\":\"sverma@actiontitleresearch.com\",\"reason\":\"HOLD\"}"</name>
+                    <title>Values passed:"{\"email_address\":\"sverma@actiontitleresearch.com\",\"reason\":\"HOLD\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "Successfully added email address to suppression list."
+                Received: undefined</message>
+                <stack-trace>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "Successfully added email address to suppression list."
+                Received: undefined
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/SES/Unsubscribe_email.test.js:156:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1707832938460' status='failed' stop='1707832939502'>
+            <name>email_address &amp; reason both are empty</name>
+            <title>email_address &amp; reason both are empty</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1707832938460' status='undefined'>
+                    <name>Values passed:"{\"email_address\":\"\",\"reason\":\"\"}"</name>
+                    <title>Values passed:"{\"email_address\":\"\",\"reason\":\"\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: TypeError: Cannot read properties of undefined (reading 'errorType')</message>
+                <stack-trace>Error: TypeError: Cannot read properties of undefined (reading 'errorType')
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/SES/Unsubscribe_email.test.js:178:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

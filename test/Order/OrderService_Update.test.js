@@ -8,7 +8,7 @@ const {
   statusInactive,
   statusHold
 } = require("../../RequestBodies/CommentUpdateBody");
-const { STAGE, VERSION, commonOptionsPUT, Timeout } = require("../../config");
+const { STAGE, VERSION, commonOptionsPUT, Timeout,commonOptionsPUTwithoutHeader } = require("../../config");
 const NAModule = require("../../modules/NAModule");
 
 const options = {
@@ -26,7 +26,7 @@ it(
       expect(response.success.msg.length >= 1).toBe(true);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/comments/update")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -46,7 +46,7 @@ it(
       );
       reporter.endStep();
       reporter.testId("API Endpoint-/services/comments/update")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -66,7 +66,7 @@ it(
       );
       reporter.endStep();
       reporter.testId("API Endpoint-/services/comments/update")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -83,7 +83,7 @@ it(
       expect(response.error).toBe("'order'");
       reporter.endStep();
       reporter.testId("API Endpoint-/services/comments/update")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -103,7 +103,7 @@ it(
       );
       reporter.endStep();
       reporter.testId("API Endpoint-/services/comments/update")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -123,7 +123,7 @@ it(
         0);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/comments/update")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -141,7 +141,7 @@ it(
         0);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/comments/update")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -159,7 +159,28 @@ it(
         0);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/comments/update")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:" + JSON.stringify(response))
+    } catch (error) {
+      throw new Error(error);
+    }
+  },
+  Timeout
+);
+it(
+  "Invalid Session",
+  async () => {
+    const options = {
+      path: `/${STAGE}/${VERSION}/services/comments/update`,
+      ...commonOptionsPUTwithoutHeader,
+    };
+    const postData = JSON.stringify(CommentUpdateBody);
+    try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
+      const response = await NAModule(postData, options);
+      expect(response.error).toBe("Invalid Session");
+      reporter.endStep();
+      reporter.testId("API Endpoint-/services/comments/update")
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }

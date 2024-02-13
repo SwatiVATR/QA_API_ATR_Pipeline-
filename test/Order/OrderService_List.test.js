@@ -1,4 +1,4 @@
-const { STAGE, VERSION, commonOptionsGET, Timeout } = require("../../config");
+const { STAGE, VERSION, commonOptionsGET, Timeout,commonOptionsGETwithoutHeader } = require("../../config");
 const OrderModule = require("../../modules/OrderModule");
 it('API Success',
   async () => {
@@ -13,7 +13,7 @@ it('API Success',
       expect(data.success.msg.results.length >= 1).toBe(true);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/orders?status=&offset=0&limit=100&sort=DESC")
-      reporter.description("Response message from API:" + data)
+      reporter.description("Response message from API:" +JSON.stringify(data))
     } catch (error) {
       throw new Error(error);
     }
@@ -34,7 +34,7 @@ it('parameter missing',
       expect(data.error).toEqual("invalid literal for int() with base 10: ''");
       reporter.endStep();
       reporter.testId("API Endpoint-/services/orders?status=&offset=&limit=&sort=DESC")
-      reporter.description("Response message from API:" + data)
+      reporter.description("Response message from API:" +JSON.stringify(data))
     } catch (error) {
       throw new Error(error);
     }
@@ -55,7 +55,7 @@ it('status is required',
       expect(data.error).toEqual("'status'");
       reporter.endStep();
       reporter.testId("API Endpoint-/services/orders?limit=10&sort=ASC")
-      reporter.description("Response message from API:" + data)
+      reporter.description("Response message from API:" +JSON.stringify(data))
     } catch (error) {
       throw new Error(error);
     }
@@ -77,7 +77,7 @@ it('invalid status is passed',
       expect(data.success.msg.results.length >= 1).toEqual(false);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/orders?status=sdsds&offset=0&limit=100&sort=DESC")
-      reporter.description("Response message from API:" + data)
+      reporter.description("Response message from API:" +JSON.stringify(data))
     } catch (error) {
       throw new Error(error);
     }
@@ -100,7 +100,7 @@ it('invalid offset is passed',
       expect(data.error).toEqual("invalid literal for int() with base 10: 'dvbfv'");
       reporter.endStep();
       reporter.testId("API Endpoint-/services/orders?status=active&offset=dvbfv&limit=100&sort=DESC")
-      reporter.description("Response message from API:" + data)
+      reporter.description("Response message from API:" +JSON.stringify(data))
     } catch (error) {
       throw new Error(error);
     }
@@ -122,7 +122,28 @@ it('invalid limit is passed',
       expect(data.error).toEqual("invalid literal for int() with base 10: ''");
       reporter.endStep();
       reporter.testId("API Endpoint-/services/normalize/ramquest")
-      reporter.description("Response message from API:" + data)
+      reporter.description("Response message from API:" +JSON.stringify(data))
+    } catch (error) {
+      throw new Error(error);
+    }
+  },
+  Timeout
+)
+it('Invalid session',
+  async () => {
+    const options = {
+      ...commonOptionsGETwithoutHeader,
+      path: `/${STAGE}/${VERSION}/services/orders?status=active&offset=&limit=1sdsds00&sort=DESC`,
+    };
+
+    try {
+      reporter.startStep("parameters passed:" + JSON.stringify(options));
+      const responseData = await OrderModule(options);
+      const data = JSON.parse(responseData);
+      expect(data.error).toEqual("Invalid Session");
+      reporter.endStep();
+      reporter.testId("API Endpoint-/services/normalize/ramquest")
+      reporter.description("Response message from API:" +JSON.stringify(data))
     } catch (error) {
       throw new Error(error);
     }

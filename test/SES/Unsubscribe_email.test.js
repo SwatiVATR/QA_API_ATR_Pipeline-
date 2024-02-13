@@ -7,8 +7,8 @@ const options = {
   path: `/${STAGE}/${VERSION}/services/unsubscribe-email`,
   ...commonOptionsPOST,
 };
-const EMAIL=process.env.SWATI_USER_EMAIL
-test(
+const EMAIL = process.env.SWATI_USER_EMAIL
+it(
   "API Success",
   async () => {
     const postData = JSON.stringify({
@@ -16,30 +16,41 @@ test(
       reason: "BOUNCE",
     });
     try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
+
       const response = await NAModule(postData, options);
       expect(response.Message).toBe(
         "Successfully added email address to suppression list."
       );
+      reporter.endStep();
+      reporter.testId("API Endpoint-/services/unsubscribe-email")
+      reporter.description("Response message from API:" + JSON.stringify(response))
+
     } catch (error) {
       throw new Error(error);
     }
   },
   Timeout
 );
-test(
+it(
   "BAD REQUEST",
   async () => {
     const postData = JSON.stringify({});
     try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
+
       const response = await NAModule(postData, options);
       expect(response.Error).toBe("Message Not Delivered");
+      reporter.endStep();
+      reporter.testId("API Endpoint-/services/unsubscribe-email")
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
   },
   Timeout
 );
-test(
+it(
   "email_address is missing",
   async () => {
     const postData = JSON.stringify({
@@ -47,8 +58,12 @@ test(
       reason: "BOUNCE",
     });
     try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
       const response = await NAModule(postData, options);
       expect(response.Result.errorType).toBe("BadRequestException");
+      reporter.endStep();
+      reporter.testId("API Endpoint-/services/unsubscribe-email")
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -56,15 +71,20 @@ test(
   Timeout
 );
 
-test(
+it(
   "email_address is not passed",
   async () => {
     const postData = JSON.stringify({
       reason: "BOUNCE",
     });
     try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
+
       const response = await NAModule(postData, options);
       expect(response.Error).toBe("Message Not Delivered");
+      reporter.endStep();
+      reporter.testId("API Endpoint-/services/unsubscribe-email")
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -73,16 +93,21 @@ test(
 );
 
 
-test(
+it(
   "email_address is passed wrong",
   async () => {
     const postData = JSON.stringify({
-      "email_address": "sv"+EMAIL+"szds",
+      "email_address": "sv" + EMAIL + "szds",
       "reason": "BOUNCE"
     });
     try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
+
       const response = await NAModule(postData, options);
       expect(response.Message).toBe("Successfully added email address to suppression list.");
+      reporter.endStep();
+      reporter.testId("API Endpoint-/services/unsubscribe-email")
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -90,7 +115,7 @@ test(
   Timeout
 );
 
-test(
+it(
   "reason is passed empty",
   async () => {
     const postData = JSON.stringify({
@@ -98,8 +123,13 @@ test(
       "reason": ""
     });
     try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
+
       const response = await NAModule(postData, options);
       expect(response.Message).toBe("Successfully added email address to suppression list.");
+      reporter.endStep();
+      reporter.testId("API Endpoint-/services/unsubscribe-email")
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -107,16 +137,21 @@ test(
   Timeout
 );
 
-test(
+it(
   "reason is passed gibberish",
   async () => {
     const postData = JSON.stringify({
-      "email_address":EMAIL,
+      "email_address": EMAIL,
       "reason": "HOLD"
     });
     try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
+
       const response = await NAModule(postData, options);
       expect(response.Message).toBe("Successfully added email address to suppression list.");
+      reporter.endStep();
+      reporter.testId("API Endpoint-/services/unsubscribe-email")
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -124,7 +159,7 @@ test(
   Timeout
 );
 
-test(
+it(
   "email_address & reason both are empty",
   async () => {
     const postData = JSON.stringify({
@@ -132,8 +167,13 @@ test(
       "reason": ""
     });
     try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
+
       const response = await NAModule(postData, options);
       expect(response.Result.errorType).toBe("BadRequestException");
+      reporter.endStep();
+      reporter.testId("API Endpoint-/services/unsubscribe-email")
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }

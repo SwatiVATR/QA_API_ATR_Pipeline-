@@ -16,7 +16,7 @@ it(
       expect(response.success).toBe(true);
       reporter.endStep();
       reporter.testId("API Endpoint-/webhook/order/ramquest")
-      reporter.description("Response message from API:" + response.error)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -34,7 +34,7 @@ it(
       expect(response.error.success).toBe(false);
       reporter.endStep();
       reporter.testId("API Endpoint-/webhook/order/ramquest")
-      reporter.description("Response message from API:" + response.error)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -51,7 +51,7 @@ it(
       expect(response.error.success).toBe(false);
       reporter.endStep();
       reporter.testId("API Endpoint-/webhook/order/ramquest")
-      reporter.description("Response message from API:" + response.error)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }

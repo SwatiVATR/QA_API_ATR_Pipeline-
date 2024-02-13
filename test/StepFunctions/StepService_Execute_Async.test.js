@@ -29,7 +29,7 @@ it(
       expect(response.success.statusCode).toBe(200);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/async/MyStandardStateMachine")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -50,7 +50,7 @@ it(
       expect(response.success.statusCode).toBe(200);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/async/MyStandardStateMachine")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -71,7 +71,7 @@ it(
       expect(response.success.statusCode).toBe(200);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/async/MyStandardStateMachine")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -91,7 +91,7 @@ it(
       expect(response.success.statusCode).toBe(200);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/async/MyStandardStateMachine")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -112,7 +112,7 @@ it(
       expect(response.success.statusCode).toBe(200);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/async/MyStandardStateMachine")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }

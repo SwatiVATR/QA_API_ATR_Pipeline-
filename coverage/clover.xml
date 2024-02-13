@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1707488437289" clover="3.2.0">
-  <project timestamp="1707488437290" name="All files">
+<coverage generated="1707833025065" clover="3.2.0">
+  <project timestamp="1707833025065" name="All files">
     <metrics statements="231" coveredstatements="221" conditionals="0" coveredconditionals="0" methods="37" coveredmethods="31" elements="268" coveredelements="252" complexity="0" loc="231" ncloc="231" packages="3" files="25" classes="25"/>
     <package name="QA-API-Automation-Testing">
       <metrics statements="33" coveredstatements="31" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -284,36 +284,36 @@
         <metrics statements="17" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="5"/>
         <line num="1" count="50" type="stmt"/>
         <line num="3" count="50" type="stmt"/>
-        <line num="4" count="251" type="stmt"/>
-        <line num="5" count="251" type="stmt"/>
-        <line num="6" count="251" type="stmt"/>
-        <line num="7" count="251" type="stmt"/>
-        <line num="8" count="262" type="stmt"/>
-        <line num="10" count="251" type="stmt"/>
-        <line num="11" count="251" type="stmt"/>
-        <line num="12" count="251" type="stmt"/>
-        <line num="13" count="226" type="stmt"/>
+        <line num="4" count="262" type="stmt"/>
+        <line num="5" count="262" type="stmt"/>
+        <line num="6" count="262" type="stmt"/>
+        <line num="7" count="262" type="stmt"/>
+        <line num="8" count="272" type="stmt"/>
+        <line num="10" count="262" type="stmt"/>
+        <line num="11" count="262" type="stmt"/>
+        <line num="12" count="262" type="stmt"/>
+        <line num="13" count="237" type="stmt"/>
         <line num="15" count="25" type="stmt"/>
-        <line num="20" count="251" type="stmt"/>
+        <line num="20" count="262" type="stmt"/>
         <line num="21" count="0" type="stmt"/>
-        <line num="24" count="251" type="stmt"/>
-        <line num="25" count="251" type="stmt"/>
+        <line num="24" count="262" type="stmt"/>
+        <line num="25" count="262" type="stmt"/>
         <line num="29" count="50" type="stmt"/>
       </file>
       <file name="OrderModule.js" path="/home/devtrust/Project/QA-API-Automation-Testing/modules/OrderModule.js">
         <metrics statements="13" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="5"/>
         <line num="1" count="1" type="stmt"/>
-        <line num="4" count="6" type="stmt"/>
-        <line num="5" count="6" type="stmt"/>
-        <line num="6" count="6" type="stmt"/>
-        <line num="8" count="6" type="stmt"/>
-        <line num="9" count="6" type="stmt"/>
-        <line num="12" count="6" type="stmt"/>
-        <line num="13" count="6" type="stmt"/>
-        <line num="14" count="6" type="stmt"/>
-        <line num="18" count="6" type="stmt"/>
+        <line num="4" count="7" type="stmt"/>
+        <line num="5" count="7" type="stmt"/>
+        <line num="6" count="7" type="stmt"/>
+        <line num="8" count="7" type="stmt"/>
+        <line num="9" count="7" type="stmt"/>
+        <line num="12" count="7" type="stmt"/>
+        <line num="13" count="7" type="stmt"/>
+        <line num="14" count="7" type="stmt"/>
+        <line num="18" count="7" type="stmt"/>
         <line num="19" count="0" type="stmt"/>
-        <line num="22" count="6" type="stmt"/>
+        <line num="22" count="7" type="stmt"/>
         <line num="26" count="1" type="stmt"/>
       </file>
     </package>

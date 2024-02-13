@@ -1,4 +1,4 @@
-const { STAGE, VERSION, commonOptionsPOST, Timeout } = require("../../config");
+const { STAGE, VERSION, commonOptionsPOST, Timeout,commonOptionsPOSTwithoutHeader } = require("../../config");
 const { NormalizeQualiaBody, NormalizeQualiaWithoutOrderBody, BadBody } = require('../../RequestBodies/NormalizeQualiaBody')
 const NAModule = require("../../modules/NAModule");
 
@@ -16,7 +16,7 @@ it('API Success', async () => {
     );
     reporter.endStep();
     reporter.testId("API Endpoint-/services/normalize/qualia?json")
-    reporter.description("Response message from API:" + response)
+    reporter.description("Response message from API:"+ JSON.stringify(response))
   } catch (error) {
     throw new Error(error);
   }
@@ -29,7 +29,7 @@ it('order is missing', async () => {
     expect(response.error).toBe("Invalid data or url or filepath argument: \nExpecting value: line 1 column 1 (char 0)");
     reporter.endStep();
     reporter.testId("API Endpoint-/services/normalize/qualia?json")
-    reporter.description("Response message from API:" + response.error)
+    reporter.description("Response message from API:" + JSON.stringify(response.error))
   } catch (error) {
     throw new Error(error);
   }
@@ -42,7 +42,25 @@ it('BAD REQUEST', async () => {
     expect(response.error).toBe("'order'");
     reporter.endStep();
     reporter.testId("API Endpoint-/services/normalize/qualia?json")
-    reporter.description("Response message from API:" + response.error)
+    reporter.description("Response message from API:" + JSON.stringify(response.error))
+  } catch (error) {
+    throw new Error(error);
+  }
+}, Timeout)
+
+it('Invalid session', async () => {
+  const options = {
+    path: `/${STAGE}/${VERSION}/services/normalize/qualia?json`,
+    ...commonOptionsPOSTwithoutHeader,
+  };
+  const postData = JSON.stringify(BadBody);
+  try {
+    reporter.startStep("Values passed:" + JSON.stringify(postData));
+    const response = await NAModule(postData, options);
+    expect(response.error).toBe("Invalid Session");
+    reporter.endStep();
+    reporter.testId("API Endpoint-/services/normalize/qualia?json")
+    reporter.description("Response message from API:" + JSON.stringify(response.error))
   } catch (error) {
     throw new Error(error);
   }

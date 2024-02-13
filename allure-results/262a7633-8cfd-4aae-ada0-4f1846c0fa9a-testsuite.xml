@@ -1,0 +1,79 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1707832988806' stop='1707832992881'>
+    <name>test/Notes/NotesService_Append_Notes.test.js</name>
+    <title>test/Notes/NotesService_Append_Notes.test.js</title>
+    <test-cases>
+        <test-case start='1707832988806' status='passed' stop='1707832991149'>
+            <name>API Success</name>
+            <title>API Success</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/notes/update'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1707832988808' status='passed' stop='1707832991147'>
+                    <name>Values passed:"{\"order\":{\"note\":{\"transactionId\":118359,\"noteDateTime\":\"04-30-2023 19:00:00\",\"note\":\"this is a note\",\"noteCategory\":\"CLIENT_PORTAL\",\"noteType\":\"PUBLIC\",\"userEmail\":\"msingh@actiontitleresearch.com\",\"read\":false}}}"</name>
+                    <title>Values passed:"{\"order\":{\"note\":{\"transactionId\":118359,\"noteDateTime\":\"04-30-2023 19:00:00\",\"note\":\"this is a note\",\"noteCategory\":\"CLIENT_PORTAL\",\"noteType\":\"PUBLIC\",\"userEmail\":\"msingh@actiontitleresearch.com\",\"read\":false}}}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"success":{"txId":118359,"statusCode":200,"body":"{\"transactionId\": 118359, \"noteId\": 3354, \"readMessage\": false, \"clientOrderID\": \"672023\", \"userID\": 874895, \"sendEmail\": null, \"noteDateTime\": \"02-13-2024 09:03:10\", \"note\": \"this is a note\", \"noteCategory\": \"CLIENT_PORTAL\", \"noteType\": \"PUBLIC\", \"userEmail\": \"msingh@actiontitleresearch.com\", \"userName\": null, \"aesNoteDateTime\": \"02-13-2024 14:03:10\", \"searcherID\": 0, \"backOfficeTransactionStatus\": null}"}}</description>
+        </test-case>
+        <test-case start='1707832991149' status='passed' stop='1707832991915'>
+            <name>BAD Request</name>
+            <title>BAD Request</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/notes/update'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1707832991149' status='passed' stop='1707832991915'>
+                    <name>Values passed:"{}"</name>
+                    <title>Values passed:"{}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"error":"'order'"}</description>
+        </test-case>
+        <test-case start='1707832991915' status='passed' stop='1707832992418'>
+            <name>orders is missing</name>
+            <title>orders is missing</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/notes/update'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1707832991916' status='passed' stop='1707832992417'>
+                    <name>Values passed:"{\"order\":\"\"}"</name>
+                    <title>Values passed:"{\"order\":\"\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"error":"Invalid data or url or filepath argument: \nExpecting value: line 1 column 1 (char 0)"}</description>
+        </test-case>
+        <test-case start='1707832992418' status='passed' stop='1707832992880'>
+            <name>order note is missing </name>
+            <title>order note is missing </title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/notes/update'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1707832992418' status='passed' stop='1707832992880'>
+                    <name>Values passed:"{\"order\":{\"note\":\"\"}}"</name>
+                    <title>Values passed:"{\"order\":{\"note\":\"\"}}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"error":"'str' object does not support item assignment"}</description>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

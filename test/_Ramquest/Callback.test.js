@@ -26,7 +26,7 @@ it(
       expect(response.statusCode).toBe(201);
       reporter.endStep();
       reporter.testId("API Endpoint-/callback/order/ramquest")
-      reporter.description("Response message from API:" + response)
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }

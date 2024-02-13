@@ -1,0 +1,121 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1707832968168' stop='1707832975769'>
+    <name>test/BackOffice/List_Jobs.test.js</name>
+    <title>test/BackOffice/List_Jobs.test.js</title>
+    <test-cases>
+        <test-case start='1707832968168' status='passed' stop='1707832970928'>
+            <name>API Success</name>
+            <title>API Success</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/backoffice/ListJobs'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1707832968168' status='passed' stop='1707832970926'>
+                    <name>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"Pass$123\",\"appType\":\"ListJobs\",\"appUsername\":\"SScott-18\",\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\"}"</name>
+                    <title>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"Pass$123\",\"appType\":\"ListJobs\",\"appUsername\":\"SScott-18\",\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"Response":{"TXStatus":"00","TransactionID":"40749300948291322024","Orders":{"Job0":{"ActionID":"1048137","FileNumber":"","OrderCode":"FCM","StateID":"MA","Assigned":"SScott-18","AssignDate":"12/20/2023","AssignStatus":"Completed","Town":"SOUTHBRIDGE","Town2":"SOUTHBRIDGE","Address":"39 Elm Street","County":"WORCESTER","EffectDate":"12/26/2023","Rush":"NoRush","OrderDate":"12/20/2023","ClientName":"","SearchCompanyName":"","DueDate":"12/29/2023"},"Job1":{"ActionID":"1048162","FileNumber":"","OrderCode":"40","StateID":"MA","Assigned":"SScott-18","AssignDate":"12/20/2023","AssignStatus":"Completed","Town":"NATICK","Town2":"NATICK","Address":"21 PITTS STREET","County":"MIDDLESEX","EffectDate":"12/20/2023","Rush":"NoRush","OrderDate":"12/20/2023","ClientName":"","SearchCompanyName":"Action Title Research","DueDate":"12/27/2023"},"Job2":{"ActionID":"1048166","FileNumber":"","OrderCode":"40","StateID":"MA","Assigned":"SScott-18","AssignDate":"12/20/2023","AssignStatus":"Completed","Town":"SPRINGFIELD","Town2":"SPRINGFIELD","Address":"39 SEYMOUR AVE","County":"HAMPDEN","EffectDate":"12/19/2023","Rush":"NoRush","OrderDate":"12/20/2023","ClientName":"","SearchCompanyName":"Action Title Research","DueDate":"12/25/2023"},"Job3":{"ActionID":"1048399","FileNumber":"","OrderCode":"FUL","StateID":"MA","Assigned":"SScott-18","AssignDate":"12/21/2023","AssignStatus":"Completed","Town":"PITTSFIELD","Town2":"PITTSFIELD","Address":"24 Ann Drive","County":"BERKSHIRE","EffectDate":"","Rush":"NoRush","OrderDate":"12/21/2023","ClientName":"","SearchCompanyName":"Action Title Research","DueDate":"12/26/2023"},"Job4":{"ActionID":"1050056","FileNumber":"","OrderCode":"FUL","StateID":"MA","Assigned":"SScott-18","AssignDate":"1/4/2024","AssignStatus":"Completed","Town":"WESTFIELD","Town2":"WESTFIELD","Address":"23 Clinton Avenue","County":"HAMPDEN","EffectDate":"","Rush":"NoRush","OrderDate":"1/4/2024","ClientName":"","SearchCompanyName":"Action Title Research","DueDate":"1/9/2024"},"Job5":{"ActionID":"1050339","FileNumber":"","OrderCode":"50","StateID":"MA","Assigned":"SScott-18","AssignDate":"1/5/2024","AssignStatus":"Completed","Town":"CHICOPEE","Town2":"CHICOPEE","Address":"60 Murphy Lane","County":"HAMPDEN","EffectDate":"","Rush":"NoRush","OrderDate":"1/5/2024","ClientName":"","SearchCompanyName":"Action Title Research","DueDate":"1/10/2024"},"Job6":{"ActionID":"1050446","FileNumber":"","OrderCode":"TO","StateID":"MA","Assigned":"SScott-18","AssignDate":"1/8/2024","AssignStatus":"Completed","Town":"MELROSE","Town2":"MELROSE","Address":"42 Sylvan Street","County":"MIDDLESEX","EffectDate":"","Rush":"NoRush","OrderDate":"1/8/2024","ClientName":"","SearchCompanyName":"Action Title Research","DueDate":"1/10/2024"},"Job7":{"ActionID":"1050471","FileNumber":"","OrderCode":"50","StateID":"MA","Assigned":"SScott-18","AssignDate":"1/8/2024","AssignStatus":"Completed","Town":"SPRINGFIELD","Town2":"SPRINGFIELD","Address":"54 Princeton St","County":"HAMPDEN","EffectDate":"","Rush":"NoRush","OrderDate":"1/8/2024","ClientName":"","SearchCompanyName":"Action Title Research","DueDate":"1/11/2024"},"Job8":{"ActionID":"1052304","FileNumber":"","OrderCode":"40","StateID":"MA","Assigned":"SScott-18","AssignDate":"1/22/2024","AssignStatus":"Completed","Town":"LEXINGTON","Town2":"LEXINGTON","Address":"6 HAYES AVENUE","County":"MIDDLESEX","EffectDate":"1/22/2024","Rush":"NoRush","OrderDate":"1/22/2024","ClientName":"","SearchCompanyName":"Action Title Research","DueDate":"1/29/2024"},"Job9":{"ActionID":"1054349","FileNumber":"","OrderCode":"FUL","StateID":"MA","Assigned":"SScott-18","AssignDate":"2/2/2024","AssignStatus":"Completed","Town":"MERRIMAC","Town2":"MERRIMAC","Address":"23 Prospect Hill Road &amp; 19 Prospect Hill Road","County":"ESSEX","EffectDate":"","Rush":"NoRush","OrderDate":"2/2/2024","ClientName":"","SearchCompanyName":"Action Title Research","DueDate":"2/7/2024"},"Job10":{"ActionID":"1054438","FileNumber":"","OrderCode":"40","StateID":"MA","Assigned":"SScott-18","AssignDate":"2/2/2024","AssignStatus":"Accepted","Town":"BOSTON","Town2":"BOSTON","Address":"551 COMMERCIAL ST","County":"SUFFOLK","EffectDate":"","Rush":"NoRush","OrderDate":"2/2/2024","ClientName":"","SearchCompanyName":"Action Title Research","DueDate":"2/16/2024"},"Job11":{"ActionID":"1054447","FileNumber":"","OrderCode":"40","StateID":"MA","Assigned":"SScott-18","AssignDate":"2/2/2024","AssignStatus":"Accepted","Town":"BOSTON","Town2":"BOSTON","Address":"471 COMMERCIAL ST","County":"SUFFOLK","EffectDate":"","Rush":"NoRush","OrderDate":"2/2/2024","ClientName":"","SearchCompanyName":"Action Title Research","DueDate":"2/16/2024"},"Job12":{"ActionID":"1054460","FileNumber":"","OrderCode":"40","StateID":"MA","Assigned":"SScott-18","AssignDate":"2/2/2024","AssignStatus":"Accepted","Town":"BOSTON","Town2":"BOSTON","Address":"1 NORTH POINT BLVD","County":"SUFFOLK","EffectDate":"","Rush":"NoRush","OrderDate":"2/2/2024","ClientName":"","SearchCompanyName":"Action Title Research","DueDate":"2/16/2024"},"Job13":{"ActionID":"1054470","FileNumber":"","OrderCode":"40","StateID":"MA","Assigned":"SScott-18","AssignDate":"2/2/2024","AssignStatus":"Accepted","Town":"BOSTON","Town2":"BOSTON","Address":"64 SLEEPER ST","County":"SUFFOLK","EffectDate":"","Rush":"NoRush","OrderDate":"2/2/2024","ClientName":"","SearchCompanyName":"Action Title Research","DueDate":"2/16/2024"},"Job14":{"ActionID":"1054544","FileNumber":"","OrderCode":"TO","StateID":"MA","Assigned":"SScott-18","AssignDate":"2/5/2024","AssignStatus":"Completed","Town":"PEABODY","Town2":"PEABODY","Address":"2 Herbert Ave","County":"ESSEX","EffectDate":"","Rush":"NoRush","OrderDate":"2/5/2024","ClientName":"","SearchCompanyName":"Action Title Research","DueDate":"2/7/2024"},"Job15":{"ActionID":"1054580","FileNumber":"","OrderCode":"30","StateID":"MA","Assigned":"SScott-18","AssignDate":"2/5/2024","AssignStatus":"Completed","Town":"PLYMOUTH","Town2":"PLYMOUTH","Address":"40 SPENCER Drive","County":"PLYMOUTH","EffectDate":"","Rush":"NoRush","OrderDate":"2/5/2024","ClientName":"","SearchCompanyName":"Action Title Research","DueDate":"2/8/2024"},"Job16":{"ActionID":"1048573","FileNumber":"","OrderCode":"PO","StateID":"MA","Assigned":"SScott-18","AssignDate":"12/22/2023","AssignStatus":"Completed","Town":"SHEFFIELD","Town2":"SHEFFIELD","Address":"2080 SOUTH UNDERMOUNTAIN ROAD; et al","County":"BERKSHIRE","EffectDate":"12/18/2023","Rush":"NoRush","OrderDate":"12/22/2023","ClientName":"","SearchCompanyName":"Action Title Research","DueDate":"12/24/2023"},"Job17":{"ActionID":"1048877","FileNumber":"","OrderCode":"FCM","StateID":"MA","Assigned":"SScott-18","AssignDate":"12/27/2023","AssignStatus":"Completed","Town":"WEST SPRINGFIELD","Town2":"WEST SPRINGFIELD","Address":"69 SPRAGUE STREET","County":"HAMPDEN","EffectDate":"","Rush":"NoRush","OrderDate":"12/27/2023","ClientName":"","SearchCompanyName":"Action Title Research","DueDate":"1/4/2024"},"Job18":{"ActionID":"1048937","FileNumber":"","OrderCode":"FCM","StateID":"MA","Assigned":"SScott-18","AssignDate":"12/27/2023","AssignStatus":"Completed","Town":"HOPKINTON","Town2":"HOPKINTON","Address":"117 South Street","County":"MIDDLESEX","EffectDate":"","Rush":"NoRush","OrderDate":"12/27/2023","ClientName":"","SearchCompanyName":"Action Title Research","DueDate":"1/2/2024"},"Job19":{"ActionID":"1051072","FileNumber":"","OrderCode":"FCM","StateID":"MA","Assigned":"SScott-18","AssignDate":"1/11/2024","AssignStatus":"Completed","Town":"DOVER","Town2":"DOVER","Address":"1675 DORCHESTER AVENUE","County":"SUFFOLK","EffectDate":"","Rush":"NoRush","OrderDate":"1/11/2024","ClientName":"","SearchCompanyName":"Action Title Research","DueDate":"1/17/2024"},"Job20":{"ActionID":"1052896","FileNumber":"","OrderCode":"40","StateID":"MA","Assigned":"SScott-18","AssignDate":"1/24/2024","AssignStatus":"Completed","Town":"MILFORD","Town2":"MILFORD","Address":"1 TANGLEWOOD DR","County":"WORCESTER","EffectDate":"1/24/2024","Rush":"NoRush","OrderDate":"1/24/2024","ClientName":"","SearchCompanyName":"Action Title Research","DueDate":"1/29/2024"},"Job21":{"ActionID":"1052971","FileNumber":"","OrderCode":"40","StateID":"MA","Assigned":"SScott-18","AssignDate":"1/25/2024","AssignStatus":"Cancelled","Town":"EVERETT","Town2":"EVERETT","Address":"112 KINSMAN STREET","County":"MIDDLESEX","EffectDate":"","Rush":"NoRush","OrderDate":"1/24/2024","ClientName":"","SearchCompanyName":"Action Title Research","DueDate":"2/6/2024"},"Job22":{"ActionID":"1052973","FileNumber":"","OrderCode":"40","StateID":"MA","Assigned":"SScott-18","AssignDate":"1/25/2024","AssignStatus":"Completed","Town":"EVERETT","Town2":"EVERETT","Address":"1 BROADWAY","County":"MIDDLESEX","EffectDate":"2/6/2024","Rush":"NoRush","OrderDate":"1/24/2024","ClientName":"","SearchCompanyName":"Action Title Research","DueDate":"2/6/2024"},"Job23":{"ActionID":"1052976","FileNumber":"","OrderCode":"40","StateID":"MA","Assigned":"SScott-18","AssignDate":"1/25/2024","AssignStatus":"Completed","Town":"MILFORD","Town2":"MILFORD","Address":"307 PURCHASE ST","County":"WORCESTER","EffectDate":"1/24/2024","Rush":"NoRush","OrderDate":"1/25/2024","ClientName":"","SearchCompanyName":"Action Title Research","DueDate":"1/30/2024"},"Job24":{"ActionID":"1052977","FileNumber":"","OrderCode":"40","StateID":"MA","Assigned":"SScott-18","AssignDate":"1/25/2024","AssignStatus":"Completed","Town":"BOSTON","Town2":"BOSTON","Address":"NKA ALFORD ST","County":"SUFFOLK","EffectDate":"2/7/2024","Rush":"NoRush","OrderDate":"1/25/2024","ClientName":"","SearchCompanyName":"Action Title Research","DueDate":"2/9/2024"},"Job25":{"ActionID":"1052996","FileNumber":"","OrderCode":"40","StateID":"MA","Assigned":"SScott-18","AssignDate":"1/25/2024","AssignStatus":"Accepted","Town":"BOSTON","Town2":"BOSTON","Address":"NKA CHEMICAL LN","County":"SUFFOLK","EffectDate":"","Rush":"NoRush","OrderDate":"1/25/2024","ClientName":"","SearchCompanyName":"Action Title Research","DueDate":"2/7/2024"},"Job26":{"ActionID":"1055035","FileNumber":"","OrderCode":"50","StateID":"MA","Assigned":"SScott-18","AssignDate":"2/7/2024","AssignStatus":"Completed","Town":"SOUTHWICK","Town2":"SOUTHWICK","Address":"2 Lakemont St","County":"HAMPDEN","EffectDate":"","Rush":"NoRush","OrderDate":"2/7/2024","ClientName":"","SearchCompanyName":"Action Title Research","DueDate":"2/12/2024"},"Job27":{"ActionID":"1049458","FileNumber":"","OrderCode":"FUL","StateID":"CT","Assigned":"SScott-18","AssignDate":"1/2/2024","AssignStatus":"Completed","Town":"NEW BRITAIN","Town2":"NEW BRITAIN","Address":"7 Whiting Street","County":"HARTFORD","EffectDate":"","Rush":"NoRush","OrderDate":"1/2/2024","ClientName":"","SearchCompanyName":"Action Title Research","DueDate":"1/5/2024"},"Job28":{"ActionID":"1051118","FileNumber":"","OrderCode":"TO","StateID":"MA","Assigned":"SScott-18","AssignDate":"1/11/2024","AssignStatus":"Completed","Town":"WESTBOROUGH","Town2":"WESTBOROUGH","Address":"4 Lee Ann Circle","County":"WORCESTER","EffectDate":"","Rush":"NoRush","OrderDate":"1/11/2024","ClientName":"","SearchCompanyName":"Action Title Research","DueDate":"1/15/2024"},"Job29":{"ActionID":"1051278","FileNumber":"","OrderCode":"40","StateID":"MA","Assigned":"SScott-18","AssignDate":"1/12/2024","AssignStatus":"Completed","Town":"SPRINGFIELD","Town2":"SPRINGFIELD","Address":"1982 ROOSEVELT AVE","County":"HAMPDEN","EffectDate":"1/22/2024","Rush":"NoRush","OrderDate":"1/12/2024","ClientName":"","SearchCompanyName":"Action Title Research","DueDate":"1/26/2024"},"Job30":{"ActionID":"1051469","FileNumber":"","OrderCode":"30","StateID":"MA","Assigned":"SScott-18","AssignDate":"1/15/2024","AssignStatus":"Completed","Town":"WRENTHAM","Town2":"WRENTHAM","Address":"287 SHEARS Street","County":"NORFOLK","EffectDate":"","Rush":"NoRush","OrderDate":"1/15/2024","ClientName":"","SearchCompanyName":"Action Title Research","DueDate":"1/18/2024"},"Job31":{"ActionID":"1053642","FileNumber":"","OrderCode":"40","StateID":"MA","Assigned":"SScott-18","AssignDate":"1/30/2024","AssignStatus":"Completed","Town":"GEORGETOWN","Town2":"GEORGETOWN","Address":"Georgetown Assessor s Map 1 Lot 20","County":"ESSEX","EffectDate":"","Rush":"NoRush","OrderDate":"1/30/2024","ClientName":"","SearchCompanyName":"Action Title Research","DueDate":"2/13/2024"},"Job32":{"ActionID":"1055568","FileNumber":"","OrderCode":"40","StateID":"MA","Assigned":"SScott-18","AssignDate":"2/9/2024","AssignStatus":"Accepted","Town":"NEWTON","Town2":"NEWTON","Address":"45 BUSWELL PARK","County":"MIDDLESEX","EffectDate":"","Rush":"NoRush","OrderDate":"2/9/2024","ClientName":"","SearchCompanyName":"Action Title Research","DueDate":"2/15/2024"},"Job33":{"ActionID":"1055638","FileNumber":"","OrderCode":"40","StateID":"MA","Assigned":"SScott-18","AssignDate":"2/9/2024","AssignStatus":"Accepted","Town":"OTIS","Town2":"OTIS","Address":"72 W. CENTER ROAD","County":"BERKSHIRE","EffectDate":"","Rush":"NoRush","OrderDate":"2/9/2024","ClientName":"","SearchCompanyName":"Action Title Research","DueDate":"2/21/2024"},"Job34":{"ActionID":"1051790","FileNumber":"","OrderCode":"50","StateID":"MA","Assigned":"SScott-18","AssignDate":"1/17/2024","AssignStatus":"Completed","Town":"BELCHERTOWN","Town2":"BELCHERTOWN","Address":"37 Old Sawmill Road","County":"HAMPSHIRE","EffectDate":"","Rush":"NoRush","OrderDate":"1/17/2024","ClientName":"","SearchCompanyName":"Action Title Research","DueDate":"1/19/2024"},"Job35":{"ActionID":"1053835","FileNumber":"","OrderCode":"40","StateID":"MA","Assigned":"SScott-18","AssignDate":"1/31/2024","AssignStatus":"Completed","Town":"BELCHERTOWN","Town2":"BELCHERTOWN","Address":"475 SOUTH WASHINGTON STREET","County":"HAMPSHIRE","EffectDate":"1/30/2024","Rush":"NoRush","OrderDate":"1/31/2024","ClientName":"","SearchCompanyName":"Action Title Research","DueDate":"2/6/2024"},"Job36":{"ActionID":"1054138","FileNumber":"","OrderCode":"50","StateID":"MA","Assigned":"SScott-18","AssignDate":"2/1/2024","AssignStatus":"Completed","Town":"CHICOPEE","Town2":"CHICOPEE","Address":"20-22 Alvord Ave","County":"HAMPDEN","EffectDate":"","Rush":"NoRush","OrderDate":"2/1/2024","ClientName":"","SearchCompanyName":"Action Title Research","DueDate":"2/6/2024"}}}}</description>
+        </test-case>
+        <test-case start='1707832970928' status='failed' stop='1707832971437'>
+            <name>Auth Key is missing ||invalid Auth Key</name>
+            <title>Auth Key is missing ||invalid Auth Key</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1707832970929' status='undefined'>
+                    <name>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"Pass$123\",\"appType\":\"ListJobs\",\"appUsername\":\"SScott-18\",\"authKey\":\"\"}"</name>
+                    <title>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"Pass$123\",\"appType\":\"ListJobs\",\"appUsername\":\"SScott-18\",\"authKey\":\"\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Response is not in valid json format</message>
+                <stack-trace>Error: Response is not in valid json format
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/BackOffice/List_Jobs.test.js:38:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1707832971437' status='failed' stop='1707832972408'>
+            <name>Plain text received as response</name>
+            <title>Plain text received as response</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1707832971438' status='undefined'>
+                    <name>Values passed:"{}"</name>
+                    <title>Values passed:"{}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Response is not in valid json format</message>
+                <stack-trace>Error: Response is not in valid json format
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/BackOffice/List_Jobs.test.js:55:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1707832972409' status='passed' stop='1707832973659'>
+            <name>Appid is invalid or empty</name>
+            <title>Appid is invalid or empty</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/backoffice/ListJobs'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1707832972410' status='passed' stop='1707832973659'>
+                    <name>Values passed:"{\"appId\":\"ApsdsdsdpUser101\",\"appPass\":\"Pass$123\",\"appType\":\"ListJobs\",\"appUsername\":\"SScott-18\",\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\"}"</name>
+                    <title>Values passed:"{\"appId\":\"ApsdsdsdpUser101\",\"appPass\":\"Pass$123\",\"appType\":\"ListJobs\",\"appUsername\":\"SScott-18\",\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"Response":{"TXStatus":"01","TransactionID":"40749301353291322024"}}</description>
+        </test-case>
+        <test-case start='1707832973659' status='passed' stop='1707832974903'>
+            <name>appPass is invalid or empty</name>
+            <title>appPass is invalid or empty</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/backoffice/ListJobs'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1707832973660' status='passed' stop='1707832974902'>
+                    <name>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"Passsdsd$123\",\"appType\":\"ListJobs\",\"appUsername\":\"SScott-18\",\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\"}"</name>
+                    <title>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"Passsdsd$123\",\"appType\":\"ListJobs\",\"appUsername\":\"SScott-18\",\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"Response":{"TXStatus":"02","TransactionID":"40749301554291322024"}}</description>
+        </test-case>
+        <test-case start='1707832974903' status='passed' stop='1707832975761'>
+            <name>appUsername is invalid or empty</name>
+            <title>appUsername is invalid or empty</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/backoffice/ListJobs'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1707832974904' status='passed' stop='1707832975761'>
+                    <name>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"Pass$123\",\"appType\":\"ListJobs\",\"appUsername\":\"SSddcott-18\",\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\"}"</name>
+                    <title>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"Pass$123\",\"appType\":\"ListJobs\",\"appUsername\":\"SSddcott-18\",\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"Response":{"TXStatus":"04","TransactionID":"40749301755291322024"}}</description>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
