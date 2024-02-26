@@ -1,0 +1,90 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1707488398154' stop='1707488401037'>
+    <name>test/_Qualia/Order_Normalizer.test.js</name>
+    <title>test/_Qualia/Order_Normalizer.test.js</title>
+    <test-cases>
+        <test-case start='1707488398154' status='failed' stop='1707488399130'>
+            <name>API Success</name>
+            <title>API Success</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1707488398155' status='undefined'>
+                    <name>Values passed:"{\"order\":{\"source\":\"SnapClose\",\"notes\":\"helloworld3\",\"additionalParcelId\":1,\"parcelId\":2,\"purchasePrice\":\"$23,000\",\"transSummary\":\"Refi\",\"searchLength\":\"40\",\"serviceCode\":\"DI16\",\"webTitleNumber\":\"12345\",\"agencyOrderId\":\"54321\",\"agencyPortalId\":\"abc123\",\"orderId\":\"123123\",\"correlationId\":\"1568hdbxfzgsew4\",\"searchType\":\"SmartSearch\",\"orgId\":184245,\"properties\":[{\"municipalityName\":\"Ridgewood\",\"ownerFullName\":\"Curtis Spendlove\",\"propertyTypeId\":\"1\",\"agencyName\":\"Bubble Title\",\"block\":\"1\",\"lot\":\"1\",\"qualifier\":\"1\",\"address\":\"1234 123A Ave.\",\"addressTwo\":\"888 Park\",\"city\":\"Richmond\",\"county\":\"Vancouver\",\"state\":\"Washington\",\"zip\":\"99999\"}],\"parties\":[{\"role\":\"owner\",\"id\":623853,\"firstName\":\"Bugs\",\"lastName\":\"B\",\"middleName\":\"Bunny\",\"orderId\":623852,\"type\":1},{\"role\":\"owner\",\"id\":623857,\"firstName\":\"Daffy\",\"lastName\":\"D\",\"middleName\":\"Duck\",\"orderId\":623852,\"type\":1}]}}"</name>
+                    <title>Values passed:"{\"order\":{\"source\":\"SnapClose\",\"notes\":\"helloworld3\",\"additionalParcelId\":1,\"parcelId\":2,\"purchasePrice\":\"$23,000\",\"transSummary\":\"Refi\",\"searchLength\":\"40\",\"serviceCode\":\"DI16\",\"webTitleNumber\":\"12345\",\"agencyOrderId\":\"54321\",\"agencyPortalId\":\"abc123\",\"orderId\":\"123123\",\"correlationId\":\"1568hdbxfzgsew4\",\"searchType\":\"SmartSearch\",\"orgId\":184245,\"properties\":[{\"municipalityName\":\"Ridgewood\",\"ownerFullName\":\"Curtis Spendlove\",\"propertyTypeId\":\"1\",\"agencyName\":\"Bubble Title\",\"block\":\"1\",\"lot\":\"1\",\"qualifier\":\"1\",\"address\":\"1234 123A Ave.\",\"addressTwo\":\"888 Park\",\"city\":\"Richmond\",\"county\":\"Vancouver\",\"state\":\"Washington\",\"zip\":\"99999\"}],\"parties\":[{\"role\":\"owner\",\"id\":623853,\"firstName\":\"Bugs\",\"lastName\":\"B\",\"middleName\":\"Bunny\",\"orderId\":623852,\"type\":1},{\"role\":\"owner\",\"id\":623857,\"firstName\":\"Daffy\",\"lastName\":\"D\",\"middleName\":\"Duck\",\"orderId\":623852,\"type\":1}]}}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: TypeError: Cannot read properties of undefined (reading 'credentials')</message>
+                <stack-trace>Error: TypeError: Cannot read properties of undefined (reading 'credentials')
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/_Qualia/Order_Normalizer.test.js:21:11)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1707488399130' status='failed' stop='1707488400097'>
+            <name>order is missing</name>
+            <title>order is missing</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1707488399131' status='undefined'>
+                    <name>Values passed:"{\"order\":\"\"}"</name>
+                    <title>Values passed:"{\"order\":\"\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                - Expected  - 2
+                + Received  + 1
+                
+                - Invalid data or url or filepath argument: 
+                - Expecting value: line 1 column 1 (char 0)
+                + Invalid Session</message>
+                <stack-trace>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                - Expected  - 2
+                + Received  + 1
+                
+                - Invalid data or url or filepath argument: 
+                - Expecting value: line 1 column 1 (char 0)
+                + Invalid Session
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/_Qualia/Order_Normalizer.test.js:34:11)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1707488400098' status='failed' stop='1707488401032'>
+            <name>BAD REQUEST</name>
+            <title>BAD REQUEST</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1707488400098' status='undefined'>
+                    <name>Values passed:"{}"</name>
+                    <title>Values passed:"{}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "'order'"
+                Received: "Invalid Session"</message>
+                <stack-trace>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "'order'"
+                Received: "Invalid Session"
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/_Qualia/Order_Normalizer.test.js:47:11)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

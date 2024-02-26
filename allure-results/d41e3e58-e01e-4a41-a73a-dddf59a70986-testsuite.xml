@@ -1,0 +1,97 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1707832985593' stop='1707832988338'>
+    <name>test/Order/OrderService_Details.test.js</name>
+    <title>test/Order/OrderService_Details.test.js</title>
+    <test-cases>
+        <test-case start='1707832985593' status='failed' stop='1707832986129'>
+            <name>API Success</name>
+            <title>API Success</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1707832985595' status='undefined'>
+                    <name>Values passed:"{}"</name>
+                    <title>Values passed:"{}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: TypeError: Cannot read properties of undefined (reading 'msg')</message>
+                <stack-trace>Error: TypeError: Cannot read properties of undefined (reading 'msg')
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/Order/OrderService_Details.test.js:20:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1707832986130' status='failed' stop='1707832987189'>
+            <name>Wrong id passed in endpoints</name>
+            <title>Wrong id passed in endpoints</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1707832986130' status='undefined'>
+                    <name>Values passed:"{}"</name>
+                    <title>Values passed:"{}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: TypeError: Cannot read properties of undefined (reading 'msg')</message>
+                <stack-trace>Error: TypeError: Cannot read properties of undefined (reading 'msg')
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/Order/OrderService_Details.test.js:41:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1707832987190' status='failed' stop='1707832987612'>
+            <name>No id passed in endpoints</name>
+            <title>No id passed in endpoints</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1707832987190' status='undefined'>
+                    <name>Values passed:"{}"</name>
+                    <title>Values passed:"{}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "Authorization header requires 'Credential' parameter. Authorization header requires 'Signature' parameter. Authorization header requires 'SignedHeaders' parameter. Authorization header requires existence of either a 'X-Amz-Date' or a 'Date' header. Authorization={\"body\":\"An error occurred (UserNotConfirmedException) when calling the InitiateAuth operation: User is not confirmed.\",\"statusCode\":500,\"headers\":{\"Content-Type\":\"application/json\"}}"
+                Received: "'error' not a valid key=value pair (missing equal-sign) in Authorization header: '{\"body\":\"An error occurred (UserNotConfirmedException) when calling the InitiateAuth operation: User is not confirmed.\",\"statusCode\":500,\"headers\":{\"Content-Type\":\"application/json\"}}'."</message>
+                <stack-trace>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "Authorization header requires 'Credential' parameter. Authorization header requires 'Signature' parameter. Authorization header requires 'SignedHeaders' parameter. Authorization header requires existence of either a 'X-Amz-Date' or a 'Date' header. Authorization={\"body\":\"An error occurred (UserNotConfirmedException) when calling the InitiateAuth operation: User is not confirmed.\",\"statusCode\":500,\"headers\":{\"Content-Type\":\"application/json\"}}"
+                Received: "'error' not a valid key=value pair (missing equal-sign) in Authorization header: '{\"body\":\"An error occurred (UserNotConfirmedException) when calling the InitiateAuth operation: User is not confirmed.\",\"statusCode\":500,\"headers\":{\"Content-Type\":\"application/json\"}}'."
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/Order/OrderService_Details.test.js:60:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1707832987612' status='failed' stop='1707832988328'>
+            <name>Special character passed in end point last</name>
+            <title>Special character passed in end point last</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1707832987613' status='undefined'>
+                    <name>Values passed:"{}"</name>
+                    <title>Values passed:"{}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: TypeError: Cannot read properties of undefined (reading 'msg')</message>
+                <stack-trace>Error: TypeError: Cannot read properties of undefined (reading 'msg')
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/Order/OrderService_Details.test.js:80:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

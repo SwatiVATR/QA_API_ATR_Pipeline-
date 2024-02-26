@@ -18,6 +18,7 @@ it('API Success without appended_note key',
             const response = await NAModule(postData, options);
             expect(response.success.message).toBe("Rush note has been added successfully");
             reporter.endStep();
+            reporter.testId("API Endpoint-/services/notes/special-request")
             reporter.description("Response message from API:"+JSON.stringify(response))
 
         } catch (error) {
@@ -34,6 +35,8 @@ it('API Success with appended_note key',
             const response = await NAModule(postData, options);
             expect(response.success.message).toBe("Appended note has been added successfully for Rush");
             reporter.endStep();
+            reporter.testId("API Endpoint-/services/notes/special-request")
+
             reporter.description("Response message from API:"+JSON.stringify(response))
 
         } catch (error) {
@@ -52,6 +55,8 @@ it('button_id is missing',
                 "Button ID parameter is missing."
             );
             reporter.endStep();
+            reporter.testId("API Endpoint-/services/notes/special-request")
+
             reporter.description("Response message from API:"+JSON.stringify(response))
 
         } catch (error) {
@@ -70,6 +75,8 @@ it('button_id is passed wrong or special characters passed to button_id',
                 "Button ID not found."
             );
             reporter.endStep();
+            reporter.testId("API Endpoint-/services/notes/special-request")
+
             reporter.description("Response message from API:"+JSON.stringify(response))
 
         } catch (error) {
@@ -89,6 +96,7 @@ it('button_id is not passed in body',
                 "Button ID parameter is missing."
             );
             reporter.endStep();
+            reporter.testId("API Endpoint-/services/notes/special-request")
             reporter.description("Response message from API:"+JSON.stringify(response))
 
         } catch (error) {
@@ -106,6 +114,7 @@ it('order_id is missing',
             const response = await NAModule(postData, options);
             expect(response.success.message).toBe("Rush note has been added successfully");
             reporter.endStep();
+            reporter.testId("API Endpoint-/services/notes/special-request")
             reporter.description("Response message from API:"+JSON.stringify(response))
 
         } catch (error) {
@@ -123,6 +132,7 @@ it('order_id is passed wrong',
             const response = await NAModule(postData, options);
             expect(response.success.message).toBe("Rush note has been added successfully");
             reporter.endStep();
+            reporter.testId("API Endpoint-/services/notes/special-request")
             reporter.description("Response message from API:"+JSON.stringify(response))
 
         } catch (error) {
@@ -139,6 +149,7 @@ it('order_id is not passed in body',
             const response = await NAModule(postData, options);
             expect(response.success.message).toBe("Rush note has been added successfully");
             reporter.endStep();
+            reporter.testId("API Endpoint-/services/notes/special-request")
             reporter.description("Response message from API:"+JSON.stringify(response))
 
         } catch (error) {
@@ -158,6 +169,7 @@ it('order is passed empty',
                 "Invalid data or url or filepath argument: \nExpecting value: line 1 column 1 (char 0)"
             );
             reporter.endStep();
+            reporter.testId("API Endpoint-/services/notes/special-request")
             reporter.description("Response message from API:"+JSON.stringify(response))
 
         } catch (error) {

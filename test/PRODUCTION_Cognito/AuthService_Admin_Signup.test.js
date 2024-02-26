@@ -13,7 +13,7 @@ const {
   };
 
   const PASSWORD=process.env.SWATI_PASSWORD
-  test(
+  it(
     "API Success",
     async () => {
       const postData = JSON.stringify({
@@ -21,15 +21,19 @@ const {
         password: PASSWORD,
       });
       try {
+        reporter.startStep("Values passed:" + JSON.stringify(postData));
         const response = await NAModule(postData, options);
         expect(response.statusCode).toBe(500);
+        reporter.endStep();
+        reporter.testId("API Endpoint-/services/invoker/cognito/signup-dev")
+        reporter.description("Response message from API:" + JSON.stringify(response))
       } catch (error) {
         throw new Error(error);
       }
     },
     Timeout
   );
-  test(
+  it(
     "Email already exist",
     async () => {
       const postData = JSON.stringify({
@@ -37,15 +41,19 @@ const {
         password:PASSWORD,
       });
       try {
+        reporter.startStep("Values passed:" + JSON.stringify(postData));
         const response = await NAModule(postData, options);
         expect(response.statusCode).toBe(500);
+        reporter.endStep();
+        reporter.testId("API Endpoint-/services/invoker/cognito/signup-dev")
+        reporter.description("Response message from API:" + JSON.stringify(response))
       } catch (error) {
         throw new Error(error);
       }
     },
     Timeout
   );
-  test(
+  it(
     "Email is blank",
     async () => {
       const postData = JSON.stringify({
@@ -53,15 +61,19 @@ const {
         password: PASSWORD,
       });
       try {
+        reporter.startStep("Values passed:" + JSON.stringify(postData));
         const response = await NAModule(postData, options);
         expect(response.statusCode).toBe(500);
+        reporter.endStep();
+        reporter.testId("API Endpoint-/services/invoker/cognito/signup-dev")
+        reporter.description("Response message from API:" + JSON.stringify(response))
       } catch (error) {
         throw new Error(error);
       }
     },
     Timeout
   );
-  test(
+  it(
     "Password is blank",
     async () => {
       const postData = JSON.stringify({
@@ -69,33 +81,45 @@ const {
         password: "",
       });
       try {
+        reporter.startStep("Values passed:" + JSON.stringify(postData));
         const response = await NAModule(postData, options);
         expect(response.statusCode).toBe(500);
+        reporter.endStep();
+        reporter.testId("API Endpoint-/services/invoker/cognito/signup-dev")
+        reporter.description("Response message from API:" + JSON.stringify(response))
       } catch (error) {
         throw new Error(error);
       }
     },
     Timeout
   );
-  test(
+  it(
     "Email and Password both is blank",
     async () => {
       const postData = JSON.stringify({ username: "", password: "" });
       try {
+        reporter.startStep("Values passed:" + JSON.stringify(postData));
         const response = await NAModule(postData, options);
         expect(response.statusCode).toBe(500);
+        reporter.endStep();
+        reporter.testId("API Endpoint-/services/invoker/cognito/signup-dev")
+        reporter.description("Response message from API:" + JSON.stringify(response))
       } catch (error) {
         throw new Error(error);
       }
     },
     Timeout
   );
-  test(
+  it(
     "Bad Request",
     async () => {
       const postData = JSON.stringify({ username: "", password: "" });
       try {
+        reporter.startStep("Values passed:" + JSON.stringify(postData));
         const response = await NAModule(postData, options);
+        reporter.endStep();
+        reporter.testId("API Endpoint-/services/invoker/cognito/signup-dev")
+        reporter.description("Response message from API:" + JSON.stringify(response))
       } catch (error) {
         throw new Error(error);
       }

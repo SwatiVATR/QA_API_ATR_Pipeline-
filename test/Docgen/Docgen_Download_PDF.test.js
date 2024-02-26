@@ -11,7 +11,7 @@ const {
     ...commonOptionsPOSTwithoutHeader,
   };
   
-  test(
+  it(
     "API Success",
     async () => {
       const postData = JSON.stringify({
@@ -21,8 +21,12 @@ const {
         authKey: "d68c908ad8a31c3963f42181f932458461e5a379",
       });
       try {
+        reporter.startStep("Values passed:" + JSON.stringify(postData));
         const response = await NAModule(postData, options);
         expect(response.statusCode).toBe(500);
+        reporter.endStep();
+        reporter.testId("API Endpoint-/services/invoker/docgen/pdf2string")
+        reporter.description("Response message from API:"+ JSON.stringify(response))
       } catch (error) {
         throw new Error(error);
       }
@@ -30,7 +34,7 @@ const {
     Timeout
   );
   
-  test(
+  it(
     "Auth key is missing|| Wrong API key",
     async () => {
       const postData = JSON.stringify({
@@ -40,7 +44,11 @@ const {
         authKey: "",
       });
       try {
+        reporter.startStep("Values passed:" + JSON.stringify(postData));
           const response = await NAModule(postData, options);
+          reporter.endStep();
+          reporter.testId("API Endpoint-/services/invoker/docgen/pdf2string")
+          reporter.description("Response message from API:"+ JSON.stringify(response))
           } catch (error) {
           throw new Error(error);
         }
@@ -48,7 +56,7 @@ const {
     Timeout
   );
   
-  test(
+  it(
     "Plain text received as response",
     async () => {
       const postData = JSON.stringify({
@@ -58,7 +66,11 @@ const {
         authKey: "",
       });
       try {
+        reporter.startStep("Values passed:" + JSON.stringify(postData));
         const response = await NAModule(postData, options);
+        reporter.endStep();
+        reporter.testId("API Endpoint-/services/invoker/docgen/pdf2string")
+        reporter.description("Response message from API:"+ JSON.stringify(response))
       } catch (error) {
         throw new Error(error);
       }

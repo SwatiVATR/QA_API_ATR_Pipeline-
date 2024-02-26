@@ -27,6 +27,10 @@ const HEADERS = {
   "Content-Type": "application/json",
   Authorization: TOKEN,
 };
+const BEARERHEADERS = {
+  "Content-Type": "application/json",
+  Authorization: `Bearer ${TOKEN}`,
+};
 const HEADERSWITHBASICAUTH = {
   "Content-Type": "application/json",
   Authorization: BASICAUTHTOKEN,
@@ -49,6 +53,11 @@ const commonOptionsPOST = {
   hostname: BASE,
   method: "POST",
   headers: HEADERS,
+};
+const commonOptionsPOSTBearer = {
+  hostname: BASE,
+  method: "POST",
+  headers: BEARERHEADERS,
 };
 const commonOptionsPOSTBasicAUTH = {
   hostname: BASE,
@@ -116,6 +125,7 @@ module.exports = {
   HEADERWITHOUTTOKEN,
   commonOptionsGET,
   commonOptionsPOST,
+  commonOptionsPOSTBearer,
   commonOptionsDELETE,
   commonOptionsGETwithoutHeader,
   commonOptionsPOSTwithoutHeader,
@@ -128,5 +138,5 @@ module.exports = {
   commonOptionsPOSTBasicAUTH,
   OrderAuthenticateToken,
   PRODBASE,
-  PRODSTAGE
+  PRODSTAGE,
 };

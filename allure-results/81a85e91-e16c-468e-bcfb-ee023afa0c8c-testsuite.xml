@@ -1,0 +1,97 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1707488416811' stop='1707488425255'>
+    <name>test/StepFunctions/StepService_Execute_Async.test.js</name>
+    <title>test/StepFunctions/StepService_Execute_Async.test.js</title>
+    <test-cases>
+        <test-case start='1707488416811' status='passed' stop='1707488420487'>
+            <name>API Success</name>
+            <title>API Success</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/async/MyStandardStateMachine'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1707488416812' status='passed' stop='1707488420484'>
+                    <name>Values passed:"{\"username\":\"sverma@actiontitleresearch.com\",\"password\":\"Sverma@123\"}"</name>
+                    <title>Values passed:"{\"username\":\"sverma@actiontitleresearch.com\",\"password\":\"Sverma@123\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:[object Object]</description>
+        </test-case>
+        <test-case start='1707488420487' status='passed' stop='1707488421696'>
+            <name>username is missing</name>
+            <title>username is missing</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/async/MyStandardStateMachine'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1707488420488' status='passed' stop='1707488421696'>
+                    <name>Values passed:"{\"username\":\"\",\"password\":\"Sverma@123\"}"</name>
+                    <title>Values passed:"{\"username\":\"\",\"password\":\"Sverma@123\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:[object Object]</description>
+        </test-case>
+        <test-case start='1707488421696' status='passed' stop='1707488422904'>
+            <name>password is missing</name>
+            <title>password is missing</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/async/MyStandardStateMachine'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1707488421697' status='passed' stop='1707488422904'>
+                    <name>Values passed:"{\"username\":\"sverma@actiontitleresearch.com\",\"password\":\"\"}"</name>
+                    <title>Values passed:"{\"username\":\"sverma@actiontitleresearch.com\",\"password\":\"\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:[object Object]</description>
+        </test-case>
+        <test-case start='1707488422904' status='passed' stop='1707488424085'>
+            <name>username and password is missing</name>
+            <title>username and password is missing</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/async/MyStandardStateMachine'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1707488422904' status='passed' stop='1707488424085'>
+                    <name>Values passed:"{\"username\":\"\",\"password\":\"\"}"</name>
+                    <title>Values passed:"{\"username\":\"\",\"password\":\"\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:[object Object]</description>
+        </test-case>
+        <test-case start='1707488424085' status='passed' stop='1707488425255'>
+            <name>Bad Request</name>
+            <title>Bad Request</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/async/MyStandardStateMachine'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1707488424085' status='passed' stop='1707488425255'>
+                    <name>Values passed:"{\"username\":\"\",\"password\":\"\"}"</name>
+                    <title>Values passed:"{\"username\":\"\",\"password\":\"\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:[object Object]</description>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

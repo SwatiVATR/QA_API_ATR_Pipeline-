@@ -1,0 +1,331 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1707488318112' stop='1707488329322'>
+    <name>test/Notes/COR-370.test.js</name>
+    <title>test/Notes/COR-370.test.js</title>
+    <test-cases>
+        <test-case start='1707488318112' status='failed' stop='1707488318840'>
+            <name>API Success of non ATR members</name>
+            <title>API Success of non ATR members</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1707488318121' status='undefined'>
+                    <name>Values passed:"{\"client_orderId\":\"BT-7801\",\"note\":\"testing3 send email from postman12 send Email is true\",\"userID\":\"352\"}"</name>
+                    <title>Values passed:"{\"client_orderId\":\"BT-7801\",\"note\":\"testing3 send email from postman12 send Email is true\",\"userID\":\"352\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "Notes have been submitted successfully and an email has been sent to both the existing user and the non-ATR members."
+                Received: undefined</message>
+                <stack-trace>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "Notes have been submitted successfully and an email has been sent to both the existing user and the non-ATR members."
+                Received: undefined
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/Notes/COR-370.test.js:26:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1707488318840' status='failed' stop='1707488319760'>
+            <name>API Success of ATR members</name>
+            <title>API Success of ATR members</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1707488318841' status='undefined'>
+                    <name>Values passed:"{\"client_orderId\":\"BT-7801\",\"note\":\"testing3 send email from postman12 send Email is true\",\"userID\":\"363\"}"</name>
+                    <title>Values passed:"{\"client_orderId\":\"BT-7801\",\"note\":\"testing3 send email from postman12 send Email is true\",\"userID\":\"363\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "Notes have been submitted successfully and an email has been sent to ATR Support."
+                Received: undefined</message>
+                <stack-trace>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "Notes have been submitted successfully and an email has been sent to ATR Support."
+                Received: undefined
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/Notes/COR-370.test.js:50:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1707488319760' status='failed' stop='1707488320479'>
+            <name>client_orderId is missing</name>
+            <title>client_orderId is missing</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1707488319761' status='undefined'>
+                    <name>Values passed:"{\"client_orderId\":\"\",\"note\":\"testing3 send email from postman12 send Email is true\",\"userID\":\"352\"}"</name>
+                    <title>Values passed:"{\"client_orderId\":\"\",\"note\":\"testing3 send email from postman12 send Email is true\",\"userID\":\"352\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "Please provide a client_orderId"
+                Received: "Invalid Session"</message>
+                <stack-trace>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "Please provide a client_orderId"
+                Received: "Invalid Session"
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/Notes/COR-370.test.js:72:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1707488320480' status='failed' stop='1707488321500'>
+            <name>userID is missing</name>
+            <title>userID is missing</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1707488320480' status='undefined'>
+                    <name>Values passed:"{\"client_orderId\":\"BT-7801\",\"note\":\"testing3 send email from postman12 send Email is true\",\"userID\":\"\"}"</name>
+                    <title>Values passed:"{\"client_orderId\":\"BT-7801\",\"note\":\"testing3 send email from postman12 send Email is true\",\"userID\":\"\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "Invalid user id "
+                Received: "Invalid Session"</message>
+                <stack-trace>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "Invalid user id "
+                Received: "Invalid Session"
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/Notes/COR-370.test.js:94:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1707488321500' status='failed' stop='1707488322418'>
+            <name>BAD REQUEST</name>
+            <title>BAD REQUEST</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1707488321501' status='undefined'>
+                    <name>Values passed:"{}"</name>
+                    <title>Values passed:"{}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "Invalid user id "
+                Received: "Invalid Session"</message>
+                <stack-trace>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "Invalid user id "
+                Received: "Invalid Session"
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/Notes/COR-370.test.js:113:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1707488322418' status='failed' stop='1707488322938'>
+            <name>Wrong client_orderId is passed</name>
+            <title>Wrong client_orderId is passed</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1707488322419' status='undefined'>
+                    <name>Values passed:"{\"client_orderId\":\"BT-@43dc7801\",\"note\":\"testing3 send email from postman12 send Email is true\",\"userID\":\"352\"}"</name>
+                    <title>Values passed:"{\"client_orderId\":\"BT-@43dc7801\",\"note\":\"testing3 send email from postman12 send Email is true\",\"userID\":\"352\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "local variable 'transaction_id' referenced before assignment"
+                Received: "Invalid Session"</message>
+                <stack-trace>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "local variable 'transaction_id' referenced before assignment"
+                Received: "Invalid Session"
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/Notes/COR-370.test.js:137:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1707488322938' status='failed' stop='1707488323721'>
+            <name>Wrong userID is passed</name>
+            <title>Wrong userID is passed</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1707488322939' status='undefined'>
+                    <name>Values passed:"{\"client_orderId\":\"BT-7801\",\"note\":\"testing3 send email from postman12 send Email is true\",\"userID\":\"@f@@@@@\"}"</name>
+                    <title>Values passed:"{\"client_orderId\":\"BT-7801\",\"note\":\"testing3 send email from postman12 send Email is true\",\"userID\":\"@f@@@@@\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "Invalid user id "
+                Received: "Invalid Session"</message>
+                <stack-trace>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "Invalid user id "
+                Received: "Invalid Session"
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/Notes/COR-370.test.js:160:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1707488323721' status='failed' stop='1707488324854'>
+            <name>Blank Spaces in client_orderId</name>
+            <title>Blank Spaces in client_orderId</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1707488323722' status='undefined'>
+                    <name>Values passed:"{\"client_orderId\":\"      \",\"note\":\"testing3 send email from postman12 send Email is true\",\"userID\":\"3esdesdw23352\"}"</name>
+                    <title>Values passed:"{\"client_orderId\":\"      \",\"note\":\"testing3 send email from postman12 send Email is true\",\"userID\":\"3esdesdw23352\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "invalid literal for int() with base 10: '3esdesdw23352'"
+                Received: "Invalid Session"</message>
+                <stack-trace>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "invalid literal for int() with base 10: '3esdesdw23352'"
+                Received: "Invalid Session"
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/Notes/COR-370.test.js:182:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1707488324854' status='failed' stop='1707488325801'>
+            <name>note is empty</name>
+            <title>note is empty</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1707488324855' status='undefined'>
+                    <name>Values passed:"{\"client_orderId\":\"BT-@43dc7801\",\"note\":\"\",\"userID\":\"352\"}"</name>
+                    <title>Values passed:"{\"client_orderId\":\"BT-@43dc7801\",\"note\":\"\",\"userID\":\"352\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "local variable 'transaction_id' referenced before assignment"
+                Received: "Invalid Session"</message>
+                <stack-trace>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "local variable 'transaction_id' referenced before assignment"
+                Received: "Invalid Session"
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/Notes/COR-370.test.js:204:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1707488325801' status='failed' stop='1707488326741'>
+            <name>special character in note </name>
+            <title>special character in note </title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1707488325801' status='undefined'>
+                    <name>Values passed:"{\"client_orderId\":\"BT-@43dc7801\",\"note\":\"@12@@@@@@$$\",\"userID\":\"3esdesdw23352\"}"</name>
+                    <title>Values passed:"{\"client_orderId\":\"BT-@43dc7801\",\"note\":\"@12@@@@@@$$\",\"userID\":\"3esdesdw23352\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "invalid literal for int() with base 10: '3esdesdw23352'"
+                Received: "Invalid Session"</message>
+                <stack-trace>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "invalid literal for int() with base 10: '3esdesdw23352'"
+                Received: "Invalid Session"
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/Notes/COR-370.test.js:227:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1707488326741' status='failed' stop='1707488327778'>
+            <name>blank space passed in note </name>
+            <title>blank space passed in note </title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1707488326741' status='undefined'>
+                    <name>Values passed:"{\"client_orderId\":\"BT-@43dc7801\",\"note\":\"     \",\"userID\":\"3esdesdw23352\"}"</name>
+                    <title>Values passed:"{\"client_orderId\":\"BT-@43dc7801\",\"note\":\"     \",\"userID\":\"3esdesdw23352\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "invalid literal for int() with base 10: '3esdesdw23352'"
+                Received: "Invalid Session"</message>
+                <stack-trace>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "invalid literal for int() with base 10: '3esdesdw23352'"
+                Received: "Invalid Session"
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/Notes/COR-370.test.js:249:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1707488327778' status='failed' stop='1707488329057'>
+            <name>API body is called empty</name>
+            <title>API body is called empty</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1707488327779' status='undefined'>
+                    <name>Values passed:"{\"client_orderId\":\"\",\"note\":\"\",\"userID\":\"\"}"</name>
+                    <title>Values passed:"{\"client_orderId\":\"\",\"note\":\"\",\"userID\":\"\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "Invalid user id "
+                Received: "Invalid Session"</message>
+                <stack-trace>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "Invalid user id "
+                Received: "Invalid Session"
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/Notes/COR-370.test.js:273:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

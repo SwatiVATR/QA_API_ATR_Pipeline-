@@ -1,0 +1,47 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1707488397434' stop='1707488399328'>
+    <name>test/SES/delete_email_template_250_sandbox.test.js</name>
+    <title>test/SES/delete_email_template_250_sandbox.test.js</title>
+    <test-cases>
+        <test-case start='1707488397434' status='failed' stop='1707488398367'>
+            <name>API Success</name>
+            <title>API Success</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "Template 'testabc' deleted successfully"
+                Received: undefined</message>
+                <stack-trace>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "Template 'testabc' deleted successfully"
+                Received: undefined
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/SES/delete_email_template_250_sandbox.test.js:24:19)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1707488398367' status='failed' stop='1707488399322'>
+            <name>special characters in endpoints</name>
+            <title>special characters in endpoints</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "Template '@@@' deleted successfully"
+                Received: undefined</message>
+                <stack-trace>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "Template '@@@' deleted successfully"
+                Received: undefined
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/SES/delete_email_template_250_sandbox.test.js:45:19)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

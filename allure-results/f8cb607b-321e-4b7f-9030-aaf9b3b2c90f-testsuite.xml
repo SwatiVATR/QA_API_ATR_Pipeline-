@@ -1,0 +1,121 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1707832961406' stop='1707832967813'>
+    <name>test/BackOffice/Status_Update.test.js</name>
+    <title>test/BackOffice/Status_Update.test.js</title>
+    <test-cases>
+        <test-case start='1707832961406' status='passed' stop='1707832962702'>
+            <name>API Success</name>
+            <title>API Success</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/backoffice/StatusUpdateJobs'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1707832961407' status='passed' stop='1707832962700'>
+                    <name>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"Pass$123\",\"appType\":\"StatusUpdateJobs\",\"appUsername\":\"SchPortal\",\"recId\":994547,\"recStatus\":\"NotesUpdate\",\"recStatusNote\":\"[text]-Comments\",\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\"}"</name>
+                    <title>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"Pass$123\",\"appType\":\"StatusUpdateJobs\",\"appUsername\":\"SchPortal\",\"recId\":994547,\"recStatus\":\"NotesUpdate\",\"recStatusNote\":\"[text]-Comments\",\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"Response":{"TXStatus":"00","TransactionID":"40749299842291322024","RecID":"[994547]"}}</description>
+        </test-case>
+        <test-case start='1707832962702' status='failed' stop='1707832963627'>
+            <name>Auth Key is missing ||invalid Auth Key</name>
+            <title>Auth Key is missing ||invalid Auth Key</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1707832962702' status='undefined'>
+                    <name>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"Pass$123\",\"appType\":\"StatusUpdateJobs\",\"appUsername\":\"SchPortal\",\"recId\":994547,\"recStatus\":\"NotesUpdate\",\"recStatusNote\":\"[text]-Comments\",\"authKey\":\"\"}"</name>
+                    <title>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"Pass$123\",\"appType\":\"StatusUpdateJobs\",\"appUsername\":\"SchPortal\",\"recId\":994547,\"recStatus\":\"NotesUpdate\",\"recStatusNote\":\"[text]-Comments\",\"authKey\":\"\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Response is not in valid json format</message>
+                <stack-trace>Error: Response is not in valid json format
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/BackOffice/Status_Update.test.js:39:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1707832963627' status='failed' stop='1707832964505'>
+            <name>Plain text received as response</name>
+            <title>Plain text received as response</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1707832963627' status='undefined'>
+                    <name>Values passed:"{}"</name>
+                    <title>Values passed:"{}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Response is not in valid json format</message>
+                <stack-trace>Error: Response is not in valid json format
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/BackOffice/Status_Update.test.js:56:15)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1707832964505' status='passed' stop='1707832965731'>
+            <name>appId is missing or invalid appId</name>
+            <title>appId is missing or invalid appId</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/backoffice/StatusUpdateJobs'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1707832964506' status='passed' stop='1707832965731'>
+                    <name>Values passed:"{\"appId\":\"sdsd\",\"appPass\":\"Pass$123\",\"appType\":\"StatusUpdateJobs\",\"appUsername\":\"SchPortal\",\"recId\":994547,\"recStatus\":\"NotesUpdate\",\"recStatusNote\":\"[text]-Comments\",\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\"}"</name>
+                    <title>Values passed:"{\"appId\":\"sdsd\",\"appPass\":\"Pass$123\",\"appType\":\"StatusUpdateJobs\",\"appUsername\":\"SchPortal\",\"recId\":994547,\"recStatus\":\"NotesUpdate\",\"recStatusNote\":\"[text]-Comments\",\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"Response":{"TXStatus":"01","TransactionID":"40749300145291322024"}}</description>
+        </test-case>
+        <test-case start='1707832965731' status='passed' stop='1707832966539'>
+            <name>appPass is missing or invalid appPass</name>
+            <title>appPass is missing or invalid appPass</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/backoffice/StatusUpdateJobs'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1707832965732' status='passed' stop='1707832966539'>
+                    <name>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"Passwsdsd$123\",\"appType\":\"StatusUpdateJobs\",\"appUsername\":\"SchPortal\",\"recId\":994547,\"recStatus\":\"NotesUpdate\",\"recStatusNote\":\"[text]-Comments\",\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\"}"</name>
+                    <title>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"Passwsdsd$123\",\"appType\":\"StatusUpdateJobs\",\"appUsername\":\"SchPortal\",\"recId\":994547,\"recStatus\":\"NotesUpdate\",\"recStatusNote\":\"[text]-Comments\",\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"Response":{"TXStatus":"02","TransactionID":"40749300346291322024"}}</description>
+        </test-case>
+        <test-case start='1707832966539' status='passed' stop='1707832967804'>
+            <name>appUsername is missing or invalid appUsername</name>
+            <title>appUsername is missing or invalid appUsername</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/backoffice/StatusUpdateJobs'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1707832966539' status='passed' stop='1707832967804'>
+                    <name>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"Pass$123\",\"appType\":\"StatusUpdateJobs\",\"appUsername\":\"SchPwswsortal\",\"recId\":994547,\"recStatus\":\"NotesUpdate\",\"recStatusNote\":\"[text]-Comments\",\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\"}"</name>
+                    <title>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"Pass$123\",\"appType\":\"StatusUpdateJobs\",\"appUsername\":\"SchPwswsortal\",\"recId\":994547,\"recStatus\":\"NotesUpdate\",\"recStatusNote\":\"[text]-Comments\",\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"Response":{"TXStatus":"04","TransactionID":"40749300547291322024"}}</description>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

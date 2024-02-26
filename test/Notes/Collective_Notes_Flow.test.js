@@ -25,6 +25,7 @@ it('API Success for service notes',
                 "159306"
             );
             reporter.endStep();
+            reporter.testId("API Endpoint-/services/notes/159306/0")
             reporter.description("Response message from API:"+JSON.stringify(response))
         } catch (error) {
             throw new Error(error);
@@ -45,6 +46,7 @@ it('API Success for service notes update',
             const response = await NAModule(postData, options);
             expect(response.success.statusCode).toBe(200);
             reporter.endStep();
+            reporter.testId("API Endpoint-/services/notes/update")
             reporter.description("Response message from API:"+JSON.stringify(response))
         } catch (error) {
             throw new Error(error);
@@ -71,7 +73,8 @@ it('API Success for service submit notes of not ATR Members',
                 "Notes have been submitted successfully and an email has been sent to both the existing user and the non-ATR members."
             );
             reporter.endStep();
-            reporter.description("Response message from API:"+response.message)
+            reporter.testId("API Endpoint-/services/submit-notes")
+            reporter.description("Response message from API:"+ JSON.stringify(response))
 
         } catch (error) {
             throw new Error(error);
@@ -97,7 +100,8 @@ it('API Success for service submit notes of ATR Members',
                 "Notes have been submitted successfully and an email has been sent to ATR Support."
             );
             reporter.endStep();
-            reporter.description("Response message from API:"+response.message)
+            reporter.testId("API Endpoint-/services/submit-notes")
+            reporter.description("Response message from API:"+ JSON.stringify(response))
 
         } catch (error) {
             throw new Error(error);
@@ -122,7 +126,8 @@ it('API Success for special-request without appended_note key',
             const response = await NAModule(postData, options);
             expect(response.success.message).toBe("Rush note has been added successfully");
             reporter.endStep();
-            reporter.description("Response message from API:" + response.success.message)
+            reporter.testId("API Endpoint-/services/notes/special-request")
+            reporter.description("Response message from API:" + JSON.stringify(response))
 
         } catch (error) {
             throw new Error(error);
@@ -148,7 +153,9 @@ it('API Success for special-request with appended_note key',
             const response = await NAModule(postData, options);
             expect(response.success.message).toBe("Appended note has been added successfully for Rush");
             reporter.endStep();
-            reporter.description("Response message from API:" + response.success.message)
+            reporter.testId("API Endpoint-/services/notes/special-request")
+
+            reporter.description("Response message from API:" + JSON.stringify(response))
 
         } catch (error) {
             throw new Error(error);
@@ -172,7 +179,8 @@ it('API Success for service current duedate update',
             const response = await NAModule(postData, options);
             expect(response.success).toBe("An email with the updated details has been shared with the user.");
             reporter.endStep();
-            reporter.description("Response message from API:" + response.success)
+            reporter.testId("API Endpoint-/services/current_duedate_update")
+            reporter.description("Response message from API:" + JSON.stringify(response))
 
         } catch (error) {
             throw new Error(error);

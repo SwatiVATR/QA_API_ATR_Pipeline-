@@ -1,0 +1,251 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1707832893015' stop='1707832906089'>
+    <name>test/SES/create_template_250_sandbox.test.js</name>
+    <title>test/SES/create_template_250_sandbox.test.js</title>
+    <test-cases>
+        <test-case start='1707832893015' status='failed' stop='1707832896840'>
+            <name>Api Success on new template creation</name>
+            <title>Api Success on new template creation</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1707832893016' status='undefined'>
+                    <name>Values passed:"{\"name\":\"AliceOrderCompletedEmailAliceLee\",\"subject\":\"Action Title Order Completed\",\"text\":\"Notification\",\"html\":\"&lt;html>&lt;body>&lt;p>Hi {{first_name}} {{last_name}},&lt;br>&lt;br>The following are the completed order(s) :&lt;br>{{AgencyOrderid}}  &lt;br>&lt;br>&lt;strong>NEW!&lt;/strong> Action is using MaestroX to provide our customers with search order tracking and ETAs. You can view your order status and send us messages here https://portal.maestrox.com. Please login to see your recent orders and other valuable file information. If you do not yet have access, follow the link above and click the “Request Access” button. You will receive an email invitation from No-reply@actioncentral.com.&lt;br>&lt;br> Thanks! &lt;/p>&lt;/body>&lt;/html>\"}"</name>
+                    <title>Values passed:"{\"name\":\"AliceOrderCompletedEmailAliceLee\",\"subject\":\"Action Title Order Completed\",\"text\":\"Notification\",\"html\":\"&lt;html>&lt;body>&lt;p>Hi {{first_name}} {{last_name}},&lt;br>&lt;br>The following are the completed order(s) :&lt;br>{{AgencyOrderid}}  &lt;br>&lt;br>&lt;strong>NEW!&lt;/strong> Action is using MaestroX to provide our customers with search order tracking and ETAs. You can view your order status and send us messages here https://portal.maestrox.com. Please login to see your recent orders and other valuable file information. If you do not yet have access, follow the link above and click the “Request Access” button. You will receive an email invitation from No-reply@actioncentral.com.&lt;br>&lt;br> Thanks! &lt;/p>&lt;/body>&lt;/html>\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Error: expect(received).toBeTruthy()
+                
+                Received: undefined</message>
+                <stack-trace>Error: Error: expect(received).toBeTruthy()
+                
+                Received: undefined
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/SES/create_template_250_sandbox.test.js:26:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1707832896840' status='failed' stop='1707832898025'>
+            <name>Template name already exists</name>
+            <title>Template name already exists</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1707832896840' status='undefined'>
+                    <name>Values passed:"{\"name\":\"OrderCompletedEmail11\",\"subject\":\"Action Title Order Completed\",\"text\":\"Notification\",\"html\":\"&lt;html>&lt;body>&lt;p>Hi {{first_name}} {{last_name}},&lt;br>&lt;br>The following are the completed order(s) :&lt;br>{{AgencyOrderid}}  &lt;br>&lt;br>&lt;strong>NEW!&lt;/strong> Action is using MaestroX to provide our customers with search order tracking and ETAs. You can view your order status and send us messages here https://portal.maestrox.com. Please login to see your recent orders and other valuable file information. If you do not yet have access, follow the link above and click the “Request Access” button. You will receive an email invitation from No-reply@actioncentral.com.&lt;br>&lt;br> Thanks! &lt;/p>&lt;/body>&lt;/html>\"}"</name>
+                    <title>Values passed:"{\"name\":\"OrderCompletedEmail11\",\"subject\":\"Action Title Order Completed\",\"text\":\"Notification\",\"html\":\"&lt;html>&lt;body>&lt;p>Hi {{first_name}} {{last_name}},&lt;br>&lt;br>The following are the completed order(s) :&lt;br>{{AgencyOrderid}}  &lt;br>&lt;br>&lt;strong>NEW!&lt;/strong> Action is using MaestroX to provide our customers with search order tracking and ETAs. You can view your order status and send us messages here https://portal.maestrox.com. Please login to see your recent orders and other valuable file information. If you do not yet have access, follow the link above and click the “Request Access” button. You will receive an email invitation from No-reply@actioncentral.com.&lt;br>&lt;br> Thanks! &lt;/p>&lt;/body>&lt;/html>\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: TypeError: Cannot read properties of undefined (reading 'errorType')</message>
+                <stack-trace>Error: TypeError: Cannot read properties of undefined (reading 'errorType')
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/SES/create_template_250_sandbox.test.js:49:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1707832898025' status='failed' stop='1707832898787'>
+            <name>400 Bad Request</name>
+            <title>400 Bad Request</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1707832898026' status='undefined'>
+                    <name>Values passed:"{}"</name>
+                    <title>Values passed:"{}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "'name' is a mandatory field and is missing or empty."
+                Received: undefined</message>
+                <stack-trace>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "'name' is a mandatory field and is missing or empty."
+                Received: undefined
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/SES/create_template_250_sandbox.test.js:69:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1707832898787' status='failed' stop='1707832899963'>
+            <name>name is blank</name>
+            <title>name is blank</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1707832898788' status='undefined'>
+                    <name>Values passed:"{\"name\":\"\",\"subject\":\"Action Title Order Completed\",\"text\":\"Notification\",\"html\":\"&lt;html>&lt;body>&lt;p>Hi {{first_name}} {{last_name}},&lt;br>&lt;br>The following are the completed order(s) :&lt;br>{{AgencyOrderid}}  &lt;br>&lt;br>&lt;strong>NEW!&lt;/strong> Action is using MaestroX to provide our customers with search order tracking and ETAs. You can view your order status and send us messages here https://portal.maestrox.com. Please login to see your recent orders and other valuable file information. If you do not yet have access, follow the link above and click the “Request Access” button. You will receive an email invitation from No-reply@actioncentral.com.&lt;br>&lt;br> Thanks! &lt;/p>&lt;/body>&lt;/html>\"}"</name>
+                    <title>Values passed:"{\"name\":\"\",\"subject\":\"Action Title Order Completed\",\"text\":\"Notification\",\"html\":\"&lt;html>&lt;body>&lt;p>Hi {{first_name}} {{last_name}},&lt;br>&lt;br>The following are the completed order(s) :&lt;br>{{AgencyOrderid}}  &lt;br>&lt;br>&lt;strong>NEW!&lt;/strong> Action is using MaestroX to provide our customers with search order tracking and ETAs. You can view your order status and send us messages here https://portal.maestrox.com. Please login to see your recent orders and other valuable file information. If you do not yet have access, follow the link above and click the “Request Access” button. You will receive an email invitation from No-reply@actioncentral.com.&lt;br>&lt;br> Thanks! &lt;/p>&lt;/body>&lt;/html>\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "'name' is a mandatory field and is missing or empty."
+                Received: undefined</message>
+                <stack-trace>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "'name' is a mandatory field and is missing or empty."
+                Received: undefined
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/SES/create_template_250_sandbox.test.js:94:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1707832899963' status='failed' stop='1707832900604'>
+            <name>subject is blank</name>
+            <title>subject is blank</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1707832899964' status='undefined'>
+                    <name>Values passed:"{\"name\":\"OrderCompletedEmail\",\"subject\":\"\",\"text\":\"Notification\",\"html\":\"&lt;html>&lt;body>&lt;p>Hi {{first_name}} {{last_name}},&lt;br>&lt;br>The following are the completed order(s) :&lt;br>{{AgencyOrderid}}  &lt;br>&lt;br>&lt;strong>NEW!&lt;/strong> Action is using MaestroX to provide our customers with search order tracking and ETAs. You can view your order status and send us messages here https://portal.maestrox.com. Please login to see your recent orders and other valuable file information. If you do not yet have access, follow the link above and click the “Request Access” button. You will receive an email invitation from No-reply@actioncentral.com.&lt;br>&lt;br> Thanks! &lt;/p>&lt;/body>&lt;/html>\"}"</name>
+                    <title>Values passed:"{\"name\":\"OrderCompletedEmail\",\"subject\":\"\",\"text\":\"Notification\",\"html\":\"&lt;html>&lt;body>&lt;p>Hi {{first_name}} {{last_name}},&lt;br>&lt;br>The following are the completed order(s) :&lt;br>{{AgencyOrderid}}  &lt;br>&lt;br>&lt;strong>NEW!&lt;/strong> Action is using MaestroX to provide our customers with search order tracking and ETAs. You can view your order status and send us messages here https://portal.maestrox.com. Please login to see your recent orders and other valuable file information. If you do not yet have access, follow the link above and click the “Request Access” button. You will receive an email invitation from No-reply@actioncentral.com.&lt;br>&lt;br> Thanks! &lt;/p>&lt;/body>&lt;/html>\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "'subject' is a mandatory field and is missing or empty."
+                Received: undefined</message>
+                <stack-trace>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "'subject' is a mandatory field and is missing or empty."
+                Received: undefined
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/SES/create_template_250_sandbox.test.js:118:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1707832900604' status='failed' stop='1707832901567'>
+            <name>invalid subject</name>
+            <title>invalid subject</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1707832900605' status='undefined'>
+                    <name>Values passed:"{\"name\":\"OrderCompletedEmail\",\"subject\":\"wdwdcesc\",\"text\":\"Notification\",\"html\":\"&lt;html>&lt;body>&lt;p>Hi {{first_name}} {{last_name}},&lt;br>&lt;br>The following are the completed order(s) :&lt;br>{{AgencyOrderid}}  &lt;br>&lt;br>&lt;strong>NEW!&lt;/strong> Action is using MaestroX to provide our customers with search order tracking and ETAs. You can view your order status and send us messages here https://portal.maestrox.com. Please login to see your recent orders and other valuable file information. If you do not yet have access, follow the link above and click the “Request Access” button. You will receive an email invitation from No-reply@actioncentral.com.&lt;br>&lt;br> Thanks! &lt;/p>&lt;/body>&lt;/html>\"}"</name>
+                    <title>Values passed:"{\"name\":\"OrderCompletedEmail\",\"subject\":\"wdwdcesc\",\"text\":\"Notification\",\"html\":\"&lt;html>&lt;body>&lt;p>Hi {{first_name}} {{last_name}},&lt;br>&lt;br>The following are the completed order(s) :&lt;br>{{AgencyOrderid}}  &lt;br>&lt;br>&lt;strong>NEW!&lt;/strong> Action is using MaestroX to provide our customers with search order tracking and ETAs. You can view your order status and send us messages here https://portal.maestrox.com. Please login to see your recent orders and other valuable file information. If you do not yet have access, follow the link above and click the “Request Access” button. You will receive an email invitation from No-reply@actioncentral.com.&lt;br>&lt;br> Thanks! &lt;/p>&lt;/body>&lt;/html>\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: TypeError: Cannot read properties of undefined (reading 'errorType')</message>
+                <stack-trace>Error: TypeError: Cannot read properties of undefined (reading 'errorType')
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/SES/create_template_250_sandbox.test.js:141:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1707832901567' status='failed' stop='1707832902543'>
+            <name>text is blank</name>
+            <title>text is blank</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1707832901568' status='undefined'>
+                    <name>Values passed:"{\"name\":\"OrderCompletedEmail\",\"subject\":\"Action Title Order Completed\",\"text\":\"\",\"html\":\"&lt;html>&lt;body>&lt;p>Hi {{first_name}} {{last_name}},&lt;br>&lt;br>The following are the completed order(s) :&lt;br>{{AgencyOrderid}}  &lt;br>&lt;br>&lt;strong>NEW!&lt;/strong> Action is using MaestroX to provide our customers with search order tracking and ETAs. You can view your order status and send us messages here https://portal.maestrox.com. Please login to see your recent orders and other valuable file information. If you do not yet have access, follow the link above and click the “Request Access” button. You will receive an email invitation from No-reply@actioncentral.com.&lt;br>&lt;br> Thanks! &lt;/p>&lt;/body>&lt;/html>\"}"</name>
+                    <title>Values passed:"{\"name\":\"OrderCompletedEmail\",\"subject\":\"Action Title Order Completed\",\"text\":\"\",\"html\":\"&lt;html>&lt;body>&lt;p>Hi {{first_name}} {{last_name}},&lt;br>&lt;br>The following are the completed order(s) :&lt;br>{{AgencyOrderid}}  &lt;br>&lt;br>&lt;strong>NEW!&lt;/strong> Action is using MaestroX to provide our customers with search order tracking and ETAs. You can view your order status and send us messages here https://portal.maestrox.com. Please login to see your recent orders and other valuable file information. If you do not yet have access, follow the link above and click the “Request Access” button. You will receive an email invitation from No-reply@actioncentral.com.&lt;br>&lt;br> Thanks! &lt;/p>&lt;/body>&lt;/html>\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "'text' is a mandatory field and is missing or empty."
+                Received: undefined</message>
+                <stack-trace>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "'text' is a mandatory field and is missing or empty."
+                Received: undefined
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/SES/create_template_250_sandbox.test.js:165:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1707832902543' status='failed' stop='1707832903583'>
+            <name>text is invalid</name>
+            <title>text is invalid</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1707832902544' status='undefined'>
+                    <name>Values passed:"{\"name\":\"OrderCompletedEmail\",\"subject\":\"Action Title Order Completed\",\"text\":\"Notifsdsfdication\",\"html\":\"&lt;html>&lt;body>&lt;p>Hi {{first_name}} {{last_name}},&lt;br>&lt;br>The following are the completed order(s) :&lt;br>{{AgencyOrderid}}  &lt;br>&lt;br>&lt;strong>NEW!&lt;/strong> Action is using MaestroX to provide our customers with search order tracking and ETAs. You can view your order status and send us messages here https://portal.maestrox.com. Please login to see your recent orders and other valuable file information. If you do not yet have access, follow the link above and click the “Request Access” button. You will receive an email invitation from No-reply@actioncentral.com.&lt;br>&lt;br> Thanks! &lt;/p>&lt;/body>&lt;/html>\"}"</name>
+                    <title>Values passed:"{\"name\":\"OrderCompletedEmail\",\"subject\":\"Action Title Order Completed\",\"text\":\"Notifsdsfdication\",\"html\":\"&lt;html>&lt;body>&lt;p>Hi {{first_name}} {{last_name}},&lt;br>&lt;br>The following are the completed order(s) :&lt;br>{{AgencyOrderid}}  &lt;br>&lt;br>&lt;strong>NEW!&lt;/strong> Action is using MaestroX to provide our customers with search order tracking and ETAs. You can view your order status and send us messages here https://portal.maestrox.com. Please login to see your recent orders and other valuable file information. If you do not yet have access, follow the link above and click the “Request Access” button. You will receive an email invitation from No-reply@actioncentral.com.&lt;br>&lt;br> Thanks! &lt;/p>&lt;/body>&lt;/html>\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: TypeError: Cannot read properties of undefined (reading 'errorType')</message>
+                <stack-trace>Error: TypeError: Cannot read properties of undefined (reading 'errorType')
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/SES/create_template_250_sandbox.test.js:188:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1707832903583' status='failed' stop='1707832904674'>
+            <name>html is blank</name>
+            <title>html is blank</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1707832903584' status='undefined'>
+                    <name>Values passed:"{\"name\":\"OrderCompletedEmail\",\"subject\":\"Action Title Order Completed\",\"text\":\"Notification\",\"html\":\"\"}"</name>
+                    <title>Values passed:"{\"name\":\"OrderCompletedEmail\",\"subject\":\"Action Title Order Completed\",\"text\":\"Notification\",\"html\":\"\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "'html' is a mandatory field and is missing or empty."
+                Received: undefined</message>
+                <stack-trace>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "'html' is a mandatory field and is missing or empty."
+                Received: undefined
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/SES/create_template_250_sandbox.test.js:212:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1707832904674' status='failed' stop='1707832905980'>
+            <name>Special character in name</name>
+            <title>Special character in name</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1707832904675' status='undefined'>
+                    <name>Values passed:"{\"name\":\"OrderCo@@@@mpletedEmail\",\"subject\":\"Action Title Order Completed\",\"text\":\"Notification\",\"html\":\"&lt;html>&lt;body>&lt;p>Hi {{first_name}} {{last_name}},&lt;br>&lt;br>The following are the completed order(s) :&lt;br>{{AgencyOrderid}}  &lt;br>&lt;br>&lt;strong>NEW!&lt;/strong> Action is using MaestroX to provide our customers with search order tracking and ETAs. You can view your order status and send us messages here https://portal.maestrox.com. Please login to see your recent orders and other valuable file information. If you do not yet have access, follow the link above and click the “Request Access” button. You will receive an email invitation from No-reply@actioncentral.com.&lt;br>&lt;br> Thanks! &lt;/p>&lt;/body>&lt;/html>\"}"</name>
+                    <title>Values passed:"{\"name\":\"OrderCo@@@@mpletedEmail\",\"subject\":\"Action Title Order Completed\",\"text\":\"Notification\",\"html\":\"&lt;html>&lt;body>&lt;p>Hi {{first_name}} {{last_name}},&lt;br>&lt;br>The following are the completed order(s) :&lt;br>{{AgencyOrderid}}  &lt;br>&lt;br>&lt;strong>NEW!&lt;/strong> Action is using MaestroX to provide our customers with search order tracking and ETAs. You can view your order status and send us messages here https://portal.maestrox.com. Please login to see your recent orders and other valuable file information. If you do not yet have access, follow the link above and click the “Request Access” button. You will receive an email invitation from No-reply@actioncentral.com.&lt;br>&lt;br> Thanks! &lt;/p>&lt;/body>&lt;/html>\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: TypeError: Cannot read properties of undefined (reading 'errorType')</message>
+                <stack-trace>Error: TypeError: Cannot read properties of undefined (reading 'errorType')
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/SES/create_template_250_sandbox.test.js:235:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

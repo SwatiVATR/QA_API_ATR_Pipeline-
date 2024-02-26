@@ -1,0 +1,157 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1707488365292' stop='1707488369755'>
+    <name>test/Order/OrderService_List.test.js</name>
+    <title>test/Order/OrderService_List.test.js</title>
+    <test-cases>
+        <test-case start='1707488365292' status='failed' stop='1707488365842'>
+            <name>API Success</name>
+            <title>API Success</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1707488365293' status='undefined'>
+                    <name>parameters passed:{"hostname":"nu1b6z2kx8.execute-api.us-east-1.amazonaws.com","method":"GET","headers":{"Content-Type":"application/json","Authorization":"{\"body\":\"An error occurred (UserNotConfirmedException) when calling the InitiateAuth operation: User is not confirmed.\",\"statusCode\":500,\"headers\":{\"Content-Type\":\"application/json\"}}"},"path":"/uat/v1/services/orders?status=&amp;offset=0&amp;limit=100&amp;sort=DESC"}</name>
+                    <title>parameters passed:{"hostname":"nu1b6z2kx8.execute-api.us-east-1.amazonaws.com","method":"GET","headers":{"Content-Type":"application/json","Authorization":"{\"body\":\"An error occurred (UserNotConfirmedException) when calling the InitiateAuth operation: User is not confirmed.\",\"statusCode\":500,\"headers\":{\"Content-Type\":\"application/json\"}}"},"path":"/uat/v1/services/orders?status=&amp;offset=0&amp;limit=100&amp;sort=DESC"}</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: TypeError: Cannot read properties of undefined (reading 'msg')</message>
+                <stack-trace>Error: TypeError: Cannot read properties of undefined (reading 'msg')
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/Order/OrderService_List.test.js:18:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1707488365842' status='failed' stop='1707488366774'>
+            <name>parameter missing</name>
+            <title>parameter missing</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1707488365842' status='undefined'>
+                    <name>parameters passed:{"hostname":"nu1b6z2kx8.execute-api.us-east-1.amazonaws.com","method":"GET","headers":{"Content-Type":"application/json","Authorization":"{\"body\":\"An error occurred (UserNotConfirmedException) when calling the InitiateAuth operation: User is not confirmed.\",\"statusCode\":500,\"headers\":{\"Content-Type\":\"application/json\"}}"},"path":"/uat/v1/services/orders?status=&amp;offset=&amp;limit=&amp;sort=DESC"}</name>
+                    <title>parameters passed:{"hostname":"nu1b6z2kx8.execute-api.us-east-1.amazonaws.com","method":"GET","headers":{"Content-Type":"application/json","Authorization":"{\"body\":\"An error occurred (UserNotConfirmedException) when calling the InitiateAuth operation: User is not confirmed.\",\"statusCode\":500,\"headers\":{\"Content-Type\":\"application/json\"}}"},"path":"/uat/v1/services/orders?status=&amp;offset=&amp;limit=&amp;sort=DESC"}</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Error: expect(received).toEqual(expected) // deep equality
+                
+                Expected: "invalid literal for int() with base 10: ''"
+                Received: "Invalid Session"</message>
+                <stack-trace>Error: Error: expect(received).toEqual(expected) // deep equality
+                
+                Expected: "invalid literal for int() with base 10: ''"
+                Received: "Invalid Session"
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/Order/OrderService_List.test.js:39:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1707488366774' status='failed' stop='1707488367273'>
+            <name>status is required</name>
+            <title>status is required</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1707488366774' status='undefined'>
+                    <name>parameters passed:{"hostname":"nu1b6z2kx8.execute-api.us-east-1.amazonaws.com","method":"GET","headers":{"Content-Type":"application/json","Authorization":"{\"body\":\"An error occurred (UserNotConfirmedException) when calling the InitiateAuth operation: User is not confirmed.\",\"statusCode\":500,\"headers\":{\"Content-Type\":\"application/json\"}}"},"path":"/uat/v1/services/orders?limit=10&amp;sort=ASC"}</name>
+                    <title>parameters passed:{"hostname":"nu1b6z2kx8.execute-api.us-east-1.amazonaws.com","method":"GET","headers":{"Content-Type":"application/json","Authorization":"{\"body\":\"An error occurred (UserNotConfirmedException) when calling the InitiateAuth operation: User is not confirmed.\",\"statusCode\":500,\"headers\":{\"Content-Type\":\"application/json\"}}"},"path":"/uat/v1/services/orders?limit=10&amp;sort=ASC"}</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Error: expect(received).toEqual(expected) // deep equality
+                
+                Expected: "'status'"
+                Received: "Invalid Session"</message>
+                <stack-trace>Error: Error: expect(received).toEqual(expected) // deep equality
+                
+                Expected: "'status'"
+                Received: "Invalid Session"
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/Order/OrderService_List.test.js:60:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1707488367273' status='failed' stop='1707488368209'>
+            <name>invalid status is passed</name>
+            <title>invalid status is passed</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1707488367274' status='undefined'>
+                    <name>parameters passed:{"hostname":"nu1b6z2kx8.execute-api.us-east-1.amazonaws.com","method":"GET","headers":{"Content-Type":"application/json","Authorization":"{\"body\":\"An error occurred (UserNotConfirmedException) when calling the InitiateAuth operation: User is not confirmed.\",\"statusCode\":500,\"headers\":{\"Content-Type\":\"application/json\"}}"},"path":"/uat/v1/services/orders?status=sdsds&amp;offset=0&amp;limit=100&amp;sort=DESC"}</name>
+                    <title>parameters passed:{"hostname":"nu1b6z2kx8.execute-api.us-east-1.amazonaws.com","method":"GET","headers":{"Content-Type":"application/json","Authorization":"{\"body\":\"An error occurred (UserNotConfirmedException) when calling the InitiateAuth operation: User is not confirmed.\",\"statusCode\":500,\"headers\":{\"Content-Type\":\"application/json\"}}"},"path":"/uat/v1/services/orders?status=sdsds&amp;offset=0&amp;limit=100&amp;sort=DESC"}</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: TypeError: Cannot read properties of undefined (reading 'msg')</message>
+                <stack-trace>Error: TypeError: Cannot read properties of undefined (reading 'msg')
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/Order/OrderService_List.test.js:82:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1707488368209' status='failed' stop='1707488368700'>
+            <name>invalid offset is passed</name>
+            <title>invalid offset is passed</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1707488368209' status='undefined'>
+                    <name>parameters passed:{"hostname":"nu1b6z2kx8.execute-api.us-east-1.amazonaws.com","method":"GET","headers":{"Content-Type":"application/json","Authorization":"{\"body\":\"An error occurred (UserNotConfirmedException) when calling the InitiateAuth operation: User is not confirmed.\",\"statusCode\":500,\"headers\":{\"Content-Type\":\"application/json\"}}"},"path":"/uat/v1/services/orders?status=active&amp;offset=dvbfv&amp;limit=100&amp;sort=DESC"}</name>
+                    <title>parameters passed:{"hostname":"nu1b6z2kx8.execute-api.us-east-1.amazonaws.com","method":"GET","headers":{"Content-Type":"application/json","Authorization":"{\"body\":\"An error occurred (UserNotConfirmedException) when calling the InitiateAuth operation: User is not confirmed.\",\"statusCode\":500,\"headers\":{\"Content-Type\":\"application/json\"}}"},"path":"/uat/v1/services/orders?status=active&amp;offset=dvbfv&amp;limit=100&amp;sort=DESC"}</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Error: expect(received).toEqual(expected) // deep equality
+                
+                Expected: "invalid literal for int() with base 10: 'dvbfv'"
+                Received: "Invalid Session"</message>
+                <stack-trace>Error: Error: expect(received).toEqual(expected) // deep equality
+                
+                Expected: "invalid literal for int() with base 10: 'dvbfv'"
+                Received: "Invalid Session"
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/Order/OrderService_List.test.js:105:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1707488368700' status='failed' stop='1707488369729'>
+            <name>invalid limit is passed</name>
+            <title>invalid limit is passed</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1707488368700' status='undefined'>
+                    <name>parameters passed:{"hostname":"nu1b6z2kx8.execute-api.us-east-1.amazonaws.com","method":"GET","headers":{"Content-Type":"application/json","Authorization":"{\"body\":\"An error occurred (UserNotConfirmedException) when calling the InitiateAuth operation: User is not confirmed.\",\"statusCode\":500,\"headers\":{\"Content-Type\":\"application/json\"}}"},"path":"/uat/v1/services/orders?status=active&amp;offset=&amp;limit=1sdsds00&amp;sort=DESC"}</name>
+                    <title>parameters passed:{"hostname":"nu1b6z2kx8.execute-api.us-east-1.amazonaws.com","method":"GET","headers":{"Content-Type":"application/json","Authorization":"{\"body\":\"An error occurred (UserNotConfirmedException) when calling the InitiateAuth operation: User is not confirmed.\",\"statusCode\":500,\"headers\":{\"Content-Type\":\"application/json\"}}"},"path":"/uat/v1/services/orders?status=active&amp;offset=&amp;limit=1sdsds00&amp;sort=DESC"}</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Error: expect(received).toEqual(expected) // deep equality
+                
+                Expected: "invalid literal for int() with base 10: ''"
+                Received: "Invalid Session"</message>
+                <stack-trace>Error: Error: expect(received).toEqual(expected) // deep equality
+                
+                Expected: "invalid literal for int() with base 10: ''"
+                Received: "Invalid Session"
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/Order/OrderService_List.test.js:127:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

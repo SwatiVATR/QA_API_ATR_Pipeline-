@@ -22,13 +22,18 @@ const options = {
   ...commonOptionsPOST,
 };
 
-test(
+it(
   "API Success",
   async () => {
     const postData = JSON.stringify(success);
     try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
       const response = await NAModule(postData, options);
       expect(response.Response.TransactionID.length > 0).toBe(true);
+      console.log(response);
+      reporter.endStep();
+      reporter.testId("API Endpoint-/services/invoker/backoffice/s3DirectPDF")
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -36,26 +41,34 @@ test(
   Timeout
 );
 
-test(
+it(
   "appId is missing",
   async () => {
     const postData = JSON.stringify(appIdMissing);
     try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
       const response = await NAModule(postData, options);
       expect(!response.Response.FilesUploaded).toBe(true);
+      reporter.endStep();
+      reporter.testId("API Endpoint-/services/invoker/backoffice/s3DirectPDF")
+      reporter.description("Response message from API:"+ JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
   },
   Timeout
 );
-test(
+it(
   "appPass is missing",
   async () => {
     const postData = JSON.stringify(appPassMissing);
     try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
       const response = await NAModule(postData, options);
       expect(!response.Response.FilesUploaded).toBe(true);
+      reporter.endStep();
+      reporter.testId("API Endpoint-/services/invoker/backoffice/s3DirectPDF")
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -63,13 +76,17 @@ test(
   Timeout
 );
 
-test(
+it(
   "appType is missing",
   async () => {
     const postData = JSON.stringify(appType);
     try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
       const response = await NAModule(postData, options);
       expect(!response.Response.FilesUploaded).toBe(true);
+      reporter.endStep();
+      reporter.testId("API Endpoint-/services/invoker/backoffice/s3DirectPDF")
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -77,13 +94,17 @@ test(
   Timeout
 );
 
-test(
+it(
   "appUsername is missing",
   async () => {
     const postData = JSON.stringify(appUsername);
     try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
       const response = await NAModule(postData, options);
       expect(!response.Response.FilesUploaded).toBe(true);
+      reporter.endStep();
+      reporter.testId("API Endpoint-/services/invoker/backoffice/s3DirectPDF")
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -91,13 +112,17 @@ test(
   Timeout
 );
 
-test(
+it(
   "recidMissig is missing",
   async () => {
     const postData = JSON.stringify(recidMissig);
     try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
       const response = await NAModule(postData, options);
       expect(!response.Response.FilesUploaded).toBe(true);
+      reporter.endStep();
+      reporter.testId("API Endpoint-/services/invoker/backoffice/s3DirectPDF")
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -105,12 +130,16 @@ test(
   Timeout
 );
 
-test(
+it(
   "authKey is missing|| invalid authKey",
   async () => {
     const postData = JSON.stringify(authKeyMissig);
     try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
       const response = await NAModule(postData, options);
+      reporter.endStep();
+      reporter.testId("API Endpoint-/services/invoker/backoffice/s3DirectPDF")
+      reporter.description("Response message from API:"+ JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -118,13 +147,17 @@ test(
   Timeout
 );
 
-test(
+it(
   "rating is missing",
   async () => {
     const postData = JSON.stringify(ratingMissing);
     try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
       const response = await NAModule(postData, options);
       expect(!response.Response.FilesUploaded).toBe(true);
+      reporter.endStep();
+      reporter.testId("API Endpoint-/services/invoker/backoffice/s3DirectPDF")
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -132,13 +165,17 @@ test(
   Timeout
 );
 
-test(
+it(
   "condodev is missing",
   async () => {
     const postData = JSON.stringify(condodevMissing);
     try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
       const response = await NAModule(postData, options);
       expect(!response.Response.FilesUploaded).toBe(true);
+      reporter.endStep();
+      reporter.testId("API Endpoint-/services/invoker/backoffice/s3DirectPDF")
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -146,13 +183,17 @@ test(
   Timeout
 );
 
-test(
+it(
   "filename is missing",
   async () => {
     const postData = JSON.stringify(filenameMissing);
     try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
       const response = await NAModule(postData, options);
       expect(!response.Response.FilesUploaded).toBe(true);
+      reporter.endStep();
+      reporter.testId("API Endpoint-/services/invoker/backoffice/s3DirectPDF")
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -160,13 +201,17 @@ test(
   Timeout
 );
 
-test(
+it(
   "surrogatesfee is missing",
   async () => {
     const postData = JSON.stringify(surrogatesfee);
     try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
       const response = await NAModule(postData, options);
       expect(!response.Response.FilesUploaded).toBe(true);
+      reporter.endStep();
+      reporter.testId("API Endpoint-/services/invoker/backoffice/s3DirectPDF")
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
@@ -174,51 +219,67 @@ test(
   Timeout
 );
 
-test(
+it(
   "copyfee is missing",
   async () => {
     const postData = JSON.stringify(copyfeeMissing);
     try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
       const response = await NAModule(postData, options);
       expect(!response.Response.FilesUploaded).toBe(true);
+      reporter.endStep();
+      reporter.testId("API Endpoint-/services/invoker/backoffice/s3DirectPDF")
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
   },
   Timeout
 );
-test(
+it(
   "otherfee is missing",
   async () => {
     const postData = JSON.stringify(otherfeeMissing);
     try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
       const response = await NAModule(postData, options);
       expect(!response.Response.FilesUploaded).toBe(true);
+      reporter.endStep();
+      reporter.testId("API Endpoint-/services/invoker/backoffice/s3DirectPDF")
+      reporter.description("Response message from API:"+ JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
   },
   Timeout
 );
-test(
+it(
   "notes is missing",
   async () => {
     const postData = JSON.stringify(notesMissing);
     try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
       const response = await NAModule(postData, options);
       expect(!response.Response.FilesUploaded).toBe(true);
+      reporter.endStep();
+      reporter.testId("API Endpoint-/services/invoker/backoffice/s3DirectPDF")
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
   },
   Timeout
 );
-test(
+it(
   "Plain text received",
   async () => {
     const postData = JSON.stringify({});
     try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
       const response = await NAModule(postData, options);
+      reporter.endStep();
+      reporter.testId("API Endpoint-/services/invoker/backoffice/s3DirectPDF")
+      reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
       throw new Error(error);
     }
