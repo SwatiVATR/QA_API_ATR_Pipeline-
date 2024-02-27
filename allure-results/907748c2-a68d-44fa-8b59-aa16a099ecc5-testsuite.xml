@@ -1,0 +1,52 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1709039677166' stop='1709039678770'>
+    <name>test/Special_Request_Recipients/Update_special_request_recipients_Copy.test.js</name>
+    <title>test/Special_Request_Recipients/Update_special_request_recipients_Copy.test.js</title>
+    <test-cases>
+        <test-case start='1709039677166' status='passed' stop='1709039678387'>
+            <name>API Success</name>
+            <title>API Success</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/notes/update-special-request-recipients/DEVTRUST1'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709039677171' status='passed' stop='1709039678384'>
+                    <name>Values passed:"{}"</name>
+                    <title>Values passed:"{}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"success":{"txId":"update-special-request-recipients","statusCode":200,"body":"{\"type\": \"https://zalando.github.io/problem/constraint-violation\", \"title\": \"Constraint Violation\", \"status\": 400, \"path\": \"/notes\", \"violations\": [{\"field\": \"transactionId.equals\", \"message\": \"Failed to convert property value of type 'java.lang.String' to required type 'java.lang.Integer' for property 'transactionId.equals'; nested exception is java.lang.NumberFormatException: For input string: \\\"update-special-request-recipients\\\"\"}], \"message\": \"error.validation\"}"}}</description>
+        </test-case>
+        <test-case start='1709039678387' status='failed' stop='1709039678767'>
+            <name>Endpoint is not passes</name>
+            <title>Endpoint is not passes</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1709039678387' status='undefined'>
+                    <name>Values passed:"{}"</name>
+                    <title>Values passed:"{}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "Authorization header requires 'Credential' parameter. Authorization header requires 'Signature' parameter. Authorization header requires 'SignedHeaders' parameter. Authorization header requires existence of either a 'X-Amz-Date' or a 'Date' header. Authorization={\"body\":\"An error occurred (UserNotConfirmedException) when calling the InitiateAuth operation: User is not confirmed.\",\"statusCode\":500,\"headers\":{\"Content-Type\":\"application/json\"}}"
+                Received: "'error' not a valid key=value pair (missing equal-sign) in Authorization header: '{\"body\":\"An error occurred (UserNotConfirmedException) when calling the InitiateAuth operation: User is not confirmed.\",\"statusCode\":500,\"headers\":{\"Content-Type\":\"application/json\"}}'."</message>
+                <stack-trace>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "Authorization header requires 'Credential' parameter. Authorization header requires 'Signature' parameter. Authorization header requires 'SignedHeaders' parameter. Authorization header requires existence of either a 'X-Amz-Date' or a 'Date' header. Authorization={\"body\":\"An error occurred (UserNotConfirmedException) when calling the InitiateAuth operation: User is not confirmed.\",\"statusCode\":500,\"headers\":{\"Content-Type\":\"application/json\"}}"
+                Received: "'error' not a valid key=value pair (missing equal-sign) in Authorization header: '{\"body\":\"An error occurred (UserNotConfirmedException) when calling the InitiateAuth operation: User is not confirmed.\",\"statusCode\":500,\"headers\":{\"Content-Type\":\"application/json\"}}'."
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/Special_Request_Recipients/Update_special_request_recipients_Copy.test.js:47:15)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

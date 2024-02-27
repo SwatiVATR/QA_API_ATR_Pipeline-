@@ -1,0 +1,46 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1709039681030' stop='1709039682890'>
+    <name>test/UAT_Cognito/AuthService_Get_User_Details.test.js</name>
+    <title>test/UAT_Cognito/AuthService_Get_User_Details.test.js</title>
+    <test-cases>
+        <test-case start='1709039681030' status='failed' stop='1709039681967'>
+            <name>Api success</name>
+            <title>Api success</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1709039681031' status='undefined'>
+                    <name>Values passed:""</name>
+                    <title>Values passed:""</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: TypeError: Cannot read properties of undefined (reading 'correlationId')</message>
+                <stack-trace>Error: TypeError: Cannot read properties of undefined (reading 'correlationId')
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/UAT_Cognito/AuthService_Get_User_Details.test.js:27:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1709039681967' status='passed' stop='1709039682887'>
+            <name>No Auth provided</name>
+            <title>No Auth provided</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/user'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709039681967' status='passed' stop='1709039682886'>
+                    <name>Values passed:""</name>
+                    <title>Values passed:""</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"error":"Invalid Session"}</description>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

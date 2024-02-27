@@ -1,0 +1,160 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1709039596804' stop='1709039606171'>
+    <name>test/Notes/COR_442.test.js</name>
+    <title>test/Notes/COR_442.test.js</title>
+    <test-cases>
+        <test-case start='1709039596804' status='passed' stop='1709039599900'>
+            <name>API Success</name>
+            <title>API Success</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/current_duedate_update'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709039596805' status='passed' stop='1709039599898'>
+                    <name>Values passed:"{\"transaction_id\":\"5093\",\"dueDate\":1}"</name>
+                    <title>Values passed:"{\"transaction_id\":\"5093\",\"dueDate\":1}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"success":"An email with the updated details has been shared with the user."}</description>
+        </test-case>
+        <test-case start='1709039599900' status='passed' stop='1709039602217'>
+            <name>transaction_id is passed wrong</name>
+            <title>transaction_id is passed wrong</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/current_duedate_update'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709039599901' status='passed' stop='1709039602217'>
+                    <name>Values passed:"{\"transaction_id\":\"509wdewfewewd3\",\"dueDate\":1}"</name>
+                    <title>Values passed:"{\"transaction_id\":\"509wdewfewewd3\",\"dueDate\":1}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"error":"Transaction not found."}</description>
+        </test-case>
+        <test-case start='1709039602217' status='passed' stop='1709039602509'>
+            <name>transaction_id is missing</name>
+            <title>transaction_id is missing</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/current_duedate_update'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709039602218' status='passed' stop='1709039602509'>
+                    <name>Values passed:"{\"transaction_id\":\"\",\"dueDate\":1}"</name>
+                    <title>Values passed:"{\"transaction_id\":\"\",\"dueDate\":1}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"error":"transaction_id and due date are required."}</description>
+        </test-case>
+        <test-case start='1709039602509' status='passed' stop='1709039603256'>
+            <name>transaction_id is not passed in body</name>
+            <title>transaction_id is not passed in body</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/current_duedate_update'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709039602510' status='passed' stop='1709039603256'>
+                    <name>Values passed:"{\"dueDate\":1}"</name>
+                    <title>Values passed:"{\"dueDate\":1}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"error":"transaction_id and due date are required."}</description>
+        </test-case>
+        <test-case start='1709039603256' status='passed' stop='1709039603998'>
+            <name>dueDate is missing</name>
+            <title>dueDate is missing</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/current_duedate_update'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709039603257' status='passed' stop='1709039603998'>
+                    <name>Values passed:"{\"transaction_id\":\"5093\",\"dueDate\":\"\"}"</name>
+                    <title>Values passed:"{\"transaction_id\":\"5093\",\"dueDate\":\"\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"error":"invalid literal for int() with base 10: ''"}</description>
+        </test-case>
+        <test-case start='1709039603999' status='passed' stop='1709039604701'>
+            <name>dueDate is passed as string or special characters</name>
+            <title>dueDate is passed as string or special characters</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/current_duedate_update'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709039603999' status='passed' stop='1709039604701'>
+                    <name>Values passed:"{\"transaction_id\":\"5093\",\"dueDate\":\"wasds@233232\"}"</name>
+                    <title>Values passed:"{\"transaction_id\":\"5093\",\"dueDate\":\"wasds@233232\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"error":"invalid literal for int() with base 10: 'wasds@233232'"}</description>
+        </test-case>
+        <test-case start='1709039604701' status='passed' stop='1709039605433'>
+            <name>Bad Request</name>
+            <title>Bad Request</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/current_duedate_update'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709039604702' status='passed' stop='1709039605433'>
+                    <name>Values passed:"{\"transaction_id\":\"5093\",\"dueDate\":\"wasds@233232\"}"</name>
+                    <title>Values passed:"{\"transaction_id\":\"5093\",\"dueDate\":\"wasds@233232\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"error":"invalid literal for int() with base 10: 'wasds@233232'"}</description>
+        </test-case>
+        <test-case start='1709039605434' status='failed' stop='1709039606165'>
+            <name>Invalid session</name>
+            <title>Invalid session</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1709039605434' status='undefined'>
+                    <name>Values passed:"{\"transaction_id\":\"5093\",\"dueDate\":\"wasds@233232\"}"</name>
+                    <title>Values passed:"{\"transaction_id\":\"5093\",\"dueDate\":\"wasds@233232\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "Invalid Session"
+                Received: "invalid literal for int() with base 10: 'wasds@233232'"</message>
+                <stack-trace>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "Invalid Session"
+                Received: "invalid literal for int() with base 10: 'wasds@233232'"
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/Notes/COR_442.test.js:190:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

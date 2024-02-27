@@ -1,0 +1,115 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1709039626245' stop='1709039635128'>
+    <name>test/PRODUCTION_Cognito/AuthService_Admin_Signup.test.js</name>
+    <title>test/PRODUCTION_Cognito/AuthService_Admin_Signup.test.js</title>
+    <test-cases>
+        <test-case start='1709039626246' status='passed' stop='1709039629201'>
+            <name>API Success</name>
+            <title>API Success</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/cognito/signup-dev'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709039626246' status='passed' stop='1709039629199'>
+                    <name>Values passed:"{\"username\":\"sdddsssssddoglu@actiontitleresearch.com\",\"password\":\"Sverma@123\"}"</name>
+                    <title>Values passed:"{\"username\":\"sdddsssssddoglu@actiontitleresearch.com\",\"password\":\"Sverma@123\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"body":"An error occurred (UsernameExistsException) when calling the SignUp operation: An account with the given email already exists.","statusCode":500,"headers":{"Content-Type":"application/json"}}</description>
+        </test-case>
+        <test-case start='1709039629201' status='passed' stop='1709039630422'>
+            <name>Email already exist</name>
+            <title>Email already exist</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/cognito/signup-dev'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709039629202' status='passed' stop='1709039630422'>
+                    <name>Values passed:"{\"username\":\"sdddssssoglu@actiontitleresearch.com\",\"password\":\"Sverma@123\"}"</name>
+                    <title>Values passed:"{\"username\":\"sdddssssoglu@actiontitleresearch.com\",\"password\":\"Sverma@123\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"body":"An error occurred (UsernameExistsException) when calling the SignUp operation: An account with the given email already exists.","statusCode":500,"headers":{"Content-Type":"application/json"}}</description>
+        </test-case>
+        <test-case start='1709039630422' status='passed' stop='1709039631128'>
+            <name>Email is blank</name>
+            <title>Email is blank</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/cognito/signup-dev'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709039630423' status='passed' stop='1709039631128'>
+                    <name>Values passed:"{\"username\":\"\",\"password\":\"Sverma@123\"}"</name>
+                    <title>Values passed:"{\"username\":\"\",\"password\":\"Sverma@123\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"body":"Parameter validation failed:\nInvalid length for parameter Username, value: 0, valid min length: 1","statusCode":500,"headers":{"Content-Type":"application/json"}}</description>
+        </test-case>
+        <test-case start='1709039631128' status='passed' stop='1709039632458'>
+            <name>Password is blank</name>
+            <title>Password is blank</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/cognito/signup-dev'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709039631129' status='passed' stop='1709039632457'>
+                    <name>Values passed:"{\"username\":\"sdddssssoglu@actiontitleresearch.com\",\"password\":\"\"}"</name>
+                    <title>Values passed:"{\"username\":\"sdddssssoglu@actiontitleresearch.com\",\"password\":\"\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"body":"An error occurred (InvalidParameterException) when calling the SignUp operation: 1 validation error detected: Value at 'password' failed to satisfy constraint: Member must satisfy regular expression pattern: ^[\\S]+.*[\\S]+$","statusCode":500,"headers":{"Content-Type":"application/json"}}</description>
+        </test-case>
+        <test-case start='1709039632458' status='passed' stop='1709039633840'>
+            <name>Email and Password both is blank</name>
+            <title>Email and Password both is blank</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/cognito/signup-dev'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709039632459' status='passed' stop='1709039633840'>
+                    <name>Values passed:"{\"username\":\"\",\"password\":\"\"}"</name>
+                    <title>Values passed:"{\"username\":\"\",\"password\":\"\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"body":"Parameter validation failed:\nInvalid length for parameter Username, value: 0, valid min length: 1","statusCode":500,"headers":{"Content-Type":"application/json"}}</description>
+        </test-case>
+        <test-case start='1709039633840' status='passed' stop='1709039635128'>
+            <name>Bad Request</name>
+            <title>Bad Request</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/cognito/signup-dev'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709039633840' status='passed' stop='1709039635127'>
+                    <name>Values passed:"{\"username\":\"\",\"password\":\"\"}"</name>
+                    <title>Values passed:"{\"username\":\"\",\"password\":\"\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"body":"Parameter validation failed:\nInvalid length for parameter Username, value: 0, valid min length: 1","statusCode":500,"headers":{"Content-Type":"application/json"}}</description>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -1,0 +1,43 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1709039677448' stop='1709039680723'>
+    <name>test/StepFunctions/StepService_Execute_Sync.test.js</name>
+    <title>test/StepFunctions/StepService_Execute_Sync.test.js</title>
+    <test-cases>
+        <test-case start='1709039677449' status='passed' stop='1709039679663'>
+            <name>API Success</name>
+            <title>API Success</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/sync/MyExpressStateMachine'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709039677449' status='passed' stop='1709039679661'>
+                    <name>Values passed:"{\"username\":\"sverma@actiontitleresearch.com\",\"password\":\"Sverma@123\"}"</name>
+                    <title>Values passed:"{\"username\":\"sverma@actiontitleresearch.com\",\"password\":\"Sverma@123\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"success":{"body":{"executionArn":"arn:aws:states:us-east-1:242886645947:express:MyExpressStateMachine:163ada36-eccf-40c3-b0a7-204bf600c263:432ff0ba-49e1-4361-b4fa-5d09a545c58e","stateMachineArn":"arn:aws:states:us-east-1:242886645947:stateMachine:MyExpressStateMachine","name":"163ada36-eccf-40c3-b0a7-204bf600c263","startDate":"2024-02-27T13:14:38.051000+00:00","stopDate":"2024-02-27T13:14:39.508000+00:00","status":"FAILED","error":"ApiGateway.403","cause":"{\"error\":\"Invalid Session\"}","input":"{\n    \"execute\": \"run synchronously\",\n    \"authToken\": \"{\\\"body\\\":\\\"An error occurred (UserNotConfirmedException) when calling the InitiateAuth operation: User is not confirmed.\\\",\\\"statusCode\\\":500,\\\"headers\\\":{\\\"Content-Type\\\":\\\"application/json\\\"}}\",\n    \"mode\": \"sync\"\n}","inputDetails":{"included":true},"outputDetails":{"included":true},"traceHeader":"Root=1-65dde03d-63a188df688b5df963186ed2;Parent=701aab643d25270a;Sampled=0;Lineage=696d6202:0%7C3d276671:0","billingDetails":{"billedMemoryUsedInMB":64,"billedDurationInMilliseconds":1500},"ResponseMetadata":{"RequestId":"4d661d67-f13d-4680-90a9-18d03006ed3e","HTTPStatusCode":200,"HTTPHeaders":{"x-amzn-requestid":"4d661d67-f13d-4680-90a9-18d03006ed3e","date":"Tue, 27 Feb 2024 13:14:39 GMT","content-type":"application/x-amz-json-1.0","content-length":"1191","connection":"keep-alive"},"RetryAttempts":0}},"statusCode":200,"headers":{"Content-Type":"application/json"}}}</description>
+        </test-case>
+        <test-case start='1709039679663' status='passed' stop='1709039680722'>
+            <name>Wrong username</name>
+            <title>Wrong username</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/sync/MyExpressStateMachine'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709039679664' status='passed' stop='1709039680722'>
+                    <name>Values passed:"{\"username\":\"iosverma@actiontitleresearch.comdjd\",\"password\":\"Sverma@123\"}"</name>
+                    <title>Values passed:"{\"username\":\"iosverma@actiontitleresearch.comdjd\",\"password\":\"Sverma@123\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"success":{"body":{"executionArn":"arn:aws:states:us-east-1:242886645947:express:MyExpressStateMachine:3bcf6c63-27cc-4d7c-a815-51318494bd5b:2c6ace41-95f6-4a9c-8e6a-9d32935a0073","stateMachineArn":"arn:aws:states:us-east-1:242886645947:stateMachine:MyExpressStateMachine","name":"3bcf6c63-27cc-4d7c-a815-51318494bd5b","startDate":"2024-02-27T13:14:40.266000+00:00","stopDate":"2024-02-27T13:14:40.562000+00:00","status":"FAILED","error":"ApiGateway.403","cause":"{\"error\":\"Invalid Session\"}","input":"{\n    \"execute\": \"run synchronously\",\n    \"authToken\": \"{\\\"body\\\":\\\"An error occurred (UserNotConfirmedException) when calling the InitiateAuth operation: User is not confirmed.\\\",\\\"statusCode\\\":500,\\\"headers\\\":{\\\"Content-Type\\\":\\\"application/json\\\"}}\",\n    \"mode\": \"sync\"\n}","inputDetails":{"included":true},"outputDetails":{"included":true},"traceHeader":"Root=1-65dde03f-1aab5ec338ff69cc0d5264c5;Parent=401c920b62f514e3;Sampled=0;Lineage=696d6202:0%7C3d276671:0","billingDetails":{"billedMemoryUsedInMB":64,"billedDurationInMilliseconds":300},"ResponseMetadata":{"RequestId":"2ffb3e9b-95d7-435f-af9e-20ff6bc8824e","HTTPStatusCode":200,"HTTPHeaders":{"x-amzn-requestid":"2ffb3e9b-95d7-435f-af9e-20ff6bc8824e","date":"Tue, 27 Feb 2024 13:14:40 GMT","content-type":"application/x-amz-json-1.0","content-length":"1190","connection":"keep-alive"},"RetryAttempts":0}},"statusCode":200,"headers":{"Content-Type":"application/json"}}}</description>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

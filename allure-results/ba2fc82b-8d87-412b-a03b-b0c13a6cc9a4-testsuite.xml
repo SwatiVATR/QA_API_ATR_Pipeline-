@@ -1,0 +1,97 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1709039641358' stop='1709039646459'>
+    <name>test/UAT_Cognito/AuthService_Login.test.js</name>
+    <title>test/UAT_Cognito/AuthService_Login.test.js</title>
+    <test-cases>
+        <test-case start='1709039641358' status='passed' stop='1709039642607'>
+            <name>API Success</name>
+            <title>API Success</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/cognito/signin-dev'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709039641360' status='passed' stop='1709039642605'>
+                    <name>Values passed:"{\"username\":\"sverma@actiontitleresearch.com\",\"password\":\"Sverma@123\"}"</name>
+                    <title>Values passed:"{\"username\":\"sverma@actiontitleresearch.com\",\"password\":\"Sverma@123\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"body":"An error occurred (UserNotConfirmedException) when calling the InitiateAuth operation: User is not confirmed.","statusCode":500,"headers":{"Content-Type":"application/json"}}</description>
+        </test-case>
+        <test-case start='1709039642607' status='passed' stop='1709039643770'>
+            <name>Wrong username</name>
+            <title>Wrong username</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/cognito/signin-dev'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709039642608' status='passed' stop='1709039643769'>
+                    <name>Values passed:"{\"username\":\"tisverma@actiontitleresearch.com\",\"password\":\"Sverma@123\"}"</name>
+                    <title>Values passed:"{\"username\":\"tisverma@actiontitleresearch.com\",\"password\":\"Sverma@123\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"body":"An error occurred (UserNotFoundException) when calling the InitiateAuth operation: User does not exist.","statusCode":500,"headers":{"Content-Type":"application/json"}}</description>
+        </test-case>
+        <test-case start='1709039643770' status='passed' stop='1709039644977'>
+            <name>Wrong password</name>
+            <title>Wrong password</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/cognito/signin-dev'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709039643770' status='passed' stop='1709039644977'>
+                    <name>Values passed:"{\"username\":\"sverma@actiontitleresearch.com\",\"password\":\"46sdsdSverma@123\"}"</name>
+                    <title>Values passed:"{\"username\":\"sverma@actiontitleresearch.com\",\"password\":\"46sdsdSverma@123\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"body":"An error occurred (UserNotConfirmedException) when calling the InitiateAuth operation: User is not confirmed.","statusCode":500,"headers":{"Content-Type":"application/json"}}</description>
+        </test-case>
+        <test-case start='1709039644977' status='passed' stop='1709039646143'>
+            <name>Wrong username and password</name>
+            <title>Wrong username and password</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/cognito/signin-dev'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709039644978' status='passed' stop='1709039646143'>
+                    <name>Values passed:"{\"username\":\"tisverma@actiontitleresearch.com\",\"password\":\"46sdsdSverma@123\"}"</name>
+                    <title>Values passed:"{\"username\":\"tisverma@actiontitleresearch.com\",\"password\":\"46sdsdSverma@123\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"body":"An error occurred (UserNotFoundException) when calling the InitiateAuth operation: User does not exist.","statusCode":500,"headers":{"Content-Type":"application/json"}}</description>
+        </test-case>
+        <test-case start='1709039646143' status='passed' stop='1709039646458'>
+            <name>Plain text received as response</name>
+            <title>Plain text received as response</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/cognito/signin-dev'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709039646144' status='passed' stop='1709039646458'>
+                    <name>Values passed:"{}"</name>
+                    <title>Values passed:"{}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"error":"Username and Password Required","status_code":200}</description>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

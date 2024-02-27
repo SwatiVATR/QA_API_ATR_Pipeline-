@@ -1,0 +1,25 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1709039683750' stop='1709039685945'>
+    <name>test/UAT_Cognito/AuthService_Validate_JWT.test.js</name>
+    <title>test/UAT_Cognito/AuthService_Validate_JWT.test.js</title>
+    <test-cases>
+        <test-case start='1709039683750' status='passed' stop='1709039685945'>
+            <name>API Success</name>
+            <title>API Success</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/jwt/asdf-dev'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709039683751' status='passed' stop='1709039685943'>
+                    <name>Values passed:""</name>
+                    <title>Values passed:""</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"message":"exception","error":{"name":"JsonWebTokenError","message":"jwt malformed"}}</description>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
