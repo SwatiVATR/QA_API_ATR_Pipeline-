@@ -1,0 +1,46 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1709039679045' stop='1709039680988'>
+    <name>test/Find/FindService_Get_via_Filenumber.test.js</name>
+    <title>test/Find/FindService_Get_via_Filenumber.test.js</title>
+    <test-cases>
+        <test-case start='1709039679046' status='failed' stop='1709039680016'>
+            <name>API Success</name>
+            <title>API Success</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1709039679046' status='undefined'>
+                    <name>Values passed:"{}"</name>
+                    <title>Values passed:"{}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: TypeError: Cannot read properties of undefined (reading 'msg')</message>
+                <stack-trace>Error: TypeError: Cannot read properties of undefined (reading 'msg')
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/Find/FindService_Get_via_Filenumber.test.js:27:19)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1709039680016' status='passed' stop='1709039680985'>
+            <name>Invalid session</name>
+            <title>Invalid session</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/search?filenumber=Test&amp;status='/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709039680017' status='passed' stop='1709039680984'>
+                    <name>Values passed:"{}"</name>
+                    <title>Values passed:"{}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"error":"Invalid Session"}</description>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

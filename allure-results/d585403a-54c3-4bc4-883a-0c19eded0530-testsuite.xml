@@ -1,0 +1,61 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1709039665541' stop='1709039671761'>
+    <name>test/Notes/NotesService_Get_Notes.test.js</name>
+    <title>test/Notes/NotesService_Get_Notes.test.js</title>
+    <test-cases>
+        <test-case start='1709039665541' status='passed' stop='1709039666671'>
+            <name>API Success</name>
+            <title>API Success</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/notes/159306/0'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709039665542' status='passed' stop='1709039666655'>
+                    <name>Values passed:"{}"</name>
+                    <title>Values passed:"{}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"success":{"txId":"159306","statusCode":200,"body":"[]"}}</description>
+        </test-case>
+        <test-case start='1709039666671' status='passed' stop='1709039667834'>
+            <name>Special characters passed to txId</name>
+            <title>Special characters passed to txId</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/notes/@@@@@/0'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709039666672' status='passed' stop='1709039667834'>
+                    <name>Values passed:"{}"</name>
+                    <title>Values passed:"{}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"success":{"txId":"@@@@@","statusCode":200,"body":"{\"type\": \"https://zalando.github.io/problem/constraint-violation\", \"title\": \"Constraint Violation\", \"status\": 400, \"path\": \"/notes\", \"violations\": [{\"field\": \"transactionId.equals\", \"message\": \"Failed to convert property value of type 'java.lang.String' to required type 'java.lang.Integer' for property 'transactionId.equals'; nested exception is java.lang.NumberFormatException: For input string: \\\"@@@@@\\\"\"}], \"message\": \"error.validation\"}"}}</description>
+        </test-case>
+        <test-case start='1709039667834' status='passed' stop='1709039671760'>
+            <name>txId is not passed</name>
+            <title>txId is not passed</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/notes//0'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709039667835' status='passed' stop='1709039671760'>
+                    <name>Values passed:"{}"</name>
+                    <title>Values passed:"{}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"success":{"errorMessage":"2024-02-27T13:14:31.638Z fe06373d-a4ea-457e-a657-31a44277e9c1 Task timed out after 3.01 seconds"}}</description>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -1,0 +1,145 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1709039606286' stop='1709039616303'>
+    <name>test/_Ramquest/Webhook_Validate_Order_Copy.test.js</name>
+    <title>test/_Ramquest/Webhook_Validate_Order_Copy.test.js</title>
+    <test-cases>
+        <test-case start='1709039606286' status='passed' stop='1709039608601'>
+            <name>API Success</name>
+            <title>API Success</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/webhook/order/ramquest/note'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709039606288' status='passed' stop='1709039608599'>
+                    <name>Values passed:"{\"orderId\":\"7b04e568-688c-4f38-8ed9-682e5a3334b8\",\"serviceId\":\"3e69b815-733f-4a3b-bd6d-5acd68cd9fa5\",\"note\":\"hello from postman\",\"status\":\"\"}"</name>
+                    <title>Values passed:"{\"orderId\":\"7b04e568-688c-4f38-8ed9-682e5a3334b8\",\"serviceId\":\"3e69b815-733f-4a3b-bd6d-5acd68cd9fa5\",\"note\":\"hello from postman\",\"status\":\"\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"date":null,"publisher":null,"message":"hello from postman","title":null}</description>
+        </test-case>
+        <test-case start='1709039608601' status='failed' stop='1709039609717'>
+            <name>Plain text received as response</name>
+            <title>Plain text received as response</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1709039608602' status='undefined'>
+                    <name>Values passed:"{}"</name>
+                    <title>Values passed:"{}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Response is not in valid json format</message>
+                <stack-trace>Error: Response is not in valid json format
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/_Ramquest/Webhook_Validate_Order_Copy.test.js:40:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1709039609718' status='failed' stop='1709039611089'>
+            <name>orderId is missing</name>
+            <title>orderId is missing</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1709039609718' status='undefined'>
+                    <name>Values passed:"{\"orderId\":\"\",\"serviceId\":\"3e69b815-733f-4a3b-bd6d-5acd68cd9fa5\",\"note\":\"hello from postman\",\"status\":\"\"}"</name>
+                    <title>Values passed:"{\"orderId\":\"\",\"serviceId\":\"3e69b815-733f-4a3b-bd6d-5acd68cd9fa5\",\"note\":\"hello from postman\",\"status\":\"\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Response is not in valid json format</message>
+                <stack-trace>Error: Response is not in valid json format
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/_Ramquest/Webhook_Validate_Order_Copy.test.js:59:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1709039611089' status='passed' stop='1709039612439'>
+            <name>invalid orderId </name>
+            <title>invalid orderId </title>
+            <labels>
+                <label name='testId' value='API Endpoint-/webhook/order/ramquest/note'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709039611090' status='passed' stop='1709039612438'>
+                    <name>Values passed:"{\"orderId\":\"sdsds\",\"serviceId\":\"3e69b815-733f-4a3b-bd6d-5acd68cd9fa5\",\"note\":\"hello from postman\",\"status\":\"\"}"</name>
+                    <title>Values passed:"{\"orderId\":\"sdsds\",\"serviceId\":\"3e69b815-733f-4a3b-bd6d-5acd68cd9fa5\",\"note\":\"hello from postman\",\"status\":\"\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"correlationId":"6e2fcb9e-c976-44df-90cc-f3196e7635ff","errors":["The value 'sdsds' is not valid."]}</description>
+        </test-case>
+        <test-case start='1709039612439' status='failed' stop='1709039613795'>
+            <name>serviceId is missing</name>
+            <title>serviceId is missing</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1709039612439' status='undefined'>
+                    <name>Values passed:"{\"orderId\":\"7b04e568-688c-4f38-8ed9-682e5a3334b8\",\"serviceId\":\"\",\"note\":\"hello from postman\",\"status\":\"\"}"</name>
+                    <title>Values passed:"{\"orderId\":\"7b04e568-688c-4f38-8ed9-682e5a3334b8\",\"serviceId\":\"\",\"note\":\"hello from postman\",\"status\":\"\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Response is not in valid json format</message>
+                <stack-trace>Error: Response is not in valid json format
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/_Ramquest/Webhook_Validate_Order_Copy.test.js:103:17)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1709039613795' status='passed' stop='1709039615163'>
+            <name>invalid serviceId </name>
+            <title>invalid serviceId </title>
+            <labels>
+                <label name='testId' value='API Endpoint-/webhook/order/ramquest/note'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709039613796' status='passed' stop='1709039615163'>
+                    <name>Values passed:"{\"orderId\":\"7b04e568-688c-4f38-8ed9-682e5a3334b8\",\"serviceId\":\"wdsdsd\",\"note\":\"hello from postman\",\"status\":123}"</name>
+                    <title>Values passed:"{\"orderId\":\"7b04e568-688c-4f38-8ed9-682e5a3334b8\",\"serviceId\":\"wdsdsd\",\"note\":\"hello from postman\",\"status\":123}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"correlationId":"f20770b8-bef8-4e7d-a071-cabfc29732cb","errors":["The value 'wdsdsd' is not valid."]}</description>
+        </test-case>
+        <test-case start='1709039615163' status='failed' stop='1709039616281'>
+            <name>note is missing</name>
+            <title>note is missing</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1709039615164' status='undefined'>
+                    <name>Values passed:"{\"orderId\":\"7b04e568-688c-4f38-8ed9-682e5a3334b8\",\"serviceId\":\"3e69b815-733f-4a3b-bd6d-5acd68cd9fa5\",\"note\":\"\",\"status\":\"\"}"</name>
+                    <title>Values passed:"{\"orderId\":\"7b04e568-688c-4f38-8ed9-682e5a3334b8\",\"serviceId\":\"3e69b815-733f-4a3b-bd6d-5acd68cd9fa5\",\"note\":\"\",\"status\":\"\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Response is not in valid json format</message>
+                <stack-trace>Error: Response is not in valid json format
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/_Ramquest/Webhook_Validate_Order_Copy.test.js:147:17)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

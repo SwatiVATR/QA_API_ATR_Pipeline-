@@ -1,0 +1,79 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1709039646846' stop='1709039653102'>
+    <name>test/New_Order_Flow/order_authenticate.test.js</name>
+    <title>test/New_Order_Flow/order_authenticate.test.js</title>
+    <test-cases>
+        <test-case start='1709039646846' status='passed' stop='1709039649975'>
+            <name>API Success</name>
+            <title>API Success</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/order-authenticate'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709039646848' status='passed' stop='1709039649974'>
+                    <name>Values passed:"{\"username\":\"sverma@actiontitleresearch.com\",\"password\":\"Sverma@123\"}"</name>
+                    <title>Values passed:"{\"username\":\"sverma@actiontitleresearch.com\",\"password\":\"Sverma@123\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"body":"An error occurred (NotAuthorizedException) when calling the InitiateAuth operation: Incorrect username or password.","statusCode":500,"headers":{"Content-Type":"application/json"}}</description>
+        </test-case>
+        <test-case start='1709039649976' status='passed' stop='1709039651132'>
+            <name>Username is missing</name>
+            <title>Username is missing</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/order-authenticate'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709039649976' status='passed' stop='1709039651132'>
+                    <name>Values passed:"{\"username\":\"\",\"password\":\"Sverma@123\"}"</name>
+                    <title>Values passed:"{\"username\":\"\",\"password\":\"Sverma@123\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"body":"An error occurred (InvalidParameterException) when calling the InitiateAuth operation: Missing required parameter USERNAME","statusCode":500,"headers":{"Content-Type":"application/json"}}</description>
+        </test-case>
+        <test-case start='1709039651132' status='passed' stop='1709039651912'>
+            <name>Password is missing</name>
+            <title>Password is missing</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/order-authenticate'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709039651133' status='passed' stop='1709039651912'>
+                    <name>Values passed:"{\"username\":\"sverma@actiontitleresearch.com\",\"password\":\"\"}"</name>
+                    <title>Values passed:"{\"username\":\"sverma@actiontitleresearch.com\",\"password\":\"\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"body":"An error occurred (InvalidParameterException) when calling the InitiateAuth operation: Missing required parameter PASSWORD","statusCode":500,"headers":{"Content-Type":"application/json"}}</description>
+        </test-case>
+        <test-case start='1709039651913' status='passed' stop='1709039653101'>
+            <name>Both username and password are empty</name>
+            <title>Both username and password are empty</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/order-authenticate'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709039651913' status='passed' stop='1709039653101'>
+                    <name>Values passed:"{\"username\":\"\",\"password\":\"\"}"</name>
+                    <title>Values passed:"{\"username\":\"\",\"password\":\"\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"body":"An error occurred (InvalidParameterException) when calling the InitiateAuth operation: Missing required parameter USERNAME","statusCode":500,"headers":{"Content-Type":"application/json"}}</description>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

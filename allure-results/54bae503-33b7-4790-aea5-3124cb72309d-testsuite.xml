@@ -1,0 +1,116 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1709039643624' stop='1709039646064'>
+    <name>test/Order/OrderService_Normalizer.test.js</name>
+    <title>test/Order/OrderService_Normalizer.test.js</title>
+    <test-cases>
+        <test-case start='1709039643625' status='failed' stop='1709039644130'>
+            <name>Api success</name>
+            <title>Api success</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1709039643625' status='undefined'>
+                    <name>Values passed:"{\"order\":{\"serviceCode\":\"AB12\",\"webTitleNumber\":\"Test12\",\"agencyOrderId\":\"Test12\",\"correlationId\":\"Test12\",\"agencyPortalId\":\"Test12\",\"properties\":\"\",\"orgId\":\"12\",\"parties\":[{\"role\":\"owner\",\"type\":\"owner\",\"id\":\"12\",\"orderId\":\"12\",\"firstName\":\"test\",\"lastName\":\"test\"}],\"tgOrder\":{\"customerName\":\"Surety Title Company\",\"customerOrderId\":\"ANG-4520\",\"transProcessingNote\":\"Steven Knight\",\"duedate\":\"2022-08-11T16:24:55-04:00\",\"stateId\":31,\"propertyCounty\":\"MONMOUTH\",\"propertyMunicipality\":\"Borough of Belmar\",\"propertyAddress\":\"1008 Fourteenth Ave\",\"parcelId\":\"139\",\"propertyBlock\":\"139\",\"propertyLot\":\"17\",\"orderType\":\"County Search\",\"searchLength\":\"60\",\"loanAmount\":null,\"contractPrice\":null},\"transaction\":{\"orgId\":2744,\"agencyName\":\"Angel Title &amp; Abstract, Inc.\",\"countyCode\":null,\"agencyOrderId\":\"ANG-4520\",\"note\":\"Steven Knight\",\"transactionDateTime\":\"2022-08-09T16:25:12-04:00\",\"agencyShortName\":\"angelta\",\"state\":\"NJ\",\"county\":\"MONMOUTH\",\"municipalityName\":\"Borough of Belmar\",\"address\":\"1008 Fourteenth Ave\",\"parcelId\":\"139\",\"block\":\"139\",\"lot\":\"17\",\"searchType\":\"County Search\",\"property_typeId\":\"1\",\"policy_typeId\":\"1\",\"propertyType\":\"Single Family (1-4)\",\"_txTypeName\":\"Residential Refinance\",\"searchLength\":\"60\",\"lender\":null,\"loanAmount\":null,\"comments\":\"Steven Knight\",\"purchasePrice\":null},\"legalDescription\":{},\"vestingDeed\":{},\"_ownerBuyerRows\":null,\"smOrderId\":\"\",\"smServiceId\":\"\",\"errors\":[],\"relationshipKey\":false}}"</name>
+                    <title>Values passed:"{\"order\":{\"serviceCode\":\"AB12\",\"webTitleNumber\":\"Test12\",\"agencyOrderId\":\"Test12\",\"correlationId\":\"Test12\",\"agencyPortalId\":\"Test12\",\"properties\":\"\",\"orgId\":\"12\",\"parties\":[{\"role\":\"owner\",\"type\":\"owner\",\"id\":\"12\",\"orderId\":\"12\",\"firstName\":\"test\",\"lastName\":\"test\"}],\"tgOrder\":{\"customerName\":\"Surety Title Company\",\"customerOrderId\":\"ANG-4520\",\"transProcessingNote\":\"Steven Knight\",\"duedate\":\"2022-08-11T16:24:55-04:00\",\"stateId\":31,\"propertyCounty\":\"MONMOUTH\",\"propertyMunicipality\":\"Borough of Belmar\",\"propertyAddress\":\"1008 Fourteenth Ave\",\"parcelId\":\"139\",\"propertyBlock\":\"139\",\"propertyLot\":\"17\",\"orderType\":\"County Search\",\"searchLength\":\"60\",\"loanAmount\":null,\"contractPrice\":null},\"transaction\":{\"orgId\":2744,\"agencyName\":\"Angel Title &amp; Abstract, Inc.\",\"countyCode\":null,\"agencyOrderId\":\"ANG-4520\",\"note\":\"Steven Knight\",\"transactionDateTime\":\"2022-08-09T16:25:12-04:00\",\"agencyShortName\":\"angelta\",\"state\":\"NJ\",\"county\":\"MONMOUTH\",\"municipalityName\":\"Borough of Belmar\",\"address\":\"1008 Fourteenth Ave\",\"parcelId\":\"139\",\"block\":\"139\",\"lot\":\"17\",\"searchType\":\"County Search\",\"property_typeId\":\"1\",\"policy_typeId\":\"1\",\"propertyType\":\"Single Family (1-4)\",\"_txTypeName\":\"Residential Refinance\",\"searchLength\":\"60\",\"lender\":null,\"loanAmount\":null,\"comments\":\"Steven Knight\",\"purchasePrice\":null},\"legalDescription\":{},\"vestingDeed\":{},\"_ownerBuyerRows\":null,\"smOrderId\":\"\",\"smServiceId\":\"\",\"errors\":[],\"relationshipKey\":false}}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: TypeError: Cannot read properties of undefined (reading 'credentials')</message>
+                <stack-trace>Error: TypeError: Cannot read properties of undefined (reading 'credentials')
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/Order/OrderService_Normalizer.test.js:25:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1709039644130' status='failed' stop='1709039645052'>
+            <name>Invalid file path</name>
+            <title>Invalid file path</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1709039644130' status='undefined'>
+                    <name>Values passed:"{\"order\":\"orderXML2\"}"</name>
+                    <title>Values passed:"{\"order\":\"orderXML2\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                - Expected  - 2
+                + Received  + 1
+                
+                - Invalid data or url or filepath argument: orderXML2
+                - Expecting value: line 1 column 1 (char 0)
+                + Invalid Session</message>
+                <stack-trace>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                - Expected  - 2
+                + Received  + 1
+                
+                - Invalid data or url or filepath argument: orderXML2
+                - Expecting value: line 1 column 1 (char 0)
+                + Invalid Session
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/Order/OrderService_Normalizer.test.js:48:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1709039645052' status='failed' stop='1709039645559'>
+            <name>file path is missing</name>
+            <title>file path is missing</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1709039645052' status='undefined'>
+                    <name>Values passed:"{\"order\":\"orderXML2\"}"</name>
+                    <title>Values passed:"{\"order\":\"orderXML2\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                - Expected  - 2
+                + Received  + 1
+                
+                - Invalid data or url or filepath argument: orderXML2
+                - Expecting value: line 1 column 1 (char 0)
+                + Invalid Session</message>
+                <stack-trace>Error: Error: expect(received).toBe(expected) // Object.is equality
+                
+                - Expected  - 2
+                + Received  + 1
+                
+                - Invalid data or url or filepath argument: orderXML2
+                - Expecting value: line 1 column 1 (char 0)
+                + Invalid Session
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/Order/OrderService_Normalizer.test.js:70:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1709039645560' status='passed' stop='1709039646057'>
+            <name>Invalid sesson</name>
+            <title>Invalid sesson</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/normalize/vendor?json'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709039645560' status='passed' stop='1709039646056'>
+                    <name>Values passed:"{\"order\":{\"serviceCode\":\"AB12\",\"webTitleNumber\":\"Test12\",\"agencyOrderId\":\"Test12\",\"correlationId\":\"Test12\",\"agencyPortalId\":\"Test12\",\"properties\":\"\",\"orgId\":\"12\",\"parties\":[{\"role\":\"owner\",\"type\":\"owner\",\"id\":\"12\",\"orderId\":\"12\",\"firstName\":\"test\",\"lastName\":\"test\"}],\"tgOrder\":{\"customerName\":\"Surety Title Company\",\"customerOrderId\":\"ANG-4520\",\"transProcessingNote\":\"Steven Knight\",\"duedate\":\"2022-08-11T16:24:55-04:00\",\"stateId\":31,\"propertyCounty\":\"MONMOUTH\",\"propertyMunicipality\":\"Borough of Belmar\",\"propertyAddress\":\"1008 Fourteenth Ave\",\"parcelId\":\"139\",\"propertyBlock\":\"139\",\"propertyLot\":\"17\",\"orderType\":\"County Search\",\"searchLength\":\"60\",\"loanAmount\":null,\"contractPrice\":null},\"transaction\":{\"orgId\":2744,\"agencyName\":\"Angel Title &amp; Abstract, Inc.\",\"countyCode\":null,\"agencyOrderId\":\"ANG-4520\",\"note\":\"Steven Knight\",\"transactionDateTime\":\"2022-08-09T16:25:12-04:00\",\"agencyShortName\":\"angelta\",\"state\":\"NJ\",\"county\":\"MONMOUTH\",\"municipalityName\":\"Borough of Belmar\",\"address\":\"1008 Fourteenth Ave\",\"parcelId\":\"139\",\"block\":\"139\",\"lot\":\"17\",\"searchType\":\"County Search\",\"property_typeId\":\"1\",\"policy_typeId\":\"1\",\"propertyType\":\"Single Family (1-4)\",\"_txTypeName\":\"Residential Refinance\",\"searchLength\":\"60\",\"lender\":null,\"loanAmount\":null,\"comments\":\"Steven Knight\",\"purchasePrice\":null},\"legalDescription\":{},\"vestingDeed\":{},\"_ownerBuyerRows\":null,\"smOrderId\":\"\",\"smServiceId\":\"\",\"errors\":[],\"relationshipKey\":false}}"</name>
+                    <title>Values passed:"{\"order\":{\"serviceCode\":\"AB12\",\"webTitleNumber\":\"Test12\",\"agencyOrderId\":\"Test12\",\"correlationId\":\"Test12\",\"agencyPortalId\":\"Test12\",\"properties\":\"\",\"orgId\":\"12\",\"parties\":[{\"role\":\"owner\",\"type\":\"owner\",\"id\":\"12\",\"orderId\":\"12\",\"firstName\":\"test\",\"lastName\":\"test\"}],\"tgOrder\":{\"customerName\":\"Surety Title Company\",\"customerOrderId\":\"ANG-4520\",\"transProcessingNote\":\"Steven Knight\",\"duedate\":\"2022-08-11T16:24:55-04:00\",\"stateId\":31,\"propertyCounty\":\"MONMOUTH\",\"propertyMunicipality\":\"Borough of Belmar\",\"propertyAddress\":\"1008 Fourteenth Ave\",\"parcelId\":\"139\",\"propertyBlock\":\"139\",\"propertyLot\":\"17\",\"orderType\":\"County Search\",\"searchLength\":\"60\",\"loanAmount\":null,\"contractPrice\":null},\"transaction\":{\"orgId\":2744,\"agencyName\":\"Angel Title &amp; Abstract, Inc.\",\"countyCode\":null,\"agencyOrderId\":\"ANG-4520\",\"note\":\"Steven Knight\",\"transactionDateTime\":\"2022-08-09T16:25:12-04:00\",\"agencyShortName\":\"angelta\",\"state\":\"NJ\",\"county\":\"MONMOUTH\",\"municipalityName\":\"Borough of Belmar\",\"address\":\"1008 Fourteenth Ave\",\"parcelId\":\"139\",\"block\":\"139\",\"lot\":\"17\",\"searchType\":\"County Search\",\"property_typeId\":\"1\",\"policy_typeId\":\"1\",\"propertyType\":\"Single Family (1-4)\",\"_txTypeName\":\"Residential Refinance\",\"searchLength\":\"60\",\"lender\":null,\"loanAmount\":null,\"comments\":\"Steven Knight\",\"purchasePrice\":null},\"legalDescription\":{},\"vestingDeed\":{},\"_ownerBuyerRows\":null,\"smOrderId\":\"\",\"smServiceId\":\"\",\"errors\":[],\"relationshipKey\":false}}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"error":"Invalid Session"}</description>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
