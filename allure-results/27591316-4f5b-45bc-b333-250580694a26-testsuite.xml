@@ -1,0 +1,172 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1709127866508' stop='1709127878470'>
+    <name>test/PRODUCTION_Cognito/AuthService_Confirm.test.js</name>
+    <title>test/PRODUCTION_Cognito/AuthService_Confirm.test.js</title>
+    <test-cases>
+        <test-case start='1709127866508' status='passed' stop='1709127868491'>
+            <name>API Success</name>
+            <title>API Success</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/cognito/confirm'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127866517' status='passed' stop='1709127868489'>
+                    <name>Values passed:"{\"email\":\"title@bluelandtitle.com\",\"code\":486945,\"newPassword\":\"MyPasswerd!#$123\"}"</name>
+                    <title>Values passed:"{\"email\":\"title@bluelandtitle.com\",\"code\":486945,\"newPassword\":\"MyPasswerd!#$123\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"statusCode":500,"headers":{"Access-Control-Allow-Headers":"Content-Type","Access-Control-Allow-Origin":"*","Access-Control-Allow-Methods":"GET, POST, PUT, DELETE, OPTIONS"},"isBase64Encoded":false,"body":"{\"message\":\"failure\",\"error\":\"{\\\"name\\\":\\\"SerializationException\\\",\\\"code\\\":\\\"SerializationException\\\"}\"}"}</description>
+        </test-case>
+        <test-case start='1709127868491' status='passed' stop='1709127870115'>
+            <name>Email is missing</name>
+            <title>Email is missing</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/cognito/confirm'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127868492' status='passed' stop='1709127870115'>
+                    <name>Values passed:"{\"email\":\"\",\"code\":486945,\"newPassword\":\"MyPasswerd!#$123\"}"</name>
+                    <title>Values passed:"{\"email\":\"\",\"code\":486945,\"newPassword\":\"MyPasswerd!#$123\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"statusCode":500,"headers":{"Access-Control-Allow-Headers":"Content-Type","Access-Control-Allow-Origin":"*","Access-Control-Allow-Methods":"GET, POST, PUT, DELETE, OPTIONS"},"isBase64Encoded":false,"body":"{\"message\":\"failure\",\"error\":\"{\\\"name\\\":\\\"SerializationException\\\",\\\"code\\\":\\\"SerializationException\\\"}\"}"}</description>
+        </test-case>
+        <test-case start='1709127870115' status='passed' stop='1709127871390'>
+            <name>Invalid email entered</name>
+            <title>Invalid email entered</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/cognito/confirm'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127870116' status='passed' stop='1709127871390'>
+                    <name>Values passed:"{\"email\":\"dsfewsdwsad\",\"code\":486945,\"newPassword\":\"MyPasswerd!#$123\"}"</name>
+                    <title>Values passed:"{\"email\":\"dsfewsdwsad\",\"code\":486945,\"newPassword\":\"MyPasswerd!#$123\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"statusCode":500,"headers":{"Access-Control-Allow-Headers":"Content-Type","Access-Control-Allow-Origin":"*","Access-Control-Allow-Methods":"GET, POST, PUT, DELETE, OPTIONS"},"isBase64Encoded":false,"body":"{\"message\":\"failure\",\"error\":\"{\\\"name\\\":\\\"SerializationException\\\",\\\"code\\\":\\\"SerializationException\\\"}\"}"}</description>
+        </test-case>
+        <test-case start='1709127871390' status='passed' stop='1709127872952'>
+            <name>invalid code is passed</name>
+            <title>invalid code is passed</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/cognito/confirm'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127871391' status='passed' stop='1709127872951'>
+                    <name>Values passed:"{\"email\":\"title@bluelandtitle.com\",\"code\":\"wsdufs\",\"newPassword\":\"MyPasswerd!#$123\"}"</name>
+                    <title>Values passed:"{\"email\":\"title@bluelandtitle.com\",\"code\":\"wsdufs\",\"newPassword\":\"MyPasswerd!#$123\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"statusCode":500,"headers":{"Access-Control-Allow-Headers":"Content-Type","Access-Control-Allow-Origin":"*","Access-Control-Allow-Methods":"GET, POST, PUT, DELETE, OPTIONS"},"isBase64Encoded":false,"body":"{\"message\":\"failure\",\"error\":\"{\\\"name\\\":\\\"NotAuthorizedException\\\",\\\"code\\\":\\\"NotAuthorizedException\\\"}\"}"}</description>
+        </test-case>
+        <test-case start='1709127872952' status='passed' stop='1709127874429'>
+            <name>code is missing</name>
+            <title>code is missing</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/cognito/confirm'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127872952' status='passed' stop='1709127874428'>
+                    <name>Values passed:"{\"email\":\"title@bluelandtitle.com\",\"code\":\"\",\"newPassword\":\"MyPasswerd!#$123\"}"</name>
+                    <title>Values passed:"{\"email\":\"title@bluelandtitle.com\",\"code\":\"\",\"newPassword\":\"MyPasswerd!#$123\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"statusCode":500,"headers":{"Access-Control-Allow-Headers":"Content-Type","Access-Control-Allow-Origin":"*","Access-Control-Allow-Methods":"GET, POST, PUT, DELETE, OPTIONS"},"isBase64Encoded":false,"body":"{\"message\":\"failure\",\"error\":\"{\\\"name\\\":\\\"InvalidParameterException\\\",\\\"code\\\":\\\"InvalidParameterException\\\"}\"}"}</description>
+        </test-case>
+        <test-case start='1709127874429' status='passed' stop='1709127875523'>
+            <name>newPassword is missing</name>
+            <title>newPassword is missing</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/cognito/confirm'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127874429' status='passed' stop='1709127875523'>
+                    <name>Values passed:"{\"email\":\"title@bluelandtitle.com\",\"code\":486945,\"newPassword\":\"\"}"</name>
+                    <title>Values passed:"{\"email\":\"title@bluelandtitle.com\",\"code\":486945,\"newPassword\":\"\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"statusCode":500,"headers":{"Access-Control-Allow-Headers":"Content-Type","Access-Control-Allow-Origin":"*","Access-Control-Allow-Methods":"GET, POST, PUT, DELETE, OPTIONS"},"isBase64Encoded":false,"body":"{\"message\":\"failure\",\"error\":\"{\\\"message\\\":\\\"1 validation error detected: Value at 'password' failed to satisfy constraint: Member must satisfy regular expression pattern: ^[\\\\\\\\S]+.*[\\\\\\\\S]+$\\\",\\\"code\\\":\\\"InvalidParameterException\\\",\\\"time\\\":\\\"2024-02-28T13:44:35.374Z\\\",\\\"requestId\\\":\\\"0cbcba8a-934c-47eb-b260-b018a681664c\\\",\\\"statusCode\\\":400,\\\"retryable\\\":false,\\\"retryDelay\\\":8.347589461201178}\"}"}</description>
+        </test-case>
+        <test-case start='1709127875523' status='passed' stop='1709127876323'>
+            <name>all fields are empty</name>
+            <title>all fields are empty</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/cognito/confirm'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127875523' status='passed' stop='1709127876322'>
+                    <name>Values passed:"{\"email\":\"\",\"code\":\"\",\"newPassword\":\"\"}"</name>
+                    <title>Values passed:"{\"email\":\"\",\"code\":\"\",\"newPassword\":\"\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"statusCode":500,"headers":{"Access-Control-Allow-Headers":"Content-Type","Access-Control-Allow-Origin":"*","Access-Control-Allow-Methods":"GET, POST, PUT, DELETE, OPTIONS"},"isBase64Encoded":false,"body":"{\"message\":\"failure\",\"error\":\"{\\\"message\\\":\\\"1 validation error detected: Value at 'password' failed to satisfy constraint: Member must satisfy regular expression pattern: ^[\\\\\\\\S]+.*[\\\\\\\\S]+$\\\",\\\"code\\\":\\\"InvalidParameterException\\\",\\\"time\\\":\\\"2024-02-28T13:44:36.180Z\\\",\\\"requestId\\\":\\\"4df41e63-b3d3-44b6-b732-6b34d05a74d5\\\",\\\"statusCode\\\":400,\\\"retryable\\\":false,\\\"retryDelay\\\":96.52138349404424}\"}"}</description>
+        </test-case>
+        <test-case start='1709127876323' status='failed' stop='1709127877145'>
+            <name>Bad Request</name>
+            <title>Bad Request</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1709127876324' status='undefined'>
+                    <name>Values passed:"{}"</name>
+                    <title>Values passed:"{}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Response is not in valid json format</message>
+                <stack-trace>Error: Response is not in valid json format
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/PRODUCTION_Cognito/AuthService_Confirm.test.js:189:19)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1709127877145' status='passed' stop='1709127878463'>
+            <name>No Auth key is passed in authorization</name>
+            <title>No Auth key is passed in authorization</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/cognito/confirm'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127877146' status='passed' stop='1709127878462'>
+                    <name>Values passed:"{\"email\":\"title@bluelandtitle.com\",\"code\":486945,\"newPassword\":\"MyPasswerd!#$123\"}"</name>
+                    <title>Values passed:"{\"email\":\"title@bluelandtitle.com\",\"code\":486945,\"newPassword\":\"MyPasswerd!#$123\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"statusCode":500,"headers":{"Access-Control-Allow-Headers":"Content-Type","Access-Control-Allow-Origin":"*","Access-Control-Allow-Methods":"GET, POST, PUT, DELETE, OPTIONS"},"isBase64Encoded":false,"body":"{\"message\":\"failure\",\"error\":\"{\\\"name\\\":\\\"SerializationException\\\",\\\"code\\\":\\\"SerializationException\\\"}\"}"}</description>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -1,1 +1,1 @@
-{"body":"An error occurred (UserNotConfirmedException) when calling the InitiateAuth operation: User is not confirmed.","statusCode":500,"headers":{"Content-Type":"application/json"}}
+{"body":"An error occurred (PasswordResetRequiredException) when calling the InitiateAuth operation: Password reset required for the user","statusCode":500,"headers":{"Content-Type":"application/json"}}

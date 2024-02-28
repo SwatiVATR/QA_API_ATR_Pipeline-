@@ -1,0 +1,223 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1709127952573' stop='1709127965657'>
+    <name>test/Notes/COR-370.test.js</name>
+    <title>test/Notes/COR-370.test.js</title>
+    <test-cases>
+        <test-case start='1709127952573' status='passed' stop='1709127954582'>
+            <name>API Success of non ATR members</name>
+            <title>API Success of non ATR members</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/submit-notes'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127952574' status='passed' stop='1709127954579'>
+                    <name>Values passed:"{\"client_orderId\":\"BT-7801\",\"note\":\"testing3 send email from postman12 send Email is true\",\"userID\":\"352\"}"</name>
+                    <title>Values passed:"{\"client_orderId\":\"BT-7801\",\"note\":\"testing3 send email from postman12 send Email is true\",\"userID\":\"352\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"message":"Notes have been submitted successfully and an email has been sent to both the existing user and the non-ATR members."}</description>
+        </test-case>
+        <test-case start='1709127954582' status='passed' stop='1709127956072'>
+            <name>API Success of ATR members</name>
+            <title>API Success of ATR members</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/submit-notes'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127954583' status='passed' stop='1709127956072'>
+                    <name>Values passed:"{\"client_orderId\":\"BT-7801\",\"note\":\"testing3 send email from postman12 send Email is true\",\"userID\":\"363\"}"</name>
+                    <title>Values passed:"{\"client_orderId\":\"BT-7801\",\"note\":\"testing3 send email from postman12 send Email is true\",\"userID\":\"363\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"message":"Notes have been submitted successfully and an email has been sent to ATR Support."}</description>
+        </test-case>
+        <test-case start='1709127956072' status='passed' stop='1709127957068'>
+            <name>client_orderId is missing</name>
+            <title>client_orderId is missing</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/submit-notes'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127956073' status='passed' stop='1709127957068'>
+                    <name>Values passed:"{\"client_orderId\":\"\",\"note\":\"testing3 send email from postman12 send Email is true\",\"userID\":\"352\"}"</name>
+                    <title>Values passed:"{\"client_orderId\":\"\",\"note\":\"testing3 send email from postman12 send Email is true\",\"userID\":\"352\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"error":"Please provide a client_orderId"}</description>
+        </test-case>
+        <test-case start='1709127957068' status='passed' stop='1709127957688'>
+            <name>userID is missing</name>
+            <title>userID is missing</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/submit-notes'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127957069' status='passed' stop='1709127957688'>
+                    <name>Values passed:"{\"client_orderId\":\"BT-7801\",\"note\":\"testing3 send email from postman12 send Email is true\",\"userID\":\"\"}"</name>
+                    <title>Values passed:"{\"client_orderId\":\"BT-7801\",\"note\":\"testing3 send email from postman12 send Email is true\",\"userID\":\"\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"error":"Invalid user id "}</description>
+        </test-case>
+        <test-case start='1709127957688' status='passed' stop='1709127958715'>
+            <name>BAD REQUEST</name>
+            <title>BAD REQUEST</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/submit-notes'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127957689' status='passed' stop='1709127958714'>
+                    <name>Values passed:"{}"</name>
+                    <title>Values passed:"{}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"error":"Invalid user id "}</description>
+        </test-case>
+        <test-case start='1709127958715' status='passed' stop='1709127959811'>
+            <name>Wrong client_orderId is passed</name>
+            <title>Wrong client_orderId is passed</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/submit-notes'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127958715' status='passed' stop='1709127959811'>
+                    <name>Values passed:"{\"client_orderId\":\"BT-@43dc7801\",\"note\":\"testing3 send email from postman12 send Email is true\",\"userID\":\"352\"}"</name>
+                    <title>Values passed:"{\"client_orderId\":\"BT-@43dc7801\",\"note\":\"testing3 send email from postman12 send Email is true\",\"userID\":\"352\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"error":"local variable 'transaction_id' referenced before assignment"}</description>
+        </test-case>
+        <test-case start='1709127959811' status='passed' stop='1709127960853'>
+            <name>Wrong userID is passed</name>
+            <title>Wrong userID is passed</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/submit-notes'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127959811' status='passed' stop='1709127960853'>
+                    <name>Values passed:"{\"client_orderId\":\"BT-7801\",\"note\":\"testing3 send email from postman12 send Email is true\",\"userID\":\"@f@@@@@\"}"</name>
+                    <title>Values passed:"{\"client_orderId\":\"BT-7801\",\"note\":\"testing3 send email from postman12 send Email is true\",\"userID\":\"@f@@@@@\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"error":"Invalid user id "}</description>
+        </test-case>
+        <test-case start='1709127960854' status='passed' stop='1709127961905'>
+            <name>Blank Spaces in client_orderId</name>
+            <title>Blank Spaces in client_orderId</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/submit-notes'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127960854' status='passed' stop='1709127961905'>
+                    <name>Values passed:"{\"client_orderId\":\"      \",\"note\":\"testing3 send email from postman12 send Email is true\",\"userID\":\"3esdesdw23352\"}"</name>
+                    <title>Values passed:"{\"client_orderId\":\"      \",\"note\":\"testing3 send email from postman12 send Email is true\",\"userID\":\"3esdesdw23352\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"error":"invalid literal for int() with base 10: '3esdesdw23352'"}</description>
+        </test-case>
+        <test-case start='1709127961905' status='passed' stop='1709127962583'>
+            <name>note is empty</name>
+            <title>note is empty</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/submit-notes'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127961905' status='passed' stop='1709127962583'>
+                    <name>Values passed:"{\"client_orderId\":\"BT-@43dc7801\",\"note\":\"\",\"userID\":\"352\"}"</name>
+                    <title>Values passed:"{\"client_orderId\":\"BT-@43dc7801\",\"note\":\"\",\"userID\":\"352\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"error":"local variable 'transaction_id' referenced before assignment"}</description>
+        </test-case>
+        <test-case start='1709127962583' status='passed' stop='1709127963621'>
+            <name>special character in note </name>
+            <title>special character in note </title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/submit-notes'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127962584' status='passed' stop='1709127963621'>
+                    <name>Values passed:"{\"client_orderId\":\"BT-@43dc7801\",\"note\":\"@12@@@@@@$$\",\"userID\":\"3esdesdw23352\"}"</name>
+                    <title>Values passed:"{\"client_orderId\":\"BT-@43dc7801\",\"note\":\"@12@@@@@@$$\",\"userID\":\"3esdesdw23352\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"error":"invalid literal for int() with base 10: '3esdesdw23352'"}</description>
+        </test-case>
+        <test-case start='1709127963621' status='passed' stop='1709127964666'>
+            <name>blank space passed in note </name>
+            <title>blank space passed in note </title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/submit-notes'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127963621' status='passed' stop='1709127964666'>
+                    <name>Values passed:"{\"client_orderId\":\"BT-@43dc7801\",\"note\":\"     \",\"userID\":\"3esdesdw23352\"}"</name>
+                    <title>Values passed:"{\"client_orderId\":\"BT-@43dc7801\",\"note\":\"     \",\"userID\":\"3esdesdw23352\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"error":"invalid literal for int() with base 10: '3esdesdw23352'"}</description>
+        </test-case>
+        <test-case start='1709127964666' status='passed' stop='1709127965656'>
+            <name>API body is called empty</name>
+            <title>API body is called empty</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/submit-notes'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127964666' status='passed' stop='1709127965656'>
+                    <name>Values passed:"{\"client_orderId\":\"\",\"note\":\"\",\"userID\":\"\"}"</name>
+                    <title>Values passed:"{\"client_orderId\":\"\",\"note\":\"\",\"userID\":\"\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"error":"Invalid user id "}</description>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

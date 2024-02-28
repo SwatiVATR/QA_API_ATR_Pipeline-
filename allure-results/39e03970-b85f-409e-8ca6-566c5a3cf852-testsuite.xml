@@ -1,0 +1,43 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1709128006457' stop='1709128009075'>
+    <name>test/UAT_Cognito/AuthService_Get_User_Details.test.js</name>
+    <title>test/UAT_Cognito/AuthService_Get_User_Details.test.js</title>
+    <test-cases>
+        <test-case start='1709128006457' status='passed' stop='1709128008561'>
+            <name>Api success</name>
+            <title>Api success</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/user'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709128006458' status='passed' stop='1709128008558'>
+                    <name>Values passed:""</name>
+                    <title>Values passed:""</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"success":{"correlationId":1,"msg":[{"user_name":"Rajesh  Kondapaneni","user_address":"519 S Broad St","user_appt":"","user_zip":"07452","user_city":"Glen Rock","user_country":"United States","user_phone":"201-531-1663","user_loginStatus":0,"user_chatState":0,"user_jasperFlag":0,"user_jasperuserId":null,"user_jasperUserRole":null,"user_email":"RKondapaneni@actiontitleresearch.com","organization_groupName":null,"organization_softwarePlatform":"RamQuest","organization_agencyPortalId":"13367697626250001204_31","organization_primaryEmail":"pdowning@austin.rr.com","organization_orgId":868819,"organization_reportingOrgId":601,"agency_agencyName":"e-closing test NJ"}]}}</description>
+        </test-case>
+        <test-case start='1709128008561' status='passed' stop='1709128009074'>
+            <name>No Auth provided</name>
+            <title>No Auth provided</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/user'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709128008561' status='passed' stop='1709128009073'>
+                    <name>Values passed:""</name>
+                    <title>Values passed:""</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"error":"Invalid Session"}</description>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

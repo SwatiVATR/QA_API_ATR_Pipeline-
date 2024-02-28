@@ -1,0 +1,139 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1709127889380' stop='1709127895588'>
+    <name>test/BackOffice/User_Validation.test.js</name>
+    <title>test/BackOffice/User_Validation.test.js</title>
+    <test-cases>
+        <test-case start='1709127889380' status='passed' stop='1709127890557'>
+            <name>Succesfull Reponse</name>
+            <title>Succesfull Reponse</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/backoffice/ValUser'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127889381' status='passed' stop='1709127890555'>
+                    <name>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"Pass$123\",\"appType\":\"ValUser\",\"appUsername\":\"SchPortal\",\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\"}"</name>
+                    <title>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"Pass$123\",\"appType\":\"ValUser\",\"appUsername\":\"SchPortal\",\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"body":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiU2NoUG9ydGFsIiwidmFsaWQiOnRydWUsInNlYXJjaGVyQWRtaW4iOiIxIiwiZXhwIjoxNzA5MTMxNDkwfQ.dN_OC6py9f_phk0rxO8G2sxF8ZihUXBBT-AA4epVtlg","statusCode":201,"headers":{"Content-Type":"application/json"}}</description>
+        </test-case>
+        <test-case start='1709127890557' status='passed' stop='1709127891712'>
+            <name>No Such User Exists|| no appUsername is passed</name>
+            <title>No Such User Exists|| no appUsername is passed</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/backoffice/ValUser'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127890557' status='passed' stop='1709127891711'>
+                    <name>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"Pass$123\",\"appType\":\"ValUser\",\"appUsername\":\"bkode@actiontitleresearch.com\",\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\"}"</name>
+                    <title>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"Pass$123\",\"appType\":\"ValUser\",\"appUsername\":\"bkode@actiontitleresearch.com\",\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"body":"No Such User Exists","statusCode":401,"headers":{"Content-Type":"application/json"}}</description>
+        </test-case>
+        <test-case start='1709127891712' status='failed' stop='1709127892581'>
+            <name>Invalid API Key</name>
+            <title>Invalid API Key</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1709127891712' status='undefined'>
+                    <name>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"Pass$123\",\"appType\":\"ValUser\",\"appUsername\":\"SchPortal\",\"authKey\":\"\"}"</name>
+                    <title>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"Pass$123\",\"appType\":\"ValUser\",\"appUsername\":\"SchPortal\",\"authKey\":\"\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Response is not in valid json format</message>
+                <stack-trace>Error: Response is not in valid json format
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/BackOffice/User_Validation.test.js:75:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1709127892581' status='failed' stop='1709127892955'>
+            <name>Plain text received as response</name>
+            <title>Plain text received as response</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1709127892581' status='undefined'>
+                    <name>Values passed:"{}"</name>
+                    <title>Values passed:"{}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Response is not in valid json format</message>
+                <stack-trace>Error: Response is not in valid json format
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/BackOffice/User_Validation.test.js:92:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1709127892956' status='passed' stop='1709127894119'>
+            <name>appId is passed wrong || Special character passed in appId</name>
+            <title>appId is passed wrong || Special character passed in appId</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/backoffice/ValUser'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127892956' status='passed' stop='1709127894118'>
+                    <name>Values passed:"{\"appId\":\"AppweeeUser101\",\"appPass\":\"Pass$123\",\"appType\":\"ValUser\",\"appUsername\":\"SchPortal\",\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\"}"</name>
+                    <title>Values passed:"{\"appId\":\"AppweeeUser101\",\"appPass\":\"Pass$123\",\"appType\":\"ValUser\",\"appUsername\":\"SchPortal\",\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"body":"No Such User Exists","statusCode":401,"headers":{"Content-Type":"application/json"}}</description>
+        </test-case>
+        <test-case start='1709127894119' status='passed' stop='1709127894825'>
+            <name>appPass is passed wrong|| appPass is missing</name>
+            <title>appPass is passed wrong|| appPass is missing</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/backoffice/ValUser'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127894119' status='passed' stop='1709127894825'>
+                    <name>Values passed:"{\"appId\":\"AppweeeUser101\",\"appPass\":\"$\",\"appType\":\"ValUser\",\"appUsername\":\"SchPortal\",\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\"}"</name>
+                    <title>Values passed:"{\"appId\":\"AppweeeUser101\",\"appPass\":\"$\",\"appType\":\"ValUser\",\"appUsername\":\"SchPortal\",\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"body":"No Such User Exists","statusCode":401,"headers":{"Content-Type":"application/json"}}</description>
+        </test-case>
+        <test-case start='1709127894825' status='passed' stop='1709127895577'>
+            <name>appType is passed wrong|| appType is missing</name>
+            <title>appType is passed wrong|| appType is missing</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/backoffice/ValUser'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127894826' status='passed' stop='1709127895577'>
+                    <name>Values passed:"{\"appId\":\"AppweeeUser101\",\"appPass\":\"$\",\"appType\":\"ValUser\",\"appUsername\":\"SchPortal\",\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\"}"</name>
+                    <title>Values passed:"{\"appId\":\"AppweeeUser101\",\"appPass\":\"$\",\"appType\":\"ValUser\",\"appUsername\":\"SchPortal\",\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"body":"No Such User Exists","statusCode":401,"headers":{"Content-Type":"application/json"}}</description>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

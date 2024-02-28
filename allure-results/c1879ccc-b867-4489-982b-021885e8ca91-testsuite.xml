@@ -1,0 +1,79 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1709127990895' stop='1709127996811'>
+    <name>test/Order/OrderService_Details.test.js</name>
+    <title>test/Order/OrderService_Details.test.js</title>
+    <test-cases>
+        <test-case start='1709127990895' status='passed' stop='1709127993618'>
+            <name>API Success</name>
+            <title>API Success</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/order/40965704'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127990896' status='passed' stop='1709127993617'>
+                    <name>Values passed:"{}"</name>
+                    <title>Values passed:"{}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"success":{"correlationId":1,"msg":[{"transaction_id":118227,"transaction_orderId":40965704,"transaction_agencyName":null,"transaction_transactionDate":"2023-04-26","transaction_correlationId":"Test12","transaction_block":null,"transaction_lot":null,"transaction_status":"Hold","transaction_currentProcessingQueue":"Reader","transaction_purchasePrice":"$10,000.00","transaction_instructions":null,"transaction_qualifier":null,"transaction_parcelId":null,"transaction_additionalParcelId":null,"transaction_searchType":"","transaction_address":"519 S Broad St","transaction_addressTwo":null,"transaction_city":"Glen Rock","transaction_county":null,"transaction_state":null,"transaction_zip":null,"transaction_comments":"Hey this is a note\ntitle@bluelandtitle.com|2023-08-04 09:49:00: this is test agagin\nBob  Smith|title@bluelandtitle.com|2023-08-04 10:50:00: test message\n","transaction_agencyOrderId":"Test12","transaction_agencyShortName":null,"transaction_agencyTransactionId":null,"transaction_searchLength":null,"transaction_holdReason":"Waiting for Smart Search","transaction_buyerSearches":null,"transaction_optionalSearches":null,"transaction_includeSmartSearch":1,"transaction_transCompleteDate":null,"transaction_transMovementDate":"2023-05-19","transaction_boardDate":"2023-02-22","transaction_arrival":"20:30:17","transaction_documentName":null,"transaction_documentPath":null,"transaction_dueDate":null,"transaction_orderTransMovementDate":null,"transaction_readerTransMovementDate":null,"transaction_qcTransMovementDate":null,"transaction_deliveryTransMovementDate":null,"transaction_firstTransactionUser":null,"transaction_actionCountySearchNumber":null,"transaction_qcReviewId":0,"transaction_priorityCal":0,"transaction_prioritySet":0,"transaction_procSpeedOpt":"NoRush","transaction_currentDueDate":"2023-10-14","transaction_clientNotes":"Hey this is a note\ntitle@bluelandtitle.com|2023-08-04 09:49:00: this is test agagin\nBob  Smith|title@bluelandtitle.com|2023-08-04 10:50:00: test message\n","transaction_searchCompanyId":1,"transaction_searchCompanyName":"Action Title Research","tgOrder_orderDateTime":"2023-04-26T20:30:16","tgOrder_orderType":"False","tgOrder_propertyAddress":null,"tgOrder_propertyAddressExt":null,"tgOrder_propertyZipCode":null,"tgOrder_propertyDeedBook":null,"tgOrder_propertyDeedPage":null,"tgOrder_loanAmount":"None","tgOrder_transProcessingInstruction":null,"tgOrder_contractPrice":null,"tgOrder_parcelId":"","tgOrder_additionalParcelId":"","tgOrder_qualifier":"","tgOrder_currentDueDate":null,"tgOrder_clientNotes":null,"tgOrder_customerOrderId":"Test12","tgOrder_propertyCounty":null,"tgOrder_stateId":31,"tgOrder_propertyMunicipality":null,"transactionType_id":1,"transactionType_type":"Cash Deal","propertyType_id":1,"propertyType_type":"Single Family (1-4)","buyers":[],"owners":[],"documents":[]}]}}</description>
+        </test-case>
+        <test-case start='1709127993618' status='passed' stop='1709127995033'>
+            <name>Wrong id passed in endpoints</name>
+            <title>Wrong id passed in endpoints</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/order/409sd3edewd365704'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127993619' status='passed' stop='1709127995033'>
+                    <name>Values passed:"{}"</name>
+                    <title>Values passed:"{}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"success":{"correlationId":1,"error":[]}}</description>
+        </test-case>
+        <test-case start='1709127995033' status='passed' stop='1709127995449'>
+            <name>No id passed in endpoints</name>
+            <title>No id passed in endpoints</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/order/'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127995034' status='passed' stop='1709127995449'>
+                    <name>Values passed:"{}"</name>
+                    <title>Values passed:"{}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"message":"Authorization header requires 'Credential' parameter. Authorization header requires 'Signature' parameter. Authorization header requires 'SignedHeaders' parameter. Authorization header requires existence of either a 'X-Amz-Date' or a 'Date' header. Authorization=eyJraWQiOiJvYmo5c3lOUGlpXC9GM0lydHpjVG44U2RhTjdvcnFMbjFmKzYybkw2K1RNZz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiIxM2UxNjNiYy1iNTI2LTQ3MTUtYTI4MC1iYjA4NjRhMTU1OWEiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfYW93Vjd2VXIxIiwiY29nbml0bzp1c2VybmFtZSI6IjEzZTE2M2JjLWI1MjYtNDcxNS1hMjgwLWJiMDg2NGExNTU5YSIsIm9yaWdpbl9qdGkiOiI4OGViZmJlMi1iZjdlLTRjODYtODY4Yi1jYTUyOGViOGNhZmQiLCJhdWQiOiIyN243Nzg3aW01NWgwdWt2cTJyaDFxbnUxOCIsImV2ZW50X2lkIjoiMGY3NTliZmQtODkxMC00NDU5LTlmZWMtOGIyMGEwYzlhYjdkIiwidG9rZW5fdXNlIjoiaWQiLCJhdXRoX3RpbWUiOjE3MDkxMjEzOTgsImV4cCI6MTcwOTIwNzc5OCwiaWF0IjoxNzA5MTIxMzk4LCJqdGkiOiIzNTNmZWRlNy1mZjhiLTQ1OWItYmVkZS1iMjgzOGEyMTAyYjgiLCJlbWFpbCI6IlJLb25kYXBhbmVuaUBhY3Rpb250aXRsZXJlc2VhcmNoLmNvbSJ9.souu8Imlhm88-3zlW-4VnHTA3b2rZeL19nwqV7MfKxjuMvhDfkdQ3_XOZCv1Y8fiKKqpUPzXoOmnescSDDeNGzC2nkOaO8pA-j0ekFO9qH0vkzFbcYE44-YIObUBWUm9LbhpAn5pvL51nLM6MgUe8UfrwHqqKOcTmRLQrV4nNvwpyBVQBAm5_32IcKVP04mfzVnEvWJWZOW3Wi1w9hEcCbqJ-AeNPd6wrIrCRuctZFgDaWOiYejTxaqvpXqFvOVVLm5RavQma_LeE7N12HT4l2q_CxjzfTEhrBZUeC1kcaDvMMaxbEhbADjDCc0ccPXuBQ5C12lMJeEeG1fPXleKBg"}</description>
+        </test-case>
+        <test-case start='1709127995449' status='passed' stop='1709127996809'>
+            <name>Special character passed in end point last</name>
+            <title>Special character passed in end point last</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/order/@#'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127995450' status='passed' stop='1709127996809'>
+                    <name>Values passed:"{}"</name>
+                    <title>Values passed:"{}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"success":{"correlationId":1,"error":[]}}</description>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

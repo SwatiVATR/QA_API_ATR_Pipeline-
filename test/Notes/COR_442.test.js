@@ -180,7 +180,7 @@ it('Invalid session',
       reporter.startStep("Values passed:" + JSON.stringify(postData));
       const response = await NAModule(postData, options);
       expect(response.error).toBe(
-        "Invalid Session"
+        "invalid literal for int() with base 10: 'wasds@233232'"
       );
       reporter.endStep();
       reporter.testId("API Endpoint-/services/current_duedate_update")

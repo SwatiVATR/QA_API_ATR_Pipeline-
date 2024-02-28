@@ -1,0 +1,43 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1709128002862' stop='1709128006179'>
+    <name>test/StepFunctions/StepService_Execute_Sync.test.js</name>
+    <title>test/StepFunctions/StepService_Execute_Sync.test.js</title>
+    <test-cases>
+        <test-case start='1709128002862' status='passed' stop='1709128004544'>
+            <name>API Success</name>
+            <title>API Success</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/sync/MyExpressStateMachine'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709128002863' status='passed' stop='1709128004543'>
+                    <name>Values passed:"{\"username\":\"title@bluelandtitle.com\",\"password\":\"460@Bergen\"}"</name>
+                    <title>Values passed:"{\"username\":\"title@bluelandtitle.com\",\"password\":\"460@Bergen\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"success":{"body":{"executionArn":"arn:aws:states:us-east-1:242886645947:express:MyExpressStateMachine:8d4ddf09-001e-4bfd-bb93-7275f80dd2a1:60b21f55-3607-4a80-8f78-7b53f50ef379","stateMachineArn":"arn:aws:states:us-east-1:242886645947:stateMachine:MyExpressStateMachine","name":"8d4ddf09-001e-4bfd-bb93-7275f80dd2a1","startDate":"2024-02-28T13:46:43.598000+00:00","stopDate":"2024-02-28T13:46:44.277000+00:00","status":"FAILED","error":"ApiGateway.500","cause":"{\"error\":\"'NoneType' object has no attribute 'orgId'\"}","input":"{\n    \"execute\": \"run synchronously\",\n    \"authToken\": \"eyJraWQiOiJvYmo5c3lOUGlpXC9GM0lydHpjVG44U2RhTjdvcnFMbjFmKzYybkw2K1RNZz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiIxM2UxNjNiYy1iNTI2LTQ3MTUtYTI4MC1iYjA4NjRhMTU1OWEiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfYW93Vjd2VXIxIiwiY29nbml0bzp1c2VybmFtZSI6IjEzZTE2M2JjLWI1MjYtNDcxNS1hMjgwLWJiMDg2NGExNTU5YSIsIm9yaWdpbl9qdGkiOiI4OGViZmJlMi1iZjdlLTRjODYtODY4Yi1jYTUyOGViOGNhZmQiLCJhdWQiOiIyN243Nzg3aW01NWgwdWt2cTJyaDFxbnUxOCIsImV2ZW50X2lkIjoiMGY3NTliZmQtODkxMC00NDU5LTlmZWMtOGIyMGEwYzlhYjdkIiwidG9rZW5fdXNlIjoiaWQiLCJhdXRoX3RpbWUiOjE3MDkxMjEzOTgsImV4cCI6MTcwOTIwNzc5OCwiaWF0IjoxNzA5MTIxMzk4LCJqdGkiOiIzNTNmZWRlNy1mZjhiLTQ1OWItYmVkZS1iMjgzOGEyMTAyYjgiLCJlbWFpbCI6IlJLb25kYXBhbmVuaUBhY3Rpb250aXRsZXJlc2VhcmNoLmNvbSJ9.souu8Imlhm88-3zlW-4VnHTA3b2rZeL19nwqV7MfKxjuMvhDfkdQ3_XOZCv1Y8fiKKqpUPzXoOmnescSDDeNGzC2nkOaO8pA-j0ekFO9qH0vkzFbcYE44-YIObUBWUm9LbhpAn5pvL51nLM6MgUe8UfrwHqqKOcTmRLQrV4nNvwpyBVQBAm5_32IcKVP04mfzVnEvWJWZOW3Wi1w9hEcCbqJ-AeNPd6wrIrCRuctZFgDaWOiYejTxaqvpXqFvOVVLm5RavQma_LeE7N12HT4l2q_CxjzfTEhrBZUeC1kcaDvMMaxbEhbADjDCc0ccPXuBQ5C12lMJeEeG1fPXleKBg\",\n    \"mode\": \"sync\"\n}","inputDetails":{"included":true},"outputDetails":{"included":true},"traceHeader":"Root=1-65df3943-0e5b07e869417b2b47ea7128;Parent=080da17f5b93bbe1;Sampled=0;Lineage=696d6202:0%7C3d276671:0","billingDetails":{"billedMemoryUsedInMB":64,"billedDurationInMilliseconds":700},"ResponseMetadata":{"RequestId":"6fad25db-f69d-48d2-8307-d3678dda8971","HTTPStatusCode":200,"HTTPHeaders":{"x-amzn-requestid":"6fad25db-f69d-48d2-8307-d3678dda8971","date":"Wed, 28 Feb 2024 13:46:44 GMT","content-type":"application/x-amz-json-1.0","content-length":"2106","connection":"keep-alive"},"RetryAttempts":0}},"statusCode":200,"headers":{"Content-Type":"application/json"}}}</description>
+        </test-case>
+        <test-case start='1709128004544' status='passed' stop='1709128006179'>
+            <name>Wrong username</name>
+            <title>Wrong username</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/sync/MyExpressStateMachine'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709128004545' status='passed' stop='1709128006178'>
+                    <name>Values passed:"{\"username\":\"iotitle@bluelandtitle.comdjd\",\"password\":\"460@Bergen\"}"</name>
+                    <title>Values passed:"{\"username\":\"iotitle@bluelandtitle.comdjd\",\"password\":\"460@Bergen\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"success":{"body":{"executionArn":"arn:aws:states:us-east-1:242886645947:express:MyExpressStateMachine:e33ff356-c20e-4b42-97c2-168f0fa36375:ea665736-6da9-49d5-82c7-ee2931138e51","stateMachineArn":"arn:aws:states:us-east-1:242886645947:stateMachine:MyExpressStateMachine","name":"e33ff356-c20e-4b42-97c2-168f0fa36375","startDate":"2024-02-28T13:46:45.329000+00:00","stopDate":"2024-02-28T13:46:46.022000+00:00","status":"FAILED","error":"ApiGateway.500","cause":"{\"error\":\"'NoneType' object has no attribute 'orgId'\"}","input":"{\n    \"execute\": \"run synchronously\",\n    \"authToken\": \"eyJraWQiOiJvYmo5c3lOUGlpXC9GM0lydHpjVG44U2RhTjdvcnFMbjFmKzYybkw2K1RNZz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiIxM2UxNjNiYy1iNTI2LTQ3MTUtYTI4MC1iYjA4NjRhMTU1OWEiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfYW93Vjd2VXIxIiwiY29nbml0bzp1c2VybmFtZSI6IjEzZTE2M2JjLWI1MjYtNDcxNS1hMjgwLWJiMDg2NGExNTU5YSIsIm9yaWdpbl9qdGkiOiI4OGViZmJlMi1iZjdlLTRjODYtODY4Yi1jYTUyOGViOGNhZmQiLCJhdWQiOiIyN243Nzg3aW01NWgwdWt2cTJyaDFxbnUxOCIsImV2ZW50X2lkIjoiMGY3NTliZmQtODkxMC00NDU5LTlmZWMtOGIyMGEwYzlhYjdkIiwidG9rZW5fdXNlIjoiaWQiLCJhdXRoX3RpbWUiOjE3MDkxMjEzOTgsImV4cCI6MTcwOTIwNzc5OCwiaWF0IjoxNzA5MTIxMzk4LCJqdGkiOiIzNTNmZWRlNy1mZjhiLTQ1OWItYmVkZS1iMjgzOGEyMTAyYjgiLCJlbWFpbCI6IlJLb25kYXBhbmVuaUBhY3Rpb250aXRsZXJlc2VhcmNoLmNvbSJ9.souu8Imlhm88-3zlW-4VnHTA3b2rZeL19nwqV7MfKxjuMvhDfkdQ3_XOZCv1Y8fiKKqpUPzXoOmnescSDDeNGzC2nkOaO8pA-j0ekFO9qH0vkzFbcYE44-YIObUBWUm9LbhpAn5pvL51nLM6MgUe8UfrwHqqKOcTmRLQrV4nNvwpyBVQBAm5_32IcKVP04mfzVnEvWJWZOW3Wi1w9hEcCbqJ-AeNPd6wrIrCRuctZFgDaWOiYejTxaqvpXqFvOVVLm5RavQma_LeE7N12HT4l2q_CxjzfTEhrBZUeC1kcaDvMMaxbEhbADjDCc0ccPXuBQ5C12lMJeEeG1fPXleKBg\",\n    \"mode\": \"sync\"\n}","inputDetails":{"included":true},"outputDetails":{"included":true},"traceHeader":"Root=1-65df3944-2e5687643422feb80f02417c;Parent=2b1aa7b51044a2a7;Sampled=0;Lineage=696d6202:0%7C3d276671:0","billingDetails":{"billedMemoryUsedInMB":64,"billedDurationInMilliseconds":700},"ResponseMetadata":{"RequestId":"880f5efd-7da8-4b6e-a648-b4199406285f","HTTPStatusCode":200,"HTTPHeaders":{"x-amzn-requestid":"880f5efd-7da8-4b6e-a648-b4199406285f","date":"Wed, 28 Feb 2024 13:46:46 GMT","content-type":"application/x-amz-json-1.0","content-length":"2106","connection":"keep-alive"},"RetryAttempts":0}},"statusCode":200,"headers":{"Content-Type":"application/json"}}}</description>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -1,0 +1,61 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1709128016440' stop='1709128017854'>
+    <name>test/Searcher/Update_Searcher.test.js</name>
+    <title>test/Searcher/Update_Searcher.test.js</title>
+    <test-cases>
+        <test-case start='1709128016440' status='passed' stop='1709128016757'>
+            <name>API Success</name>
+            <title>API Success</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/searcher/update'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709128016441' status='passed' stop='1709128016755'>
+                    <name>Values passed:"{\"orders\":[{\"transaction\":{\"USR_First_Name\":\"test\",\"searcherID\":\"333\"}},{\"transaction\":{\"USR_First_Name\":\"joe\",\"searcherID\":\"333\"}}]}"</name>
+                    <title>Values passed:"{\"orders\":[{\"transaction\":{\"USR_First_Name\":\"test\",\"searcherID\":\"333\"}},{\"transaction\":{\"USR_First_Name\":\"joe\",\"searcherID\":\"333\"}}]}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"success":{"searcherId":[],"searchCompanyId":[]}}</description>
+        </test-case>
+        <test-case start='1709128016758' status='passed' stop='1709128017546'>
+            <name>Plain text received as response</name>
+            <title>Plain text received as response</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/searcher/update'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709128016758' status='passed' stop='1709128017546'>
+                    <name>Values passed:"{}"</name>
+                    <title>Values passed:"{}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"success":{"searcherId":[],"searchCompanyId":[]}}</description>
+        </test-case>
+        <test-case start='1709128017546' status='passed' stop='1709128017853'>
+            <name>orders is missing </name>
+            <title>orders is missing </title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/searcher/update'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709128017547' status='passed' stop='1709128017853'>
+                    <name>Values passed:"{\"orders\":\"\"}"</name>
+                    <title>Values passed:"{\"orders\":\"\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"success":{"searcherId":[],"searchCompanyId":[]}}</description>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

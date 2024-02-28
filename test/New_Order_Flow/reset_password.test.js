@@ -3,11 +3,11 @@ dotenv.config();
 const {
     STAGE,
     VERSION,
-    commonOptionsPOSTwithoutHeader,
+    commonOptionsPOST,
     Timeout,
   } = require("../../config");
   const options = {
-    ...commonOptionsPOSTwithoutHeader,
+    ...commonOptionsPOST,
     path: `/${STAGE}/${VERSION}/services/reset-password-link`,
   };
   const NAModule = require("../../modules/NAModule");

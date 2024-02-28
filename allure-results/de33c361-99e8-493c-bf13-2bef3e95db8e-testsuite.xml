@@ -1,0 +1,283 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1709127854218' stop='1709127871469'>
+    <name>test/BackOffice/Direct_PDF_Upload.test.js</name>
+    <title>test/BackOffice/Direct_PDF_Upload.test.js</title>
+    <test-cases>
+        <test-case start='1709127854218' status='passed' stop='1709127856172'>
+            <name>API Success</name>
+            <title>API Success</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/backoffice/s3DirectPDF'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127854219' status='passed' stop='1709127856171'>
+                    <name>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"Pass$123\",\"appType\":\"FileUpload\",\"appUsername\":\"SchPortal\",\"recId\":1012906,\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\",\"rating\":\"5\",\"condodev\":\"1\",\"filename\":\"test1982845.pdf\",\"copyfee\":\"5\",\"surrogatesfee\":\"25.00\",\"otherfee\":\"1\",\"notes\":\"hi\"}"</name>
+                    <title>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"Pass$123\",\"appType\":\"FileUpload\",\"appUsername\":\"SchPortal\",\"recId\":1012906,\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\",\"rating\":\"5\",\"condodev\":\"1\",\"filename\":\"test1982845.pdf\",\"copyfee\":\"5\",\"surrogatesfee\":\"25.00\",\"otherfee\":\"1\",\"notes\":\"hi\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"Response":{"TXStatus":"00","TransactionID":"949478177154482822024","FilesUploaded":"1"}}</description>
+        </test-case>
+        <test-case start='1709127856172' status='passed' stop='1709127857397'>
+            <name>appId is missing</name>
+            <title>appId is missing</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/backoffice/s3DirectPDF'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127856173' status='passed' stop='1709127857397'>
+                    <name>Values passed:"{\"appId\":\"\",\"appPass\":\"Pass$123\",\"appType\":\"FileUpload\",\"appUsername\":\"SchPortal\",\"recId\":1012906,\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\",\"rating\":\"5\",\"condodev\":\"1\",\"filename\":\"test1982845.pdf\",\"copyfee\":\"5\",\"surrogatesfee\":\"25.00\",\"otherfee\":\"1\",\"notes\":\"hi\"}"</name>
+                    <title>Values passed:"{\"appId\":\"\",\"appPass\":\"Pass$123\",\"appType\":\"FileUpload\",\"appUsername\":\"SchPortal\",\"recId\":1012906,\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\",\"rating\":\"5\",\"condodev\":\"1\",\"filename\":\"test1982845.pdf\",\"copyfee\":\"5\",\"surrogatesfee\":\"25.00\",\"otherfee\":\"1\",\"notes\":\"hi\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"Response":{"TXStatus":"01","TransactionID":"949478178174482822024"}}</description>
+        </test-case>
+        <test-case start='1709127857397' status='passed' stop='1709127858635'>
+            <name>appPass is missing</name>
+            <title>appPass is missing</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/backoffice/s3DirectPDF'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127857398' status='passed' stop='1709127858635'>
+                    <name>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"\",\"appType\":\"FileUpload\",\"appUsername\":\"SchPortal\",\"recId\":1012906,\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\",\"rating\":\"5\",\"condodev\":\"1\",\"filename\":\"test1982845.pdf\",\"copyfee\":\"5\",\"surrogatesfee\":\"25.00\",\"otherfee\":\"1\",\"notes\":\"hi\"}"</name>
+                    <title>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"\",\"appType\":\"FileUpload\",\"appUsername\":\"SchPortal\",\"recId\":1012906,\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\",\"rating\":\"5\",\"condodev\":\"1\",\"filename\":\"test1982845.pdf\",\"copyfee\":\"5\",\"surrogatesfee\":\"25.00\",\"otherfee\":\"1\",\"notes\":\"hi\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"Response":{"TXStatus":"02","TransactionID":"949478179184482822024"}}</description>
+        </test-case>
+        <test-case start='1709127858635' status='passed' stop='1709127859892'>
+            <name>appType is missing</name>
+            <title>appType is missing</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/backoffice/s3DirectPDF'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127858636' status='passed' stop='1709127859892'>
+                    <name>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"$123\",\"appType\":\"\",\"appUsername\":\"SchPortal\",\"recId\":1012906,\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\",\"rating\":\"5\",\"condodev\":\"1\",\"filename\":\"test1982845.pdf\",\"copyfee\":\"5\",\"surrogatesfee\":\"25.00\",\"otherfee\":\"1\",\"notes\":\"hi\"}"</name>
+                    <title>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"$123\",\"appType\":\"\",\"appUsername\":\"SchPortal\",\"recId\":1012906,\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\",\"rating\":\"5\",\"condodev\":\"1\",\"filename\":\"test1982845.pdf\",\"copyfee\":\"5\",\"surrogatesfee\":\"25.00\",\"otherfee\":\"1\",\"notes\":\"hi\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"Response":{"TXStatus":"02","TransactionID":"949478180194482822024"}}</description>
+        </test-case>
+        <test-case start='1709127859892' status='passed' stop='1709127860716'>
+            <name>appUsername is missing</name>
+            <title>appUsername is missing</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/backoffice/s3DirectPDF'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127859893' status='passed' stop='1709127860716'>
+                    <name>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"$123\",\"appType\":\"FileUpload\",\"appUsername\":\"\",\"recId\":1012906,\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\",\"rating\":\"5\",\"condodev\":\"1\",\"filename\":\"test1982845.pdf\",\"copyfee\":\"5\",\"surrogatesfee\":\"25.00\",\"otherfee\":\"1\",\"notes\":\"hi\"}"</name>
+                    <title>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"$123\",\"appType\":\"FileUpload\",\"appUsername\":\"\",\"recId\":1012906,\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\",\"rating\":\"5\",\"condodev\":\"1\",\"filename\":\"test1982845.pdf\",\"copyfee\":\"5\",\"surrogatesfee\":\"25.00\",\"otherfee\":\"1\",\"notes\":\"hi\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"Response":{"TXStatus":"04","TransactionID":"949478181204482822024"}}</description>
+        </test-case>
+        <test-case start='1709127860716' status='passed' stop='1709127861948'>
+            <name>recidMissig is missing</name>
+            <title>recidMissig is missing</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/backoffice/s3DirectPDF'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127860717' status='passed' stop='1709127861948'>
+                    <name>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"$123\",\"appType\":\"FileUpload\",\"appUsername\":\"SchPortal\",\"recId\":\"\",\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\",\"rating\":\"5\",\"condodev\":\"1\",\"filename\":\"test1982845.pdf\",\"copyfee\":\"5\",\"surrogatesfee\":\"25.00\",\"otherfee\":\"1\",\"notes\":\"hi\"}"</name>
+                    <title>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"$123\",\"appType\":\"FileUpload\",\"appUsername\":\"SchPortal\",\"recId\":\"\",\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\",\"rating\":\"5\",\"condodev\":\"1\",\"filename\":\"test1982845.pdf\",\"copyfee\":\"5\",\"surrogatesfee\":\"25.00\",\"otherfee\":\"1\",\"notes\":\"hi\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"Response":{"TXStatus":"02","TransactionID":"949478182214482822024"}}</description>
+        </test-case>
+        <test-case start='1709127861948' status='failed' stop='1709127862882'>
+            <name>authKey is missing|| invalid authKey</name>
+            <title>authKey is missing|| invalid authKey</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1709127861949' status='undefined'>
+                    <name>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"$123\",\"appType\":\"FileUpload\",\"appUsername\":\"SchPortal\",\"recId\":\"1012906\",\"authKey\":\"\",\"rating\":\"5\",\"condodev\":\"1\",\"filename\":\"test1982845.pdf\",\"copyfee\":\"5\",\"surrogatesfee\":\"25.00\",\"otherfee\":\"1\",\"notes\":\"hi\"}"</name>
+                    <title>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"$123\",\"appType\":\"FileUpload\",\"appUsername\":\"SchPortal\",\"recId\":\"1012906\",\"authKey\":\"\",\"rating\":\"5\",\"condodev\":\"1\",\"filename\":\"test1982845.pdf\",\"copyfee\":\"5\",\"surrogatesfee\":\"25.00\",\"otherfee\":\"1\",\"notes\":\"hi\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Response is not in valid json format</message>
+                <stack-trace>Error: Response is not in valid json format
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/BackOffice/Direct_PDF_Upload.test.js:144:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1709127862883' status='passed' stop='1709127863592'>
+            <name>rating is missing</name>
+            <title>rating is missing</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/backoffice/s3DirectPDF'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127862883' status='passed' stop='1709127863592'>
+                    <name>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"$123\",\"appType\":\"FileUpload\",\"appUsername\":\"SchPortal\",\"recId\":\"1012906\",\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\",\"rating\":\"\",\"condodev\":\"1\",\"filename\":\"test1982845.pdf\",\"copyfee\":\"5\",\"surrogatesfee\":\"25.00\",\"otherfee\":\"1\",\"notes\":\"hi\"}"</name>
+                    <title>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"$123\",\"appType\":\"FileUpload\",\"appUsername\":\"SchPortal\",\"recId\":\"1012906\",\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\",\"rating\":\"\",\"condodev\":\"1\",\"filename\":\"test1982845.pdf\",\"copyfee\":\"5\",\"surrogatesfee\":\"25.00\",\"otherfee\":\"1\",\"notes\":\"hi\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"Response":{"TXStatus":"02","TransactionID":"949478183234482822024"}}</description>
+        </test-case>
+        <test-case start='1709127863592' status='passed' stop='1709127864765'>
+            <name>condodev is missing</name>
+            <title>condodev is missing</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/backoffice/s3DirectPDF'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127863594' status='passed' stop='1709127864764'>
+                    <name>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"$123\",\"appType\":\"FileUpload\",\"appUsername\":\"SchPortal\",\"recId\":\"1012906\",\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\",\"rating\":\"5\",\"condodev\":\"\",\"filename\":\"test1982845.pdf\",\"copyfee\":\"5\",\"surrogatesfee\":\"25.00\",\"otherfee\":\"1\",\"notes\":\"hi\"}"</name>
+                    <title>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"$123\",\"appType\":\"FileUpload\",\"appUsername\":\"SchPortal\",\"recId\":\"1012906\",\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\",\"rating\":\"5\",\"condodev\":\"\",\"filename\":\"test1982845.pdf\",\"copyfee\":\"5\",\"surrogatesfee\":\"25.00\",\"otherfee\":\"1\",\"notes\":\"hi\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"Response":{"TXStatus":"02","TransactionID":"949478184244482822024"}}</description>
+        </test-case>
+        <test-case start='1709127864765' status='passed' stop='1709127865994'>
+            <name>filename is missing</name>
+            <title>filename is missing</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/backoffice/s3DirectPDF'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127864766' status='passed' stop='1709127865994'>
+                    <name>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"$123\",\"appType\":\"FileUpload\",\"appUsername\":\"SchPortal\",\"recId\":\"1012906\",\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\",\"rating\":\"5\",\"condodev\":\"1\",\"filename\":\"\",\"copyfee\":\"5\",\"surrogatesfee\":\"25.00\",\"otherfee\":\"1\",\"notes\":\"hi\"}"</name>
+                    <title>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"$123\",\"appType\":\"FileUpload\",\"appUsername\":\"SchPortal\",\"recId\":\"1012906\",\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\",\"rating\":\"5\",\"condodev\":\"1\",\"filename\":\"\",\"copyfee\":\"5\",\"surrogatesfee\":\"25.00\",\"otherfee\":\"1\",\"notes\":\"hi\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"Response":{"TXStatus":"02","TransactionID":"949478185254482822024"}}</description>
+        </test-case>
+        <test-case start='1709127865994' status='passed' stop='1709127867131'>
+            <name>surrogatesfee is missing</name>
+            <title>surrogatesfee is missing</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/backoffice/s3DirectPDF'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127865995' status='passed' stop='1709127867130'>
+                    <name>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"$123\",\"appType\":\"FileUpload\",\"appUsername\":\"SchPortal\",\"recId\":\"1012906\",\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\",\"rating\":\"5\",\"condodev\":\"1\",\"filename\":\"test1982845.pdf\",\"copyfee\":\"5\",\"surrogatesfee\":\"\",\"otherfee\":\"1\",\"notes\":\"hi\"}"</name>
+                    <title>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"$123\",\"appType\":\"FileUpload\",\"appUsername\":\"SchPortal\",\"recId\":\"1012906\",\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\",\"rating\":\"5\",\"condodev\":\"1\",\"filename\":\"test1982845.pdf\",\"copyfee\":\"5\",\"surrogatesfee\":\"\",\"otherfee\":\"1\",\"notes\":\"hi\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"Response":{"TXStatus":"02","TransactionID":"949478186264482822024"}}</description>
+        </test-case>
+        <test-case start='1709127867131' status='passed' stop='1709127868333'>
+            <name>copyfee is missing</name>
+            <title>copyfee is missing</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/backoffice/s3DirectPDF'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127867132' status='passed' stop='1709127868333'>
+                    <name>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"$123\",\"appType\":\"FileUpload\",\"appUsername\":\"SchPortal\",\"recId\":\"1012906\",\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\",\"rating\":\"5\",\"condodev\":\"1\",\"filename\":\"test1982845.pdf\",\"copyfee\":\"\",\"surrogatesfee\":\"25.00\",\"otherfee\":\"1\",\"notes\":\"hi\"}"</name>
+                    <title>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"$123\",\"appType\":\"FileUpload\",\"appUsername\":\"SchPortal\",\"recId\":\"1012906\",\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\",\"rating\":\"5\",\"condodev\":\"1\",\"filename\":\"test1982845.pdf\",\"copyfee\":\"\",\"surrogatesfee\":\"25.00\",\"otherfee\":\"1\",\"notes\":\"hi\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"Response":{"TXStatus":"02","TransactionID":"949478187284482822024"}}</description>
+        </test-case>
+        <test-case start='1709127868333' status='passed' stop='1709127869467'>
+            <name>otherfee is missing</name>
+            <title>otherfee is missing</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/backoffice/s3DirectPDF'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127868334' status='passed' stop='1709127869467'>
+                    <name>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"$123\",\"appType\":\"FileUpload\",\"appUsername\":\"SchPortal\",\"recId\":\"1012906\",\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\",\"rating\":\"5\",\"condodev\":\"1\",\"filename\":\"test1982845.pdf\",\"copyfee\":\"5\",\"surrogatesfee\":\"25.00\",\"otherfee\":\"\",\"notes\":\"hi\"}"</name>
+                    <title>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"$123\",\"appType\":\"FileUpload\",\"appUsername\":\"SchPortal\",\"recId\":\"1012906\",\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\",\"rating\":\"5\",\"condodev\":\"1\",\"filename\":\"test1982845.pdf\",\"copyfee\":\"5\",\"surrogatesfee\":\"25.00\",\"otherfee\":\"\",\"notes\":\"hi\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"Response":{"TXStatus":"02","TransactionID":"949478188294482822024"}}</description>
+        </test-case>
+        <test-case start='1709127869467' status='passed' stop='1709127870613'>
+            <name>notes is missing</name>
+            <title>notes is missing</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/backoffice/s3DirectPDF'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127869468' status='passed' stop='1709127870612'>
+                    <name>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"$123\",\"appType\":\"FileUpload\",\"appUsername\":\"SchPortal\",\"recId\":\"1012906\",\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\",\"rating\":\"5\",\"condodev\":\"1\",\"filename\":\"test1982845.pdf\",\"copyfee\":\"5\",\"surrogatesfee\":\"25.00\",\"otherfee\":\"1\",\"notes\":\"\"}"</name>
+                    <title>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"$123\",\"appType\":\"FileUpload\",\"appUsername\":\"SchPortal\",\"recId\":\"1012906\",\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\",\"rating\":\"5\",\"condodev\":\"1\",\"filename\":\"test1982845.pdf\",\"copyfee\":\"5\",\"surrogatesfee\":\"25.00\",\"otherfee\":\"1\",\"notes\":\"\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"Response":{"TXStatus":"02","TransactionID":"949478189304482822024"}}</description>
+        </test-case>
+        <test-case start='1709127870613' status='failed' stop='1709127871405'>
+            <name>Plain text received</name>
+            <title>Plain text received</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1709127870613' status='undefined'>
+                    <name>Values passed:"{}"</name>
+                    <title>Values passed:"{}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Response is not in valid json format</message>
+                <stack-trace>Error: Response is not in valid json format
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/BackOffice/Direct_PDF_Upload.test.js:284:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

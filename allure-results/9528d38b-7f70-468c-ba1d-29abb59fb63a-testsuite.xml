@@ -1,0 +1,205 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1709127909948' stop='1709127943626'>
+    <name>test/Notes/COR-470.test.js</name>
+    <title>test/Notes/COR-470.test.js</title>
+    <test-cases>
+        <test-case start='1709127909948' status='passed' stop='1709127914024'>
+            <name>API Success without appended_note key</name>
+            <title>API Success without appended_note key</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/notes/special-request'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127909950' status='passed' stop='1709127914023'>
+                    <name>Values passed:"{\"button_id\":\"Rush\",\"order_id\":\"OrderNY-ABC_02\",\"search_company_id\":1,\"order\":{\"note\":{\"transactionId\":118359,\"userEmail\":\"title@bluelandtitle.com\",\"read\":false}}}"</name>
+                    <title>Values passed:"{\"button_id\":\"Rush\",\"order_id\":\"OrderNY-ABC_02\",\"search_company_id\":1,\"order\":{\"note\":{\"transactionId\":118359,\"userEmail\":\"title@bluelandtitle.com\",\"read\":false}}}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"success":{"message":"Rush note has been added successfully","result":{"txId":118359,"statusCode":200,"body":"{\"transactionId\": 118359, \"noteId\": 3638, \"readMessage\": false, \"clientOrderID\": \"672023\", \"userID\": 872178, \"sendEmail\": null, \"noteDateTime\": \"02-28-2024 08:45:11\", \"note\": \"A Rush request has been made for this transaction Testing Process Testing Process  Testing Process begin\", \"noteCategory\": \"CLIENT_PORTAL\", \"noteType\": \"PUBLIC\", \"userEmail\": \"title@bluelandtitle.com\", \"userName\": null, \"aesNoteDateTime\": \"02-28-2024 13:45:11\", \"searcherID\": 0, \"backOfficeTransactionStatus\": null}"},"endpointsresult":{"statusCode":200,"body":"\"{\\n  \\\"userId\\\": 1,\\n  \\\"id\\\": 1,\\n  \\\"title\\\": \\\"sunt aut facere repellat provident occaecati excepturi optio reprehenderit\\\",\\n  \\\"body\\\": \\\"quia et suscipit\\\\nsuscipit recusandae consequuntur expedita et cum\\\\nreprehenderit molestiae ut ut quas totam\\\\nnostrum rerum est autem sunt rem eveniet architecto\\\"\\n}\""}}}</description>
+        </test-case>
+        <test-case start='1709127914024' status='passed' stop='1709127917232'>
+            <name>API Success with appended_note key</name>
+            <title>API Success with appended_note key</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/notes/special-request'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127914025' status='passed' stop='1709127917232'>
+                    <name>Values passed:"{\"button_id\":\"Rush\",\"order_id\":\"OrderNY-ABC_02\",\"search_company_id\":1,\"appended_note\":\"Testing Process\",\"order\":{\"note\":{\"transactionId\":118359,\"userEmail\":\"title@bluelandtitle.com\",\"read\":false}}}"</name>
+                    <title>Values passed:"{\"button_id\":\"Rush\",\"order_id\":\"OrderNY-ABC_02\",\"search_company_id\":1,\"appended_note\":\"Testing Process\",\"order\":{\"note\":{\"transactionId\":118359,\"userEmail\":\"title@bluelandtitle.com\",\"read\":false}}}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"success":{"message":"Appended note has been added successfully for Rush","result":{"txId":118359,"statusCode":200,"body":"{\"transactionId\": 118359, \"noteId\": 3640, \"readMessage\": false, \"clientOrderID\": \"672023\", \"userID\": 872178, \"sendEmail\": null, \"noteDateTime\": \"02-28-2024 08:45:15\", \"note\": \"A Rush request has been made for this transaction Testing Process Testing Process  Testing Process begin Testing Process\", \"noteCategory\": \"CLIENT_PORTAL\", \"noteType\": \"PUBLIC\", \"userEmail\": \"title@bluelandtitle.com\", \"userName\": null, \"aesNoteDateTime\": \"02-28-2024 13:45:15\", \"searcherID\": 0, \"backOfficeTransactionStatus\": null}"},"endpointsresult":{"statusCode":200,"body":"\"{\\n  \\\"userId\\\": 1,\\n  \\\"id\\\": 1,\\n  \\\"title\\\": \\\"sunt aut facere repellat provident occaecati excepturi optio reprehenderit\\\",\\n  \\\"body\\\": \\\"quia et suscipit\\\\nsuscipit recusandae consequuntur expedita et cum\\\\nreprehenderit molestiae ut ut quas totam\\\\nnostrum rerum est autem sunt rem eveniet architecto\\\"\\n}\""}}}</description>
+        </test-case>
+        <test-case start='1709127917232' status='passed' stop='1709127918236'>
+            <name>button_id key is empty</name>
+            <title>button_id key is empty</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/notes/special-request'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127917232' status='passed' stop='1709127918236'>
+                    <name>Values passed:"{\"button_id\":\"\",\"order_id\":\"OrderNY-ABC_02\",\"search_company_id\":1,\"appended_note\":\"Testing Process\",\"order\":{\"note\":{\"transactionId\":118359,\"userEmail\":\"title@bluelandtitle.com\",\"read\":false}}}"</name>
+                    <title>Values passed:"{\"button_id\":\"\",\"order_id\":\"OrderNY-ABC_02\",\"search_company_id\":1,\"appended_note\":\"Testing Process\",\"order\":{\"note\":{\"transactionId\":118359,\"userEmail\":\"title@bluelandtitle.com\",\"read\":false}}}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"error":"Button ID parameter is missing."}</description>
+        </test-case>
+        <test-case start='1709127918237' status='passed' stop='1709127919350'>
+            <name>button_id key passed wrong</name>
+            <title>button_id key passed wrong</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/notes/special-request'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127918237' status='passed' stop='1709127919350'>
+                    <name>Values passed:"{\"button_id\":\"ewarewfewfef\",\"order_id\":\"OrderNY-ABC_02\",\"search_company_id\":1,\"order\":{\"note\":{\"transactionId\":118359,\"userEmail\":\"title@bluelandtitle.com\",\"read\":false}}}"</name>
+                    <title>Values passed:"{\"button_id\":\"ewarewfewfef\",\"order_id\":\"OrderNY-ABC_02\",\"search_company_id\":1,\"order\":{\"note\":{\"transactionId\":118359,\"userEmail\":\"title@bluelandtitle.com\",\"read\":false}}}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"error":"Button ID not found."}</description>
+        </test-case>
+        <test-case start='1709127919350' status='passed' stop='1709127923512'>
+            <name>order_id is empty</name>
+            <title>order_id is empty</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/notes/special-request'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127919351' status='passed' stop='1709127923512'>
+                    <name>Values passed:"{\"button_id\":\"Rush\",\"order_id\":\"\",\"search_company_id\":1,\"appended_note\":\"Testing Process\",\"order\":{\"note\":{\"transactionId\":118359,\"userEmail\":\"title@bluelandtitle.com\",\"read\":false}}}"</name>
+                    <title>Values passed:"{\"button_id\":\"Rush\",\"order_id\":\"\",\"search_company_id\":1,\"appended_note\":\"Testing Process\",\"order\":{\"note\":{\"transactionId\":118359,\"userEmail\":\"title@bluelandtitle.com\",\"read\":false}}}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"success":{"message":"Appended note has been added successfully for Rush","result":{"txId":118359,"statusCode":200,"body":"{\"transactionId\": 118359, \"noteId\": 3642, \"readMessage\": false, \"clientOrderID\": \"672023\", \"userID\": 872178, \"sendEmail\": null, \"noteDateTime\": \"02-28-2024 08:45:21\", \"note\": \"A Rush request has been made for this transaction Testing Process Testing Process  Testing Process begin Testing Process\", \"noteCategory\": \"CLIENT_PORTAL\", \"noteType\": \"PUBLIC\", \"userEmail\": \"title@bluelandtitle.com\", \"userName\": null, \"aesNoteDateTime\": \"02-28-2024 13:45:21\", \"searcherID\": 0, \"backOfficeTransactionStatus\": null}"},"endpointsresult":{"statusCode":200,"body":"\"{\\n  \\\"userId\\\": 1,\\n  \\\"id\\\": 1,\\n  \\\"title\\\": \\\"sunt aut facere repellat provident occaecati excepturi optio reprehenderit\\\",\\n  \\\"body\\\": \\\"quia et suscipit\\\\nsuscipit recusandae consequuntur expedita et cum\\\\nreprehenderit molestiae ut ut quas totam\\\\nnostrum rerum est autem sunt rem eveniet architecto\\\"\\n}\""}}}</description>
+        </test-case>
+        <test-case start='1709127923513' status='passed' stop='1709127928079'>
+            <name>order_id key passed wrong</name>
+            <title>order_id key passed wrong</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/notes/special-request'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127923513' status='passed' stop='1709127928079'>
+                    <name>Values passed:"{\"button_id\":\"Rush\",\"order_id\":\"wsaffffffffs\",\"search_company_id\":1,\"appended_note\":\"Testing Process\",\"order\":{\"note\":{\"transactionId\":118359,\"userEmail\":\"title@bluelandtitle.com\",\"read\":false}}}"</name>
+                    <title>Values passed:"{\"button_id\":\"Rush\",\"order_id\":\"wsaffffffffs\",\"search_company_id\":1,\"appended_note\":\"Testing Process\",\"order\":{\"note\":{\"transactionId\":118359,\"userEmail\":\"title@bluelandtitle.com\",\"read\":false}}}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"success":{"message":"Appended note has been added successfully for Rush","result":{"txId":118359,"statusCode":200,"body":"{\"transactionId\": 118359, \"noteId\": 3644, \"readMessage\": false, \"clientOrderID\": \"672023\", \"userID\": 872178, \"sendEmail\": null, \"noteDateTime\": \"02-28-2024 08:45:24\", \"note\": \"A Rush request has been made for this transaction Testing Process Testing Process  Testing Process begin Testing Process\", \"noteCategory\": \"CLIENT_PORTAL\", \"noteType\": \"PUBLIC\", \"userEmail\": \"title@bluelandtitle.com\", \"userName\": null, \"aesNoteDateTime\": \"02-28-2024 13:45:24\", \"searcherID\": 0, \"backOfficeTransactionStatus\": null}"},"endpointsresult":{"statusCode":200,"body":"\"{\\n  \\\"userId\\\": 1,\\n  \\\"id\\\": 1,\\n  \\\"title\\\": \\\"sunt aut facere repellat provident occaecati excepturi optio reprehenderit\\\",\\n  \\\"body\\\": \\\"quia et suscipit\\\\nsuscipit recusandae consequuntur expedita et cum\\\\nreprehenderit molestiae ut ut quas totam\\\\nnostrum rerum est autem sunt rem eveniet architecto\\\"\\n}\""}}}</description>
+        </test-case>
+        <test-case start='1709127928080' status='passed' stop='1709127932433'>
+            <name>search_company_id is passed as string</name>
+            <title>search_company_id is passed as string</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/notes/special-request'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127928080' status='passed' stop='1709127932432'>
+                    <name>Values passed:"{\"button_id\":\"Rush\",\"order_id\":\"OrderNY-ABC_02\",\"search_company_id\":\"1\",\"appended_note\":\"Testing Process\",\"order\":{\"note\":{\"transactionId\":118359,\"userEmail\":\"title@bluelandtitle.com\",\"read\":false}}}"</name>
+                    <title>Values passed:"{\"button_id\":\"Rush\",\"order_id\":\"OrderNY-ABC_02\",\"search_company_id\":\"1\",\"appended_note\":\"Testing Process\",\"order\":{\"note\":{\"transactionId\":118359,\"userEmail\":\"title@bluelandtitle.com\",\"read\":false}}}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"success":{"message":"Appended note has been added successfully for Rush","result":{"txId":118359,"statusCode":200,"body":"{\"transactionId\": 118359, \"noteId\": 3647, \"readMessage\": false, \"clientOrderID\": \"672023\", \"userID\": 872178, \"sendEmail\": null, \"noteDateTime\": \"02-28-2024 08:45:29\", \"note\": \"A Rush request has been made for this transaction Testing Process Testing Process  Testing Process begin Testing Process\", \"noteCategory\": \"CLIENT_PORTAL\", \"noteType\": \"PUBLIC\", \"userEmail\": \"title@bluelandtitle.com\", \"userName\": null, \"aesNoteDateTime\": \"02-28-2024 13:45:29\", \"searcherID\": 0, \"backOfficeTransactionStatus\": null}"},"endpointsresult":{"statusCode":200,"body":"\"{\\n  \\\"userId\\\": 1,\\n  \\\"id\\\": 1,\\n  \\\"title\\\": \\\"sunt aut facere repellat provident occaecati excepturi optio reprehenderit\\\",\\n  \\\"body\\\": \\\"quia et suscipit\\\\nsuscipit recusandae consequuntur expedita et cum\\\\nreprehenderit molestiae ut ut quas totam\\\\nnostrum rerum est autem sunt rem eveniet architecto\\\"\\n}\""}}}</description>
+        </test-case>
+        <test-case start='1709127932433' status='passed' stop='1709127936055'>
+            <name>appended_note is passed empty</name>
+            <title>appended_note is passed empty</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/notes/special-request'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127932433' status='passed' stop='1709127936055'>
+                    <name>Values passed:"{\"button_id\":\"Rush\",\"order_id\":\"OrderNY-ABC_02\",\"search_company_id\":1,\"appended_note\":\"\",\"order\":{\"note\":{\"transactionId\":118359,\"userEmail\":\"title@bluelandtitle.com\",\"read\":false}}}"</name>
+                    <title>Values passed:"{\"button_id\":\"Rush\",\"order_id\":\"OrderNY-ABC_02\",\"search_company_id\":1,\"appended_note\":\"\",\"order\":{\"note\":{\"transactionId\":118359,\"userEmail\":\"title@bluelandtitle.com\",\"read\":false}}}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"success":{"message":"Rush note has been added successfully","result":{"txId":118359,"statusCode":200,"body":"{\"transactionId\": 118359, \"noteId\": 3648, \"readMessage\": false, \"clientOrderID\": \"672023\", \"userID\": 872178, \"sendEmail\": null, \"noteDateTime\": \"02-28-2024 08:45:33\", \"note\": \"A Rush request has been made for this transaction Testing Process Testing Process  Testing Process begin\", \"noteCategory\": \"CLIENT_PORTAL\", \"noteType\": \"PUBLIC\", \"userEmail\": \"title@bluelandtitle.com\", \"userName\": null, \"aesNoteDateTime\": \"02-28-2024 13:45:33\", \"searcherID\": 0, \"backOfficeTransactionStatus\": null}"},"endpointsresult":{"statusCode":200,"body":"\"{\\n  \\\"userId\\\": 1,\\n  \\\"id\\\": 1,\\n  \\\"title\\\": \\\"sunt aut facere repellat provident occaecati excepturi optio reprehenderit\\\",\\n  \\\"body\\\": \\\"quia et suscipit\\\\nsuscipit recusandae consequuntur expedita et cum\\\\nreprehenderit molestiae ut ut quas totam\\\\nnostrum rerum est autem sunt rem eveniet architecto\\\"\\n}\""}}}</description>
+        </test-case>
+        <test-case start='1709127936055' status='passed' stop='1709127939192'>
+            <name>transactionId is passed as string</name>
+            <title>transactionId is passed as string</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/notes/special-request'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127936056' status='passed' stop='1709127939192'>
+                    <name>Values passed:"{\"button_id\":\"Rush\",\"order_id\":\"OrderNY-ABC_02\",\"search_company_id\":1,\"appended_note\":\"Testing Process\",\"order\":{\"note\":{\"transactionId\":\"118359\",\"userEmail\":\"title@bluelandtitle.com\",\"read\":false}}}"</name>
+                    <title>Values passed:"{\"button_id\":\"Rush\",\"order_id\":\"OrderNY-ABC_02\",\"search_company_id\":1,\"appended_note\":\"Testing Process\",\"order\":{\"note\":{\"transactionId\":\"118359\",\"userEmail\":\"title@bluelandtitle.com\",\"read\":false}}}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"success":{"message":"Appended note has been added successfully for Rush","result":{"txId":118359,"statusCode":200,"body":"{\"transactionId\": 118359, \"noteId\": 3649, \"readMessage\": false, \"clientOrderID\": \"672023\", \"userID\": 872178, \"sendEmail\": null, \"noteDateTime\": \"02-28-2024 08:45:37\", \"note\": \"A Rush request has been made for this transaction Testing Process Testing Process  Testing Process begin Testing Process\", \"noteCategory\": \"CLIENT_PORTAL\", \"noteType\": \"PUBLIC\", \"userEmail\": \"title@bluelandtitle.com\", \"userName\": null, \"aesNoteDateTime\": \"02-28-2024 13:45:37\", \"searcherID\": 0, \"backOfficeTransactionStatus\": null}"},"endpointsresult":{"statusCode":200,"body":"\"{\\n  \\\"userId\\\": 1,\\n  \\\"id\\\": 1,\\n  \\\"title\\\": \\\"sunt aut facere repellat provident occaecati excepturi optio reprehenderit\\\",\\n  \\\"body\\\": \\\"quia et suscipit\\\\nsuscipit recusandae consequuntur expedita et cum\\\\nreprehenderit molestiae ut ut quas totam\\\\nnostrum rerum est autem sunt rem eveniet architecto\\\"\\n}\""}}}</description>
+        </test-case>
+        <test-case start='1709127939193' status='passed' stop='1709127941383'>
+            <name>userEmail is empty</name>
+            <title>userEmail is empty</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/notes/special-request'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127939193' status='passed' stop='1709127941383'>
+                    <name>Values passed:"{\"button_id\":\"Rush\",\"order_id\":\"OrderNY-ABC_02\",\"search_company_id\":1,\"appended_note\":\"Testing Process\",\"order\":{\"note\":{\"transactionId\":\"118359\",\"userEmail\":\"\",\"read\":false}}}"</name>
+                    <title>Values passed:"{\"button_id\":\"Rush\",\"order_id\":\"OrderNY-ABC_02\",\"search_company_id\":1,\"appended_note\":\"Testing Process\",\"order\":{\"note\":{\"transactionId\":\"118359\",\"userEmail\":\"\",\"read\":false}}}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"success":{"message":"Appended note has been added successfully for Rush","result":{"txId":118359,"statusCode":200,"body":"{\"type\": \"https://ac1.actioncentral.com/\", \"status\": 400, \"path\": \"/notes\", \"message\": \"Invalid input json either userId or user email should be present for transactionId:118359, noteType:PUBLIC, noteCategory:CLIENT_PORTAL\"}"},"endpointsresult":{"statusCode":200,"body":"\"{\\n  \\\"userId\\\": 1,\\n  \\\"id\\\": 1,\\n  \\\"title\\\": \\\"sunt aut facere repellat provident occaecati excepturi optio reprehenderit\\\",\\n  \\\"body\\\": \\\"quia et suscipit\\\\nsuscipit recusandae consequuntur expedita et cum\\\\nreprehenderit molestiae ut ut quas totam\\\\nnostrum rerum est autem sunt rem eveniet architecto\\\"\\n}\""}}}</description>
+        </test-case>
+        <test-case start='1709127941383' status='passed' stop='1709127943625'>
+            <name>invalid userEmail passed</name>
+            <title>invalid userEmail passed</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/notes/special-request'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127941384' status='passed' stop='1709127943624'>
+                    <name>Values passed:"{\"button_id\":\"Rush\",\"order_id\":\"OrderNY-ABC_02\",\"search_company_id\":1,\"appended_note\":\"Testing Process\",\"order\":{\"note\":{\"transactionId\":\"118359\",\"userEmail\":\"sddddddddddddd\",\"read\":false}}}"</name>
+                    <title>Values passed:"{\"button_id\":\"Rush\",\"order_id\":\"OrderNY-ABC_02\",\"search_company_id\":1,\"appended_note\":\"Testing Process\",\"order\":{\"note\":{\"transactionId\":\"118359\",\"userEmail\":\"sddddddddddddd\",\"read\":false}}}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"success":{"message":"Appended note has been added successfully for Rush","result":{"txId":118359,"statusCode":200,"body":"{\"type\": \"https://ac1.actioncentral.com/\", \"title\": \"Method argument not valid\", \"status\": 400, \"path\": \"/notes\", \"message\": \"error.validation\", \"fieldErrors\": [{\"objectName\": \"noteDto\", \"field\": \"userEmail\", \"message\": \"must be a well-formed email address\"}]}"},"endpointsresult":{"statusCode":200,"body":"\"{\\n  \\\"userId\\\": 1,\\n  \\\"id\\\": 1,\\n  \\\"title\\\": \\\"sunt aut facere repellat provident occaecati excepturi optio reprehenderit\\\",\\n  \\\"body\\\": \\\"quia et suscipit\\\\nsuscipit recusandae consequuntur expedita et cum\\\\nreprehenderit molestiae ut ut quas totam\\\\nnostrum rerum est autem sunt rem eveniet architecto\\\"\\n}\""}}}</description>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

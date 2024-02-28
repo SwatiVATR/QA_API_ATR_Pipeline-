@@ -1,0 +1,97 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1709127999054' stop='1709128005252'>
+    <name>test/UAT_Cognito/AuthService_Login.test.js</name>
+    <title>test/UAT_Cognito/AuthService_Login.test.js</title>
+    <test-cases>
+        <test-case start='1709127999055' status='passed' stop='1709128000791'>
+            <name>API Success</name>
+            <title>API Success</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/cognito/signin-dev'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127999055' status='passed' stop='1709128000788'>
+                    <name>Values passed:"{\"username\":\"title@bluelandtitle.com\",\"password\":\"460@Bergen\"}"</name>
+                    <title>Values passed:"{\"username\":\"title@bluelandtitle.com\",\"password\":\"460@Bergen\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"body":"An error occurred (PasswordResetRequiredException) when calling the InitiateAuth operation: Password reset required for the user","statusCode":500,"headers":{"Content-Type":"application/json"}}</description>
+        </test-case>
+        <test-case start='1709128000791' status='passed' stop='1709128002157'>
+            <name>Wrong username</name>
+            <title>Wrong username</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/cognito/signin-dev'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709128000791' status='passed' stop='1709128002156'>
+                    <name>Values passed:"{\"username\":\"tititle@bluelandtitle.com\",\"password\":\"460@Bergen\"}"</name>
+                    <title>Values passed:"{\"username\":\"tititle@bluelandtitle.com\",\"password\":\"460@Bergen\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"body":"An error occurred (UserNotFoundException) when calling the InitiateAuth operation: User does not exist.","statusCode":500,"headers":{"Content-Type":"application/json"}}</description>
+        </test-case>
+        <test-case start='1709128002157' status='passed' stop='1709128003437'>
+            <name>Wrong password</name>
+            <title>Wrong password</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/cognito/signin-dev'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709128002157' status='passed' stop='1709128003436'>
+                    <name>Values passed:"{\"username\":\"title@bluelandtitle.com\",\"password\":\"46sdsd460@Bergen\"}"</name>
+                    <title>Values passed:"{\"username\":\"title@bluelandtitle.com\",\"password\":\"46sdsd460@Bergen\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"body":"An error occurred (PasswordResetRequiredException) when calling the InitiateAuth operation: Password reset required for the user","statusCode":500,"headers":{"Content-Type":"application/json"}}</description>
+        </test-case>
+        <test-case start='1709128003437' status='passed' stop='1709128004291'>
+            <name>Wrong username and password</name>
+            <title>Wrong username and password</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/cognito/signin-dev'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709128003437' status='passed' stop='1709128004290'>
+                    <name>Values passed:"{\"username\":\"tititle@bluelandtitle.com\",\"password\":\"46sdsd460@Bergen\"}"</name>
+                    <title>Values passed:"{\"username\":\"tititle@bluelandtitle.com\",\"password\":\"46sdsd460@Bergen\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"body":"An error occurred (UserNotFoundException) when calling the InitiateAuth operation: User does not exist.","statusCode":500,"headers":{"Content-Type":"application/json"}}</description>
+        </test-case>
+        <test-case start='1709128004291' status='passed' stop='1709128005251'>
+            <name>Plain text received as response</name>
+            <title>Plain text received as response</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/cognito/signin-dev'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709128004292' status='passed' stop='1709128005251'>
+                    <name>Values passed:"{}"</name>
+                    <title>Values passed:"{}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"error":"Username and Password Required","status_code":200}</description>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

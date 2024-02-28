@@ -1,0 +1,157 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1709127878809' stop='1709127889069'>
+    <name>test/BackOffice/File_Download.test.js</name>
+    <title>test/BackOffice/File_Download.test.js</title>
+    <test-cases>
+        <test-case start='1709127878809' status='passed' stop='1709127882561'>
+            <name>API Success</name>
+            <title>API Success</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/backoffice/FileDownload'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127878810' status='passed' stop='1709127882559'>
+                    <name>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"Pass$123\",\"appType\":\"FileDownload\",\"appUsername\":\"SchPortal\",\"fileName\":\"1008569_HUDSON_Chain Attached.pdf\",\"recId\":1008569,\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\",\"notes\":\"hi\"}"</name>
+                    <title>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"Pass$123\",\"appType\":\"FileDownload\",\"appUsername\":\"SchPortal\",\"fileName\":\"1008569_HUDSON_Chain Attached.pdf\",\"recId\":1008569,\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\",\"notes\":\"hi\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"Response":{"TXStatus":"00","TransactionID":"949478194394482822024","FileURL":"https://searcher-portal-development.s3.amazonaws.com/1008569_HUDSON_Chain Attached.pdf"}}</description>
+        </test-case>
+        <test-case start='1709127882561' status='failed' stop='1709127883365'>
+            <name>authKeyMissing || Invalid Auth key</name>
+            <title>authKeyMissing || Invalid Auth key</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1709127882562' status='undefined'>
+                    <name>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"Pass$123\",\"appType\":\"FileDownload\",\"appUsername\":\"SchPortal\",\"fileName\":\"1008569_HUDSON_Chain Attached.pdf\",\"recId\":1008569,\"authKey\":\"\",\"notes\":\"hi\"}"</name>
+                    <title>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"Pass$123\",\"appType\":\"FileDownload\",\"appUsername\":\"SchPortal\",\"fileName\":\"1008569_HUDSON_Chain Attached.pdf\",\"recId\":1008569,\"authKey\":\"\",\"notes\":\"hi\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Response is not in valid json format</message>
+                <stack-trace>Error: Response is not in valid json format
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/BackOffice/File_Download.test.js:46:15)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1709127883365' status='failed' stop='1709127884203'>
+            <name>Bad Request</name>
+            <title>Bad Request</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1709127883365' status='undefined'>
+                    <name>Values passed:"{}"</name>
+                    <title>Values passed:"{}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Response is not in valid json format</message>
+                <stack-trace>Error: Response is not in valid json format
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/BackOffice/File_Download.test.js:62:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1709127884203' status='passed' stop='1709127885002'>
+            <name>invalid appId or missing appId</name>
+            <title>invalid appId or missing appId</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/backoffice/FileDownload'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127884203' status='passed' stop='1709127885001'>
+                    <name>Values passed:"{\"appId\":\"\",\"appPass\":\"Pass$123\",\"appType\":\"FileDownload\",\"appUsername\":\"SchPortal\",\"fileName\":\"1008569_HUDSON_Chain Attached.pdf\",\"recId\":1008569,\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\",\"notes\":\"hi\"}"</name>
+                    <title>Values passed:"{\"appId\":\"\",\"appPass\":\"Pass$123\",\"appType\":\"FileDownload\",\"appUsername\":\"SchPortal\",\"fileName\":\"1008569_HUDSON_Chain Attached.pdf\",\"recId\":1008569,\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\",\"notes\":\"hi\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"Response":{"TXStatus":"01","TransactionID":"949478200444482822024"}}</description>
+        </test-case>
+        <test-case start='1709127885002' status='passed' stop='1709127885725'>
+            <name>invalid appPass or missing appPass</name>
+            <title>invalid appPass or missing appPass</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/backoffice/FileDownload'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127885003' status='passed' stop='1709127885725'>
+                    <name>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"Psdsdsass$123\",\"appType\":\"FileDownload\",\"appUsername\":\"SchPortal\",\"fileName\":\"1008569_HUDSON_Chain Attached.pdf\",\"recId\":1008569,\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\",\"notes\":\"hi\"}"</name>
+                    <title>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"Psdsdsass$123\",\"appType\":\"FileDownload\",\"appUsername\":\"SchPortal\",\"fileName\":\"1008569_HUDSON_Chain Attached.pdf\",\"recId\":1008569,\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\",\"notes\":\"hi\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"Response":{"TXStatus":"02","TransactionID":"949478201454482822024"}}</description>
+        </test-case>
+        <test-case start='1709127885726' status='passed' stop='1709127886889'>
+            <name>invalid appUsername or missing appUsername</name>
+            <title>invalid appUsername or missing appUsername</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/backoffice/FileDownload'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127885726' status='passed' stop='1709127886888'>
+                    <name>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"Pass$123\",\"appType\":\"FileDownload\",\"appUsername\":\"esdsdsd\",\"fileName\":\"1008569_HUDSON_Chain Attached.pdf\",\"recId\":1008569,\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\",\"notes\":\"hi\"}"</name>
+                    <title>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"Pass$123\",\"appType\":\"FileDownload\",\"appUsername\":\"esdsdsd\",\"fileName\":\"1008569_HUDSON_Chain Attached.pdf\",\"recId\":1008569,\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\",\"notes\":\"hi\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"Response":{"TXStatus":"04","TransactionID":"949478202464482822024"}}</description>
+        </test-case>
+        <test-case start='1709127886889' status='passed' stop='1709127887876'>
+            <name>invalid fileName or missing fileName</name>
+            <title>invalid fileName or missing fileName</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/backoffice/FileDownload'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127886889' status='passed' stop='1709127887876'>
+                    <name>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"Pass$123\",\"appType\":\"FileDownload\",\"appUsername\":\"SchPortal\",\"fileName\":\"\",\"recId\":1008569,\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\",\"notes\":\"hi\"}"</name>
+                    <title>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"Pass$123\",\"appType\":\"FileDownload\",\"appUsername\":\"SchPortal\",\"fileName\":\"\",\"recId\":1008569,\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\",\"notes\":\"hi\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"Response":{"TXStatus":"18","TransactionID":"949478205474482822024"}}</description>
+        </test-case>
+        <test-case start='1709127887876' status='passed' stop='1709127889052'>
+            <name>invalid recId or missing recId</name>
+            <title>invalid recId or missing recId</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/backoffice/FileDownload'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127887877' status='passed' stop='1709127889052'>
+                    <name>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"Pass$123\",\"appType\":\"FileDownload\",\"appUsername\":\"SchPortal\",\"fileName\":\"1008569_HUDSON_Chain Attached.pdf\",\"recId\":10343408569,\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\",\"notes\":\"hi\"}"</name>
+                    <title>Values passed:"{\"appId\":\"AppUser101\",\"appPass\":\"Pass$123\",\"appType\":\"FileDownload\",\"appUsername\":\"SchPortal\",\"fileName\":\"1008569_HUDSON_Chain Attached.pdf\",\"recId\":10343408569,\"authKey\":\"c3932d68c908a63f428a31458461e5a3181f9d79\",\"notes\":\"hi\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"Response":{"TXStatus":"12","TransactionID":"949478206484482822024"}}</description>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -1,0 +1,61 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1709128009347' stop='1709128013193'>
+    <name>test/UAT_Cognito/AuthService_Delete_User.test.js</name>
+    <title>test/UAT_Cognito/AuthService_Delete_User.test.js</title>
+    <test-cases>
+        <test-case start='1709128009347' status='passed' stop='1709128010480'>
+            <name>API Success</name>
+            <title>API Success</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/cognito/deleteUser?email=dsdsdsd@actiontitleresearch.com'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709128009348' status='passed' stop='1709128010477'>
+                    <name>Values passed:""</name>
+                    <title>Values passed:""</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"error":"User not found for the provided email."}</description>
+        </test-case>
+        <test-case start='1709128010480' status='passed' stop='1709128012132'>
+            <name>Email already exist</name>
+            <title>Email already exist</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/cognito/deleteUser?email=dsdsdsd@actiontitleresearch.com'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709128010480' status='passed' stop='1709128012132'>
+                    <name>Values passed:""</name>
+                    <title>Values passed:""</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"error":"User not found for the provided email."}</description>
+        </test-case>
+        <test-case start='1709128012132' status='passed' stop='1709128013192'>
+            <name>BAD Request</name>
+            <title>BAD Request</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/invoker/cognito/deleteUser'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709128012133' status='passed' stop='1709128013192'>
+                    <name>Values passed:{}</name>
+                    <title>Values passed:{}</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"error":"argument of type 'NoneType' is not iterable"}</description>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

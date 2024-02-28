@@ -1,0 +1,61 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1709128010132' stop='1709128012390'>
+    <name>test/SES/delete_email_template_250_sandbox.test.js</name>
+    <title>test/SES/delete_email_template_250_sandbox.test.js</title>
+    <test-cases>
+        <test-case start='1709128010132' status='passed' stop='1709128011069'>
+            <name>API Success</name>
+            <title>API Success</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/delete-template/testabc'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709128010133' status='passed' stop='1709128011068'>
+                    <name>Values passed:"{}"</name>
+                    <title>Values passed:"{}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"message":"Template 'testabc' deleted successfully","result":{"ResponseMetadata":{"RequestId":"b1bb20a6-f782-49fc-936a-deb8e6d08c4b","HTTPStatusCode":200,"HTTPHeaders":{"date":"Wed, 28 Feb 2024 13:46:50 GMT","content-type":"text/xml","content-length":"233","connection":"keep-alive","x-amzn-requestid":"b1bb20a6-f782-49fc-936a-deb8e6d08c4b"},"RetryAttempts":0}}}</description>
+        </test-case>
+        <test-case start='1709128011070' status='passed' stop='1709128011884'>
+            <name>special characters in endpoints</name>
+            <title>special characters in endpoints</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/delete-template/@@@#$$DD'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709128011070' status='passed' stop='1709128011884'>
+                    <name>Values passed:"{}"</name>
+                    <title>Values passed:"{}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"message":"Template '@@@' deleted successfully","result":{"errorMessage":"An error occurred (InvalidParameterValue) when calling the DeleteTemplate operation: Template name &lt;@@@>: only alphanumeric ASCII characters, '_', and '-' are allowed.","errorType":"ClientError","requestId":"68659b29-8d66-4dd6-b4c9-f1a086e419aa","stackTrace":["  File \"/var/task/lambda_function.py\", line 26, in lambda_handler\n    ses_response = client.delete_template(TemplateName=template_name)\n","  File \"/var/runtime/botocore/client.py\", line 530, in _api_call\n    return self._make_api_call(operation_name, kwargs)\n","  File \"/var/runtime/botocore/client.py\", line 960, in _make_api_call\n    raise error_class(parsed_response, operation_name)\n"]}}</description>
+        </test-case>
+        <test-case start='1709128011884' status='passed' stop='1709128012389'>
+            <name>Invalid session</name>
+            <title>Invalid session</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/delete-template/@@@#$$DD'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709128011885' status='passed' stop='1709128012389'>
+                    <name>Values passed:"{}"</name>
+                    <title>Values passed:"{}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"error":"Invalid Session"}</description>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

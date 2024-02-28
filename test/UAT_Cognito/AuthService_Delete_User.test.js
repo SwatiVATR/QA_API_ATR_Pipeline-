@@ -1,8 +1,8 @@
 const {
   STAGE,
   VERSION,
-  commonOptionsDELETEwithoutHeader,
   Timeout,
+  commonOptionsDELETE
 } = require("../../config");
 const NAModule = require("../../modules/NAModule");
 const postData = "";
@@ -11,7 +11,7 @@ test(
   async () => {
     const options = {
       path: `/${STAGE}/${VERSION}/services/invoker/cognito/deleteUser?email=dsdsdsd@actiontitleresearch.com`,
-      ...commonOptionsDELETEwithoutHeader,
+      ...commonOptionsDELETE,
     };
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
@@ -32,7 +32,7 @@ test(
   async () => {
     const options = {
       path: `/${STAGE}/${VERSION}/services/invoker/cognito/deleteUser?email=dsdsdsd@actiontitleresearch.com`,
-      ...commonOptionsDELETEwithoutHeader,
+      ...commonOptionsDELETE,
     };
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
@@ -54,10 +54,10 @@ test(
   async () => {
     const options = {
       path: `/${STAGE}/${VERSION}/services/invoker/cognito/deleteUser`,
-      ...commonOptionsDELETEwithoutHeader,
+      ...commonOptionsDELETE,
     };
     try {
-      reporter.startStep("Values passed:" + JSON.stringify(postData));
+      reporter.startStep("Values passed:" + JSON.stringify({}));
       const response = await NAModule(postData, options);
       expect(response.error).toBe("argument of type 'NoneType' is not iterable");
       reporter.endStep();

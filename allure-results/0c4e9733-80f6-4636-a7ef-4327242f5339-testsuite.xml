@@ -1,0 +1,64 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1709127907385' stop='1709127909574'>
+    <name>test/Searcher/Get_Searcher_Companies.test.js</name>
+    <title>test/Searcher/Get_Searcher_Companies.test.js</title>
+    <test-cases>
+        <test-case start='1709127907386' status='passed' stop='1709127908311'>
+            <name>API Success</name>
+            <title>API Success</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/searcherCompanies/all'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127907386' status='passed' stop='1709127908309'>
+                    <name>Values passed:"{}"</name>
+                    <title>Values passed:"{}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"success":{"correlationId":1,"msg":[{"searcher_SCOMP_ID":1,"searcher_SCOMP_Code":"ATR","searcher_SCOMP_Company":"Action Title Research","searcher_SCOMP_Description":"Search Company","searcher_SCOMP_Contract":null,"searcher_SCOMP_Email":"cmontero@actiontitleresearch.com","searcher_SCOMP_Phone":"201-531-1663","searcher_SCOMP_Status":"1","searcher_SCOMP_History":""},{"searcher_SCOMP_ID":2,"searcher_SCOMP_Code":"SSLLC","searcher_SCOMP_Company":"Superior Search LLC","searcher_SCOMP_Description":"Search Company","searcher_SCOMP_Contract":null,"searcher_SCOMP_Email":"superiorsearchllc@yahoo.com","searcher_SCOMP_Phone":"","searcher_SCOMP_Status":"1","searcher_SCOMP_History":""},{"searcher_SCOMP_ID":3,"searcher_SCOMP_Code":"ACA","searcher_SCOMP_Company":"Atlantic Coast Abstract","searcher_SCOMP_Description":"Search Company","searcher_SCOMP_Contract":null,"searcher_SCOMP_Email":"mbailey@mysurety.com","searcher_SCOMP_Phone":"856-312-4241","searcher_SCOMP_Status":"0","searcher_SCOMP_History":""},{"searcher_SCOMP_ID":4,"searcher_SCOMP_Code":"EA","searcher_SCOMP_Company":"Expert Abstract","searcher_SCOMP_Description":"Search Company","searcher_SCOMP_Contract":null,"searcher_SCOMP_Email":"cmontero@actiontitleresearch.com","searcher_SCOMP_Phone":"","searcher_SCOMP_Status":"1","searcher_SCOMP_History":""},{"searcher_SCOMP_ID":5,"searcher_SCOMP_Code":"SR","searcher_SCOMP_Company":"Shane Rushman","searcher_SCOMP_Description":"Search Company","searcher_SCOMP_Contract":null,"searcher_SCOMP_Email":"srushman@actiontitleresearch.com","searcher_SCOMP_Phone":"866-376-1377","searcher_SCOMP_Status":"1","searcher_SCOMP_History":""},{"searcher_SCOMP_ID":354,"searcher_SCOMP_Code":"ATR1","searcher_SCOMP_Company":"AWS F_Name","searcher_SCOMP_Description":"Search Company","searcher_SCOMP_Contract":null,"searcher_SCOMP_Email":"firstname@gmail.com","searcher_SCOMP_Phone":"123-456-7890","searcher_SCOMP_Status":"1","searcher_SCOMP_History":""},{"searcher_SCOMP_ID":355,"searcher_SCOMP_Code":"ATR2","searcher_SCOMP_Company":"AWS F_Name","searcher_SCOMP_Description":"Search Company","searcher_SCOMP_Contract":null,"searcher_SCOMP_Email":"firstname@gmail.com","searcher_SCOMP_Phone":"123-456-7890","searcher_SCOMP_Status":"1","searcher_SCOMP_History":""},{"searcher_SCOMP_ID":134522,"searcher_SCOMP_Code":"ABC","searcher_SCOMP_Company":"Test Inc.","searcher_SCOMP_Description":"Search Company","searcher_SCOMP_Contract":null,"searcher_SCOMP_Email":"pdowning@actiontitleresearch.com","searcher_SCOMP_Phone":null,"searcher_SCOMP_Status":"1","searcher_SCOMP_History":null}]}}</description>
+        </test-case>
+        <test-case start='1709127908311' status='passed' stop='1709127908732'>
+            <name>instead of all any random numbers is passed</name>
+            <title>instead of all any random numbers is passed</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/searcherCompanies/2151834341'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709127908311' status='passed' stop='1709127908732'>
+                    <name>Values passed:"{}"</name>
+                    <title>Values passed:"{}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"success":{"correlationId":1,"msg":[]}}</description>
+        </test-case>
+        <test-case start='1709127908732' status='failed' stop='1709127909568'>
+            <name>instead of all any special character is passed</name>
+            <title>instead of all any special character is passed</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1709127908733' status='undefined'>
+                    <name>Values passed:"{}"</name>
+                    <title>Values passed:"{}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Response is not in valid json format</message>
+                <stack-trace>Error: Response is not in valid json format
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/Searcher/Get_Searcher_Companies.test.js:71:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
