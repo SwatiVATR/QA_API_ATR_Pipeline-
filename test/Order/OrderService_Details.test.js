@@ -33,7 +33,7 @@ it('Wrong id passed in endpoints',
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
       const response = await NAModule(postData, options);
-      expect(response.success.msg.length).toBe(0);
+      expect(response.success.correlationId).toBe(1);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/order/409sd3edewd365704")
       reporter.description("Response message from API:" +JSON.stringify(response))
@@ -72,7 +72,7 @@ it('Special character passed in end point last',
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
       const response = await NAModule(postData, options);
-      expect(response.success.msg.length).toBe(0);
+      expect(response.success.correlationId).toBe(1);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/order/@#")
       reporter.description("Response message from API:" +JSON.stringify(response))

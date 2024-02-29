@@ -1,0 +1,43 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1709207281538' stop='1709207284465'>
+    <name>test/UAT_Cognito/AuthService_Get_User_Details.test.js</name>
+    <title>test/UAT_Cognito/AuthService_Get_User_Details.test.js</title>
+    <test-cases>
+        <test-case start='1709207281538' status='passed' stop='1709207283445'>
+            <name>Api success</name>
+            <title>Api success</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/user'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709207281539' status='passed' stop='1709207283443'>
+                    <name>Values passed:""</name>
+                    <title>Values passed:""</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"success":{"correlationId":1,"msg":[{"user_name":"Bob  Smith","user_address":"519 S Broad St","user_appt":"","user_zip":"07452","user_city":"Glen Rock","user_country":"United States","user_phone":"512-422-9904","user_loginStatus":0,"user_chatState":0,"user_jasperFlag":0,"user_jasperuserId":null,"user_jasperUserRole":null,"user_email":"title@bluelandtitle.com","organization_groupName":null,"organization_softwarePlatform":"0","organization_agencyPortalId":"","organization_primaryEmail":"Title@bluelandtitle.com","organization_orgId":787201,"organization_reportingOrgId":787201,"agency_agencyName":"Blueland Title"}]}}</description>
+        </test-case>
+        <test-case start='1709207283445' status='passed' stop='1709207284464'>
+            <name>No Auth provided</name>
+            <title>No Auth provided</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/user'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709207283446' status='passed' stop='1709207284464'>
+                    <name>Values passed:""</name>
+                    <title>Values passed:""</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"error":"Invalid Session"}</description>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

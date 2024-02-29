@@ -1,0 +1,190 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1709207137842' stop='1709207153030'>
+    <name>test/SES/create_template_250_sandbox.test.js</name>
+    <title>test/SES/create_template_250_sandbox.test.js</title>
+    <test-cases>
+        <test-case start='1709207137842' status='failed' stop='1709207143447'>
+            <name>Api Success on new template creation</name>
+            <title>Api Success on new template creation</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1709207137844' status='undefined'>
+                    <name>Values passed:"{\"name\":\"JackOrderCompletedEmailJackKing\",\"subject\":\"Action Title Order Completed\",\"text\":\"Notification\",\"html\":\"&lt;html>&lt;body>&lt;p>Hi {{first_name}} {{last_name}},&lt;br>&lt;br>The following are the completed order(s) :&lt;br>{{AgencyOrderid}}  &lt;br>&lt;br>&lt;strong>NEW!&lt;/strong> Action is using MaestroX to provide our customers with search order tracking and ETAs. You can view your order status and send us messages here https://portal.maestrox.com. Please login to see your recent orders and other valuable file information. If you do not yet have access, follow the link above and click the “Request Access” button. You will receive an email invitation from No-reply@actioncentral.com.&lt;br>&lt;br> Thanks! &lt;/p>&lt;/body>&lt;/html>\"}"</name>
+                    <title>Values passed:"{\"name\":\"JackOrderCompletedEmailJackKing\",\"subject\":\"Action Title Order Completed\",\"text\":\"Notification\",\"html\":\"&lt;html>&lt;body>&lt;p>Hi {{first_name}} {{last_name}},&lt;br>&lt;br>The following are the completed order(s) :&lt;br>{{AgencyOrderid}}  &lt;br>&lt;br>&lt;strong>NEW!&lt;/strong> Action is using MaestroX to provide our customers with search order tracking and ETAs. You can view your order status and send us messages here https://portal.maestrox.com. Please login to see your recent orders and other valuable file information. If you do not yet have access, follow the link above and click the “Request Access” button. You will receive an email invitation from No-reply@actioncentral.com.&lt;br>&lt;br> Thanks! &lt;/p>&lt;/body>&lt;/html>\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: TypeError: Cannot read properties of undefined (reading 'HTTPStatusCode')</message>
+                <stack-trace>Error: TypeError: Cannot read properties of undefined (reading 'HTTPStatusCode')
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/SES/create_template_250_sandbox.test.js:29:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1709207143448' status='passed' stop='1709207144774'>
+            <name>Template name already exists</name>
+            <title>Template name already exists</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/create-template'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709207143448' status='passed' stop='1709207144773'>
+                    <name>Values passed:"{\"name\":\"OrderCompletedEmail11\",\"subject\":\"Action Title Order Completed\",\"text\":\"Notification\",\"html\":\"&lt;html>&lt;body>&lt;p>Hi {{first_name}} {{last_name}},&lt;br>&lt;br>The following are the completed order(s) :&lt;br>{{AgencyOrderid}}  &lt;br>&lt;br>&lt;strong>NEW!&lt;/strong> Action is using MaestroX to provide our customers with search order tracking and ETAs. You can view your order status and send us messages here https://portal.maestrox.com. Please login to see your recent orders and other valuable file information. If you do not yet have access, follow the link above and click the “Request Access” button. You will receive an email invitation from No-reply@actioncentral.com.&lt;br>&lt;br> Thanks! &lt;/p>&lt;/body>&lt;/html>\"}"</name>
+                    <title>Values passed:"{\"name\":\"OrderCompletedEmail11\",\"subject\":\"Action Title Order Completed\",\"text\":\"Notification\",\"html\":\"&lt;html>&lt;body>&lt;p>Hi {{first_name}} {{last_name}},&lt;br>&lt;br>The following are the completed order(s) :&lt;br>{{AgencyOrderid}}  &lt;br>&lt;br>&lt;strong>NEW!&lt;/strong> Action is using MaestroX to provide our customers with search order tracking and ETAs. You can view your order status and send us messages here https://portal.maestrox.com. Please login to see your recent orders and other valuable file information. If you do not yet have access, follow the link above and click the “Request Access” button. You will receive an email invitation from No-reply@actioncentral.com.&lt;br>&lt;br> Thanks! &lt;/p>&lt;/body>&lt;/html>\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"Result":{"errorMessage":"An error occurred (AlreadyExists) when calling the CreateTemplate operation: Template OrderCompletedEmail11 already exists for account id 242886645947","errorType":"AlreadyExistsException","requestId":"9c9e5f28-096f-433e-a895-9bb31e8c834e","stackTrace":["  File \"/var/task/lambda_function.py\", line 15, in lambda_handler\n    ses_response = client.create_template(\n","  File \"/var/runtime/botocore/client.py\", line 530, in _api_call\n    return self._make_api_call(operation_name, kwargs)\n","  File \"/var/runtime/botocore/client.py\", line 960, in _make_api_call\n    raise error_class(parsed_response, operation_name)\n"]}}</description>
+        </test-case>
+        <test-case start='1709207144774' status='passed' stop='1709207145818'>
+            <name>400 Bad Request</name>
+            <title>400 Bad Request</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/create-template'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709207144775' status='passed' stop='1709207145817'>
+                    <name>Values passed:"{}"</name>
+                    <title>Values passed:"{}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"Error":"'name' is a mandatory field and is missing or empty."}</description>
+        </test-case>
+        <test-case start='1709207145818' status='passed' stop='1709207146860'>
+            <name>name is blank</name>
+            <title>name is blank</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/create-template'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709207145818' status='passed' stop='1709207146860'>
+                    <name>Values passed:"{\"name\":\"\",\"subject\":\"Action Title Order Completed\",\"text\":\"Notification\",\"html\":\"&lt;html>&lt;body>&lt;p>Hi {{first_name}} {{last_name}},&lt;br>&lt;br>The following are the completed order(s) :&lt;br>{{AgencyOrderid}}  &lt;br>&lt;br>&lt;strong>NEW!&lt;/strong> Action is using MaestroX to provide our customers with search order tracking and ETAs. You can view your order status and send us messages here https://portal.maestrox.com. Please login to see your recent orders and other valuable file information. If you do not yet have access, follow the link above and click the “Request Access” button. You will receive an email invitation from No-reply@actioncentral.com.&lt;br>&lt;br> Thanks! &lt;/p>&lt;/body>&lt;/html>\"}"</name>
+                    <title>Values passed:"{\"name\":\"\",\"subject\":\"Action Title Order Completed\",\"text\":\"Notification\",\"html\":\"&lt;html>&lt;body>&lt;p>Hi {{first_name}} {{last_name}},&lt;br>&lt;br>The following are the completed order(s) :&lt;br>{{AgencyOrderid}}  &lt;br>&lt;br>&lt;strong>NEW!&lt;/strong> Action is using MaestroX to provide our customers with search order tracking and ETAs. You can view your order status and send us messages here https://portal.maestrox.com. Please login to see your recent orders and other valuable file information. If you do not yet have access, follow the link above and click the “Request Access” button. You will receive an email invitation from No-reply@actioncentral.com.&lt;br>&lt;br> Thanks! &lt;/p>&lt;/body>&lt;/html>\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"Error":"'name' is a mandatory field and is missing or empty."}</description>
+        </test-case>
+        <test-case start='1709207146860' status='passed' stop='1709207147895'>
+            <name>subject is blank</name>
+            <title>subject is blank</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/create-template'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709207146861' status='passed' stop='1709207147895'>
+                    <name>Values passed:"{\"name\":\"OrderCompletedEmail\",\"subject\":\"\",\"text\":\"Notification\",\"html\":\"&lt;html>&lt;body>&lt;p>Hi {{first_name}} {{last_name}},&lt;br>&lt;br>The following are the completed order(s) :&lt;br>{{AgencyOrderid}}  &lt;br>&lt;br>&lt;strong>NEW!&lt;/strong> Action is using MaestroX to provide our customers with search order tracking and ETAs. You can view your order status and send us messages here https://portal.maestrox.com. Please login to see your recent orders and other valuable file information. If you do not yet have access, follow the link above and click the “Request Access” button. You will receive an email invitation from No-reply@actioncentral.com.&lt;br>&lt;br> Thanks! &lt;/p>&lt;/body>&lt;/html>\"}"</name>
+                    <title>Values passed:"{\"name\":\"OrderCompletedEmail\",\"subject\":\"\",\"text\":\"Notification\",\"html\":\"&lt;html>&lt;body>&lt;p>Hi {{first_name}} {{last_name}},&lt;br>&lt;br>The following are the completed order(s) :&lt;br>{{AgencyOrderid}}  &lt;br>&lt;br>&lt;strong>NEW!&lt;/strong> Action is using MaestroX to provide our customers with search order tracking and ETAs. You can view your order status and send us messages here https://portal.maestrox.com. Please login to see your recent orders and other valuable file information. If you do not yet have access, follow the link above and click the “Request Access” button. You will receive an email invitation from No-reply@actioncentral.com.&lt;br>&lt;br> Thanks! &lt;/p>&lt;/body>&lt;/html>\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"Error":"'subject' is a mandatory field and is missing or empty."}</description>
+        </test-case>
+        <test-case start='1709207147895' status='passed' stop='1709207149205'>
+            <name>invalid subject</name>
+            <title>invalid subject</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/create-template'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709207147896' status='passed' stop='1709207149205'>
+                    <name>Values passed:"{\"name\":\"OrderCompletedEmail\",\"subject\":\"wdwdcesc\",\"text\":\"Notification\",\"html\":\"&lt;html>&lt;body>&lt;p>Hi {{first_name}} {{last_name}},&lt;br>&lt;br>The following are the completed order(s) :&lt;br>{{AgencyOrderid}}  &lt;br>&lt;br>&lt;strong>NEW!&lt;/strong> Action is using MaestroX to provide our customers with search order tracking and ETAs. You can view your order status and send us messages here https://portal.maestrox.com. Please login to see your recent orders and other valuable file information. If you do not yet have access, follow the link above and click the “Request Access” button. You will receive an email invitation from No-reply@actioncentral.com.&lt;br>&lt;br> Thanks! &lt;/p>&lt;/body>&lt;/html>\"}"</name>
+                    <title>Values passed:"{\"name\":\"OrderCompletedEmail\",\"subject\":\"wdwdcesc\",\"text\":\"Notification\",\"html\":\"&lt;html>&lt;body>&lt;p>Hi {{first_name}} {{last_name}},&lt;br>&lt;br>The following are the completed order(s) :&lt;br>{{AgencyOrderid}}  &lt;br>&lt;br>&lt;strong>NEW!&lt;/strong> Action is using MaestroX to provide our customers with search order tracking and ETAs. You can view your order status and send us messages here https://portal.maestrox.com. Please login to see your recent orders and other valuable file information. If you do not yet have access, follow the link above and click the “Request Access” button. You will receive an email invitation from No-reply@actioncentral.com.&lt;br>&lt;br> Thanks! &lt;/p>&lt;/body>&lt;/html>\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"Result":{"errorMessage":"An error occurred (AlreadyExists) when calling the CreateTemplate operation: Template OrderCompletedEmail already exists for account id 242886645947","errorType":"AlreadyExistsException","requestId":"1a866c3b-2fee-4bfd-ba01-25fe5f26e735","stackTrace":["  File \"/var/task/lambda_function.py\", line 15, in lambda_handler\n    ses_response = client.create_template(\n","  File \"/var/runtime/botocore/client.py\", line 530, in _api_call\n    return self._make_api_call(operation_name, kwargs)\n","  File \"/var/runtime/botocore/client.py\", line 960, in _make_api_call\n    raise error_class(parsed_response, operation_name)\n"]}}</description>
+        </test-case>
+        <test-case start='1709207149205' status='passed' stop='1709207150212'>
+            <name>text is blank</name>
+            <title>text is blank</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/create-template'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709207149206' status='passed' stop='1709207150212'>
+                    <name>Values passed:"{\"name\":\"OrderCompletedEmail\",\"subject\":\"Action Title Order Completed\",\"text\":\"\",\"html\":\"&lt;html>&lt;body>&lt;p>Hi {{first_name}} {{last_name}},&lt;br>&lt;br>The following are the completed order(s) :&lt;br>{{AgencyOrderid}}  &lt;br>&lt;br>&lt;strong>NEW!&lt;/strong> Action is using MaestroX to provide our customers with search order tracking and ETAs. You can view your order status and send us messages here https://portal.maestrox.com. Please login to see your recent orders and other valuable file information. If you do not yet have access, follow the link above and click the “Request Access” button. You will receive an email invitation from No-reply@actioncentral.com.&lt;br>&lt;br> Thanks! &lt;/p>&lt;/body>&lt;/html>\"}"</name>
+                    <title>Values passed:"{\"name\":\"OrderCompletedEmail\",\"subject\":\"Action Title Order Completed\",\"text\":\"\",\"html\":\"&lt;html>&lt;body>&lt;p>Hi {{first_name}} {{last_name}},&lt;br>&lt;br>The following are the completed order(s) :&lt;br>{{AgencyOrderid}}  &lt;br>&lt;br>&lt;strong>NEW!&lt;/strong> Action is using MaestroX to provide our customers with search order tracking and ETAs. You can view your order status and send us messages here https://portal.maestrox.com. Please login to see your recent orders and other valuable file information. If you do not yet have access, follow the link above and click the “Request Access” button. You will receive an email invitation from No-reply@actioncentral.com.&lt;br>&lt;br> Thanks! &lt;/p>&lt;/body>&lt;/html>\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"Error":"'text' is a mandatory field and is missing or empty."}</description>
+        </test-case>
+        <test-case start='1709207150212' status='passed' stop='1709207151070'>
+            <name>text is invalid</name>
+            <title>text is invalid</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/create-template'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709207150213' status='passed' stop='1709207151070'>
+                    <name>Values passed:"{\"name\":\"OrderCompletedEmail\",\"subject\":\"Action Title Order Completed\",\"text\":\"Notifsdsfdication\",\"html\":\"&lt;html>&lt;body>&lt;p>Hi {{first_name}} {{last_name}},&lt;br>&lt;br>The following are the completed order(s) :&lt;br>{{AgencyOrderid}}  &lt;br>&lt;br>&lt;strong>NEW!&lt;/strong> Action is using MaestroX to provide our customers with search order tracking and ETAs. You can view your order status and send us messages here https://portal.maestrox.com. Please login to see your recent orders and other valuable file information. If you do not yet have access, follow the link above and click the “Request Access” button. You will receive an email invitation from No-reply@actioncentral.com.&lt;br>&lt;br> Thanks! &lt;/p>&lt;/body>&lt;/html>\"}"</name>
+                    <title>Values passed:"{\"name\":\"OrderCompletedEmail\",\"subject\":\"Action Title Order Completed\",\"text\":\"Notifsdsfdication\",\"html\":\"&lt;html>&lt;body>&lt;p>Hi {{first_name}} {{last_name}},&lt;br>&lt;br>The following are the completed order(s) :&lt;br>{{AgencyOrderid}}  &lt;br>&lt;br>&lt;strong>NEW!&lt;/strong> Action is using MaestroX to provide our customers with search order tracking and ETAs. You can view your order status and send us messages here https://portal.maestrox.com. Please login to see your recent orders and other valuable file information. If you do not yet have access, follow the link above and click the “Request Access” button. You will receive an email invitation from No-reply@actioncentral.com.&lt;br>&lt;br> Thanks! &lt;/p>&lt;/body>&lt;/html>\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"Result":{"errorMessage":"An error occurred (AlreadyExists) when calling the CreateTemplate operation: Template OrderCompletedEmail already exists for account id 242886645947","errorType":"AlreadyExistsException","requestId":"3d5a493c-7ecb-4311-9b4f-87778243cc13","stackTrace":["  File \"/var/task/lambda_function.py\", line 15, in lambda_handler\n    ses_response = client.create_template(\n","  File \"/var/runtime/botocore/client.py\", line 530, in _api_call\n    return self._make_api_call(operation_name, kwargs)\n","  File \"/var/runtime/botocore/client.py\", line 960, in _make_api_call\n    raise error_class(parsed_response, operation_name)\n"]}}</description>
+        </test-case>
+        <test-case start='1709207151071' status='passed' stop='1709207152110'>
+            <name>html is blank</name>
+            <title>html is blank</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/create-template'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709207151071' status='passed' stop='1709207152110'>
+                    <name>Values passed:"{\"name\":\"OrderCompletedEmail\",\"subject\":\"Action Title Order Completed\",\"text\":\"Notification\",\"html\":\"\"}"</name>
+                    <title>Values passed:"{\"name\":\"OrderCompletedEmail\",\"subject\":\"Action Title Order Completed\",\"text\":\"Notification\",\"html\":\"\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"Error":"'html' is a mandatory field and is missing or empty."}</description>
+        </test-case>
+        <test-case start='1709207152110' status='passed' stop='1709207152990'>
+            <name>Special character in name</name>
+            <title>Special character in name</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/create-template'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709207152111' status='passed' stop='1709207152990'>
+                    <name>Values passed:"{\"name\":\"OrderCo@@@@mpletedEmail\",\"subject\":\"Action Title Order Completed\",\"text\":\"Notification\",\"html\":\"&lt;html>&lt;body>&lt;p>Hi {{first_name}} {{last_name}},&lt;br>&lt;br>The following are the completed order(s) :&lt;br>{{AgencyOrderid}}  &lt;br>&lt;br>&lt;strong>NEW!&lt;/strong> Action is using MaestroX to provide our customers with search order tracking and ETAs. You can view your order status and send us messages here https://portal.maestrox.com. Please login to see your recent orders and other valuable file information. If you do not yet have access, follow the link above and click the “Request Access” button. You will receive an email invitation from No-reply@actioncentral.com.&lt;br>&lt;br> Thanks! &lt;/p>&lt;/body>&lt;/html>\"}"</name>
+                    <title>Values passed:"{\"name\":\"OrderCo@@@@mpletedEmail\",\"subject\":\"Action Title Order Completed\",\"text\":\"Notification\",\"html\":\"&lt;html>&lt;body>&lt;p>Hi {{first_name}} {{last_name}},&lt;br>&lt;br>The following are the completed order(s) :&lt;br>{{AgencyOrderid}}  &lt;br>&lt;br>&lt;strong>NEW!&lt;/strong> Action is using MaestroX to provide our customers with search order tracking and ETAs. You can view your order status and send us messages here https://portal.maestrox.com. Please login to see your recent orders and other valuable file information. If you do not yet have access, follow the link above and click the “Request Access” button. You will receive an email invitation from No-reply@actioncentral.com.&lt;br>&lt;br> Thanks! &lt;/p>&lt;/body>&lt;/html>\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"Result":{"errorMessage":"An error occurred (InvalidParameterValue) when calling the CreateTemplate operation: Template name &lt;OrderCo@@@@mpletedEmail>: only alphanumeric ASCII characters, '_', and '-' are allowed.","errorType":"ClientError","requestId":"8213c150-c025-4e1d-a771-07b93f219361","stackTrace":["  File \"/var/task/lambda_function.py\", line 15, in lambda_handler\n    ses_response = client.create_template(\n","  File \"/var/runtime/botocore/client.py\", line 530, in _api_call\n    return self._make_api_call(operation_name, kwargs)\n","  File \"/var/runtime/botocore/client.py\", line 960, in _make_api_call\n    raise error_class(parsed_response, operation_name)\n"]}}</description>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

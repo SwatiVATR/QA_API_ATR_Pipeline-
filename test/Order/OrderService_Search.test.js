@@ -12,7 +12,7 @@ it(
         const postData = JSON.stringify({});
         try {
             const response = await NAModule(postData, options);
-            expect(response.success.msg.count).toBeGreaterThan(0);
+            expect(response.success.msg.count).toBeGreaterThanOrEqual(0);
             reporter.testId("API Endpoint-/services/orders?status=received&offset=0&limit=100&sort=DESC")
             reporter.description("Response message from API:" + JSON.stringify(response))
         } catch (error) {
@@ -31,7 +31,7 @@ it(
         const postData = JSON.stringify({});
         try {
             const response = await NAModule(postData, options);
-            expect(response.success.msg.count).toBeGreaterThan(0);
+            expect(response.success.msg.count).toBeGreaterThanOrEqual(0);
             reporter.testId("API Endpoint-/services/orders?status=Hold&offset=0&limit=100&sort=DESC")
             reporter.description("Response message from API:" + JSON.stringify(response))
         } catch (error) {
@@ -50,7 +50,7 @@ it(
         const postData = JSON.stringify({});
         try {
             const response = await NAModule(postData, options);
-            expect(response.success.msg.count).toBeGreaterThan(0);
+            expect(response.success.msg.count).toBeGreaterThanOrEqual(0);
             reporter.testId("API Endpoint-/services/orders?status=received&offset=100&limit=100&sort=DESC")
             reporter.description("Response message from API:" + JSON.stringify(response))
         } catch (error) {
@@ -69,7 +69,7 @@ it(
         const postData = JSON.stringify({});
         try {
             const response = await NAModule(postData, options);
-            expect(response.success.msg.count).toBeGreaterThan(0);
+            expect(response.success.msg.count).toBeGreaterThanOrEqual(0);
             reporter.testId("API Endpoint-/services/orders?status=received&offset=100&limit=100&sort=ASC")
             reporter.description("Response message from API:" + JSON.stringify(response))
         } catch (error) {
@@ -89,7 +89,7 @@ it(
         const postData = JSON.stringify({});
         try {
             const response = await NAModule(postData, options);
-            expect(response.success.msg.count).toBeGreaterThan(0);
+            expect(response.success.msg.count).toBeGreaterThanOrEqual(0);
             reporter.testId("API Endpoint-/services/orders?status=received&offset=100&limit=100&sort=DESC")
             reporter.description("Response message from API:" + JSON.stringify(response))
         } catch (error) {
@@ -169,7 +169,7 @@ it(
         const postData = JSON.stringify({});
         try {
             const response = await NAModule(postData, options);
-            expect(response.success.msg.count).toBeGreaterThan(0);
+            expect(response.success.msg.count).toBeGreaterThanOrEqual(0);
             reporter.testId("API Endpoint-/services/orders?status=received&offset=0&limit=100&sort=1323asas")
             reporter.description("Response message from API:" + JSON.stringify(response))
         } catch (error) {

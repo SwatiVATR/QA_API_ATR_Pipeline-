@@ -1,0 +1,61 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1709207270354' stop='1709207276528'>
+    <name>test/New_Order_Flow/reset_password.test.js</name>
+    <title>test/New_Order_Flow/reset_password.test.js</title>
+    <test-cases>
+        <test-case start='1709207270354' status='passed' stop='1709207274250'>
+            <name>API Success</name>
+            <title>API Success</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/reset-password-link'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709207270355' status='passed' stop='1709207274248'>
+                    <name>Values passed:"{\"username\":\"title@bluelandtitle.com\"}"</name>
+                    <title>Values passed:"{\"username\":\"title@bluelandtitle.com\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"ResponseMetadata":{"RequestId":"4a1c4ba1-9733-4614-9b6c-cb59d1ab9446","HTTPStatusCode":200,"HTTPHeaders":{"date":"Thu, 29 Feb 2024 11:47:54 GMT","content-type":"application/x-amz-json-1.1","content-length":"2","connection":"keep-alive","x-amzn-requestid":"4a1c4ba1-9733-4614-9b6c-cb59d1ab9446"},"RetryAttempts":0}}</description>
+        </test-case>
+        <test-case start='1709207274250' status='passed' stop='1709207275279'>
+            <name>username is wrong</name>
+            <title>username is wrong</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/reset-password-link'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709207274251' status='passed' stop='1709207275279'>
+                    <name>Values passed:"{\"username\":\"title@bluelandtitle.comdfhdjfh\"}"</name>
+                    <title>Values passed:"{\"username\":\"title@bluelandtitle.comdfhdjfh\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"body":"An error occurred (UserNotFoundException) when calling the AdminResetUserPassword operation: User does not exist.","statusCode":500,"headers":{"Content-Type":"application/json"}}</description>
+        </test-case>
+        <test-case start='1709207275279' status='passed' stop='1709207276528'>
+            <name>username is empty</name>
+            <title>username is empty</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/reset-password-link'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709207275279' status='passed' stop='1709207276527'>
+                    <name>Values passed:"{\"username\":\"\"}"</name>
+                    <title>Values passed:"{\"username\":\"\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"body":"Parameter validation failed:\nInvalid length for parameter Username, value: 0, valid min length: 1","statusCode":500,"headers":{"Content-Type":"application/json"}}</description>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -1,0 +1,43 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1709207278779' stop='1709207281160'>
+    <name>test/Find/FindService_Get_via_Filenumber.test.js</name>
+    <title>test/Find/FindService_Get_via_Filenumber.test.js</title>
+    <test-cases>
+        <test-case start='1709207278780' status='passed' stop='1709207280569'>
+            <name>API Success</name>
+            <title>API Success</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/search?filenumber=Test&amp;status='/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709207278780' status='passed' stop='1709207280566'>
+                    <name>Values passed:"{}"</name>
+                    <title>Values passed:"{}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"success":{"correlationId":1,"msg":{"results":[],"count":0,"rows":{}}}}</description>
+        </test-case>
+        <test-case start='1709207280569' status='passed' stop='1709207281160'>
+            <name>Invalid session</name>
+            <title>Invalid session</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/search?filenumber=Test&amp;status='/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709207280570' status='passed' stop='1709207281159'>
+                    <name>Values passed:"{}"</name>
+                    <title>Values passed:"{}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"error":"Invalid Session"}</description>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

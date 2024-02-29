@@ -1,0 +1,28 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1709207286018' stop='1709207286833'>
+    <name>test/BackOffice/PDF_File_Upload.test.js</name>
+    <title>test/BackOffice/PDF_File_Upload.test.js</title>
+    <test-cases>
+        <test-case start='1709207286018' status='failed' stop='1709207286830'>
+            <name>API Success</name>
+            <title>API Success</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1709207286019' status='undefined'>
+                    <name>Values passed:"[{\"key\":\"body\",\"value\":\"\",\"enabled\":true,\"type\":\"any\",\"sessionValue\":\"{\\\"appId\\\":\\\"AppUser101\\\",\\\"appPass\\\":\\\"Pass$123\\\",\\\"appType\\\":\\\"StatusUpdateJobs\\\",\\\"appUsername\\\":\\\"SHathaway-4\\\",\\\"recId\\\":986618,\\\"bName\\\":\\\"FileName\\\",\\\"bLoc\\\":1,\\\"bStatus\\\":\\\"Search\\\",\\\"bRating\\\":5,\\\"bPlant\\\":0,\\\"bPolicy\\\":1,\\\"bString\\\":\\\"JVBERi0xLjMKJcfsj6IKMSAwIG9iago8PC9UeXBlIC9DYXRhbG9nCi9QYWdlcyAyIDAgUgov=\\\",\\\"authKey\\\":\\\"c3932d68c908a63f428a31458461e5a3181f9d79\\\",\\\"notes\\\":\\\"hello world\\\"}\",\"sessionIndex\":4}]"</name>
+                    <title>Values passed:"[{\"key\":\"body\",\"value\":\"\",\"enabled\":true,\"type\":\"any\",\"sessionValue\":\"{\\\"appId\\\":\\\"AppUser101\\\",\\\"appPass\\\":\\\"Pass$123\\\",\\\"appType\\\":\\\"StatusUpdateJobs\\\",\\\"appUsername\\\":\\\"SHathaway-4\\\",\\\"recId\\\":986618,\\\"bName\\\":\\\"FileName\\\",\\\"bLoc\\\":1,\\\"bStatus\\\":\\\"Search\\\",\\\"bRating\\\":5,\\\"bPlant\\\":0,\\\"bPolicy\\\":1,\\\"bString\\\":\\\"JVBERi0xLjMKJcfsj6IKMSAwIG9iago8PC9UeXBlIC9DYXRhbG9nCi9QYWdlcyAyIDAgUgov=\\\",\\\"authKey\\\":\\\"c3932d68c908a63f428a31458461e5a3181f9d79\\\",\\\"notes\\\":\\\"hello world\\\"}\",\"sessionIndex\":4}]"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Response is not in valid json format</message>
+                <stack-trace>Error: Response is not in valid json format
+                    at Object.&lt;anonymous> (/home/devtrust/Project/QA-API-Automation-Testing/test/BackOffice/PDF_File_Upload.test.js:21:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -1,8 +1,8 @@
 const {
   STAGE,
   VERSION,
-  commonOptionsGETwithoutHeader,
   Timeout,
+  commonOptionsGET
 } = require("../../config");
 const NAModule = require("../../modules/NAModule");
 const postData = "";
@@ -12,7 +12,7 @@ test(
   async () => {
     const options = {
       path: `/${STAGE}/${VERSION}/services/invoker/cognito/getUser?email=sverma@actiontitleresearch.com`,
-      ...commonOptionsGETwithoutHeader,
+      ...commonOptionsGET,
     };
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
@@ -35,7 +35,7 @@ test(
   async () => {
     const options = {
       path: `/${STAGE}/${VERSION}/services/invoker/cognito/getUser?email=soneill@actiontitleresearch.com`,
-      ...commonOptionsGETwithoutHeader,
+      ...commonOptionsGET,
     };
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
@@ -58,7 +58,7 @@ test(
   async () => {
     const options = {
       path: `/${STAGE}/${VERSION}/services/invoker/cognito/getUser?email=`,
-      ...commonOptionsGETwithoutHeader,
+      ...commonOptionsGET,
     };
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
@@ -79,7 +79,7 @@ test(
   async () => {
     const options = {
       path: `/${STAGE}/${VERSION}/services/invoker/cognito/getUser?email=esdesd`,
-      ...commonOptionsGETwithoutHeader,
+      ...commonOptionsGET,
     };
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));

@@ -1,0 +1,133 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1709207182644' stop='1709207189811'>
+    <name>test/SES/send_email_250_sandbox.test.js</name>
+    <title>test/SES/send_email_250_sandbox.test.js</title>
+    <test-cases>
+        <test-case start='1709207182644' status='passed' stop='1709207184008'>
+            <name>API Success</name>
+            <title>API Success</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/send-email'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709207182645' status='passed' stop='1709207184007'>
+                    <name>Values passed:"{\"sender\":\"No-reply@actioncentral.com\",\"recipient\":[\"title@bluelandtitle.com\"],\"template\":\"SRNotification\",\"template_data\":\"{ \\\"request_type\\\":\\\"Rush\\\", \\\"client_order_id\\\": \\\"OrderNY-ABC_02\\\", \\\"email\\\": title@bluelandtitle.com}\"}"</name>
+                    <title>Values passed:"{\"sender\":\"No-reply@actioncentral.com\",\"recipient\":[\"title@bluelandtitle.com\"],\"template\":\"SRNotification\",\"template_data\":\"{ \\\"request_type\\\":\\\"Rush\\\", \\\"client_order_id\\\": \\\"OrderNY-ABC_02\\\", \\\"email\\\": title@bluelandtitle.com}\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"Message":"Email Sent Successfully To All Recipients","Result":{"errorMessage":"An error occurred (InvalidParameterValue) when calling the SendTemplatedEmail operation: Unable to parse template data (invalid JSON).","errorType":"ClientError","requestId":"8c007de4-76b2-4209-a6e8-3a6f212c5f32","stackTrace":["  File \"/var/task/lambda_function.py\", line 9, in lambda_handler\n    ses_response = client.send_templated_email(\n","  File \"/var/runtime/botocore/client.py\", line 530, in _api_call\n    return self._make_api_call(operation_name, kwargs)\n","  File \"/var/runtime/botocore/client.py\", line 960, in _make_api_call\n    raise error_class(parsed_response, operation_name)\n"]}}</description>
+        </test-case>
+        <test-case start='1709207184008' status='passed' stop='1709207184850'>
+            <name>Sender is missing</name>
+            <title>Sender is missing</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/send-email'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709207184009' status='passed' stop='1709207184850'>
+                    <name>Values passed:"{\"sender\":\"\",\"recipient\":[\"title@bluelandtitle.com\"],\"template\":\"SRNotification\",\"template_data\":\"{ \\\"request_type\\\":\\\"Rush\\\", \\\"client_order_id\\\": \\\"OrderNY-ABC_02\\\", \\\"email\\\": title@bluelandtitle.com}\"}"</name>
+                    <title>Values passed:"{\"sender\":\"\",\"recipient\":[\"title@bluelandtitle.com\"],\"template\":\"SRNotification\",\"template_data\":\"{ \\\"request_type\\\":\\\"Rush\\\", \\\"client_order_id\\\": \\\"OrderNY-ABC_02\\\", \\\"email\\\": title@bluelandtitle.com}\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"Message":"Email Sent Successfully To All Recipients","Result":{"errorMessage":"An error occurred (InvalidParameterValue) when calling the SendTemplatedEmail operation: Source cannot be empty","errorType":"ClientError","requestId":"cc9d06c7-a186-4b0c-94ce-6cc9a04426cb","stackTrace":["  File \"/var/task/lambda_function.py\", line 9, in lambda_handler\n    ses_response = client.send_templated_email(\n","  File \"/var/runtime/botocore/client.py\", line 530, in _api_call\n    return self._make_api_call(operation_name, kwargs)\n","  File \"/var/runtime/botocore/client.py\", line 960, in _make_api_call\n    raise error_class(parsed_response, operation_name)\n"]}}</description>
+        </test-case>
+        <test-case start='1709207184850' status='passed' stop='1709207185848'>
+            <name>recipient is missing</name>
+            <title>recipient is missing</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/send-email'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709207184850' status='passed' stop='1709207185848'>
+                    <name>Values passed:"{\"sender\":\"No-reply@actioncentral.com\",\"recipient\":[\"\"],\"template\":\"SRNotification\",\"template_data\":\"{ \\\"request_type\\\":\\\"Rush\\\", \\\"client_order_id\\\": \\\"OrderNY-ABC_02\\\", \\\"email\\\": title@bluelandtitle.com}\"}"</name>
+                    <title>Values passed:"{\"sender\":\"No-reply@actioncentral.com\",\"recipient\":[\"\"],\"template\":\"SRNotification\",\"template_data\":\"{ \\\"request_type\\\":\\\"Rush\\\", \\\"client_order_id\\\": \\\"OrderNY-ABC_02\\\", \\\"email\\\": title@bluelandtitle.com}\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"Message":"Email Sent Successfully To All Recipients","Result":{"errorMessage":"An error occurred (InvalidParameterValue) when calling the SendTemplatedEmail operation: Unable to parse template data (invalid JSON).","errorType":"ClientError","requestId":"88e84e9f-e92f-4ba7-bf55-59911ad98c72","stackTrace":["  File \"/var/task/lambda_function.py\", line 9, in lambda_handler\n    ses_response = client.send_templated_email(\n","  File \"/var/runtime/botocore/client.py\", line 530, in _api_call\n    return self._make_api_call(operation_name, kwargs)\n","  File \"/var/runtime/botocore/client.py\", line 960, in _make_api_call\n    raise error_class(parsed_response, operation_name)\n"]}}</description>
+        </test-case>
+        <test-case start='1709207185848' status='passed' stop='1709207187160'>
+            <name>template is missing</name>
+            <title>template is missing</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/send-email'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709207185850' status='passed' stop='1709207187160'>
+                    <name>Values passed:"{\"sender\":\"No-reply@actioncentral.com\",\"recipient\":[\"title@bluelandtitle.com\"],\"template\":\"\",\"template_data\":\"{ \\\"request_type\\\":\\\"Rush\\\", \\\"client_order_id\\\": \\\"OrderNY-ABC_02\\\", \\\"email\\\": title@bluelandtitle.com}\"}"</name>
+                    <title>Values passed:"{\"sender\":\"No-reply@actioncentral.com\",\"recipient\":[\"title@bluelandtitle.com\"],\"template\":\"\",\"template_data\":\"{ \\\"request_type\\\":\\\"Rush\\\", \\\"client_order_id\\\": \\\"OrderNY-ABC_02\\\", \\\"email\\\": title@bluelandtitle.com}\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"Message":"Email Sent Successfully To All Recipients","Result":{"errorMessage":"An error occurred (InvalidParameterValue) when calling the SendTemplatedEmail operation: Template cannot be empty","errorType":"ClientError","requestId":"3e220afa-9c6c-4a9b-b774-e0e42bda59b5","stackTrace":["  File \"/var/task/lambda_function.py\", line 9, in lambda_handler\n    ses_response = client.send_templated_email(\n","  File \"/var/runtime/botocore/client.py\", line 530, in _api_call\n    return self._make_api_call(operation_name, kwargs)\n","  File \"/var/runtime/botocore/client.py\", line 960, in _make_api_call\n    raise error_class(parsed_response, operation_name)\n"]}}</description>
+        </test-case>
+        <test-case start='1709207187160' status='passed' stop='1709207188096'>
+            <name>Wrong template name is entered</name>
+            <title>Wrong template name is entered</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/send-email'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709207187161' status='passed' stop='1709207188096'>
+                    <name>Values passed:"{\"sender\":\"No-reply@actioncentral.com\",\"recipient\":[\"title@bluelandtitle.com\"],\"template\":\"wdwdwd\",\"template_data\":\"{ \\\"request_type\\\":\\\"Rush\\\", \\\"client_order_id\\\": \\\"OrderNY-ABC_02\\\", \\\"email\\\": title@bluelandtitle.com}\"}"</name>
+                    <title>Values passed:"{\"sender\":\"No-reply@actioncentral.com\",\"recipient\":[\"title@bluelandtitle.com\"],\"template\":\"wdwdwd\",\"template_data\":\"{ \\\"request_type\\\":\\\"Rush\\\", \\\"client_order_id\\\": \\\"OrderNY-ABC_02\\\", \\\"email\\\": title@bluelandtitle.com}\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"Message":"Email Sent Successfully To All Recipients","Result":{"errorMessage":"An error occurred (InvalidParameterValue) when calling the SendTemplatedEmail operation: Unable to parse template data (invalid JSON).","errorType":"ClientError","requestId":"bef203f0-3143-4fdc-b335-0dd41fcb7fa6","stackTrace":["  File \"/var/task/lambda_function.py\", line 9, in lambda_handler\n    ses_response = client.send_templated_email(\n","  File \"/var/runtime/botocore/client.py\", line 530, in _api_call\n    return self._make_api_call(operation_name, kwargs)\n","  File \"/var/runtime/botocore/client.py\", line 960, in _make_api_call\n    raise error_class(parsed_response, operation_name)\n"]}}</description>
+        </test-case>
+        <test-case start='1709207188096' status='passed' stop='1709207189016'>
+            <name>template_data is empty</name>
+            <title>template_data is empty</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/send-email'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709207188097' status='passed' stop='1709207189016'>
+                    <name>Values passed:"{\"sender\":\"No-reply@actioncentral.com\",\"recipient\":[\"title@bluelandtitle.com\"],\"template\":\"SRNotification\",\"template_data\":\"\"}"</name>
+                    <title>Values passed:"{\"sender\":\"No-reply@actioncentral.com\",\"recipient\":[\"title@bluelandtitle.com\"],\"template\":\"SRNotification\",\"template_data\":\"\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"Message":"Email Sent Successfully To All Recipients","Result":{"errorMessage":"An error occurred (InvalidParameterValue) when calling the SendTemplatedEmail operation: Template data cannot be empty","errorType":"ClientError","requestId":"e596dfe6-d9ad-4137-bbbc-ba88647a97bf","stackTrace":["  File \"/var/task/lambda_function.py\", line 9, in lambda_handler\n    ses_response = client.send_templated_email(\n","  File \"/var/runtime/botocore/client.py\", line 530, in _api_call\n    return self._make_api_call(operation_name, kwargs)\n","  File \"/var/runtime/botocore/client.py\", line 960, in _make_api_call\n    raise error_class(parsed_response, operation_name)\n"]}}</description>
+        </test-case>
+        <test-case start='1709207189016' status='passed' stop='1709207189811'>
+            <name>template_data is invalid</name>
+            <title>template_data is invalid</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/send-email'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709207189017' status='passed' stop='1709207189810'>
+                    <name>Values passed:"{\"sender\":\"No-reply@actioncentral.com\",\"recipient\":[\"title@bluelandtitle.com\"],\"template\":\"SRNotification\",\"template_data\":\"sadsdsd\"}"</name>
+                    <title>Values passed:"{\"sender\":\"No-reply@actioncentral.com\",\"recipient\":[\"title@bluelandtitle.com\"],\"template\":\"SRNotification\",\"template_data\":\"sadsdsd\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"Message":"Email Sent Successfully To All Recipients","Result":{"errorMessage":"An error occurred (InvalidParameterValue) when calling the SendTemplatedEmail operation: Unable to parse template data (invalid JSON).","errorType":"ClientError","requestId":"526dc368-5ab9-432d-90ce-d28937a646c3","stackTrace":["  File \"/var/task/lambda_function.py\", line 9, in lambda_handler\n    ses_response = client.send_templated_email(\n","  File \"/var/runtime/botocore/client.py\", line 530, in _api_call\n    return self._make_api_call(operation_name, kwargs)\n","  File \"/var/runtime/botocore/client.py\", line 960, in _make_api_call\n    raise error_class(parsed_response, operation_name)\n"]}}</description>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

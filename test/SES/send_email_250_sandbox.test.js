@@ -3,14 +3,14 @@ dotenv.config();
 const {
   STAGE,
   VERSION,
-  commonOptionsPOSTwithoutHeader,
+  commonOptionsPOST,
   Timeout,
 } = require("../../config");
 const NAModule = require("../../modules/NAModule");
 
 const options = {
   path: `/${STAGE}/${VERSION}/services/send-email`,
-  ...commonOptionsPOSTwithoutHeader,
+  ...commonOptionsPOST,
 };
 
 const SCOUT_EMAIL = process.env.SIGNAL_SCOUT_EMAIL
@@ -92,8 +92,6 @@ it(
   },
   Timeout
 );
-
-
 
 it(
   "template is missing",
