@@ -1,0 +1,97 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1709207153407' stop='1709207158540'>
+    <name>test/_Accutitle/Order_Normalizer.test.js</name>
+    <title>test/_Accutitle/Order_Normalizer.test.js</title>
+    <test-cases>
+        <test-case start='1709207153407' status='passed' stop='1709207154606'>
+            <name>API Success</name>
+            <title>API Success</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/normalize/accutitle'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709207153408' status='passed' stop='1709207154603'>
+                    <name>getting response from api"{\"order\":\"\\n&lt;Order>\\n    &lt;ID>66e23f5b-2118-ed11-a861-005056010771&lt;/ID>\\n    &lt;Title>ANG-4520&lt;/Title>\\n    &lt;OrderNo>ANG-4520&lt;/OrderNo>\\n    &lt;SearchType>3&lt;/SearchType>\\n    &lt;SearchTypeDesc>County Search&lt;/SearchTypeDesc>\\n    &lt;SearchID>AT32700720220809162512138&lt;/SearchID>\\n    &lt;Ordered>2022-08-09T16:25:12-04:00&lt;/Ordered>\\n    &lt;DueDate>2022-08-11T16:24:55-04:00&lt;/DueDate>\\n    &lt;Completed>2022-08-10T07:55:06-04:00&lt;/Completed>\\n    &lt;Vendor>Action&lt;/Vendor>\\n    &lt;VendorClientRef />\\n    &lt;ReturnCode>EMAIL SENT&lt;/ReturnCode>\\n    &lt;ReturnCode2 />\\n    &lt;ReturnFileName>AT32700720220809162512138c.PDF&lt;/ReturnFileName>\\n    &lt;ClientID>angelta&lt;/ClientID>\\n    &lt;ClientName>Angel Title &amp;amp; Abstract, Inc.&lt;/ClientName>\\n    &lt;CompanyCode>ATA&lt;/CompanyCode>\\n    &lt;Status>Completed&lt;/Status>\\n    &lt;Remarks>Super Rush&lt;/Remarks>\\n    &lt;SEARCHSTATE>NJ&lt;/SEARCHSTATE>\\n    &lt;SEARCHCOUNTY>MONMOUTH&lt;/SEARCHCOUNTY>\\n    &lt;SEARCHMUNICIPALITY>Borough of Belmar&lt;/SEARCHMUNICIPALITY>\\n    &lt;SEARCHMUNICIPALITYID>1307&lt;/SEARCHMUNICIPALITYID>\\n    &lt;SEARCHSTREETADDRESS>1008 Fourteenth Ave&lt;/SEARCHSTREETADDRESS>\\n    &lt;SEARCHTAXBLOCKPARCEL1>139&lt;/SEARCHTAXBLOCKPARCEL1>\\n    &lt;SEARCHTAXLOT1>17&lt;/SEARCHTAXLOT1>\\n    &lt;SEARCHTAXQUAL />\\n    &lt;SEARCHTAXSECTION />\\n    &lt;SEARCHTAXDISTRICT />\\n    &lt;SEARCHCONDO />\\n    &lt;SEARCHUNIT />\\n    &lt;SEARCHOWNER>Steven Knight&lt;/SEARCHOWNER>\\n    &lt;SEARCHADDLOTS />\\n    &lt;SEARCHAPPLICANT />\\n    &lt;SEARCHAPPRAISALTYPE>FULL SEARCH (60 Years)&lt;/SEARCHAPPRAISALTYPE>\\n    &lt;SEARCHATTORNEY />\\n    &lt;SEARCHBUYERS>Steven Knight&lt;/SEARCHBUYERS>\\n    &lt;SEARCHCERTIFYTO />\\n    &lt;SEARCHCITY />\\n    &lt;SEARCHCLOSING />\\n    &lt;SEARCHCOAPPLICANT />\\n    &lt;SEARCHCOD>NO&lt;/SEARCHCOD>\\n    &lt;SEARCHCONTACT />\\n    &lt;SEARCHDOCUMENTCOPY>FIRST PAGE, LEGAL, SIGNATURE COPIES&lt;/SEARCHDOCUMENTCOPY>\\n    &lt;SEARCHFILEDBLOCK>5893&lt;/SEARCHFILEDBLOCK>\\n    &lt;SEARCHFILEDLOT>627&lt;/SEARCHFILEDLOT>\\n    &lt;SEARCHFLOODELEVATION />\\n    &lt;SEARCHFILEDMAP />\\n    &lt;SEARCHFROM />\\n    &lt;SEARCHHOMEPHONE />\\n    &lt;SEARCHLENDER />\\n    &lt;SEARCHLENDERPHONE />\\n    &lt;SEARCHLENDERID />\\n    &lt;SEARCHLOANNUMBER />\\n    &lt;SEARCHLIFEOFLOAN>NO&lt;/SEARCHLIFEOFLOAN>\\n    &lt;SEARCHLISTINGAGENT />\\n    &lt;SEARCHLOAN />\\n    &lt;SEARCHGRANTREQUEST>NO&lt;/SEARCHGRANTREQUEST>\\n    &lt;SEARCHGRPP>NO&lt;/SEARCHGRPP>\\n    &lt;SEARCHNAMESTABLE />\\n    &lt;SEARCHNAMESTABLERAW />\\n    &lt;SEARCHNAME />\\n    &lt;SEARCHMAIDENNAME />\\n    &lt;SEARCHPROCESSOR />\\n    &lt;SEARCHPROCESSORPHONE />\\n    &lt;SEARCHPROPOSEDLOAN />\\n    &lt;SEARCHREALTOR />\\n    &lt;SEARCHREF>ANG-4520&lt;/SEARCHREF>\\n    &lt;SEARCHMISCREMARKS>Steven Knight&lt;/SEARCHMISCREMARKS>\\n    &lt;SEARCHSALESPRICE />\\n    &lt;SEARCHSELLERS />\\n    &lt;SEARCHSELLERSNAME />\\n    &lt;SEARCHSELLERSPHONE />\\n    &lt;SEARCHSTAKES>NO&lt;/SEARCHSTAKES>\\n    &lt;SEARCHCONDOCERT>NO&lt;/SEARCHCONDOCERT>\\n    &lt;SEARCHTERMITEFINANCING />\\n    &lt;SEARCHTO />\\n    &lt;SEARCHUNCONFIRMEDASSESSMENT>NO&lt;/SEARCHUNCONFIRMEDASSESSMENT>\\n    &lt;SEARCHUTILITIES>NO&lt;/SEARCHUTILITIES>\\n    &lt;SEARCHWORKPHONE />\\n    &lt;SEARCHYEARS />\\n    &lt;SEARCHUNDERWRITER>Old Republic National Title Insurance Company&lt;/SEARCHUNDERWRITER>\\n    &lt;SEARCHPRIORDEEDBOOK>5893&lt;/SEARCHPRIORDEEDBOOK>\\n    &lt;SEARCHPRIORDEEDPAGE>627&lt;/SEARCHPRIORDEEDPAGE>\\n    &lt;SEARCHCONTIN>NO&lt;/SEARCHCONTIN>\\n    &lt;SEARCHRETURNCODE>EMAIL SENT&lt;/SEARCHRETURNCODE>\\n    &lt;SEARCHPLAINTIFF />\\n    &lt;SEARCHDEFENDANT>Steven Knight&lt;/SEARCHDEFENDANT>\\n    &lt;SEARCHDOCKET />\\n    &lt;SEARCHFINALJUDGMENT />\\n    &lt;SEARCHCOMPLAINTDATE />\\n    &lt;SEARCHFILINGLISPENS />\\n    &lt;SEARCHSEARCHPERIOD />\\n    &lt;SEARCHCAUSEOFACTION>5893&lt;/SEARCHCAUSEOFACTION>\\n    &lt;SEARCHNYTAXTYPES />\\n    &lt;SEARCHNYTAXNAMES />\\n    &lt;SEARCHFLTAXTYPES />\\n    &lt;SEARCHFLTAXNAMES />\\n    &lt;TaxSubdivision1 />\\n    &lt;SEARCHCLEARANCETITLE />\\n    &lt;SEARCHCLEARANCEITEMS />\\n    &lt;THISADDRESSONLY>False&lt;/THISADDRESSONLY>\\n    &lt;ApplicationType>Refinance&lt;/ApplicationType>\\n    &lt;PropertyType>Residential&lt;/PropertyType>\\n&lt;/Order>\\n\"}"</name>
+                    <title>getting response from api"{\"order\":\"\\n&lt;Order>\\n    &lt;ID>66e23f5b-2118-ed11-a861-005056010771&lt;/ID>\\n    &lt;Title>ANG-4520&lt;/Title>\\n    &lt;OrderNo>ANG-4520&lt;/OrderNo>\\n    &lt;SearchType>3&lt;/SearchType>\\n    &lt;SearchTypeDesc>County Search&lt;/SearchTypeDesc>\\n    &lt;SearchID>AT32700720220809162512138&lt;/SearchID>\\n    &lt;Ordered>2022-08-09T16:25:12-04:00&lt;/Ordered>\\n    &lt;DueDate>2022-08-11T16:24:55-04:00&lt;/DueDate>\\n    &lt;Completed>2022-08-10T07:55:06-04:00&lt;/Completed>\\n    &lt;Vendor>Action&lt;/Vendor>\\n    &lt;VendorClientRef />\\n    &lt;ReturnCode>EMAIL SENT&lt;/ReturnCode>\\n    &lt;ReturnCode2 />\\n    &lt;ReturnFileName>AT32700720220809162512138c.PDF&lt;/ReturnFileName>\\n    &lt;ClientID>angelta&lt;/ClientID>\\n    &lt;ClientName>Angel Title &amp;amp; Abstract, Inc.&lt;/ClientName>\\n    &lt;CompanyCode>ATA&lt;/CompanyCode>\\n    &lt;Status>Completed&lt;/Status>\\n    &lt;Remarks>Super Rush&lt;/Remarks>\\n    &lt;SEARCHSTATE>NJ&lt;/SEARCHSTATE>\\n    &lt;SEARCHCOUNTY>MONMOUTH&lt;/SEARCHCOUNTY>\\n    &lt;SEARCHMUNICIPALITY>Borough of Belmar&lt;/SEARCHMUNICIPALITY>\\n    &lt;SEARCHMUNICIPALITYID>1307&lt;/SEARCHMUNICIPALITYID>\\n    &lt;SEARCHSTREETADDRESS>1008 Fourteenth Ave&lt;/SEARCHSTREETADDRESS>\\n    &lt;SEARCHTAXBLOCKPARCEL1>139&lt;/SEARCHTAXBLOCKPARCEL1>\\n    &lt;SEARCHTAXLOT1>17&lt;/SEARCHTAXLOT1>\\n    &lt;SEARCHTAXQUAL />\\n    &lt;SEARCHTAXSECTION />\\n    &lt;SEARCHTAXDISTRICT />\\n    &lt;SEARCHCONDO />\\n    &lt;SEARCHUNIT />\\n    &lt;SEARCHOWNER>Steven Knight&lt;/SEARCHOWNER>\\n    &lt;SEARCHADDLOTS />\\n    &lt;SEARCHAPPLICANT />\\n    &lt;SEARCHAPPRAISALTYPE>FULL SEARCH (60 Years)&lt;/SEARCHAPPRAISALTYPE>\\n    &lt;SEARCHATTORNEY />\\n    &lt;SEARCHBUYERS>Steven Knight&lt;/SEARCHBUYERS>\\n    &lt;SEARCHCERTIFYTO />\\n    &lt;SEARCHCITY />\\n    &lt;SEARCHCLOSING />\\n    &lt;SEARCHCOAPPLICANT />\\n    &lt;SEARCHCOD>NO&lt;/SEARCHCOD>\\n    &lt;SEARCHCONTACT />\\n    &lt;SEARCHDOCUMENTCOPY>FIRST PAGE, LEGAL, SIGNATURE COPIES&lt;/SEARCHDOCUMENTCOPY>\\n    &lt;SEARCHFILEDBLOCK>5893&lt;/SEARCHFILEDBLOCK>\\n    &lt;SEARCHFILEDLOT>627&lt;/SEARCHFILEDLOT>\\n    &lt;SEARCHFLOODELEVATION />\\n    &lt;SEARCHFILEDMAP />\\n    &lt;SEARCHFROM />\\n    &lt;SEARCHHOMEPHONE />\\n    &lt;SEARCHLENDER />\\n    &lt;SEARCHLENDERPHONE />\\n    &lt;SEARCHLENDERID />\\n    &lt;SEARCHLOANNUMBER />\\n    &lt;SEARCHLIFEOFLOAN>NO&lt;/SEARCHLIFEOFLOAN>\\n    &lt;SEARCHLISTINGAGENT />\\n    &lt;SEARCHLOAN />\\n    &lt;SEARCHGRANTREQUEST>NO&lt;/SEARCHGRANTREQUEST>\\n    &lt;SEARCHGRPP>NO&lt;/SEARCHGRPP>\\n    &lt;SEARCHNAMESTABLE />\\n    &lt;SEARCHNAMESTABLERAW />\\n    &lt;SEARCHNAME />\\n    &lt;SEARCHMAIDENNAME />\\n    &lt;SEARCHPROCESSOR />\\n    &lt;SEARCHPROCESSORPHONE />\\n    &lt;SEARCHPROPOSEDLOAN />\\n    &lt;SEARCHREALTOR />\\n    &lt;SEARCHREF>ANG-4520&lt;/SEARCHREF>\\n    &lt;SEARCHMISCREMARKS>Steven Knight&lt;/SEARCHMISCREMARKS>\\n    &lt;SEARCHSALESPRICE />\\n    &lt;SEARCHSELLERS />\\n    &lt;SEARCHSELLERSNAME />\\n    &lt;SEARCHSELLERSPHONE />\\n    &lt;SEARCHSTAKES>NO&lt;/SEARCHSTAKES>\\n    &lt;SEARCHCONDOCERT>NO&lt;/SEARCHCONDOCERT>\\n    &lt;SEARCHTERMITEFINANCING />\\n    &lt;SEARCHTO />\\n    &lt;SEARCHUNCONFIRMEDASSESSMENT>NO&lt;/SEARCHUNCONFIRMEDASSESSMENT>\\n    &lt;SEARCHUTILITIES>NO&lt;/SEARCHUTILITIES>\\n    &lt;SEARCHWORKPHONE />\\n    &lt;SEARCHYEARS />\\n    &lt;SEARCHUNDERWRITER>Old Republic National Title Insurance Company&lt;/SEARCHUNDERWRITER>\\n    &lt;SEARCHPRIORDEEDBOOK>5893&lt;/SEARCHPRIORDEEDBOOK>\\n    &lt;SEARCHPRIORDEEDPAGE>627&lt;/SEARCHPRIORDEEDPAGE>\\n    &lt;SEARCHCONTIN>NO&lt;/SEARCHCONTIN>\\n    &lt;SEARCHRETURNCODE>EMAIL SENT&lt;/SEARCHRETURNCODE>\\n    &lt;SEARCHPLAINTIFF />\\n    &lt;SEARCHDEFENDANT>Steven Knight&lt;/SEARCHDEFENDANT>\\n    &lt;SEARCHDOCKET />\\n    &lt;SEARCHFINALJUDGMENT />\\n    &lt;SEARCHCOMPLAINTDATE />\\n    &lt;SEARCHFILINGLISPENS />\\n    &lt;SEARCHSEARCHPERIOD />\\n    &lt;SEARCHCAUSEOFACTION>5893&lt;/SEARCHCAUSEOFACTION>\\n    &lt;SEARCHNYTAXTYPES />\\n    &lt;SEARCHNYTAXNAMES />\\n    &lt;SEARCHFLTAXTYPES />\\n    &lt;SEARCHFLTAXNAMES />\\n    &lt;TaxSubdivision1 />\\n    &lt;SEARCHCLEARANCETITLE />\\n    &lt;SEARCHCLEARANCEITEMS />\\n    &lt;THISADDRESSONLY>False&lt;/THISADDRESSONLY>\\n    &lt;ApplicationType>Refinance&lt;/ApplicationType>\\n    &lt;PropertyType>Residential&lt;/PropertyType>\\n&lt;/Order>\\n\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"success":{"order":{"tgOrder":{"customerOrderId":"ANG-4520","customerCorrelationId":"66e23f5b-2118-ed11-a861-005056010771","transProcessingNote":"FIRST PAGE, LEGAL, SIGNATURE COPIES","duedate":"2022-08-11T16:24:55-04:00","stateId":31,"propertyCounty":"MONMOUTH","propertyMunicipality":"Borough of Belmar","propertyAddress":"1008 Fourteenth Ave","parcelId":"139","propertyBlock":"139","propertyLot":"17","qualifier":null,"additionalParcelId":null,"orderType":"County Search","searchLength":"60","buyerSearches":"Steven Knight","loanAmount":null,"contractPrice":null,"propertyDeedPage":"627","tgOrderId":7155604,"organizationId":18425,"orderOpen":0,"source":"Accutitle"},"transaction":{"agencyOrderId":"ANG-4520","correlationId":"66e23f5b-2118-ed11-a861-005056010771","note":"FIRST PAGE, LEGAL, SIGNATURE COPIES","transactionDateTime":"2022-08-09T16:25:12-04:00","agencyName":"Angel Title &amp; Abstract, Inc.","agencyShortName":"angelta","status":"Completed","currentProcessingQueue":"Order","state":"NJ","county":"MONMOUTH","municipalityName":"Borough of Belmar","address":"1008 Fourteenth Ave","parcelId":"139","block":"139","lot":"17","qualifier":null,"additionalParcelId":null,"searchType":"County Search","property_typeId":"1","policy_typeId":"1","propertyType":"Single Family (1-4)","_txTypeName":"Residential Refinance","searchLength":"60","buyerSearches":"Steven Knight","lender":null,"loanAmount":null,"clientNotes":"Steven Knight","purchasePrice":null,"transaction_TypeId":3,"deedInLieu":0,"shortSale":0,"prioritySet":0,"addSecondMortgage":0,"orgId":18425,"underwriter_Id":18425},"legalDescription":{"unitNo":null,"filedMapBlock":"5893","filedMapLot":"627","filedUnfiledMapName":null},"vestingDeed":{"addPresentOwner":"Steven Knight"},"_ownerBuyerRows":[]},"credentials":{"agencyPortalId":100}}}</description>
+        </test-case>
+        <test-case start='1709207154606' status='passed' stop='1709207155641'>
+            <name>Order is blank</name>
+            <title>Order is blank</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/normalize/accutitle'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709207154606' status='passed' stop='1709207155641'>
+                    <name>getting response from api"{\"order\":\"\"}"</name>
+                    <title>getting response from api"{\"order\":\"\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"error":"Invalid data or url or filepath argument: \nno element found: line 1, column 0"}</description>
+        </test-case>
+        <test-case start='1709207155641' status='passed' stop='1709207156610'>
+            <name>BAD Request</name>
+            <title>BAD Request</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/normalize/accutitle'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709207155642' status='passed' stop='1709207156609'>
+                    <name>getting response from api"{}"</name>
+                    <title>getting response from api"{}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"error":"'order'"}</description>
+        </test-case>
+        <test-case start='1709207156610' status='passed' stop='1709207157552'>
+            <name>Invalid session</name>
+            <title>Invalid session</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/normalize/accutitle'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709207156611' status='passed' stop='1709207157552'>
+                    <name>getting response from api"{}"</name>
+                    <title>getting response from api"{}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:"Invalid Session"</description>
+        </test-case>
+        <test-case start='1709207157552' status='passed' stop='1709207158540'>
+            <name>Invalid order</name>
+            <title>Invalid order</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/normalize/accutitle'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709207157553' status='passed' stop='1709207158540'>
+                    <name>Values passed:"{\"order\":\"dfdss\"}"</name>
+                    <title>Values passed:"{\"order\":\"dfdss\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:"Invalid data or url or filepath argument: dfdss\nsyntax error: line 1, column 0"</description>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

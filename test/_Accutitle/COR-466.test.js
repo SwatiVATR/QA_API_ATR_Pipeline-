@@ -5,7 +5,11 @@ const {
     searchcountyMissing,
     searchmunicipalityidMissing,
     searchmailingcityMissing,
-    searchtypedescMissing
+    searchtypedescMissing,
+    searchcountyEmpty,
+    searchstreetaddressMissing,
+    searchstreetaddressEmpty,
+    searchfiledblockEmptyOrMissing
 } = require("../../RequestBodies/COR-446-Body")
 const commonOptionsPOST = {
     hostname: BASE,
@@ -139,6 +143,74 @@ it('Invalid session', async () => {
         reporter.startStep("getting response from api" + JSON.stringify(postData));
         const response = await NAModule(postData, options);
         expect(response.error).toBe("Invalid API Key");
+        reporter.endStep();
+        reporter.testId("API Endpoint-/services/normalize/accutitle")
+        reporter.description("Response message from API:" + JSON.stringify(response))
+    } catch (error) {
+        throw new Error(error);
+    }
+}, Timeout)
+it('searchcounty key is empty', async () => {
+    const options = {
+        path: `/${STAGE}/${VERSION}/webhook/order/accutitle-test`,
+        ...commonOptionsPOST,
+    };
+    const postData = JSON.stringify(searchcountyEmpty);
+    try {
+        reporter.startStep("getting response from api" + JSON.stringify(postData));
+        const response = await NAModule(postData, options);
+        expect(response.success.msg).toBe("OK");
+        reporter.endStep();
+        reporter.testId("API Endpoint-/services/normalize/accutitle")
+        reporter.description("Response message from API:" + JSON.stringify(response))
+    } catch (error) {
+        throw new Error(error);
+    }
+}, Timeout)
+it('searchstreetaddress key is missing', async () => {
+    const options = {
+        path: `/${STAGE}/${VERSION}/webhook/order/accutitle-test`,
+        ...commonOptionsPOST,
+    };
+    const postData = JSON.stringify(searchstreetaddressMissing);
+    try {
+        reporter.startStep("getting response from api" + JSON.stringify(postData));
+        const response = await NAModule(postData, options);
+        expect(response.success.msg).toBe("OK");
+        reporter.endStep();
+        reporter.testId("API Endpoint-/services/normalize/accutitle")
+        reporter.description("Response message from API:" + JSON.stringify(response))
+    } catch (error) {
+        throw new Error(error);
+    }
+}, Timeout)
+it('searchstreetaddress key is passed empty', async () => {
+    const options = {
+        path: `/${STAGE}/${VERSION}/webhook/order/accutitle-test`,
+        ...commonOptionsPOST,
+    };
+    const postData = JSON.stringify(searchstreetaddressEmpty);
+    try {
+        reporter.startStep("getting response from api" + JSON.stringify(postData));
+        const response = await NAModule(postData, options);
+        expect(response.success.msg).toBe("OK");
+        reporter.endStep();
+        reporter.testId("API Endpoint-/services/normalize/accutitle")
+        reporter.description("Response message from API:" + JSON.stringify(response))
+    } catch (error) {
+        throw new Error(error);
+    }
+}, Timeout)
+it('searchfiledblock key is passed empty or missing', async () => {
+    const options = {
+        path: `/${STAGE}/${VERSION}/webhook/order/accutitle-test`,
+        ...commonOptionsPOST,
+    };
+    const postData = JSON.stringify(searchfiledblockEmptyOrMissing);
+    try {
+        reporter.startStep("getting response from api" + JSON.stringify(postData));
+        const response = await NAModule(postData, options);
+        expect(response.success.msg).toBe("OK");
         reporter.endStep();
         reporter.testId("API Endpoint-/services/normalize/accutitle")
         reporter.description("Response message from API:" + JSON.stringify(response))

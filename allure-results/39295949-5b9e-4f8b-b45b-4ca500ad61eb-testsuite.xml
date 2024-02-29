@@ -1,0 +1,97 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1709207229653' stop='1709207237726'>
+    <name>test/StepFunctions/StepService_Execute_Async.test.js</name>
+    <title>test/StepFunctions/StepService_Execute_Async.test.js</title>
+    <test-cases>
+        <test-case start='1709207229653' status='passed' stop='1709207232666'>
+            <name>API Success</name>
+            <title>API Success</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/async/MyStandardStateMachine'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709207229654' status='passed' stop='1709207232664'>
+                    <name>Values passed:"{\"username\":\"title@bluelandtitle.com\",\"password\":\"460@Bergen\"}"</name>
+                    <title>Values passed:"{\"username\":\"title@bluelandtitle.com\",\"password\":\"460@Bergen\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"success":{"body":{"executionArn":"arn:aws:states:us-east-1:242886645947:execution:MyStandardStateMachine:f5728338-88aa-4a37-a8d2-e484ae7b4da4","startDate":"2024-02-29T11:47:12.441000+00:00","ResponseMetadata":{"RequestId":"42626dec-6edd-4522-9e13-c42ffcdab49d","HTTPStatusCode":200,"HTTPHeaders":{"x-amzn-requestid":"42626dec-6edd-4522-9e13-c42ffcdab49d","date":"Thu, 29 Feb 2024 11:47:12 GMT","content-type":"application/x-amz-json-1.0","content-length":"155","connection":"keep-alive"},"RetryAttempts":0}},"statusCode":200,"headers":{"Content-Type":"application/json"}}}</description>
+        </test-case>
+        <test-case start='1709207232666' status='passed' stop='1709207233979'>
+            <name>username is missing</name>
+            <title>username is missing</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/async/MyStandardStateMachine'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709207232666' status='passed' stop='1709207233979'>
+                    <name>Values passed:"{\"username\":\"\",\"password\":\"460@Bergen\"}"</name>
+                    <title>Values passed:"{\"username\":\"\",\"password\":\"460@Bergen\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"success":{"body":{"executionArn":"arn:aws:states:us-east-1:242886645947:execution:MyStandardStateMachine:bffa0295-541b-4edb-993a-c95ed09183c9","startDate":"2024-02-29T11:47:13.706000+00:00","ResponseMetadata":{"RequestId":"5898b6cc-bc2b-4ab9-9455-e0ae7a303f89","HTTPStatusCode":200,"HTTPHeaders":{"x-amzn-requestid":"5898b6cc-bc2b-4ab9-9455-e0ae7a303f89","date":"Thu, 29 Feb 2024 11:47:13 GMT","content-type":"application/x-amz-json-1.0","content-length":"155","connection":"keep-alive"},"RetryAttempts":0}},"statusCode":200,"headers":{"Content-Type":"application/json"}}}</description>
+        </test-case>
+        <test-case start='1709207233979' status='passed' stop='1709207235264'>
+            <name>password is missing</name>
+            <title>password is missing</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/async/MyStandardStateMachine'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709207233980' status='passed' stop='1709207235263'>
+                    <name>Values passed:"{\"username\":\"title@bluelandtitle.com\",\"password\":\"\"}"</name>
+                    <title>Values passed:"{\"username\":\"title@bluelandtitle.com\",\"password\":\"\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"success":{"body":{"executionArn":"arn:aws:states:us-east-1:242886645947:execution:MyStandardStateMachine:ebf3a92f-726e-4383-953c-17333f4543ec","startDate":"2024-02-29T11:47:15.032000+00:00","ResponseMetadata":{"RequestId":"2e033c1f-516e-4884-9e7f-feee8c938e2f","HTTPStatusCode":200,"HTTPHeaders":{"x-amzn-requestid":"2e033c1f-516e-4884-9e7f-feee8c938e2f","date":"Thu, 29 Feb 2024 11:47:15 GMT","content-type":"application/x-amz-json-1.0","content-length":"155","connection":"keep-alive"},"RetryAttempts":0}},"statusCode":200,"headers":{"Content-Type":"application/json"}}}</description>
+        </test-case>
+        <test-case start='1709207235264' status='passed' stop='1709207236488'>
+            <name>username and password is missing</name>
+            <title>username and password is missing</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/async/MyStandardStateMachine'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709207235264' status='passed' stop='1709207236487'>
+                    <name>Values passed:"{\"username\":\"\",\"password\":\"\"}"</name>
+                    <title>Values passed:"{\"username\":\"\",\"password\":\"\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"success":{"body":{"executionArn":"arn:aws:states:us-east-1:242886645947:execution:MyStandardStateMachine:62aba5ad-60fa-4a3b-b3e0-435a63526e1d","startDate":"2024-02-29T11:47:16.259000+00:00","ResponseMetadata":{"RequestId":"9a50b253-072d-4547-9ff1-1930d8b43b14","HTTPStatusCode":200,"HTTPHeaders":{"x-amzn-requestid":"9a50b253-072d-4547-9ff1-1930d8b43b14","date":"Thu, 29 Feb 2024 11:47:16 GMT","content-type":"application/x-amz-json-1.0","content-length":"155","connection":"keep-alive"},"RetryAttempts":0}},"statusCode":200,"headers":{"Content-Type":"application/json"}}}</description>
+        </test-case>
+        <test-case start='1709207236489' status='passed' stop='1709207237725'>
+            <name>Bad Request</name>
+            <title>Bad Request</title>
+            <labels>
+                <label name='testId' value='API Endpoint-/services/async/MyStandardStateMachine'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1709207236490' status='passed' stop='1709207237725'>
+                    <name>Values passed:"{\"username\":\"\",\"password\":\"\"}"</name>
+                    <title>Values passed:"{\"username\":\"\",\"password\":\"\"}"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Response message from API:{"success":{"body":{"executionArn":"arn:aws:states:us-east-1:242886645947:execution:MyStandardStateMachine:c238de0d-5753-4e2a-bfbb-00f331a5eca0","startDate":"2024-02-29T11:47:17.506000+00:00","ResponseMetadata":{"RequestId":"0f6ab6cd-6d5f-4ed4-ba3e-c18c07d7b9d6","HTTPStatusCode":200,"HTTPHeaders":{"x-amzn-requestid":"0f6ab6cd-6d5f-4ed4-ba3e-c18c07d7b9d6","date":"Thu, 29 Feb 2024 11:47:17 GMT","content-type":"application/x-amz-json-1.0","content-length":"155","connection":"keep-alive"},"RetryAttempts":0}},"statusCode":200,"headers":{"Content-Type":"application/json"}}}</description>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -145,6 +145,33 @@ const invalidUserEmail= {
         }
     }
 }
+
+const InvalidSearch_company_id={
+    "button_id": "Rush",
+    "order_id": "OrderNY-ABC_02",
+    "search_company_id": "ewfrefr1@@@",
+    "appended_note": "Testing Process",
+    "order": {
+        "note": {
+            "transactionId": 118359,
+            "userEmail": "title@bluelandtitle.com",
+            "read": false
+        }
+    }
+}
+
+const Search_company_id_Missing={
+    "button_id": "Rush",
+    "order_id": "OrderNY-ABC_02",
+    "appended_note": "Testing Process",
+    "order": {
+        "note": {
+            "transactionId": 118359,
+            "userEmail": "title@bluelandtitle.com",
+            "read": false
+        }
+    }
+}
 module.exports = {
     success,
     successAppend,
@@ -156,5 +183,7 @@ module.exports = {
     appendNoteMissing,
     transactionId_String,
     userEmailMissing,
-    invalidUserEmail
+    invalidUserEmail,
+    InvalidSearch_company_id,
+    Search_company_id_Missing
 };

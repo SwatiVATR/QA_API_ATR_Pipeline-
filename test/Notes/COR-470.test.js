@@ -15,7 +15,9 @@ const { success,
     appendNoteMissing,
     transactionId_String,
     userEmailMissing,
-    invalidUserEmail
+    invalidUserEmail,
+    InvalidSearch_company_id,
+    Search_company_id_Missing
 } = require("../../RequestBodies/COR-470-Body")
 const options = {
     path: `/${STAGE}/${VERSION}/services/notes/special-request`,
@@ -56,7 +58,6 @@ it('API Success with appended_note key',
     },
     Timeout
 )
-
 
 it('button_id key is empty',
     async () => {
@@ -129,6 +130,40 @@ it('order_id key passed wrong',
 it('search_company_id is passed as string',
     async () => {
         const postData = JSON.stringify(search_company_id_String);
+        try {
+            reporter.startStep("Values passed:" + JSON.stringify(postData));
+            const response = await NAModule(postData, options);
+            expect(response.success.message).toBe("Appended note has been added successfully for Rush");
+            reporter.endStep();
+            reporter.testId("API Endpoint-/services/notes/special-request")
+            reporter.description("Response message from API:"+JSON.stringify(response))
+
+        } catch (error) {
+            throw new Error(error);
+        }
+    },
+    Timeout
+)
+it('search_company_id is passed as invalid',
+    async () => {
+        const postData = JSON.stringify(InvalidSearch_company_id);
+        try {
+            reporter.startStep("Values passed:" + JSON.stringify(postData));
+            const response = await NAModule(postData, options);
+            expect(response.error).toBe("Button ID not found.");
+            reporter.endStep();
+            reporter.testId("API Endpoint-/services/notes/special-request")
+            reporter.description("Response message from API:"+JSON.stringify(response))
+
+        } catch (error) {
+            throw new Error(error);
+        }
+    },
+    Timeout
+)
+it('search_company_id is not passed',
+    async () => {
+        const postData = JSON.stringify(Search_company_id_Missing);
         try {
             reporter.startStep("Values passed:" + JSON.stringify(postData));
             const response = await NAModule(postData, options);
