@@ -9,7 +9,7 @@ const {
     path: `/${STAGE}/${VERSION}/services/searcherCompany/134522`,
   };
   const NAModule = require("../../modules/NAModule");
-  
+  let response;
   it(
     "API Success",
     async () => {
@@ -18,13 +18,13 @@ const {
       });
       try {
         reporter.startStep("Values passed:" + JSON.stringify(postData));
-        const response = await NAModule(postData, options);
+        response= await NAModule(postData, options);
         expect(response.success.msg).toBe("Updated successfully");
         reporter.endStep();
         reporter.testId("API Endpoint-/services/searcherCompany/134522")
         reporter.description("Response message from API:" + JSON.stringify(response))
       } catch (error) {
-        throw new Error();
+        throw new Error(JSON.stringify(response));
       }
     },
     Timeout
@@ -36,13 +36,13 @@ const {
       const postData = JSON.stringify({});
       try {
         reporter.startStep("Values passed:" + JSON.stringify(postData));
-        const response = await NAModule(postData, options);
+        response= await NAModule(postData, options);
         expect(response.error).toBe("'searchCompany'");
         reporter.endStep();
         reporter.testId("API Endpoint-/services/searcherCompany/134522")
         reporter.description("Response message from API:" + JSON.stringify(response))
       } catch (error) {
-        throw new Error();
+        throw new Error(JSON.stringify(response));
       }
     },
     Timeout
@@ -53,7 +53,7 @@ const {
       const postData = JSON.stringify({ searchCompany: "" });
       try {
         reporter.startStep("Values passed:" + JSON.stringify(postData));
-        const response = await NAModule(postData, options);
+        response= await NAModule(postData, options);
         expect(response.error).toBe(
           "Invalid data or url or filepath argument: \nExpecting value: line 1 column 1 (char 0)"
         );
@@ -61,7 +61,7 @@ const {
         reporter.testId("API Endpoint-/services/searcherCompany/134522")
         reporter.description("Response message from API:" + JSON.stringify(response))
       } catch (error) {
-        throw new Error();
+        throw new Error(JSON.stringify(response));
       }
     },
     Timeout

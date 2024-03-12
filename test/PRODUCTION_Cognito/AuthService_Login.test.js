@@ -16,7 +16,7 @@ const {
     headers: HEADERWITHOUTTOKEN,
     path: `/${PRODSTAGE}/${VERSION}/services/invoker/cognito/signin`,
   };
-  
+  let response;
   it(
     "API Success",
     async () => {
@@ -26,12 +26,12 @@ const {
       });
       try {
         reporter.startStep("Values passed:" + JSON.stringify(postData));
-        const response = await NAModule(postData, options);
+        response= await NAModule(postData, options);
         reporter.endStep();
         reporter.testId("API Endpoint-/services/invoker/cognito/signin")
         reporter.description("Response message from API:" + JSON.stringify(response))
       } catch (error) {
-        throw new Error(error);
+        throw new Error(JSON.stringify(response));
       }
     },
     Timeout
@@ -46,13 +46,13 @@ const {
       });
       try {
         reporter.startStep("Values passed:" + JSON.stringify(postData));
-        const response = await NAModule(postData, options);
+        response= await NAModule(postData, options);
         expect(response.statusCode).toBe(500);
         reporter.endStep();
         reporter.testId("API Endpoint-/services/invoker/cognito/signin")
         reporter.description("Response message from API:" + JSON.stringify(response))
       } catch (error) {
-        throw new Error(error);
+        throw new Error(JSON.stringify(response));
       }
     },
     Timeout
@@ -66,13 +66,13 @@ const {
       });
       try {
         reporter.startStep("Values passed:" + JSON.stringify(postData));
-        const response = await NAModule(postData, options);
+        response= await NAModule(postData, options);
         expect(response.statusCode).toBe(500);
         reporter.endStep();
         reporter.testId("API Endpoint-/services/invoker/cognito/signin")
         reporter.description("Response message from API:" + JSON.stringify(response))
       } catch (error) {
-        throw new Error(error);
+        throw new Error(JSON.stringify(response));
       }
     },
     Timeout
@@ -86,13 +86,13 @@ const {
       });
       try {
         reporter.startStep("Values passed:" + JSON.stringify(postData));
-        const response = await NAModule(postData, options);
+        response= await NAModule(postData, options);
         expect(response.statusCode).toBe(500);
         reporter.endStep();
         reporter.testId("API Endpoint-/services/invoker/cognito/signin")
         reporter.description("Response message from API:" + JSON.stringify(response))
       } catch (error) {
-        throw new Error(error);
+        throw new Error(JSON.stringify(response));
       }
     },
     Timeout
@@ -106,13 +106,13 @@ const {
       });
       try {
         reporter.startStep("Values passed:" + JSON.stringify(postData));
-        const response = await NAModule(postData, options);
+        response= await NAModule(postData, options);
         expect(response.statusCode).toBe(500);
         reporter.endStep();
         reporter.testId("API Endpoint-/services/invoker/cognito/signin")
         reporter.description("Response message from API:" + JSON.stringify(response))
       } catch (error) {
-        throw new Error(error);
+        throw new Error(JSON.stringify(response));
       }
     },
     Timeout
@@ -127,13 +127,13 @@ const {
       });
       try {
         reporter.startStep("Values passed:" + JSON.stringify(postData));
-        const response = await NAModule(postData, options);
+        response= await NAModule(postData, options);
         expect(response.statusCode).toBe(500);
         reporter.endStep();
         reporter.testId("API Endpoint-/services/invoker/cognito/signin")
         reporter.description("Response message from API:" + JSON.stringify(response))
       } catch (error) {
-        throw new Error(error);
+        throw new Error(JSON.stringify(response));
       }
     },
     Timeout
@@ -148,12 +148,12 @@ const {
       });
       try {
         reporter.startStep("Values passed:" + JSON.stringify(postData));
-        const response = await NAModule(postData, options);
+        response= await NAModule(postData, options);
         reporter.endStep();
         reporter.testId("API Endpoint-/services/invoker/cognito/signin")
         reporter.description("Response message from API:" + JSON.stringify(response))
       } catch (error) {
-        throw new Error(error);
+        throw new Error(JSON.stringify(response));
       }
     },
     Timeout

@@ -13,3 +13,4 @@ pgdata/*
 
 # Ignore coverage reports
 /coverage*
+

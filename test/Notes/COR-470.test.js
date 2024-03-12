@@ -23,19 +23,20 @@ const options = {
     path: `/${STAGE}/${VERSION}/services/notes/special-request`,
     ...commonOptionsPOST,
 };
+let response;
 it('API Success without appended_note key',
     async () => {
         const postData = JSON.stringify(success);
         try {
             reporter.startStep("Values passed:" + JSON.stringify(postData));
-            const response = await NAModule(postData, options);
+            response = await NAModule(postData, options);
             expect(response.success.message).toBe("Rush note has been added successfully");
             reporter.endStep();
             reporter.testId("API Endpoint-/services/notes/special-request")
             reporter.description("Response message from API:"+JSON.stringify(response))
 
         } catch (error) {
-            throw new Error(error);
+            throw new Error(JSON.stringify(response));
         }
     },
     Timeout
@@ -46,14 +47,14 @@ it('API Success with appended_note key',
         const postData = JSON.stringify(successAppend);
         try {
             reporter.startStep("Values passed:" + JSON.stringify(postData));
-            const response = await NAModule(postData, options);
+            response = await NAModule(postData, options);
             expect(response.success.message).toBe("Appended note has been added successfully for Rush");
             reporter.endStep();
             reporter.testId("API Endpoint-/services/notes/special-request")
             reporter.description("Response message from API:"+JSON.stringify(response))
 
         } catch (error) {
-            throw new Error(error);
+            throw new Error(JSON.stringify(response));
         }
     },
     Timeout
@@ -64,14 +65,14 @@ it('button_id key is empty',
         const postData = JSON.stringify(buttonIdMissing);
         try {
             reporter.startStep("Values passed:" + JSON.stringify(postData));
-            const response = await NAModule(postData, options);
+            response = await NAModule(postData, options);
             expect(response.error).toBe("Button ID parameter is missing.");
             reporter.endStep();
             reporter.testId("API Endpoint-/services/notes/special-request")
             reporter.description("Response message from API:"+JSON.stringify(response))
 
         } catch (error) {
-            throw new Error(error);
+            throw new Error(JSON.stringify(response));
         }
     },
     Timeout
@@ -81,14 +82,14 @@ it('button_id key passed wrong',
         const postData = JSON.stringify(invalidButtonId);
         try {
             reporter.startStep("Values passed:" + JSON.stringify(postData));
-            const response = await NAModule(postData, options);
+            response = await NAModule(postData, options);
             expect(response.error).toBe("Button ID not found.");
             reporter.endStep();
             reporter.testId("API Endpoint-/services/notes/special-request")
             reporter.description("Response message from API:"+JSON.stringify(response))
 
         } catch (error) {
-            throw new Error(error);
+            throw new Error(JSON.stringify(response));
         }
     },
     Timeout
@@ -98,14 +99,14 @@ it('order_id is empty',
         const postData = JSON.stringify(orderIdMissing);
         try {
             reporter.startStep("Values passed:" + JSON.stringify(postData));
-            const response = await NAModule(postData, options);
+            response = await NAModule(postData, options);
             expect(response.success.message).toBe("Appended note has been added successfully for Rush");
             reporter.endStep();
             reporter.testId("API Endpoint-/services/notes/special-request")
             reporter.description("Response message from API:"+JSON.stringify(response))
 
         } catch (error) {
-            throw new Error(error);
+            throw new Error(JSON.stringify(response));
         }
     },
     Timeout
@@ -115,14 +116,14 @@ it('order_id key passed wrong',
         const postData = JSON.stringify(invalidOrderId);
         try {
             reporter.startStep("Values passed:" + JSON.stringify(postData));
-            const response = await NAModule(postData, options);
+            response = await NAModule(postData, options);
             expect(response.success.message).toBe("Appended note has been added successfully for Rush");
             reporter.endStep();
             reporter.testId("API Endpoint-/services/notes/special-request")
             reporter.description("Response message from API:"+JSON.stringify(response))
 
         } catch (error) {
-            throw new Error(error);
+            throw new Error(JSON.stringify(response));
         }
     },
     Timeout
@@ -132,14 +133,14 @@ it('search_company_id is passed as string',
         const postData = JSON.stringify(search_company_id_String);
         try {
             reporter.startStep("Values passed:" + JSON.stringify(postData));
-            const response = await NAModule(postData, options);
+            response = await NAModule(postData, options);
             expect(response.success.message).toBe("Appended note has been added successfully for Rush");
             reporter.endStep();
             reporter.testId("API Endpoint-/services/notes/special-request")
             reporter.description("Response message from API:"+JSON.stringify(response))
 
         } catch (error) {
-            throw new Error(error);
+            throw new Error(JSON.stringify(response));
         }
     },
     Timeout
@@ -149,14 +150,14 @@ it('search_company_id is passed as invalid',
         const postData = JSON.stringify(InvalidSearch_company_id);
         try {
             reporter.startStep("Values passed:" + JSON.stringify(postData));
-            const response = await NAModule(postData, options);
+            response = await NAModule(postData, options);
             expect(response.error).toBe("Button ID not found.");
             reporter.endStep();
             reporter.testId("API Endpoint-/services/notes/special-request")
             reporter.description("Response message from API:"+JSON.stringify(response))
 
         } catch (error) {
-            throw new Error(error);
+            throw new Error(JSON.stringify(response));
         }
     },
     Timeout
@@ -166,14 +167,14 @@ it('search_company_id is not passed',
         const postData = JSON.stringify(Search_company_id_Missing);
         try {
             reporter.startStep("Values passed:" + JSON.stringify(postData));
-            const response = await NAModule(postData, options);
+            response = await NAModule(postData, options);
             expect(response.success.message).toBe("Appended note has been added successfully for Rush");
             reporter.endStep();
             reporter.testId("API Endpoint-/services/notes/special-request")
             reporter.description("Response message from API:"+JSON.stringify(response))
 
         } catch (error) {
-            throw new Error(error);
+            throw new Error(JSON.stringify(response));
         }
     },
     Timeout
@@ -183,14 +184,14 @@ it('appended_note is passed empty',
         const postData = JSON.stringify(appendNoteMissing);
         try {
             reporter.startStep("Values passed:" + JSON.stringify(postData));
-            const response = await NAModule(postData, options);
+            response = await NAModule(postData, options);
             expect(response.success.message).toBe("Rush note has been added successfully");
             reporter.endStep();
             reporter.testId("API Endpoint-/services/notes/special-request")
             reporter.description("Response message from API:"+JSON.stringify(response))
 
         } catch (error) {
-            throw new Error(error);
+            throw new Error(JSON.stringify(response));
         }
     },
     Timeout
@@ -201,14 +202,14 @@ it('transactionId is passed as string',
         const postData = JSON.stringify(transactionId_String);
         try {
             reporter.startStep("Values passed:" + JSON.stringify(postData));
-            const response = await NAModule(postData, options);
+            response = await NAModule(postData, options);
             expect(response.success.message).toBe("Appended note has been added successfully for Rush");
             reporter.endStep();
             reporter.testId("API Endpoint-/services/notes/special-request")
             reporter.description("Response message from API:"+JSON.stringify(response))
 
         } catch (error) {
-            throw new Error(error);
+            throw new Error(JSON.stringify(response));
         }
     },
     Timeout
@@ -219,14 +220,14 @@ it('userEmail is empty',
         const postData = JSON.stringify(userEmailMissing);
         try {
             reporter.startStep("Values passed:" + JSON.stringify(postData));
-            const response = await NAModule(postData, options);
+            response = await NAModule(postData, options);
             expect(response.success.message).toBe("Appended note has been added successfully for Rush");
             reporter.endStep();
             reporter.testId("API Endpoint-/services/notes/special-request")
             reporter.description("Response message from API:"+JSON.stringify(response))
 
         } catch (error) {
-            throw new Error(error);
+            throw new Error(JSON.stringify(response));
         }
     },
     Timeout
@@ -237,14 +238,14 @@ it('invalid userEmail passed',
         const postData = JSON.stringify(invalidUserEmail);
         try {
             reporter.startStep("Values passed:" + JSON.stringify(postData));
-            const response = await NAModule(postData, options);
+            response = await NAModule(postData, options);
             expect(response.success.message).toBe("Appended note has been added successfully for Rush");
             reporter.endStep();
             reporter.testId("API Endpoint-/services/notes/special-request")
             reporter.description("Response message from API:"+JSON.stringify(response))
 
         } catch (error) {
-            throw new Error(error);
+            throw new Error(JSON.stringify(response));
         }
     },
     Timeout

@@ -5,17 +5,19 @@ const options = {
   path: `/${STAGE}/${VERSION}/services/normalize/ramquest`,
   ...commonOptionsPOST,
 };
+let response;
+
 it('transactionId is None', async () => {
   const postData = JSON.stringify(TransactionId_None);
   try {
     reporter.startStep("Values passed:" + JSON.stringify(postData));
-    const response = await NAModule(postData, options);
+    response = await NAModule(postData, options);
     expect(response.error).toBe("transactionId");
     reporter.endStep();
     reporter.testId("API Endpoint-/services/normalize/ramquest")
-    reporter.description("Response message from API:" + JSON.stringify(response.error))
+    reporter.description("Response message from API:" + JSON.stringify(response))
   } catch (error) {
-    throw new Error(error);
+    throw new Error(JSON.stringify(response));
   }
 }, Timeout)
 
@@ -23,13 +25,13 @@ it('transactionId passed with special characters', async () => {
   const postData = JSON.stringify(TransactionId_SpecialCharacters);
   try {
     reporter.startStep("Values passed:" + JSON.stringify(postData));
-    const response = await NAModule(postData, options);
+    response= await NAModule(postData, options);
     expect(response.error).toBe("transactionId");
     reporter.endStep();
     reporter.testId("API Endpoint-/services/normalize/ramquest")
-    reporter.description("Response message from API:" + JSON.stringify(response.error))
+    reporter.description("Response message from API:" + JSON.stringify(response))
   } catch (error) {
-    throw new Error(error);
+    throw new Error(JSON.stringify(response));
   }
 }, Timeout)
 
@@ -37,13 +39,13 @@ it('transactionId is empty', async () => {
   const postData = JSON.stringify(TransactionId_Empty);
   try {
     reporter.startStep("Values passed:" + JSON.stringify(postData));
-    const response = await NAModule(postData, options);
+    response = await NAModule(postData, options);
     expect(response.error).toBe("transactionId");
     reporter.endStep();
     reporter.testId("API Endpoint-/services/normalize/ramquest")
-    reporter.description("Response message from API:" + JSON.stringify(response.error))
+    reporter.description("Response message from API:" + JSON.stringify(response))
   } catch (error) {
-    throw new Error(error);
+    throw new Error(JSON.stringify(response));
   }
 }, Timeout)
 
@@ -55,13 +57,13 @@ it('Session expired', async () => {
   const postData = JSON.stringify(TransactionId_None);
   try {
     reporter.startStep("Values passed:" + JSON.stringify(postData));
-    const response = await NAModule(postData, options);
+    response = await NAModule(postData, options);
     expect(response.error).toBe("Invalid Session");
     reporter.endStep();
     reporter.testId("API Endpoint-/services/normalize/ramquest")
-    reporter.description("Response message from API:" + JSON.stringify(response.error))
+    reporter.description("Response message from API:" + JSON.stringify(response))
   } catch (error) {
-    throw new Error(error);
+    throw new Error(JSON.stringify(response));
   }
 }, Timeout)
 

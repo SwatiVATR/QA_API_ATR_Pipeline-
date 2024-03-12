@@ -18,7 +18,7 @@ const HttpModule = async (postData, options) => {
     });
 
     req.on("error", (error) => {
-      reject(error);
+      reject("Error response:",error)
     });
 
     req.write(postData);

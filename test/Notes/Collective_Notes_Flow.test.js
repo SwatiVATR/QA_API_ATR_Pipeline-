@@ -11,6 +11,7 @@ const {
 } = require("../../config");
 const NAModule = require("../../modules/NAModule");
 const { success } = require("../../RequestBodies/NotesUpdateBody");
+let response;
 it('API Success for service notes',
     async () => {
         const postData = JSON.stringify({});
@@ -20,7 +21,7 @@ it('API Success for service notes',
         };
         try {
             reporter.startStep("Values passed:" + JSON.stringify(postData));
-            const response = await NAModule(postData, options);
+            response = await NAModule(postData, options);
             expect(response.success.txId).toBe(
                 "159306"
             );
@@ -28,7 +29,7 @@ it('API Success for service notes',
             reporter.testId("API Endpoint-/services/notes/159306/0")
             reporter.description("Response message from API:"+JSON.stringify(response))
         } catch (error) {
-            throw new Error(error);
+            throw new Error(JSON.stringify(response));
         }
     },
     Timeout
@@ -43,13 +44,13 @@ it('API Success for service notes update',
         const postData = JSON.stringify(success);
         try {
             reporter.startStep("Values passed:" + JSON.stringify(postData));
-            const response = await NAModule(postData, options);
+            response = await NAModule(postData, options);
             expect(response.success.statusCode).toBe(200);
             reporter.endStep();
             reporter.testId("API Endpoint-/services/notes/update")
             reporter.description("Response message from API:"+JSON.stringify(response))
         } catch (error) {
-            throw new Error(error);
+            throw new Error(JSON.stringify(response));
         }
     },
     Timeout
@@ -68,7 +69,7 @@ it('API Success for service submit notes of not ATR Members',
         });
         try {
             reporter.startStep("Values passed:" + JSON.stringify(postData));
-            const response = await NAModule(postData, options);
+            response = await NAModule(postData, options);
             expect(response.message).toBe(
                 "Notes have been submitted successfully and an email has been sent to both the existing user and the non-ATR members."
             );
@@ -77,7 +78,7 @@ it('API Success for service submit notes of not ATR Members',
             reporter.description("Response message from API:"+ JSON.stringify(response))
 
         } catch (error) {
-            throw new Error(error);
+            throw new Error(JSON.stringify(response));
         }
     },
     Timeout
@@ -95,7 +96,7 @@ it('API Success for service submit notes of ATR Members',
         });
         try {
             reporter.startStep("Values passed:" + JSON.stringify(postData));
-            const response = await NAModule(postData, options);
+            response = await NAModule(postData, options);
             expect(response.message).toBe(
                 "Notes have been submitted successfully and an email has been sent to ATR Support."
             );
@@ -104,7 +105,7 @@ it('API Success for service submit notes of ATR Members',
             reporter.description("Response message from API:"+ JSON.stringify(response))
 
         } catch (error) {
-            throw new Error(error);
+            throw new Error(JSON.stringify(response));
         }
     },
     Timeout
@@ -123,14 +124,14 @@ it('API Success for special-request without appended_note key',
         };
         try {
             reporter.startStep("Values passed:" + JSON.stringify(postData));
-            const response = await NAModule(postData, options);
+            response = await NAModule(postData, options);
             expect(response.success.message).toBe("Rush note has been added successfully");
             reporter.endStep();
             reporter.testId("API Endpoint-/services/notes/special-request")
             reporter.description("Response message from API:" + JSON.stringify(response))
 
         } catch (error) {
-            throw new Error(error);
+            throw new Error(JSON.stringify(response));
         }
     },
     Timeout
@@ -150,7 +151,7 @@ it('API Success for special-request with appended_note key',
         };
         try {
             reporter.startStep("Values passed:" + JSON.stringify(postData));
-            const response = await NAModule(postData, options);
+            response = await NAModule(postData, options);
             expect(response.success.message).toBe("Appended note has been added successfully for Rush");
             reporter.endStep();
             reporter.testId("API Endpoint-/services/notes/special-request")
@@ -158,7 +159,7 @@ it('API Success for special-request with appended_note key',
             reporter.description("Response message from API:" + JSON.stringify(response))
 
         } catch (error) {
-            throw new Error(error);
+            throw new Error(JSON.stringify(response));
         }
     },
     Timeout
@@ -176,14 +177,14 @@ it('API Success for service current duedate update',
         };
         try {
             reporter.startStep("Values passed:" + JSON.stringify(postData));
-            const response = await NAModule(postData, options);
+            response = await NAModule(postData, options);
             expect(response.success).toBe("An email with the updated details has been shared with the user.");
             reporter.endStep();
             reporter.testId("API Endpoint-/services/current_duedate_update")
             reporter.description("Response message from API:" + JSON.stringify(response))
 
         } catch (error) {
-            throw new Error(error);
+            throw new Error(JSON.stringify(response));
         }
     },
     Timeout

@@ -4,6 +4,7 @@ const options = {
   ...commonOptionsPOST,
   path: `/${STAGE}/${VERSION}/services/create-template`,
 };
+let response;
 it(
   "Api Success on new template creation",
   async () => {
@@ -20,13 +21,13 @@ it(
     });
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
-      const response = await NAModule(postData, options);
+     response= await NAModule(postData, options);
       expect(response.Result.ResponseMetadata.HTTPStatusCode).toBe(200);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/create-template")
       reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout
@@ -42,13 +43,13 @@ it(
     });
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
-      const response = await NAModule(postData, options);
+     response= await NAModule(postData, options);
       expect(response.Result.errorType).toBe("AlreadyExistsException");
       reporter.endStep();
       reporter.testId("API Endpoint-/services/create-template")
       reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout
@@ -59,7 +60,7 @@ it(
     const postData = JSON.stringify({});
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
-      const response = await NAModule(postData, options);
+     response= await NAModule(postData, options);
       expect(response.Error).toBe(
         "'name' is a mandatory field and is missing or empty."
       );
@@ -67,7 +68,7 @@ it(
       reporter.testId("API Endpoint-/services/create-template")
       reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout
@@ -83,7 +84,7 @@ it(
     });
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
-      const response = await NAModule(postData, options);
+     response= await NAModule(postData, options);
       expect(response.Error).toBe(
         "'name' is a mandatory field and is missing or empty."
       );
@@ -91,7 +92,7 @@ it(
       reporter.testId("API Endpoint-/services/create-template")
       reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout
@@ -107,7 +108,7 @@ it(
     });
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
-      const response = await NAModule(postData, options);
+     response= await NAModule(postData, options);
       expect(response.Error).toBe(
         "'subject' is a mandatory field and is missing or empty."
       );
@@ -115,7 +116,7 @@ it(
       reporter.testId("API Endpoint-/services/create-template")
       reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout
@@ -132,13 +133,13 @@ it(
     });
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
-      const response = await NAModule(postData, options);
+     response= await NAModule(postData, options);
       expect(response.Result.errorType).toBe("AlreadyExistsException");
       reporter.endStep();
       reporter.testId("API Endpoint-/services/create-template")
       reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout
@@ -154,7 +155,7 @@ it(
     });
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
-      const response = await NAModule(postData, options);
+     response= await NAModule(postData, options);
       expect(response.Error).toBe(
         "'text' is a mandatory field and is missing or empty."
       );
@@ -162,7 +163,7 @@ it(
       reporter.testId("API Endpoint-/services/create-template")
       reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout
@@ -178,13 +179,13 @@ it(
     });
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
-      const response = await NAModule(postData, options);
+     response= await NAModule(postData, options);
       expect(response.Result.errorType).toBe("AlreadyExistsException");
       reporter.endStep();
       reporter.testId("API Endpoint-/services/create-template")
       reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout
@@ -201,7 +202,7 @@ it(
     });
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
-      const response = await NAModule(postData, options);
+     response= await NAModule(postData, options);
       expect(response.Error).toBe(
         "'html' is a mandatory field and is missing or empty."
       );
@@ -209,7 +210,7 @@ it(
       reporter.testId("API Endpoint-/services/create-template")
       reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout
@@ -225,13 +226,13 @@ it(
     });
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
-      const response = await NAModule(postData, options);
+     response= await NAModule(postData, options);
       expect(response.Result.errorType).toBe("ClientError");
       reporter.endStep();
       reporter.testId("API Endpoint-/services/create-template")
       reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout

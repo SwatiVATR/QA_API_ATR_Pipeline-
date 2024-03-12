@@ -13,9 +13,9 @@ const options = {
   path: `/${STAGE}/${VERSION}/services/async/MyStandardStateMachine`,
 };
 
-
 const USER=process.env.SWATI_USER_EMAIL
 const PASSWORD=process.env.SWATI_PASSWORD
+let response;
 it(
   "API Success",
   async () => {
@@ -25,13 +25,13 @@ it(
     });
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
-      const response = await NAModule(postData, options);
+      response=await NAModule(postData, options);
       expect(response.success.statusCode).toBe(200);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/async/MyStandardStateMachine")
       reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout
@@ -46,13 +46,13 @@ it(
     });
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
-      const response = await NAModule(postData, options);
+      response=await NAModule(postData, options);
       expect(response.success.statusCode).toBe(200);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/async/MyStandardStateMachine")
       reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout
@@ -67,13 +67,13 @@ it(
     });
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
-      const response = await NAModule(postData, options);
+      response=await NAModule(postData, options);
       expect(response.success.statusCode).toBe(200);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/async/MyStandardStateMachine")
       reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout
@@ -87,13 +87,13 @@ it(
     });
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
-      const response = await NAModule(postData, options);
+      response=await NAModule(postData, options);
       expect(response.success.statusCode).toBe(200);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/async/MyStandardStateMachine")
       reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout
@@ -108,13 +108,13 @@ it(
     });
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
-      const response = await NAModule(postData, options);
+      response=await NAModule(postData, options);
       expect(response.success.statusCode).toBe(200);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/async/MyStandardStateMachine")
       reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout

@@ -17,7 +17,7 @@ const optionsWithoutAuth = {
     ...commonOptionsPOSTwithoutHeader,
 };
 const Email = process.env.SWATI_USER_EMAIL
-
+let response;
 it(
     "API Success",
     async () => {
@@ -28,13 +28,13 @@ it(
         });
         try {
             reporter.startStep("Values passed:" + JSON.stringify(postData));
-            const response = await NAModule(postData, options);
+            response= await NAModule(postData, options);
             expect(response.statusCode).toBe(500);
             reporter.endStep();
             reporter.testId("API Endpoint-/services/invoker/cognito/confirm")
             reporter.description("Response message from API:"+ JSON.stringify(response))
         } catch (error) {
-            throw new Error(error);
+            throw new Error(JSON.stringify(response));
         }
     },
     Timeout
@@ -50,13 +50,13 @@ it(
         });
         try {
             reporter.startStep("Values passed:" + JSON.stringify(postData));
-            const response = await NAModule(postData, options);
+            response= await NAModule(postData, options);
             expect(response.statusCode).toBe(500);
             reporter.endStep();
             reporter.testId("API Endpoint-/services/invoker/cognito/confirm")
             reporter.description("Response message from API:"+ JSON.stringify(response))
         } catch (error) {
-            throw new Error(error);
+            throw new Error(JSON.stringify(response));
         }
     },
     Timeout
@@ -72,13 +72,13 @@ it(
         });
         try {
             reporter.startStep("Values passed:" + JSON.stringify(postData));
-            const response = await NAModule(postData, options);
+            response= await NAModule(postData, options);
             expect(response.statusCode).toBe(500);
             reporter.endStep();
             reporter.testId("API Endpoint-/services/invoker/cognito/confirm")
             reporter.description("Response message from API:"+ JSON.stringify(response))
         } catch (error) {
-            throw new Error(error);
+            throw new Error(JSON.stringify(response));
         }
     },
     Timeout
@@ -96,13 +96,13 @@ it(
         });
         try {
             reporter.startStep("Values passed:" + JSON.stringify(postData));
-            const response = await NAModule(postData, options);
+            response= await NAModule(postData, options);
             expect(response.statusCode).toBe(500);
             reporter.endStep();
             reporter.testId("API Endpoint-/services/invoker/cognito/confirm")
             reporter.description("Response message from API:"+ JSON.stringify(response))
         } catch (error) {
-            throw new Error(error);
+            throw new Error(JSON.stringify(response));
         }
     },
     Timeout
@@ -117,13 +117,13 @@ it(
         });
         try {
             reporter.startStep("Values passed:" + JSON.stringify(postData));
-            const response = await NAModule(postData, options);
+            response= await NAModule(postData, options);
             expect(response.statusCode).toBe(500);
             reporter.endStep();
             reporter.testId("API Endpoint-/services/invoker/cognito/confirm")
             reporter.description("Response message from API:"+ JSON.stringify(response))
         } catch (error) {
-            throw new Error(error);
+            throw new Error(JSON.stringify(response));
         }
     },
     Timeout
@@ -139,13 +139,13 @@ it(
         });
         try {
             reporter.startStep("Values passed:" + JSON.stringify(postData));
-            const response = await NAModule(postData, options);
+            response= await NAModule(postData, options);
             expect(response.statusCode).toBe(500);
             reporter.endStep();
             reporter.testId("API Endpoint-/services/invoker/cognito/confirm")
             reporter.description("Response message from API:"+ JSON.stringify(response))
         } catch (error) {
-            throw new Error(error);
+            throw new Error(JSON.stringify(response));
         }
     },
     Timeout
@@ -161,13 +161,13 @@ it(
         });
         try {
             reporter.startStep("Values passed:" + JSON.stringify(postData));
-            const response = await NAModule(postData, options);
+            response= await NAModule(postData, options);
             expect(response.statusCode).toBe(500);
             reporter.endStep();
             reporter.testId("API Endpoint-/services/invoker/cognito/confirm")
             reporter.description("Response message from API:"+ JSON.stringify(response))
         } catch (error) {
-            throw new Error(error);
+            throw new Error(JSON.stringify(response));
         }
     },
     Timeout
@@ -180,13 +180,13 @@ it(
         });
         try {
             reporter.startStep("Values passed:" + JSON.stringify(postData));
-            const response = await NAModule(postData, options);
+            response= await NAModule(postData, options);
             expect(response.statusCode).toBe(500);
             reporter.endStep();
             reporter.testId("API Endpoint-/services/invoker/cognito/confirm")
             reporter.description("Response message from API:"+ JSON.stringify(response))
         } catch (error) {
-            throw new Error(error);
+            throw new Error(JSON.stringify(response));
         }
     },
     Timeout
@@ -203,13 +203,13 @@ it(
         });
         try {
             reporter.startStep("Values passed:" + JSON.stringify(postData));
-            const response = await NAModule(postData, optionsWithoutAuth);
+            response= await NAModule(postData, optionsWithoutAuth);
             expect(response.statusCode).toBe(500);
             reporter.endStep();
             reporter.testId("API Endpoint-/services/invoker/cognito/confirm")
             reporter.description("Response message from API:"+ JSON.stringify(response))
         } catch (error) {
-            throw new Error(error);
+            throw new Error(JSON.stringify(response));
         }
     },
     Timeout

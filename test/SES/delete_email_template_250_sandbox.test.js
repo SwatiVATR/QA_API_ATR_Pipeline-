@@ -6,9 +6,8 @@ const {
     commonOptionsDELETEwithoutHeader
 } = require("../../config");
 const NAModule = require("../../modules/NAModule");
-
-
 const postData = JSON.stringify({});
+let response;
 it(
     "API Success",
     async () => {
@@ -19,7 +18,7 @@ it(
         try {
             reporter.startStep("Values passed:" + JSON.stringify(postData));
 
-            const response = await NAModule(postData, options);
+            response= await NAModule(postData, options);
             expect(response.message).toBe(
                 "Template 'testabc' deleted successfully"
             );
@@ -27,7 +26,7 @@ it(
             reporter.testId("API Endpoint-/services/delete-template/testabc")
             reporter.description("Response message from API:" + JSON.stringify(response))
         } catch (error) {
-            throw new Error(error);
+            throw new Error(JSON.stringify(response));
         }
     },
     Timeout
@@ -45,7 +44,7 @@ it(
         try {
             reporter.startStep("Values passed:" + JSON.stringify(postData));
 
-            const response = await NAModule(postData, options);
+            response= await NAModule(postData, options);
             expect(response.message).toBe(
                 "Template '@@@' deleted successfully"
             );
@@ -53,7 +52,7 @@ it(
             reporter.testId("API Endpoint-/services/delete-template/@@@#$$DD")
             reporter.description("Response message from API:" + JSON.stringify(response))
         } catch (error) {
-            throw new Error(error);
+            throw new Error(JSON.stringify(response));
         }
     },
     Timeout
@@ -69,13 +68,13 @@ it(
         try {
             reporter.startStep("Values passed:" + JSON.stringify(postData));
 
-            const response = await NAModule(postData, options);
+            response= await NAModule(postData, options);
             expect(response.error).toBe("Invalid Session");
             reporter.endStep();
             reporter.testId("API Endpoint-/services/delete-template/@@@#$$DD")
             reporter.description("Response message from API:" + JSON.stringify(response))
         } catch (error) {
-            throw new Error(error);
+            throw new Error(JSON.stringify(response));
         }
     },
     Timeout

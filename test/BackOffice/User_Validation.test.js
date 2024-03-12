@@ -6,6 +6,7 @@ const options = {
   ...commonOptionsPOSTwithoutHeader,
   path: `/${STAGE}/${VERSION}/services/invoker/backoffice/ValUser`,
 };
+let response;
 it(
   "Succesfull Reponse",
   async () => {
@@ -19,13 +20,13 @@ it(
 
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
-      const response = await COR354TemplateModule(postData, options);
+      response = await COR354TemplateModule(postData, options);
       expect(response.statusCode).toBe(201);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/backoffice/ValUser")
       reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout
@@ -43,13 +44,13 @@ it(
     });
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
-      const response = await COR354TemplateModule(postData, options);
+      response = await COR354TemplateModule(postData, options);
       expect(response.statusCode).toBe(401);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/backoffice/ValUser")
       reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout
@@ -67,12 +68,12 @@ it(
     });
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
-      const response = await COR354TemplateModule(postData, options);
+      response = await COR354TemplateModule(postData, options);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/backoffice/ValUser")
       reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout
@@ -84,12 +85,12 @@ it(
     const postData = JSON.stringify({});
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
-      const response = await COR354TemplateModule(postData, options);
+      response = await COR354TemplateModule(postData, options);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/backoffice/ValUser")
       reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout
@@ -108,13 +109,13 @@ it(
     });
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
-      const response = await COR354TemplateModule(postData, options);
+      response = await COR354TemplateModule(postData, options);
       expect(response.statusCode).toBe(401);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/backoffice/ValUser")
       reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout
@@ -132,13 +133,13 @@ it(
     });
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
-      const response = await COR354TemplateModule(postData, options);
+      response = await COR354TemplateModule(postData, options);
       expect(response.statusCode).toBe(401);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/backoffice/ValUser")
       reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout
@@ -157,13 +158,13 @@ it(
     });
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
-      const response = await COR354TemplateModule(postData, options);
+      response = await COR354TemplateModule(postData, options);
       expect(response.statusCode).toBe(401);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/backoffice/ValUser")
       reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout

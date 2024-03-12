@@ -1,10 +1,8 @@
 const { STAGE, VERSION, commonOptionsPOST,commonOptionsPOSTBearer, Timeout,commonOptionsPOSTwithoutHeader} = require("../../config");
 const NAModule = require("../../modules/NAModule");
+const {Success} = require("../../RequestBodies/OrderService_Normalizer_Body");
 
-const {
-    Success
-  } = require("../../RequestBodies/OrderService_Normalizer_Body");
-
+let response;
   it('Api success',
   async () => {
     const postData = JSON.stringify({
@@ -16,13 +14,13 @@ const {
     };
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
-      const response = await NAModule(postData, options);
+      response = await NAModule(postData, options);
       expect(response.success.credentials.agencyPortalId).toBe("Test12");
       reporter.endStep();
       reporter.testId("API Endpoint-/services/normalize/vendor?json")
       reporter.description("Response message from API:" +JSON.stringify(response))
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout
@@ -39,13 +37,13 @@ it('Invalid file path',
     };
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
-      const response = await NAModule(postData, options);
+      response = await NAModule(postData, options);
       expect(response.error).toBe("Invalid data or url or filepath argument: orderXML2\nExpecting value: line 1 column 1 (char 0)");
       reporter.endStep();
       reporter.testId("API Endpoint-/services/normalize/vendor?json")
       reporter.description("Response message from API:" +JSON.stringify(response))
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout
@@ -61,13 +59,13 @@ it('file path is missing',
     };
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
-      const response = await NAModule(postData, options);
+      response = await NAModule(postData, options);
       expect(response.error).toBe("Invalid data or url or filepath argument: orderXML2\nExpecting value: line 1 column 1 (char 0)");
       reporter.endStep();
       reporter.testId("API Endpoint-/services/normalize/vendor?json")
       reporter.description("Response message from API:" +JSON.stringify(response))
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout
@@ -84,13 +82,13 @@ async () => {
   };
   try {
     reporter.startStep("Values passed:" + JSON.stringify(postData));
-    const response = await NAModule(postData, options);
+    response = await NAModule(postData, options);
     expect(response.error).toBe("Invalid Session");
     reporter.endStep();
     reporter.testId("API Endpoint-/services/normalize/vendor?json")
     reporter.description("Response message from API:" +JSON.stringify(response))
   } catch (error) {
-    throw new Error(error);
+    throw new Error(JSON.stringify(response));
   }
 },
 Timeout

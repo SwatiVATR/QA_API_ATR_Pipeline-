@@ -13,6 +13,7 @@ const {
   const NAModule = require("../../modules/NAModule");
   const USERNAME=process.env.SWATI_USER_EMAIL
   const PASSWORD=process.env.SWATI_PASSWORD
+  let response;
   it(
     "API Success",
     async () => {
@@ -22,13 +23,13 @@ const {
       });
       try {
         reporter.startStep("Values passed:" + JSON.stringify(postData));
-        const response = await NAModule(postData, options);
+        response = await NAModule(postData, options);
         expect(response.statusCode).toBe(500);
         reporter.endStep();
         reporter.testId("API Endpoint-/services/order-authenticate")
         reporter.description("Response message from API:" + JSON.stringify(response))
       } catch (error) {
-        throw new Error(error);
+        throw new Error(JSON.stringify(response));
       }
     },
     Timeout
@@ -40,13 +41,13 @@ const {
       const postData = JSON.stringify({ username: "", password: PASSWORD });
       try {
         reporter.startStep("Values passed:" + JSON.stringify(postData));
-        const response = await NAModule(postData, options);
+        response = await NAModule(postData, options);
         expect(response.statusCode).toBe(500);
         reporter.endStep();
         reporter.testId("API Endpoint-/services/order-authenticate")
         reporter.description("Response message from API:" + JSON.stringify(response))
       } catch (error) {
-        throw new Error(error);
+        throw new Error(JSON.stringify(response));
       }
     },
     Timeout
@@ -62,13 +63,13 @@ const {
       try {
         reporter.startStep("Values passed:" + JSON.stringify(postData));
 
-        const response = await NAModule(postData, options);
+        response = await NAModule(postData, options);
         expect(response.statusCode).toBe(500);
         reporter.endStep();
         reporter.testId("API Endpoint-/services/order-authenticate")
         reporter.description("Response message from API:" + JSON.stringify(response))
       } catch (error) {
-        throw new Error(error);
+        throw new Error(JSON.stringify(response));
       }
     },
     Timeout
@@ -84,13 +85,13 @@ const {
       try {
         reporter.startStep("Values passed:" + JSON.stringify(postData));
 
-        const response = await NAModule(postData, options);
+        response = await NAModule(postData, options);
         expect(response.statusCode).toBe(500);
         reporter.endStep();
         reporter.testId("API Endpoint-/services/order-authenticate")
         reporter.description("Response message from API:" + JSON.stringify(response))
       } catch (error) {
-        throw new Error(error);
+        throw new Error(JSON.stringify(response));
       }
     },
     Timeout

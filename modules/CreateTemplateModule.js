@@ -24,7 +24,7 @@ const CreateTemplateModule = async (postData) => {
     });
 
     req.on("error", (error) => {
-      reject(error);
+      reject("Error response:",error);
     });
 
     req.write(postData);

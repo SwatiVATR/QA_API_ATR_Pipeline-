@@ -14,12 +14,11 @@ const DeleteTemplateModule = async (endpoint, expectedMessage) => {
           responseData += chunk;
         });
         res.on("end", () => {
-          console.log("Response:", responseData);
           resolve(responseData);
         });
       });
       req.on("error", (error) => {
-        reject(error);
+        reject("Error response:",error);
       });
       req.write(postData);
       req.end();

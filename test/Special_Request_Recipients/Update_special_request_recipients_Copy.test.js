@@ -1,9 +1,7 @@
 const { STAGE, VERSION,commonOptionsGET,Timeout,TOKEN } = require("../../config");
 const NAModule = require("../../modules/NAModule");
-
-
 const postData = JSON.stringify({});
-
+let response;
 it(
   "API Success",
   async () => {
@@ -13,7 +11,7 @@ it(
       };
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
-      const response = await NAModule(postData, options);
+     response= await NAModule(postData, options);
       expect(response.success.statusCode).toBe(
         200
       );
@@ -21,7 +19,7 @@ it(
       reporter.testId("API Endpoint-/services/notes/update-special-request-recipients/DEVTRUST1")
       reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout
@@ -36,7 +34,7 @@ it(
           };
       try {
         reporter.startStep("Values passed:" + JSON.stringify(postData));
-        const response = await NAModule(postData, options);
+       response= await NAModule(postData, options);
         expect(response.message).toBe(
          `Authorization header requires 'Credential' parameter. Authorization header requires 'Signature' parameter. Authorization header requires 'SignedHeaders' parameter. Authorization header requires existence of either a 'X-Amz-Date' or a 'Date' header. Authorization=${TOKEN}`
         );
@@ -44,7 +42,7 @@ it(
         reporter.testId("API Endpoint-/services/notes/update-special-request-recipients/")
         reporter.description("Response message from API:" + JSON.stringify(response))
       } catch (error) {
-        throw new Error(error);
+        throw new Error(JSON.stringify(response));
       }
     },
     Timeout
