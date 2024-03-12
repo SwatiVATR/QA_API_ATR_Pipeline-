@@ -6,6 +6,7 @@ const {
 } = require("../../config");
 const NAModule = require("../../modules/NAModule");
 const postData = "";
+let response;
 test(
   "API Success",
   async () => {
@@ -16,13 +17,13 @@ test(
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
 
-      const response = await NAModule(postData, options);
+      response=await NAModule(postData, options);
       expect(response.error.name).toBe("JsonWebTokenError");
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/jwt/asdf-dev")
       reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout

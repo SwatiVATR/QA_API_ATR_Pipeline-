@@ -6,6 +6,7 @@ const {
 } = require("../../config");
 const NAModule = require("../../modules/NAModule");
 const postData = "";
+let response;
 
 test(
   "Api success",
@@ -17,13 +18,13 @@ test(
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
 
-      const response = await NAModule(postData, options);
+      response = await NAModule(postData, options);
       expect(response.success.statusCode).toBe(200);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/cognito/getUser?email=sverma@actiontitleresearch.com")
       reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout
@@ -40,13 +41,13 @@ test(
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
 
-      const response = await NAModule(postData, options);
+       response = await NAModule(postData, options);
       expect(response.error).toBe("User not found for the provided email.");
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/cognito/getUser?email=soneill@actiontitleresearch.com")
       reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout
@@ -62,14 +63,13 @@ test(
     };
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
-
-      const response = await NAModule(postData, options);
+     response = await NAModule(postData, options);
       expect(response.success.statusCode).toBe(500);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/cognito/getUser?email=")
       reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout
@@ -84,13 +84,13 @@ test(
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
 
-      const response = await NAModule(postData, options);
+       response = await NAModule(postData, options);
       expect(response.error).toBe("User not found for the provided email.");
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/cognito/getUser?email=esdesd")
       reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout

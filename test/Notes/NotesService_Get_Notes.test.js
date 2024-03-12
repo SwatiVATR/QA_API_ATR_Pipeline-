@@ -5,9 +5,8 @@ const {
     Timeout,
 } = require("../../config");
 const NAModule = require("../../modules/NAModule");
-
-
 const postData = JSON.stringify({});
+let response;
 it('API Success',
     async () => {
         const options = {
@@ -16,7 +15,7 @@ it('API Success',
         };
         try {
             reporter.startStep("Values passed:" + JSON.stringify(postData));
-            const response = await NAModule(postData, options);
+             response = await NAModule(postData, options);
             expect(response.success.txId).toBe(
                 "159306"
             );
@@ -24,7 +23,7 @@ it('API Success',
             reporter.testId("API Endpoint-/services/notes/159306/0")
             reporter.description("Response message from API:"+JSON.stringify(response))
         } catch (error) {
-            throw new Error(error);
+            throw new Error(JSON.stringify(response));
         }
     },
     Timeout
@@ -38,13 +37,13 @@ it('Special characters passed to txId',
         };
         try {
             reporter.startStep("Values passed:" + JSON.stringify(postData));
-            const response = await NAModule(postData, options);
+             response = await NAModule(postData, options);
             expect(response.success.txId).toBe("@@@@@");
             reporter.endStep();
             reporter.testId("API Endpoint-/services/notes/@@@@@/0")
             reporter.description("Response message from API:"+JSON.stringify(response))
         } catch (error) {
-            throw new Error(error);
+            throw new Error(JSON.stringify(response));
         }
     },
     Timeout
@@ -57,13 +56,13 @@ it('txId is not passed',
         };
         try {
             reporter.startStep("Values passed:" + JSON.stringify(postData));
-            const response = await NAModule(postData, options);
+             response = await NAModule(postData, options);
             expect(response.success).toBeTruthy();
             reporter.endStep();
             reporter.testId("API Endpoint-/services/notes//0")
             reporter.description("Response message from API:"+JSON.stringify(response))
         } catch (error) {
-            throw new Error(error);
+            throw new Error(JSON.stringify(response));
         }
     },
     Timeout

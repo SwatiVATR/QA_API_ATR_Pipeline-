@@ -6,20 +6,20 @@ const options = {
   path: `/${STAGE}/${VERSION}/services/invoker/backoffice/ListJobs`,
   ...commonOptionsPOST,
 };
-
+let response;
 it(
   "API Success",
   async () => {
     const postData = JSON.stringify(success);
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
-      const response = await NAModule(postData, options);
+      response= await NAModule(postData, options);
       expect(response.Response.Orders?true:false).toBe(true);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/backoffice/ListJobs")
       reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout
@@ -30,12 +30,12 @@ it(
     const postData = JSON.stringify(apikeymissing);
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
-      const response = await NAModule(postData, options);
+      response = await NAModule(postData, options);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/backoffice/ListJobs")
       reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout
@@ -47,12 +47,12 @@ it(
     const postData = JSON.stringify({});
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
-      const response = await NAModule(postData, options);
+      response= await NAModule(postData, options);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/backoffice/ListJobs")
       reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout
@@ -65,13 +65,13 @@ it(
     const postData = JSON.stringify(appIdmissing);
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
-      const response = await NAModule(postData, options);
+      response= await NAModule(postData, options);
       expect(response.Response.Orders?true:false).toBe(false);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/backoffice/ListJobs")
       reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout
@@ -83,13 +83,13 @@ it(
     const postData = JSON.stringify(appPassmissing);
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
-      const response = await NAModule(postData, options);
+      response = await NAModule(postData, options);
       expect(response.Response.Orders?true:false).toBe(false);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/backoffice/ListJobs")
       reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout
@@ -102,13 +102,13 @@ it(
     const postData = JSON.stringify(appUsernamemissing);
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
-      const response = await NAModule(postData, options);
+      response = await NAModule(postData, options);
       expect(response.Response.Orders?true:false).toBe(false);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/backoffice/ListJobs")
       reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout

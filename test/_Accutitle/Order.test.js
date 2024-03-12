@@ -63,7 +63,7 @@ const postData = JSON.stringify({
     path: `/${STAGE}/${VERSION}/webhook/order/accutitle`,
     ...commonOptionsPOSTwithoutHeader,
   };
-
+let response;
 test(
   "Api Success",
   async () => {
@@ -76,7 +76,6 @@ test(
         });
 
         res.on("end", () => {
-          console.log("Response:", responseData);
           resolve(responseData);
         });
       });
@@ -96,7 +95,7 @@ test(
       reporter.testId("API Endpoint-/webhook/order/accutitle")
     reporter.description("Response message from API:" + data.body)
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout

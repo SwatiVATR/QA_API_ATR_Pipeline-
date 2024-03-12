@@ -11,6 +11,7 @@ const options = {
   path: `/${STAGE}/${VERSION}/services/current_duedate_update`,
   ...commonOptionsPOST,
 };
+let response;
 it('API Success',
   async () => {
     const postData = JSON.stringify({
@@ -19,7 +20,7 @@ it('API Success',
     });
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
-      const response = await NAModule(postData, options);
+      response = await NAModule(postData, options);
       expect(response.success).toBe(
         "An email with the updated details has been shared with the user."
       );
@@ -27,7 +28,7 @@ it('API Success',
       reporter.testId("API Endpoint-/services/current_duedate_update")
       reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout
@@ -40,7 +41,7 @@ it('transaction_id is passed wrong',
     });
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
-      const response = await NAModule(postData, options);
+      response = await NAModule(postData, options);
       expect(response.error).toBe(
         "Transaction not found."
       );
@@ -48,7 +49,7 @@ it('transaction_id is passed wrong',
       reporter.testId("API Endpoint-/services/current_duedate_update")
       reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout
@@ -62,7 +63,7 @@ it('transaction_id is missing',
     });
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
-      const response = await NAModule(postData, options);
+      response = await NAModule(postData, options);
       expect(response.error).toBe(
         "transaction_id and due date are required."
       );
@@ -70,7 +71,7 @@ it('transaction_id is missing',
       reporter.testId("API Endpoint-/services/current_duedate_update")
       reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout
@@ -82,7 +83,7 @@ it('transaction_id is not passed in body',
     });
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
-      const response = await NAModule(postData, options);
+      response = await NAModule(postData, options);
       expect(response.error).toBe(
         "transaction_id and due date are required."
       );
@@ -91,7 +92,7 @@ it('transaction_id is not passed in body',
       reporter.description("Response message from API:" + JSON.stringify(response))
 
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout
@@ -104,7 +105,7 @@ it('dueDate is missing',
     });
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
-      const response = await NAModule(postData, options);
+      response = await NAModule(postData, options);
       expect(response.error).toBe(
         "invalid literal for int() with base 10: ''"
       );
@@ -113,7 +114,7 @@ it('dueDate is missing',
       reporter.description("Response message from API:" + JSON.stringify(response))
 
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout
@@ -127,7 +128,7 @@ it('dueDate is passed as string or special characters',
     });
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
-      const response = await NAModule(postData, options);
+      response = await NAModule(postData, options);
       expect(response.error).toBe(
         "invalid literal for int() with base 10: 'wasds@233232'"
       );
@@ -136,7 +137,7 @@ it('dueDate is passed as string or special characters',
       reporter.description("Response message from API:" + JSON.stringify(response))
 
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout
@@ -150,7 +151,7 @@ it('Bad Request',
     });
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
-      const response = await NAModule(postData, options);
+      response = await NAModule(postData, options);
       expect(response.error).toBe(
         "invalid literal for int() with base 10: 'wasds@233232'"
       );
@@ -159,7 +160,7 @@ it('Bad Request',
       reporter.description("Response message from API:" + JSON.stringify(response))
 
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout
@@ -178,7 +179,7 @@ it('Invalid session',
     };
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
-      const response = await NAModule(postData, options);
+      response = await NAModule(postData, options);
       expect(response.error).toBe(
         "invalid literal for int() with base 10: 'wasds@233232'"
       );
@@ -187,7 +188,7 @@ it('Invalid session',
       reporter.description("Response message from API:" + JSON.stringify(response))
 
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout

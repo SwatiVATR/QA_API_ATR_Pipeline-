@@ -12,20 +12,20 @@ const options = {
   path: `/${STAGE}/${VERSION}/services/invoker/backoffice/Auth`,
   ...commonOptionsPOST,
 };
-
+let response;
 it(
   "API Success",
   async () => {
     const postData = JSON.stringify(success);
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
-      const response = await NAModule(postData, options);
+      response = await NAModule(postData, options);
       expect(response.statusCode).toBe(201);
       reporter.endStep();
     reporter.testId("API Endpoint-/services/invoker/backoffice/Auth")
     reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout
@@ -37,12 +37,12 @@ it(
     const postData = JSON.stringify(authkeyinvalid);
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
-      const response = await NAModule(postData, options);
+      response= await NAModule(postData, options);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/backoffice/Auth")
       reporter.description("Response message from API:"+ JSON.stringify(response))
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout
@@ -54,12 +54,12 @@ it(
     const postData = JSON.stringify({});
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
-      const response = await NAModule(postData, options);
+      response = await NAModule(postData, options);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/backoffice/Auth")
       reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout
@@ -71,13 +71,13 @@ it(
     const postData = JSON.stringify(wrongAppid);
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
-      const response = await NAModule(postData, options);
+      response = await NAModule(postData, options);
       expect(response.statusCode).toBe(401);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/backoffice/Auth")
       reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout
@@ -89,13 +89,13 @@ it(
     const postData = JSON.stringify(wrongappPass);
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
-      const response = await NAModule(postData, options);
+      response = await NAModule(postData, options);
       expect(response.statusCode).toBe(401);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/backoffice/Auth")
       reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout
@@ -107,13 +107,13 @@ it(
     const postData = JSON.stringify(wrongappUsername);
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
-      const response = await NAModule(postData, options);
+      response= await NAModule(postData, options);
       expect(response.statusCode).toBe(401);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/backoffice/Auth")
       reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout

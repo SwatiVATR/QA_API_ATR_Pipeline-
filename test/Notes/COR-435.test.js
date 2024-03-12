@@ -10,19 +10,20 @@ const options = {
     path: `/${STAGE}/${VERSION}/services/notes/special-request`,
     ...commonOptionsPOST,
 };
+let response;
 it('API Success without appended_note key',
     async () => {
         const postData = JSON.stringify(success);
         try {
             reporter.startStep("Values passed:" + JSON.stringify(postData));
-            const response = await NAModule(postData, options);
+            response = await NAModule(postData, options);
             expect(response.success.message).toBe("Rush note has been added successfully");
             reporter.endStep();
             reporter.testId("API Endpoint-/services/notes/special-request")
             reporter.description("Response message from API:"+JSON.stringify(response))
 
         } catch (error) {
-            throw new Error(error);
+            throw new Error(JSON.stringify(response));
         }
     },
     Timeout
@@ -32,7 +33,7 @@ it('API Success with appended_note key',
         const postData = JSON.stringify(successAppended);
         try {
             reporter.startStep("Values passed:" + JSON.stringify(postData));
-            const response = await NAModule(postData, options);
+            response = await NAModule(postData, options);
             expect(response.success.message).toBe("Appended note has been added successfully for Rush");
             reporter.endStep();
             reporter.testId("API Endpoint-/services/notes/special-request")
@@ -40,7 +41,7 @@ it('API Success with appended_note key',
             reporter.description("Response message from API:"+JSON.stringify(response))
 
         } catch (error) {
-            throw new Error(error);
+            throw new Error(JSON.stringify(response));
         }
     },
     Timeout
@@ -50,7 +51,7 @@ it('button_id is missing',
         const postData = JSON.stringify(buttonIdMissing);
         try {
             reporter.startStep("Values passed:" + JSON.stringify(postData));
-            const response = await NAModule(postData, options);
+            response = await NAModule(postData, options);
             expect(response.error).toBe(
                 "Button ID parameter is missing."
             );
@@ -60,7 +61,7 @@ it('button_id is missing',
             reporter.description("Response message from API:"+JSON.stringify(response))
 
         } catch (error) {
-            throw new Error(error);
+            throw new Error(JSON.stringify(response));
         }
     },
     Timeout
@@ -70,7 +71,7 @@ it('button_id is passed wrong or special characters passed to button_id',
         const postData = JSON.stringify(buttonIdWrong);
         try {
             reporter.startStep("Values passed:" + JSON.stringify(postData));
-            const response = await NAModule(postData, options);
+            response = await NAModule(postData, options);
             expect(response.error).toBe(
                 "Button ID not found."
             );
@@ -80,7 +81,7 @@ it('button_id is passed wrong or special characters passed to button_id',
             reporter.description("Response message from API:"+JSON.stringify(response))
 
         } catch (error) {
-            throw new Error(error);
+            throw new Error(JSON.stringify(response));
         }
     },
     Timeout
@@ -91,7 +92,7 @@ it('button_id is not passed in body',
         const postData = JSON.stringify(WithoutButtonID);
         try {
             reporter.startStep("Values passed:" + JSON.stringify(postData));
-            const response = await NAModule(postData, options);
+            response = await NAModule(postData, options);
             expect(response.error).toBe(
                 "Button ID parameter is missing."
             );
@@ -100,7 +101,7 @@ it('button_id is not passed in body',
             reporter.description("Response message from API:"+JSON.stringify(response))
 
         } catch (error) {
-            throw new Error(error);
+            throw new Error(JSON.stringify(response));
         }
     },
     Timeout
@@ -111,14 +112,14 @@ it('order_id is missing',
         const postData = JSON.stringify(order_idMissing);
         try {
             reporter.startStep("Values passed:" + JSON.stringify(postData));
-            const response = await NAModule(postData, options);
+            response = await NAModule(postData, options);
             expect(response.success.message).toBe("Rush note has been added successfully");
             reporter.endStep();
             reporter.testId("API Endpoint-/services/notes/special-request")
             reporter.description("Response message from API:"+JSON.stringify(response))
 
         } catch (error) {
-            throw new Error(error);
+            throw new Error(JSON.stringify(response));
         }
     },
     Timeout
@@ -129,14 +130,14 @@ it('order_id is passed wrong',
         const postData = JSON.stringify(order_idWrong);
         try {
             reporter.startStep("Values passed:" + JSON.stringify(postData));
-            const response = await NAModule(postData, options);
+            response = await NAModule(postData, options);
             expect(response.success.message).toBe("Rush note has been added successfully");
             reporter.endStep();
             reporter.testId("API Endpoint-/services/notes/special-request")
             reporter.description("Response message from API:"+JSON.stringify(response))
 
         } catch (error) {
-            throw new Error(error);
+            throw new Error(JSON.stringify(response));
         }
     },
     Timeout
@@ -146,14 +147,14 @@ it('order_id is not passed in body',
         const postData = JSON.stringify(Withoutorder_id);
         try {
             reporter.startStep("Values passed:" + JSON.stringify(postData));
-            const response = await NAModule(postData, options);
+            response = await NAModule(postData, options);
             expect(response.success.message).toBe("Rush note has been added successfully");
             reporter.endStep();
             reporter.testId("API Endpoint-/services/notes/special-request")
             reporter.description("Response message from API:"+JSON.stringify(response))
 
         } catch (error) {
-            throw new Error(error);
+            throw new Error(JSON.stringify(response));
         }
     },
     Timeout
@@ -164,7 +165,7 @@ it('order is passed empty',
         const postData = JSON.stringify(orderMissing);
         try {
             reporter.startStep("Values passed:" + JSON.stringify(postData));
-            const response = await NAModule(postData, options);
+            response = await NAModule(postData, options);
             expect(response.error).toBe(
                 "Invalid data or url or filepath argument: \nExpecting value: line 1 column 1 (char 0)"
             );
@@ -173,7 +174,7 @@ it('order is passed empty',
             reporter.description("Response message from API:"+JSON.stringify(response))
 
         } catch (error) {
-            throw new Error(error);
+            throw new Error(JSON.stringify(response));
         }
     },
     Timeout

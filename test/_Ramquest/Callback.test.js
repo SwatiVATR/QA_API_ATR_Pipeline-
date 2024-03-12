@@ -10,9 +10,9 @@ const options = {
     'Content-Type': 'application/json',
     'Authorization': TOKEN
   },
-
 };
 
+let response;
 it(
   "API Success",
   async () => {
@@ -22,13 +22,13 @@ it(
     });
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
-      const response = await HttpModule(postData, options);
+      response = await HttpModule(postData, options);
       expect(response.statusCode).toBe(201);
       reporter.endStep();
       reporter.testId("API Endpoint-/callback/order/ramquest")
       reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout

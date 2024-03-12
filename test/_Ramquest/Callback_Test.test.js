@@ -10,19 +10,21 @@ const options = {
     'Content-Type': 'application/json',
     'Authorization': TOKEN
   },
-
 };
+
+let response;
+
 it('API Success', async () => {
   const postData = JSON.stringify(CallbackOrderRamquestBody);
   try {
     reporter.startStep("Values passed:" + JSON.stringify(postData));
-    const response = await HttpModule(postData, options);
+    response= await HttpModule(postData, options);
       expect(response.statusCode).toBe(500);
       reporter.endStep();
       reporter.testId("API Endpoint-/callback/order/ramquest-test")
       reporter.description("Response message from API:" + JSON.stringify(response))
   } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
   }
 },Timeout)
 

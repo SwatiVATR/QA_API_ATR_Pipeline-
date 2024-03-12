@@ -15,6 +15,7 @@ const options = {
 
 const SCOUT_EMAIL = process.env.SIGNAL_SCOUT_EMAIL
 const ACTION_EMAIL = process.env.SWATI_USER_EMAIL
+let response;
 it(
   "API Success",
   async () => {
@@ -28,7 +29,7 @@ it(
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
 
-      const response = await NAModule(postData, options);
+      response= await NAModule(postData, options);
       expect(response.Message).toBe(
         "Email Sent Successfully To All Recipients"
       );
@@ -36,7 +37,7 @@ it(
       reporter.testId("API Endpoint-/services/send-email")
       reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout
@@ -54,13 +55,13 @@ it(
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
 
-      const response = await NAModule(postData, options);
+      response= await NAModule(postData, options);
       expect(response.Result.errorType).toBe("ClientError");
       reporter.endStep();
       reporter.testId("API Endpoint-/services/send-email")
       reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout
@@ -81,13 +82,13 @@ it(
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
 
-      const response = await NAModule(postData, options);
+      response= await NAModule(postData, options);
       expect(response.Result.errorType).toBe("ClientError");
       reporter.endStep();
       reporter.testId("API Endpoint-/services/send-email")
       reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout
@@ -106,13 +107,13 @@ it(
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
 
-      const response = await NAModule(postData, options);
+      response= await NAModule(postData, options);
       expect(response.Result.errorType).toBe("ClientError");
       reporter.endStep();
       reporter.testId("API Endpoint-/services/send-email")
       reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout
@@ -130,13 +131,13 @@ it(
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
 
-      const response = await NAModule(postData, options);
+      response= await NAModule(postData, options);
       expect(response.Result.errorType).toBe("ClientError");
       reporter.endStep();
       reporter.testId("API Endpoint-/services/send-email")
       reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout
@@ -154,13 +155,13 @@ it(
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
 
-      const response = await NAModule(postData, options);
+      response= await NAModule(postData, options);
       expect(response.Result.errorType).toBe("ClientError");
       reporter.endStep();
       reporter.testId("API Endpoint-/services/send-email")
       reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout
@@ -179,13 +180,13 @@ it(
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
 
-      const response = await NAModule(postData, options);
+      response= await NAModule(postData, options);
       expect(response.Result.errorType).toBe("ClientError");
       reporter.endStep();
       reporter.testId("API Endpoint-/services/send-email")
       reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   },
   Timeout

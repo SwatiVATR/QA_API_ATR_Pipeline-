@@ -9,6 +9,8 @@ const {
     path: `/${STAGE}/${VERSION}/webhook/order/ramquest/note`,
     ...commonOptionsPOSTBasicAUTH,
   };
+
+  let response;
   it('API Success', async () => {
     const postData = JSON.stringify({
       orderId: "7b04e568-688c-4f38-8ed9-682e5a3334b8",
@@ -18,13 +20,13 @@ const {
     });
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
-      const response = await NAModule(postData, options);
+      response = await NAModule(postData, options);
       expect(response.message).toBe("hello from postman");
       reporter.endStep();
       reporter.testId("API Endpoint-/webhook/order/ramquest/note")
       reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   }, Timeout)
  
@@ -32,12 +34,12 @@ const {
     const postData = JSON.stringify({});
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
-      const response = await NAModule(postData, options);
+      response = await NAModule(postData, options);
       reporter.endStep();
       reporter.testId("API Endpoint-/webhook/order/ramquest/note")
       reporter.description("Response message from API:" + JSON.stringify(response))
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   }, Timeout)
  
@@ -51,12 +53,12 @@ const {
     });
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
-      const response = await NAModule(postData, options);
+      response = await NAModule(postData, options);
       reporter.endStep();
       reporter.testId("API Endpoint-/webhook/order/ramquest/note")
       reporter.description("Response message from API:"+ JSON.stringify(response))
     } catch (error) {
-      throw new Error(error);
+      throw new Error(JSON.stringify(response));
     }
   }, Timeout)
   
@@ -71,14 +73,13 @@ const {
         });
         try {
           reporter.startStep("Values passed:" + JSON.stringify(postData));
-
-          const response = await NAModule(postData, options);
+          response = await NAModule(postData, options);
           expect(response.errors[0]).toBe("The value 'sdsds' is not valid.");
           reporter.endStep();
           reporter.testId("API Endpoint-/webhook/order/ramquest/note")
           reporter.description("Response message from API:" + JSON.stringify(response))
         } catch (error) {
-          throw new Error(error);
+          throw new Error(JSON.stringify(response));
         }
       },
       Timeout
@@ -95,12 +96,12 @@ const {
         });
         try {
           reporter.startStep("Values passed:" + JSON.stringify(postData));
-          const response = await NAModule(postData, options);
+          response = await NAModule(postData, options);
           reporter.endStep();
           reporter.testId("API Endpoint-/webhook/order/ramquest/note")
           reporter.description("Response message from API:"+ JSON.stringify(response))
         } catch (error) {
-          throw new Error(error);
+          throw new Error(JSON.stringify(response));
         }
       },
       Timeout
@@ -117,13 +118,13 @@ const {
         });
         try {
           reporter.startStep("Values passed:" + JSON.stringify(postData));
-          const response = await NAModule(postData, options);
+          response= await NAModule(postData, options);
           expect(response.errors[0]).toBe("The value 'wdsdsd' is not valid.");
           reporter.endStep();
           reporter.testId("API Endpoint-/webhook/order/ramquest/note")
           reporter.description("Response message from API:" + JSON.stringify(response))
         } catch (error) {
-          throw new Error(error);
+          throw new Error(JSON.stringify(response));
         }
       },
       Timeout
@@ -139,12 +140,12 @@ const {
         });
         try {
           reporter.startStep("Values passed:" + JSON.stringify(postData));
-          const response = await NAModule(postData, options);
+          response= await NAModule(postData, options);
           reporter.endStep();
           reporter.testId("API Endpoint-/webhook/order/ramquest/note")
           reporter.description("Response message from API:"+ JSON.stringify(response))
         } catch (error) {
-          throw new Error(error);
+          throw new Error(JSON.stringify(response));
         }
       },
       Timeout

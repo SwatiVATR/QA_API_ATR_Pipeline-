@@ -8,7 +8,7 @@ const {
 
 const NAModule = require("../../modules/NAModule");
 const postData = JSON.stringify({});
-
+let response;
 it(
     "API Success",
     async () => {
@@ -18,13 +18,13 @@ it(
         };
         try {
             reporter.startStep("Values passed:" + JSON.stringify(postData));
-            const response = await NAModule(postData, options);
+            response = await NAModule(postData, options);
             expect(response.success.msg).toBeTruthy();
             reporter.endStep();
             reporter.testId("API Endpoint-/services/search?filenumber=Test&status=")
             reporter.description("Response message from API:" + JSON.stringify(response))
         } catch (error) {
-            throw new Error(error);
+            throw new Error(JSON.stringify(response));
         }
     },
     Timeout
@@ -38,13 +38,13 @@ it(
         };
         try {
             reporter.startStep("Values passed:" + JSON.stringify(postData));
-            const response = await NAModule(postData, options);
+            response = await NAModule(postData, options);
             expect(response.error).toBe("Invalid Session");
             reporter.endStep();
             reporter.testId("API Endpoint-/services/search?filenumber=Test&status=")
             reporter.description("Response message from API:" + JSON.stringify(response))
         } catch (error) {
-            throw new Error(error);
+            throw new Error(JSON.stringify(response));
         }
     },
     Timeout

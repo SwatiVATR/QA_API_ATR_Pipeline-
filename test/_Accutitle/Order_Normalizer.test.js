@@ -1,5 +1,6 @@
 const { STAGE, VERSION, commonOptionsPOST, Timeout, commonOptionsPOSTwithoutHeader } = require("../../config");
 const NAModule = require("../../modules/NAModule");
+let response;
 
 it('API Success', async () => {
   const options = {
@@ -12,7 +13,7 @@ it('API Success', async () => {
   });
   try {
     reporter.startStep("getting response from api"+ JSON.stringify(postData));
-    const response = await NAModule(postData, options);
+     response = await NAModule(postData, options);
     expect(response.success.order.tgOrder.customerOrderId.length >= 1).toBe(
       true
     );
@@ -20,7 +21,7 @@ it('API Success', async () => {
     reporter.testId("API Endpoint-/services/normalize/accutitle")
     reporter.description("Response message from API:" + JSON.stringify(response))
   } catch (error) {
-    throw new Error(error);
+    throw new Error(JSON.stringify(response));
   }
 },Timeout)
 
@@ -34,7 +35,7 @@ it('Order is blank', async () => {
   });
   try {
     reporter.startStep("getting response from api"+ JSON.stringify(postData));
-    const response = await NAModule(postData, options);
+   response = await NAModule(postData, options);
     expect(response.error).toBe(
       "Invalid data or url or filepath argument: \nno element found: line 1, column 0"
     );
@@ -42,7 +43,7 @@ it('Order is blank', async () => {
     reporter.testId("API Endpoint-/services/normalize/accutitle")
     reporter.description("Response message from API:" + JSON.stringify(response))
   } catch (error) {
-    throw new Error(error);
+    throw new Error(JSON.stringify(response));
   }
 },Timeout)
 it('BAD Request', async () => {
@@ -53,13 +54,13 @@ it('BAD Request', async () => {
   const postData = JSON.stringify({});
   try {
     reporter.startStep("getting response from api"+ JSON.stringify(postData));
-    const response = await NAModule(postData, options);
+    response = await NAModule(postData, options);
       expect(response.error).toBe("'order'");
     reporter.endStep();
     reporter.testId("API Endpoint-/services/normalize/accutitle")
     reporter.description("Response message from API:" + JSON.stringify(response))
   } catch (error) {
-    throw new Error(error);
+    throw new Error(JSON.stringify(response));
   }
 },Timeout)
 
@@ -72,13 +73,13 @@ it('Invalid session', async () => {
   const postData = JSON.stringify({});
   try {
     reporter.startStep("getting response from api"+ JSON.stringify(postData));
-    const response = await NAModule(postData, options);
+    response = await NAModule(postData, options);
     expect(response.error).toBe("Invalid Session");
     reporter.endStep();
     reporter.testId("API Endpoint-/services/normalize/accutitle")
-    reporter.description("Response message from API:"+ JSON.stringify(response.error))
+    reporter.description("Response message from API:"+ JSON.stringify(response))
   } catch (error) {
-    throw new Error(error);
+    throw new Error(JSON.stringify(response));
   }
 },Timeout)
 
@@ -93,13 +94,13 @@ it('Invalid order', async () => {
   });
   try {
     reporter.startStep("Values passed:" + JSON.stringify(postData));
-    const response = await NAModule(postData, options);
+    response = await NAModule(postData, options);
     expect(response.error).toBe("Invalid data or url or filepath argument: dfdss\nsyntax error: line 1, column 0");
     reporter.endStep();
     reporter.testId("API Endpoint-/services/normalize/accutitle")
-    reporter.description("Response message from API:"+ JSON.stringify(response.error))
+    reporter.description("Response message from API:"+ JSON.stringify(response))
   } catch (error) {
-    throw new Error(error);
+    throw new Error(JSON.stringify(response));
   }
 },Timeout)
 

@@ -10,13 +10,12 @@ function OrderModule(options) {
       });
 
       res.on("end", () => {
-        console.log("Response:", responseData);
         resolve(responseData);
       });
     });
 
     req.on("error", (error) => {
-      reject(error);
+      reject("Error response:",error)
     });
 
     req.end();
