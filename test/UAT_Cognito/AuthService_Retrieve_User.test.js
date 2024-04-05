@@ -63,7 +63,7 @@ test(
     };
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
-     response = await NAModule(postData, options);
+      response = await NAModule(postData, options);
       expect(response.success.statusCode).toBe(500);
       reporter.endStep();
       reporter.testId("API Endpoint-/services/invoker/cognito/getUser?email=")
