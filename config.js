@@ -66,6 +66,11 @@ const commonOptionsPOSTBasicAUTH = {
   method: "POST",
   headers: HEADERSWITHBASICAUTH,
 };
+const commonOptionsGETBasicAUTH = {
+  hostname: BASE,
+  method: "GET",
+  headers: HEADERSWITHBASICAUTH,
+};
 const commonOptionsDELETE = {
   hostname: BASE,
   method: "DELETE",
@@ -234,6 +239,7 @@ module.exports = {
   lastNames,
   Timeout,
   commonOptionsPOSTBasicAUTH,
+  commonOptionsGETBasicAUTH,
   OrderAuthenticateToken,
   PRODBASE,
   PRODSTAGE,
