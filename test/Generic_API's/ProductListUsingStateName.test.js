@@ -2,21 +2,21 @@ const { BASE,STAGE, VERSION, commonOptionsGETBasicAUTH, Timeout } = require("../
 const NAModule = require("../../modules/NAModule");
 
 let response;
-const vendorName = encodeURIComponent('Test Inc.');
+const vendorName = encodeURIComponent('New Jersey');
 
 it('API Success ',
   async () => {
     const options = {
-        path: `/${STAGE}/${VERSION}/api/searchvendors?vendor_name=${vendorName}`,
+        path: `/${STAGE}/${VERSION}/api/products?state_name=${vendorName}`,
         ...commonOptionsGETBasicAUTH,
       };
     const postData = JSON.stringify({});
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
       response = await NAModule(postData, options);
-      expect(response.length).toBeGreaterThan(0);
+      expect(response.products.length).toBeGreaterThan(0);
       reporter.endStep();
-      reporter.testId("API Endpoint-/api/searchvendors?vendor_name=Test Inc.")
+      reporter.testId("API Endpoint-/api/products?state_name=New Jersey")
       reporter.description("Response message from API:"+JSON.stringify(response))
     } catch (error) {
       throw new Error(JSON.stringify(response));
@@ -28,7 +28,7 @@ it('Invalid endpoint passed',
   async () => {
     const postData = JSON.stringify({});
     const options = {
-        path: `/${STAGE}/${VERSION}/api/searchvendor`,
+        path: `/${STAGE}/${VERSION}/api/searchvendo`,
         ...commonOptionsGETBasicAUTH,
       };
     try {
@@ -36,7 +36,7 @@ it('Invalid endpoint passed',
       response = await NAModule(postData, options);
       expect(response.message).toBe("'JWeems@ORTitleTech.com:XGRgcrNuoFN5NLGf' not a valid key=value pair (missing equal-sign) in Authorization header: 'Basic JWeems@ORTitleTech.com:XGRgcrNuoFN5NLGf'.");
       reporter.endStep();
-      reporter.testId("API Endpoint-/api/searchvendor")
+      reporter.testId("API Endpoint-/api/searchvendo")
       reporter.description("Response message from API:"+JSON.stringify(response))
 
     } catch (error) {
@@ -45,19 +45,40 @@ it('Invalid endpoint passed',
   },
   Timeout
 )
-it('Wrong vendor name is passed',
+it('incorrect state name passed',
   async () => {
     const postData = JSON.stringify({});
     const options = {
-        path: `/${STAGE}/${VERSION}/api/searchvendors?vendor_name=dsfdxfxf.`,
+        path: `/${STAGE}/${VERSION}/api/products?state_name=sdsfxdsfx`,
         ...commonOptionsGETBasicAUTH,
       };
     try {
       reporter.startStep("Values passed:" + JSON.stringify(postData));
       response = await NAModule(postData, options);
-      expect(response.length).toEqual(0);
+      expect(response.products.length).toEqual(0);
       reporter.endStep();
-      reporter.testId("API Endpoint-/api/searchvendors?vendor_name=dsfdxfxf.")
+      reporter.testId("API Endpoint-/api/products?state_name=sdsfxdsfx")
+      reporter.description("Response message from API:"+JSON.stringify(response))
+
+    } catch (error) {
+      throw new Error(JSON.stringify(response));
+    }
+  },
+  Timeout
+)
+it('special characters passed in state name',
+  async () => {
+    const postData = JSON.stringify({});
+    const options = {
+        path: `/${STAGE}/${VERSION}/api/products?state_name=@@@@@`,
+        ...commonOptionsGETBasicAUTH,
+      };
+    try {
+      reporter.startStep("Values passed:" + JSON.stringify(postData));
+      response = await NAModule(postData, options);
+      expect(response.products.length).toEqual(0);
+      reporter.endStep();
+      reporter.testId("API Endpoint-/api/products?state_name=@@@@@")
       reporter.description("Response message from API:"+JSON.stringify(response))
 
     } catch (error) {
