@@ -40,9 +40,9 @@ phases:
       - echo "Uploading artifacts to S3..."
       - cd /var/www/html/QA-API-Automation-Testing/
       - npm run test || true
-      - aws s3 ls s3://qaautomationtest
-      - aws s3 cp /var/www/html/QA-API-Automation-Testing/allure-report s3://qaautomationtest --recursive # Adjust the source and destination as needed
-      - aws s3 cp /var/www/html/QA-API-Automation-Testing/allure-results s3://qaautomationtest --recursive
+      - aws s3 ls s3://qaautomationtest-api
+      - aws s3 cp /var/www/html/QA-API-Automation-Testing/allure-report s3://qaautomationtest-api --recursive # Adjust the source and destination as needed
+      - aws s3 cp /var/www/html/QA-API-Automation-Testing/allure-results s3://qaautomationtest-api --recursive
       
 artifacts:
   files:
