@@ -1,0 +1,51 @@
+version: 0.2
+  
+phases:
+  install:
+    runtime-versions:
+      java: corretto21 # Adjust the version as needed
+    commands:
+      - echo "Installing Maven dependencies..."
+      - mvn dependency:go-offline
+      - echo "Adding Google Chrome repository..."
+      - wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | apt-key add -
+      - echo "deb [arch=amd64] https://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list
+      - echo "Updating package lists again..."
+      - apt-get update
+      - echo "Installing Google Chrome..."
+      - apt-get install -y google-chrome-stable wget unzip maven jq
+      - wget https://storage.googleapis.com/chrome-for-testing-public/129.0.6668.89/linux64/chrome-linux64.zip # Download ChromeDriver
+      - unzip chrome-linux64.zip -d /usr/local/bin/ # Unzip and move to bin
+      - mv /usr/local/bin/chrome-linux64/chrome /usr/local/bin/chromedriver
+      - chmod +x /usr/local/bin/chromedriver # Make it executable
+      - ls -la /opt/google/chrome/chrome 
+      - google-chrome-stable --version
+      - chromedriver --version
+      - curl -fsSL https://deb.nodesource.com/setup_20.x | bash 
+      - apt install -y nodejs
+
+    
+  pre_build:
+    commands:
+      #- cd /var/www/html/QA-API-Automation-Testing/
+      #- npm run test 
+
+  build:
+    commands:
+      - echo "Running tests..."
+      #- cd /var/www/html/QA-API-Automation-Testing/
+      #- npm run test 
+      
+  post_build:
+    commands:
+      - echo "Uploading artifacts to S3..."
+      - cd /var/www/html/QA-API-Automation-Testing/
+      - npm run test || true
+      - aws s3 ls s3://qaautomationtest
+      - aws s3 cp /var/www/html/QA-API-Automation-Testing/allure-report s3://qaautomationtest --recursive # Adjust the source and destination as needed
+      - aws s3 cp /var/www/html/QA-API-Automation-Testing/allure-results s3://qaautomationtest --recursive
+      
+artifacts:
+  files:
+    - '**/*'
+  discard-paths: no
