@@ -38,8 +38,9 @@ phases:
     commands:
       - echo "Uploading artifacts to S3..."
       - cd /var/www/html/QA-API-Automation-Testing
-      - npm run report:build
+      - npm i -f
       - npm run test
+      - npm run report:build
       - aws s3 ls s3://qaautomationtest-api
       - aws s3 cp . s3://qaautomationtest-api --recursive 
 artifacts:
